@@ -28,6 +28,9 @@ export type SigningEnv = {
 
 export type JwtClaims = Record<string, unknown>;
 
+/** JsonWebKey plus the `kid` field the lib type omits. */
+export type SigningJwk = JsonWebKey & { kid?: string };
+
 export class SigningConfigurationError extends Error {
   constructor(message: string) {
     super(message);
@@ -40,14 +43,14 @@ export function isDevSigningEnvironment(env: SigningEnv): boolean {
   return environment === "development" || environment === "dev" || environment === "test";
 }
 
-function matchesDocumentedLocalPublicKey(jwk: JsonWebKey): boolean {
+function matchesDocumentedLocalPublicKey(jwk: SigningJwk): boolean {
   return jwk.x === CATALOG_PUBLIC_JWK.x && jwk.y === CATALOG_PUBLIC_JWK.y;
 }
 
-function parseSecretJwk(raw: string): JsonWebKey {
-  let parsed: JsonWebKey;
+function parseSecretJwk(raw: string): SigningJwk {
+  let parsed: SigningJwk;
   try {
-    parsed = JSON.parse(raw) as JsonWebKey;
+    parsed = JSON.parse(raw) as SigningJwk;
   } catch {
     throw new SigningConfigurationError("TOKEN_SIGNING_JWK must be valid JSON.");
   }
@@ -57,7 +60,7 @@ function parseSecretJwk(raw: string): JsonWebKey {
   return parsed;
 }
 
-export function resolvePrivateJwk(env: SigningEnv): JsonWebKey {
+export function resolvePrivateJwk(env: SigningEnv): SigningJwk {
   const raw = env.TOKEN_SIGNING_JWK?.trim();
   if (!raw) {
     throw new SigningConfigurationError(
@@ -73,7 +76,7 @@ export function resolvePrivateJwk(env: SigningEnv): JsonWebKey {
   return parsed;
 }
 
-export function signingPublicJwk(env: SigningEnv): JsonWebKey {
+export function signingPublicJwk(env: SigningEnv): SigningJwk {
   const priv = resolvePrivateJwk(env);
   return {
     kty: priv.kty,
@@ -86,16 +89,16 @@ export function signingPublicJwk(env: SigningEnv): JsonWebKey {
   };
 }
 
-function b64urlEncode(bytes: Uint8Array): string {
+function b64urlEncode(bytes: Uint8Array<ArrayBufferLike>): string {
   let binary = "";
   for (const byte of bytes) binary += String.fromCharCode(byte);
   return btoa(binary).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
 }
 
-function b64urlDecode(input: string): Uint8Array {
+function b64urlDecode(input: string): Uint8Array<ArrayBuffer> {
   const padded = input.replace(/-/g, "+").replace(/_/g, "/") + "=".repeat((4 - (input.length % 4)) % 4);
   const binary = atob(padded);
-  const out = new Uint8Array(binary.length);
+  const out = new Uint8Array(new ArrayBuffer(binary.length));
   for (let i = 0; i < binary.length; i++) out[i] = binary.charCodeAt(i);
   return out;
 }
@@ -104,7 +107,7 @@ function encodeJson(value: unknown): string {
   return b64urlEncode(new TextEncoder().encode(JSON.stringify(value)));
 }
 
-async function importPrivateKey(jwk: JsonWebKey): Promise<CryptoKey> {
+async function importPrivateKey(jwk: SigningJwk): Promise<CryptoKey> {
   return crypto.subtle.importKey(
     "jwk",
     { ...jwk, key_ops: ["sign"], ext: true },
@@ -114,8 +117,8 @@ async function importPrivateKey(jwk: JsonWebKey): Promise<CryptoKey> {
   );
 }
 
-async function importPublicKey(jwk: JsonWebKey = CATALOG_PUBLIC_JWK): Promise<CryptoKey> {
-  const { d: _d, key_ops: _ops, ...pub } = jwk as JsonWebKey & { d?: string };
+async function importPublicKey(jwk: SigningJwk = CATALOG_PUBLIC_JWK): Promise<CryptoKey> {
+  const { d: _d, key_ops: _ops, ...pub } = jwk as SigningJwk & { d?: string };
   return crypto.subtle.importKey(
     "jwk",
     { ...pub, key_ops: ["verify"], ext: true, use: "sig", alg: SIGNING_ALG },
@@ -138,7 +141,7 @@ export async function signEs256Jwt(payload: JwtClaims, env: SigningEnv): Promise
   return `${signingInput}.${b64urlEncode(new Uint8Array(signature))}`;
 }
 
-export async function verifyEs256Jwt(token: string, publicJwk: JsonWebKey = CATALOG_PUBLIC_JWK): Promise<JwtClaims | null> {
+export async function verifyEs256Jwt(token: string, publicJwk: SigningJwk = CATALOG_PUBLIC_JWK): Promise<JwtClaims | null> {
   const parts = token.split(".");
   if (parts.length !== 3) return null;
   const [headerPart, payloadPart, signaturePart] = parts;
