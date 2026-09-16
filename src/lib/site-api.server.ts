@@ -32,7 +32,6 @@ import {
 } from "./signing.server";
 
 export interface Env {
-  ASSETS: Fetcher;
   TOKEN_SIGNING_JWK?: string;
   ENVIRONMENT?: string;
   CORS_ALLOWED_ORIGINS?: string;
@@ -747,11 +746,25 @@ export async function handleRequest(request: Request, env: Env): Promise<Respons
     );
   }
 
-  return env.ASSETS.fetch(request);
+  return json({ error: "not_found", path }, 404, {}, request, env);
 }
 
-export default {
-  async fetch(request: Request, env: Env): Promise<Response> {
-    return handleRequest(request, env);
-  },
-};
+/**
+ * Reads the signing/CORS configuration from the runtime environment.
+ * Must be called inside a request handler: env is injected per request.
+ */
+export function siteApiEnv(): Env {
+  const env: Env = {};
+  const signingJwk = process.env["TOKEN_SIGNING_JWK"];
+  const environment = process.env["ENVIRONMENT"];
+  const corsOrigins = process.env["CORS_ALLOWED_ORIGINS"];
+  if (signingJwk) env.TOKEN_SIGNING_JWK = signingJwk;
+  if (environment) env.ENVIRONMENT = environment;
+  if (corsOrigins) env.CORS_ALLOWED_ORIGINS = corsOrigins;
+  return env;
+}
+
+/** Entry point used by every server route that mirrors a Worker path. */
+export function handleSiteApiRequest(request: Request): Promise<Response> {
+  return handleRequest(request, siteApiEnv());
+}
