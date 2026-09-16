@@ -1,0 +1,19 @@
+{
+  "issuer": "https://snaptapp.us",
+  "authorization_endpoint": "https://snaptapp.us/oauth/authorize",
+  "token_endpoint": "https://snaptapp.us/oauth2/token",
+  "jwks_uri": "https://snaptapp.us/.well-known/jwks.json",
+  "revocation_endpoint": "https://snaptapp.us/oauth2/revoke",
+  "registration_endpoint": "https://snaptapp.us/agent/identity",
+  "grant_types_supported": [
+    "client_credentials",
+    "urn:ietf:params:oauth:grant-type:jwt-bearer",
+    "urn:workos:agent-auth:grant-type:claim"
+  ],
+  "response_types_supported": [],
+  "token_endpoint_auth_methods_supported": ["none"],
+  "scopes_supported": ["catalog.read", "mcp.invoke"],
+  "subject_types_supported": ["public"],
+  "service_documentation": "https://snaptapp.us/auth.md",
+  "ui_locales_supported": ["en-US"]
+}

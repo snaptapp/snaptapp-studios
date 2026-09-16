@@ -1,0 +1,54 @@
+{
+  "specVersion": "1.0",
+  "host": {
+    "displayName": "Snaptapp",
+    "identifier": "did:web:snaptapp.us"
+  },
+  "entries": [
+    {
+      "identifier": "urn:air:snaptapp.us:server:studio",
+      "displayName": "Snaptapp studio MCP",
+      "type": "application/mcp-server-card+json",
+      "url": "https://snaptapp.us/.well-known/mcp/server-card.json",
+      "representativeQueries": [
+        "what does Snaptapp build",
+        "list Snaptapp products",
+        "how do I contact Snaptapp",
+        "where can I play More or Less"
+      ]
+    },
+    {
+      "identifier": "urn:air:snaptapp.us:api:catalog",
+      "displayName": "Snaptapp API catalog",
+      "type": "application/linkset+json",
+      "url": "https://snaptapp.us/.well-known/api-catalog",
+      "representativeQueries": [
+        "Snaptapp OpenAPI spec",
+        "Snaptapp health endpoint",
+        "machine readable Snaptapp API"
+      ]
+    },
+    {
+      "identifier": "urn:air:snaptapp.us:docs:api",
+      "displayName": "Snaptapp API documentation",
+      "type": "text/html",
+      "url": "https://snaptapp.us/docs/api/",
+      "representativeQueries": [
+        "how do agents call Snaptapp",
+        "Snaptapp MCP tools",
+        "Snaptapp OAuth for agents"
+      ]
+    },
+    {
+      "identifier": "urn:air:snaptapp.us:skills:index",
+      "displayName": "Snaptapp agent skills",
+      "type": "application/json",
+      "url": "https://snaptapp.us/.well-known/agent-skills/index.json",
+      "representativeQueries": [
+        "Snaptapp agent skills",
+        "how to work with the Snaptapp studio site",
+        "More or Less agent skill"
+      ]
+    }
+  ]
+}

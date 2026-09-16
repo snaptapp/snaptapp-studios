@@ -1,0 +1,13 @@
+{
+  "keys": [
+    {
+      "kty": "EC",
+      "crv": "P-256",
+      "x": "EKwf4qzj23PBOgwnL7K0BcNc9QqV1zJlXS3L9VIn1ik",
+      "y": "J4a6QWRlw7MAtuQFaLzsPx5qK59rAQfG-bxHz8S6040",
+      "kid": "snaptapp-2026",
+      "use": "sig",
+      "alg": "ES256"
+    }
+  ]
+}

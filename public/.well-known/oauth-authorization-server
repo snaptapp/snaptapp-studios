@@ -1,0 +1,54 @@
+{
+  "issuer": "https://snaptapp.us",
+  "authorization_endpoint": "https://snaptapp.us/oauth/authorize",
+  "token_endpoint": "https://snaptapp.us/oauth2/token",
+  "jwks_uri": "https://snaptapp.us/.well-known/jwks.json",
+  "revocation_endpoint": "https://snaptapp.us/oauth2/revoke",
+  "registration_endpoint": "https://snaptapp.us/agent/identity",
+  "grant_types_supported": [
+    "client_credentials",
+    "urn:ietf:params:oauth:grant-type:jwt-bearer",
+    "urn:workos:agent-auth:grant-type:claim"
+  ],
+  "response_types_supported": [],
+  "token_endpoint_auth_methods_supported": ["none"],
+  "scopes_supported": ["catalog.read", "mcp.invoke"],
+  "service_documentation": "https://snaptapp.us/auth.md",
+  "op_tos_uri": "https://snaptapp.us/legal/terms/",
+  "op_policy_uri": "https://snaptapp.us/legal/privacy/",
+  "resource": "https://snaptapp.us",
+  "authorization_servers": ["https://snaptapp.us"],
+  "bearer_methods_supported": ["header"],
+  "agent_auth": {
+    "skill": "https://snaptapp.us/auth.md",
+    "register_uri": "https://snaptapp.us/agent/identity",
+    "identity_endpoint": "https://snaptapp.us/agent/identity",
+    "claim_uri": "https://snaptapp.us/agent/identity/claim",
+    "claim_endpoint": "https://snaptapp.us/agent/identity/claim",
+    "revocation_uri": "https://snaptapp.us/oauth2/revoke",
+    "revocation": {
+      "mode": "noop",
+      "note": "POST /oauth2/revoke acknowledges a token. Catalog JWTs are not persisted or denylisted."
+    },
+    "identity_types_supported": ["anonymous", "service_auth", "identity_assertion"],
+    "identity_assertion": {
+      "assertion_types_supported": ["urn:ietf:params:oauth:token-type:jwt"],
+      "credential_types_supported": ["access_token"],
+      "signing_alg_values_supported": ["ES256"],
+      "token_use": "identity_assertion"
+    },
+    "anonymous": {
+      "credential_types_supported": ["access_token"],
+      "claim_uri": "https://snaptapp.us/agent/identity/claim"
+    },
+    "service_auth": {
+      "alias_of": "anonymous",
+      "note": "Same as anonymous registration plus a claim_token. Email is not verified."
+    },
+    "access_tokens": {
+      "token_class": "catalog_hint",
+      "client_authenticated": false,
+      "note": "Tokens are unauthenticated catalog and MCP hints. They are not player identities."
+    }
+  }
+}

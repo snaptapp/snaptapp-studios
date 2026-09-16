@@ -1,0 +1,27 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/v1/server-card.schema.json",
+  "name": "us.snaptapp/studio",
+  "version": "1.0.0",
+  "protocolVersion": "2025-03-26",
+  "serverInfo": {
+    "name": "snaptapp-site",
+    "version": "1.0.0"
+  },
+  "description": "Studio MCP tools for Snaptapp products, contacts, and discovery docs.",
+  "transport": {
+    "type": "streamable-http",
+    "url": "https://snaptapp.us/mcp"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://snaptapp.us/mcp",
+      "supportedProtocolVersions": ["2025-03-26"]
+    }
+  ],
+  "capabilities": {
+    "tools": {},
+    "resources": {},
+    "prompts": {}
+  }
+}

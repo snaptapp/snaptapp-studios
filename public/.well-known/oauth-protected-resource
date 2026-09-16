@@ -1,0 +1,11 @@
+{
+  "resource": "https://snaptapp.us",
+  "resource_name": "Snaptapp",
+  "resource_documentation": "https://snaptapp.us/docs/api/",
+  "authorization_servers": ["https://snaptapp.us"],
+  "scopes_supported": ["catalog.read", "mcp.invoke"],
+  "bearer_methods_supported": ["header"],
+  "resource_signing_alg_values_supported": ["ES256"],
+  "token_class": "catalog_hint",
+  "client_authenticated": false
+}

@@ -1,0 +1,25 @@
+# Snaptapp vulnerability disclosure — RFC 9116
+# Please report security issues to the address below. We acknowledge within
+# three business days and will keep you updated until the issue is closed.
+
+Contact: mailto:security@snaptapp.us
+Contact: https://snaptapp.us/contact/
+Expires: 2027-08-31T00:00:00.000Z
+Preferred-Languages: en
+Canonical: https://snaptapp.us/.well-known/security.txt
+Policy: https://snaptapp.us/support/#security
+
+# In scope
+#   snaptapp.us and its subdomains, including moreorless.snaptapp.us
+#   The More or Less mobile and web clients
+#
+# Out of scope
+#   Denial of service, volumetric or stress testing
+#   Findings that require access to an account you do not own
+#   Reports generated solely by automated scanners with no demonstrated impact
+#   Issues in third-party services we consume — please report those upstream
+#
+# Please do not access, modify, or delete data belonging to other users, and do
+# not degrade service for players while testing. Report it and we will work with
+# you. We do not currently run a paid bounty programme, but we credit reporters
+# who ask to be credited.

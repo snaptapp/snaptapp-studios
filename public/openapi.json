@@ -1,0 +1,240 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Snaptapp studio APIs",
+    "version": "1.0.0",
+    "description": "Public discovery, health, MCP, and agent-registration endpoints for snaptapp.us. Player APIs for More or Less are a separate origin.",
+    "contact": {
+      "name": "Snaptapp",
+      "email": "hello@snaptapp.us",
+      "url": "https://snaptapp.us/contact/"
+    }
+  },
+  "servers": [
+    {
+      "url": "https://snaptapp.us",
+      "description": "Production"
+    }
+  ],
+  "security": [],
+  "components": {
+    "securitySchemes": {
+      "bearerAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "JWT",
+        "description": "Optional ES256 catalog access token. Health, MCP, and discovery stay callable without it."
+      }
+    }
+  },
+  "paths": {
+    "/api/health": {
+      "get": {
+        "operationId": "getHealth",
+        "summary": "Service health",
+        "tags": ["Status"],
+        "responses": {
+          "200": {
+            "description": "The studio site Worker is up.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": ["status", "service"],
+                  "properties": {
+                    "status": { "type": "string", "example": "ok" },
+                    "service": { "type": "string" },
+                    "version": { "type": "string" },
+                    "timestamp": { "type": "string", "format": "date-time" }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/mcp": {
+      "get": {
+        "operationId": "getMcpServerCard",
+        "summary": "MCP server card (JSON) or SSE stream",
+        "tags": ["MCP"],
+        "responses": {
+          "200": {
+            "description": "Server card or an SSE stream when Accept includes text/event-stream."
+          }
+        }
+      },
+      "head": {
+        "operationId": "headMcp",
+        "summary": "MCP probe without a body",
+        "tags": ["MCP"],
+        "responses": {
+          "200": {
+            "description": "Empty body. Content-Type is application/mcp-server-card+json, or text/event-stream when Accept includes that type."
+          }
+        }
+      },
+      "post": {
+        "operationId": "postMcp",
+        "summary": "MCP Streamable HTTP JSON-RPC",
+        "tags": ["MCP"],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": { "type": "object" }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "schema": { "type": "string", "example": "application/json, text/event-stream" }
+          }
+        ],
+        "responses": {
+          "200": { "description": "JSON-RPC response" },
+          "202": { "description": "Accepted notification" },
+          "406": { "description": "Accept did not list both application/json and text/event-stream" }
+        }
+      }
+    },
+    "/oauth/authorize": {
+      "get": {
+        "operationId": "getAuthorize",
+        "summary": "Plain-text agent authorization instructions",
+        "tags": ["OAuth"],
+        "responses": {
+          "200": {
+            "description": "Text instructions. This host does not run a browser login form."
+          }
+        }
+      }
+    },
+    "/oauth2/token": {
+      "post": {
+        "operationId": "postToken",
+        "summary": "Issue an unauthenticated catalog hint token",
+        "description": "client_credentials does not authenticate the caller. Tokens carry token_class=catalog_hint and are not valid for More or Less player APIs.",
+        "tags": ["OAuth"],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "type": "object",
+                "required": ["grant_type"],
+                "properties": {
+                  "grant_type": {
+                    "type": "string",
+                    "enum": [
+                      "client_credentials",
+                      "urn:ietf:params:oauth:grant-type:jwt-bearer",
+                      "urn:workos:agent-auth:grant-type:claim"
+                    ]
+                  },
+                  "client_id": { "type": "string" },
+                  "assertion": { "type": "string" },
+                  "claim_token": { "type": "string" }
+                }
+              }
+            },
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": ["grant_type"],
+                "properties": {
+                  "grant_type": { "type": "string" },
+                  "client_id": { "type": "string" },
+                  "assertion": { "type": "string" },
+                  "claim_token": { "type": "string" }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": { "description": "Access token" },
+          "400": { "description": "OAuth error" },
+          "405": { "description": "POST required" }
+        }
+      }
+    },
+    "/oauth2/revoke": {
+      "post": {
+        "operationId": "postRevoke",
+        "summary": "Acknowledge catalog token revocation",
+        "tags": ["OAuth"],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "type": "object",
+                "required": ["token"],
+                "properties": {
+                  "token": { "type": "string" },
+                  "token_type_hint": { "type": "string" }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": { "description": "Acknowledgement. Tokens are not persisted, so this is a no-op." },
+          "400": { "description": "token is required" },
+          "405": { "description": "POST required" }
+        }
+      }
+    },
+    "/agent/identity": {
+      "post": {
+        "operationId": "postAgentIdentity",
+        "summary": "Register an agent identity (auth.md)",
+        "tags": ["OAuth"],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "type": {
+                    "type": "string",
+                    "enum": ["anonymous", "service_auth", "identity_assertion"]
+                  },
+                  "assertion": { "type": "string" },
+                  "login_hint": { "type": "string" }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": { "description": "Identity assertion and optional claim token" },
+          "400": { "description": "Unsupported identity type or missing assertion" }
+        }
+      }
+    },
+    "/.well-known/api-catalog": {
+      "get": {
+        "operationId": "getApiCatalog",
+        "summary": "RFC 9727 API catalog",
+        "tags": ["Discovery"],
+        "responses": {
+          "200": {
+            "description": "Linkset describing studio APIs",
+            "content": {
+              "application/linkset+json": {
+                "schema": { "type": "object" }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "name": "snaptapp-site",
+  "compatibility_date": "2026-08-18",
+  // Worker handles MCP, health, and agent OAuth. Everything else is still
+  // served by Cloudflare's Asset Worker from ./public.
+  "main": "./src/index.ts",
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS",
+    // /company -> /company/index.html, and /company/ stays canonical.
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "404-page",
+    "run_worker_first": [
+      "/mcp",
+      "/mcp/*",
+      "/api/health",
+      "/api/health/",
+      "/oauth/*",
+      "/oauth2/*",
+      "/agent/*",
+      "/.well-known/jwks.json"
+    ]
+  },
+  "vars": {
+    "ENVIRONMENT": "production"
+  },
+  // TOKEN_SIGNING_JWK is always required (wrangler secret in production).
+  // Local wrangler: copy .dev.vars.example to .dev.vars. Production rejects
+  // that example JWK even if someone pastes it as the live secret.
+  "observability": {
+    "enabled": true
+  }
+}

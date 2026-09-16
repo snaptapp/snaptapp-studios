@@ -1,0 +1,5 @@
+# wrangler dev only. Deployed Workers keep ENVIRONMENT=production from
+# wrangler.jsonc and require secret TOKEN_SIGNING_JWK. Do not use this
+# example JWK as a production secret; production rejects its public coordinates.
+ENVIRONMENT=development
+TOKEN_SIGNING_JWK='{"kty":"EC","crv":"P-256","x":"EKwf4qzj23PBOgwnL7K0BcNc9QqV1zJlXS3L9VIn1ik","y":"J4a6QWRlw7MAtuQFaLzsPx5qK59rAQfG-bxHz8S6040","d":"Ky49xwYDBUaowPDKYBPNy8eOwKmnJBnJpj4DdDtYpL4","kid":"snaptapp-2026","use":"sig","alg":"ES256"}'

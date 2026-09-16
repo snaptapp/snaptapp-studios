@@ -1,0 +1,26 @@
+{
+  "$schema": "https://schemas.agentskills.io/discovery/0.2.0/schema.json",
+  "skills": [
+    {
+      "name": "snaptapp-studio",
+      "type": "skill-md",
+      "description": "Facts about Snaptapp, the studio behind snaptapp.us: products, contact channels, and machine-readable discovery documents.",
+      "url": "/.well-known/agent-skills/snaptapp-studio/SKILL.md",
+      "digest": "sha256:401505b60a125a793d630d9087cb6c88b9950c8a1c7f744ad059c90cbdc21268"
+    },
+    {
+      "name": "more-or-less",
+      "type": "skill-md",
+      "description": "How More or Less works, where to play, and which Snaptapp pages describe the live trivia game.",
+      "url": "/.well-known/agent-skills/more-or-less-game/SKILL.md",
+      "digest": "sha256:ef3e127eeee2374d2be9ef9044ac937ac2a401c1fa633ba90a6c4fa9f4c3b538"
+    },
+    {
+      "name": "contact-snaptapp",
+      "type": "skill-md",
+      "description": "How to reach a human at Snaptapp for support, privacy, press, or security reports.",
+      "url": "/.well-known/agent-skills/contact-snaptapp/SKILL.md",
+      "digest": "sha256:cd07d15b6f8f14de72a2003f0116da131da0e056cb905be00c5383953c12491e"
+    }
+  ]
+}
