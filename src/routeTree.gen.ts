@@ -10,15 +10,29 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AboutRouteImport } from './routes/about'
 import { Route as CompanyRouteImport } from './routes/company'
 import { Route as ContactRouteImport } from './routes/contact'
+import { Route as HelpRouteImport } from './routes/help'
 import { Route as McpRouteImport } from './routes/mcp'
+import { Route as MoreOrLessRouteImport } from './routes/more-or-less'
+import { Route as MoreorlessRouteImport } from './routes/moreorless'
+import { Route as PlayRouteImport } from './routes/play'
+import { Route as PressRouteImport } from './routes/press'
+import { Route as PrivacyRouteImport } from './routes/privacy'
+import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
 import { Route as ProductsRouteImport } from './routes/products'
+import { Route as SecurityRouteImport } from './routes/security'
 import { Route as SupportRouteImport } from './routes/support'
+import { Route as TeamRouteImport } from './routes/team'
+import { Route as TermsRouteImport } from './routes/terms'
+import { Route as TosRouteImport } from './routes/tos'
 import { Route as DotwellKnownJwksDotjsonRouteImport } from './routes/[.]well-known.jwks[.]json'
 import { Route as AgentSplatRouteImport } from './routes/agent.$'
 import { Route as ApiHealthRouteImport } from './routes/api/health'
+import { Route as DocsIndexRouteImport } from './routes/docs.index'
 import { Route as DocsApiRouteImport } from './routes/docs.api'
+import { Route as LegalIndexRouteImport } from './routes/legal.index'
 import { Route as LegalPrivacyRouteImport } from './routes/legal.privacy'
 import { Route as LegalTermsRouteImport } from './routes/legal.terms'
 import { Route as McpSplatRouteImport } from './routes/mcp.$'
@@ -28,6 +42,11 @@ import { Route as Oauth2SplatRouteImport } from './routes/oauth2.$'
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CompanyRoute = CompanyRouteImport.update({
@@ -40,9 +59,44 @@ const ContactRoute = ContactRouteImport.update({
   path: '/contact',
   getParentRoute: () => rootRouteImport,
 } as any)
+const HelpRoute = HelpRouteImport.update({
+  id: '/help',
+  path: '/help',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const McpRoute = McpRouteImport.update({
   id: '/mcp',
   path: '/mcp',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MoreOrLessRoute = MoreOrLessRouteImport.update({
+  id: '/more-or-less',
+  path: '/more-or-less',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MoreorlessRoute = MoreorlessRouteImport.update({
+  id: '/moreorless',
+  path: '/moreorless',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PlayRoute = PlayRouteImport.update({
+  id: '/play',
+  path: '/play',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PressRoute = PressRouteImport.update({
+  id: '/press',
+  path: '/press',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacyRoute = PrivacyRouteImport.update({
+  id: '/privacy',
+  path: '/privacy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacyPolicyRoute = PrivacyPolicyRouteImport.update({
+  id: '/privacy-policy',
+  path: '/privacy-policy',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ProductsRoute = ProductsRouteImport.update({
@@ -50,9 +104,29 @@ const ProductsRoute = ProductsRouteImport.update({
   path: '/products',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SecurityRoute = SecurityRouteImport.update({
+  id: '/security',
+  path: '/security',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SupportRoute = SupportRouteImport.update({
   id: '/support',
   path: '/support',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TeamRoute = TeamRouteImport.update({
+  id: '/team',
+  path: '/team',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TermsRoute = TermsRouteImport.update({
+  id: '/terms',
+  path: '/terms',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TosRoute = TosRouteImport.update({
+  id: '/tos',
+  path: '/tos',
   getParentRoute: () => rootRouteImport,
 } as any)
 const DotwellKnownJwksDotjsonRoute = DotwellKnownJwksDotjsonRouteImport.update({
@@ -70,9 +144,19 @@ const ApiHealthRoute = ApiHealthRouteImport.update({
   path: '/api/health',
   getParentRoute: () => rootRouteImport,
 } as any)
+const DocsIndexRoute = DocsIndexRouteImport.update({
+  id: '/docs/',
+  path: '/docs/',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const DocsApiRoute = DocsApiRouteImport.update({
   id: '/docs/api',
   path: '/docs/api',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LegalIndexRoute = LegalIndexRouteImport.update({
+  id: '/legal/',
+  path: '/legal/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const LegalPrivacyRoute = LegalPrivacyRouteImport.update({
@@ -103,11 +187,23 @@ const Oauth2SplatRoute = Oauth2SplatRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
   '/company': typeof CompanyRoute
   '/contact': typeof ContactRoute
+  '/help': typeof HelpRoute
   '/mcp': typeof McpRouteWithChildren
+  '/more-or-less': typeof MoreOrLessRoute
+  '/moreorless': typeof MoreorlessRoute
+  '/play': typeof PlayRoute
+  '/press': typeof PressRoute
+  '/privacy': typeof PrivacyRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
   '/products': typeof ProductsRoute
+  '/security': typeof SecurityRoute
   '/support': typeof SupportRoute
+  '/team': typeof TeamRoute
+  '/terms': typeof TermsRoute
+  '/tos': typeof TosRoute
   '/.well-known/jwks.json': typeof DotwellKnownJwksDotjsonRoute
   '/agent/$': typeof AgentSplatRoute
   '/api/health': typeof ApiHealthRoute
@@ -117,14 +213,28 @@ export interface FileRoutesByFullPath {
   '/mcp/$': typeof McpSplatRoute
   '/oauth/authorize': typeof OauthAuthorizeRoute
   '/oauth2/$': typeof Oauth2SplatRoute
+  '/docs/': typeof DocsIndexRoute
+  '/legal/': typeof LegalIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
   '/company': typeof CompanyRoute
   '/contact': typeof ContactRoute
+  '/help': typeof HelpRoute
   '/mcp': typeof McpRouteWithChildren
+  '/more-or-less': typeof MoreOrLessRoute
+  '/moreorless': typeof MoreorlessRoute
+  '/play': typeof PlayRoute
+  '/press': typeof PressRoute
+  '/privacy': typeof PrivacyRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
   '/products': typeof ProductsRoute
+  '/security': typeof SecurityRoute
   '/support': typeof SupportRoute
+  '/team': typeof TeamRoute
+  '/terms': typeof TermsRoute
+  '/tos': typeof TosRoute
   '/.well-known/jwks.json': typeof DotwellKnownJwksDotjsonRoute
   '/agent/$': typeof AgentSplatRoute
   '/api/health': typeof ApiHealthRoute
@@ -134,15 +244,29 @@ export interface FileRoutesByTo {
   '/mcp/$': typeof McpSplatRoute
   '/oauth/authorize': typeof OauthAuthorizeRoute
   '/oauth2/$': typeof Oauth2SplatRoute
+  '/docs': typeof DocsIndexRoute
+  '/legal': typeof LegalIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
   '/company': typeof CompanyRoute
   '/contact': typeof ContactRoute
+  '/help': typeof HelpRoute
   '/mcp': typeof McpRouteWithChildren
+  '/more-or-less': typeof MoreOrLessRoute
+  '/moreorless': typeof MoreorlessRoute
+  '/play': typeof PlayRoute
+  '/press': typeof PressRoute
+  '/privacy': typeof PrivacyRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
   '/products': typeof ProductsRoute
+  '/security': typeof SecurityRoute
   '/support': typeof SupportRoute
+  '/team': typeof TeamRoute
+  '/terms': typeof TermsRoute
+  '/tos': typeof TosRoute
   '/.well-known/jwks.json': typeof DotwellKnownJwksDotjsonRoute
   '/agent/$': typeof AgentSplatRoute
   '/api/health': typeof ApiHealthRoute
@@ -152,16 +276,30 @@ export interface FileRoutesById {
   '/mcp/$': typeof McpSplatRoute
   '/oauth/authorize': typeof OauthAuthorizeRoute
   '/oauth2/$': typeof Oauth2SplatRoute
+  '/docs/': typeof DocsIndexRoute
+  '/legal/': typeof LegalIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/about'
     | '/company'
     | '/contact'
+    | '/help'
     | '/mcp'
+    | '/more-or-less'
+    | '/moreorless'
+    | '/play'
+    | '/press'
+    | '/privacy'
+    | '/privacy-policy'
     | '/products'
+    | '/security'
     | '/support'
+    | '/team'
+    | '/terms'
+    | '/tos'
     | '/.well-known/jwks.json'
     | '/agent/$'
     | '/api/health'
@@ -171,14 +309,28 @@ export interface FileRouteTypes {
     | '/mcp/$'
     | '/oauth/authorize'
     | '/oauth2/$'
+    | '/docs/'
+    | '/legal/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/about'
     | '/company'
     | '/contact'
+    | '/help'
     | '/mcp'
+    | '/more-or-less'
+    | '/moreorless'
+    | '/play'
+    | '/press'
+    | '/privacy'
+    | '/privacy-policy'
     | '/products'
+    | '/security'
     | '/support'
+    | '/team'
+    | '/terms'
+    | '/tos'
     | '/.well-known/jwks.json'
     | '/agent/$'
     | '/api/health'
@@ -188,14 +340,28 @@ export interface FileRouteTypes {
     | '/mcp/$'
     | '/oauth/authorize'
     | '/oauth2/$'
+    | '/docs'
+    | '/legal'
   id:
     | '__root__'
     | '/'
+    | '/about'
     | '/company'
     | '/contact'
+    | '/help'
     | '/mcp'
+    | '/more-or-less'
+    | '/moreorless'
+    | '/play'
+    | '/press'
+    | '/privacy'
+    | '/privacy-policy'
     | '/products'
+    | '/security'
     | '/support'
+    | '/team'
+    | '/terms'
+    | '/tos'
     | '/.well-known/jwks.json'
     | '/agent/$'
     | '/api/health'
@@ -205,15 +371,29 @@ export interface FileRouteTypes {
     | '/mcp/$'
     | '/oauth/authorize'
     | '/oauth2/$'
+    | '/docs/'
+    | '/legal/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
   CompanyRoute: typeof CompanyRoute
   ContactRoute: typeof ContactRoute
+  HelpRoute: typeof HelpRoute
   McpRoute: typeof McpRouteWithChildren
+  MoreOrLessRoute: typeof MoreOrLessRoute
+  MoreorlessRoute: typeof MoreorlessRoute
+  PlayRoute: typeof PlayRoute
+  PressRoute: typeof PressRoute
+  PrivacyRoute: typeof PrivacyRoute
+  PrivacyPolicyRoute: typeof PrivacyPolicyRoute
   ProductsRoute: typeof ProductsRoute
+  SecurityRoute: typeof SecurityRoute
   SupportRoute: typeof SupportRoute
+  TeamRoute: typeof TeamRoute
+  TermsRoute: typeof TermsRoute
+  TosRoute: typeof TosRoute
   DotwellKnownJwksDotjsonRoute: typeof DotwellKnownJwksDotjsonRoute
   AgentSplatRoute: typeof AgentSplatRoute
   ApiHealthRoute: typeof ApiHealthRoute
@@ -222,6 +402,8 @@ export interface RootRouteChildren {
   LegalTermsRoute: typeof LegalTermsRoute
   OauthAuthorizeRoute: typeof OauthAuthorizeRoute
   Oauth2SplatRoute: typeof Oauth2SplatRoute
+  DocsIndexRoute: typeof DocsIndexRoute
+  LegalIndexRoute: typeof LegalIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -231,6 +413,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/company': {
@@ -247,11 +436,60 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ContactRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/help': {
+      id: '/help'
+      path: '/help'
+      fullPath: '/help'
+      preLoaderRoute: typeof HelpRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/mcp': {
       id: '/mcp'
       path: '/mcp'
       fullPath: '/mcp'
       preLoaderRoute: typeof McpRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/more-or-less': {
+      id: '/more-or-less'
+      path: '/more-or-less'
+      fullPath: '/more-or-less'
+      preLoaderRoute: typeof MoreOrLessRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/moreorless': {
+      id: '/moreorless'
+      path: '/moreorless'
+      fullPath: '/moreorless'
+      preLoaderRoute: typeof MoreorlessRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/play': {
+      id: '/play'
+      path: '/play'
+      fullPath: '/play'
+      preLoaderRoute: typeof PlayRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/press': {
+      id: '/press'
+      path: '/press'
+      fullPath: '/press'
+      preLoaderRoute: typeof PressRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacy': {
+      id: '/privacy'
+      path: '/privacy'
+      fullPath: '/privacy'
+      preLoaderRoute: typeof PrivacyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacy-policy': {
+      id: '/privacy-policy'
+      path: '/privacy-policy'
+      fullPath: '/privacy-policy'
+      preLoaderRoute: typeof PrivacyPolicyRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/products': {
@@ -261,11 +499,39 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ProductsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/security': {
+      id: '/security'
+      path: '/security'
+      fullPath: '/security'
+      preLoaderRoute: typeof SecurityRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/support': {
       id: '/support'
       path: '/support'
       fullPath: '/support'
       preLoaderRoute: typeof SupportRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/team': {
+      id: '/team'
+      path: '/team'
+      fullPath: '/team'
+      preLoaderRoute: typeof TeamRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/terms': {
+      id: '/terms'
+      path: '/terms'
+      fullPath: '/terms'
+      preLoaderRoute: typeof TermsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tos': {
+      id: '/tos'
+      path: '/tos'
+      fullPath: '/tos'
+      preLoaderRoute: typeof TosRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/.well-known/jwks.json': {
@@ -289,11 +555,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ApiHealthRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/docs/': {
+      id: '/docs/'
+      path: '/docs'
+      fullPath: '/docs/'
+      preLoaderRoute: typeof DocsIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/docs/api': {
       id: '/docs/api'
       path: '/docs/api'
       fullPath: '/docs/api'
       preLoaderRoute: typeof DocsApiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/legal/': {
+      id: '/legal/'
+      path: '/legal'
+      fullPath: '/legal/'
+      preLoaderRoute: typeof LegalIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/legal/privacy': {
@@ -346,11 +626,23 @@ const McpRouteWithChildren = McpRoute._addFileChildren(McpRouteChildren)
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
   CompanyRoute: CompanyRoute,
   ContactRoute: ContactRoute,
+  HelpRoute: HelpRoute,
   McpRoute: McpRouteWithChildren,
+  MoreOrLessRoute: MoreOrLessRoute,
+  MoreorlessRoute: MoreorlessRoute,
+  PlayRoute: PlayRoute,
+  PressRoute: PressRoute,
+  PrivacyRoute: PrivacyRoute,
+  PrivacyPolicyRoute: PrivacyPolicyRoute,
   ProductsRoute: ProductsRoute,
+  SecurityRoute: SecurityRoute,
   SupportRoute: SupportRoute,
+  TeamRoute: TeamRoute,
+  TermsRoute: TermsRoute,
+  TosRoute: TosRoute,
   DotwellKnownJwksDotjsonRoute: DotwellKnownJwksDotjsonRoute,
   AgentSplatRoute: AgentSplatRoute,
   ApiHealthRoute: ApiHealthRoute,
@@ -359,6 +651,8 @@ const rootRouteChildren: RootRouteChildren = {
   LegalTermsRoute: LegalTermsRoute,
   OauthAuthorizeRoute: OauthAuthorizeRoute,
   Oauth2SplatRoute: Oauth2SplatRoute,
+  DocsIndexRoute: DocsIndexRoute,
+  LegalIndexRoute: LegalIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
