@@ -21,6 +21,7 @@ import { Route as LegalPrivacyRouteImport } from './routes/legal.privacy'
 import { Route as LegalTermsRouteImport } from './routes/legal.terms'
 import { Route as McpSplatRouteImport } from './routes/mcp.$'
 import { Route as OauthAuthorizeRouteImport } from './routes/oauth.authorize'
+import { Route as Oauth2SplatRouteImport } from './routes/oauth2.$'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -82,6 +83,11 @@ const OauthAuthorizeRoute = OauthAuthorizeRouteImport.update({
   path: '/oauth/authorize',
   getParentRoute: () => rootRouteImport,
 } as any)
+const Oauth2SplatRoute = Oauth2SplatRouteImport.update({
+  id: '/oauth2/$',
+  path: '/oauth2/$',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -96,6 +102,7 @@ export interface FileRoutesByFullPath {
   '/legal/terms': typeof LegalTermsRoute
   '/mcp/$': typeof McpSplatRoute
   '/oauth/authorize': typeof OauthAuthorizeRoute
+  '/oauth2/$': typeof Oauth2SplatRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -110,6 +117,7 @@ export interface FileRoutesByTo {
   '/legal/terms': typeof LegalTermsRoute
   '/mcp/$': typeof McpSplatRoute
   '/oauth/authorize': typeof OauthAuthorizeRoute
+  '/oauth2/$': typeof Oauth2SplatRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -125,6 +133,7 @@ export interface FileRoutesById {
   '/legal/terms': typeof LegalTermsRoute
   '/mcp/$': typeof McpSplatRoute
   '/oauth/authorize': typeof OauthAuthorizeRoute
+  '/oauth2/$': typeof Oauth2SplatRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -141,6 +150,7 @@ export interface FileRouteTypes {
     | '/legal/terms'
     | '/mcp/$'
     | '/oauth/authorize'
+    | '/oauth2/$'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -155,6 +165,7 @@ export interface FileRouteTypes {
     | '/legal/terms'
     | '/mcp/$'
     | '/oauth/authorize'
+    | '/oauth2/$'
   id:
     | '__root__'
     | '/'
@@ -169,6 +180,7 @@ export interface FileRouteTypes {
     | '/legal/terms'
     | '/mcp/$'
     | '/oauth/authorize'
+    | '/oauth2/$'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -183,6 +195,7 @@ export interface RootRouteChildren {
   LegalPrivacyRoute: typeof LegalPrivacyRoute
   LegalTermsRoute: typeof LegalTermsRoute
   OauthAuthorizeRoute: typeof OauthAuthorizeRoute
+  Oauth2SplatRoute: typeof Oauth2SplatRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -271,6 +284,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof OauthAuthorizeRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/oauth2/$': {
+      id: '/oauth2/$'
+      path: '/oauth2/$'
+      fullPath: '/oauth2/$'
+      preLoaderRoute: typeof Oauth2SplatRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -296,6 +316,7 @@ const rootRouteChildren: RootRouteChildren = {
   LegalPrivacyRoute: LegalPrivacyRoute,
   LegalTermsRoute: LegalTermsRoute,
   OauthAuthorizeRoute: OauthAuthorizeRoute,
+  Oauth2SplatRoute: Oauth2SplatRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
