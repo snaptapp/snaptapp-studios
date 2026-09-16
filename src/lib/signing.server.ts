@@ -78,15 +78,16 @@ export function resolvePrivateJwk(env: SigningEnv): SigningJwk {
 
 export function signingPublicJwk(env: SigningEnv): SigningJwk {
   const priv = resolvePrivateJwk(env);
-  return {
-    kty: priv.kty,
-    crv: priv.crv,
-    x: priv.x,
-    y: priv.y,
+  const pub: SigningJwk = {
     kid: priv.kid ?? SIGNING_KID,
     use: "sig",
     alg: SIGNING_ALG,
   };
+  if (priv.kty !== undefined) pub.kty = priv.kty;
+  if (priv.crv !== undefined) pub.crv = priv.crv;
+  if (priv.x !== undefined) pub.x = priv.x;
+  if (priv.y !== undefined) pub.y = priv.y;
+  return pub;
 }
 
 function b64urlEncode(bytes: Uint8Array<ArrayBufferLike>): string {
