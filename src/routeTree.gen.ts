@@ -15,6 +15,7 @@ import { Route as ContactRouteImport } from './routes/contact'
 import { Route as McpRouteImport } from './routes/mcp'
 import { Route as ProductsRouteImport } from './routes/products'
 import { Route as SupportRouteImport } from './routes/support'
+import { Route as ApiHealthRouteImport } from './routes/api/health'
 import { Route as DocsApiRouteImport } from './routes/docs.api'
 import { Route as LegalPrivacyRouteImport } from './routes/legal.privacy'
 import { Route as LegalTermsRouteImport } from './routes/legal.terms'
@@ -50,6 +51,11 @@ const SupportRoute = SupportRouteImport.update({
   path: '/support',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ApiHealthRoute = ApiHealthRouteImport.update({
+  id: '/api/health',
+  path: '/api/health',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const DocsApiRoute = DocsApiRouteImport.update({
   id: '/docs/api',
   path: '/docs/api',
@@ -78,6 +84,7 @@ export interface FileRoutesByFullPath {
   '/mcp': typeof McpRouteWithChildren
   '/products': typeof ProductsRoute
   '/support': typeof SupportRoute
+  '/api/health': typeof ApiHealthRoute
   '/docs/api': typeof DocsApiRoute
   '/legal/privacy': typeof LegalPrivacyRoute
   '/legal/terms': typeof LegalTermsRoute
@@ -90,6 +97,7 @@ export interface FileRoutesByTo {
   '/mcp': typeof McpRouteWithChildren
   '/products': typeof ProductsRoute
   '/support': typeof SupportRoute
+  '/api/health': typeof ApiHealthRoute
   '/docs/api': typeof DocsApiRoute
   '/legal/privacy': typeof LegalPrivacyRoute
   '/legal/terms': typeof LegalTermsRoute
@@ -103,6 +111,7 @@ export interface FileRoutesById {
   '/mcp': typeof McpRouteWithChildren
   '/products': typeof ProductsRoute
   '/support': typeof SupportRoute
+  '/api/health': typeof ApiHealthRoute
   '/docs/api': typeof DocsApiRoute
   '/legal/privacy': typeof LegalPrivacyRoute
   '/legal/terms': typeof LegalTermsRoute
@@ -117,6 +126,7 @@ export interface FileRouteTypes {
     | '/mcp'
     | '/products'
     | '/support'
+    | '/api/health'
     | '/docs/api'
     | '/legal/privacy'
     | '/legal/terms'
@@ -129,6 +139,7 @@ export interface FileRouteTypes {
     | '/mcp'
     | '/products'
     | '/support'
+    | '/api/health'
     | '/docs/api'
     | '/legal/privacy'
     | '/legal/terms'
@@ -141,6 +152,7 @@ export interface FileRouteTypes {
     | '/mcp'
     | '/products'
     | '/support'
+    | '/api/health'
     | '/docs/api'
     | '/legal/privacy'
     | '/legal/terms'
@@ -154,6 +166,7 @@ export interface RootRouteChildren {
   McpRoute: typeof McpRouteWithChildren
   ProductsRoute: typeof ProductsRoute
   SupportRoute: typeof SupportRoute
+  ApiHealthRoute: typeof ApiHealthRoute
   DocsApiRoute: typeof DocsApiRoute
   LegalPrivacyRoute: typeof LegalPrivacyRoute
   LegalTermsRoute: typeof LegalTermsRoute
@@ -201,6 +214,13 @@ declare module '@tanstack/react-router' {
       path: '/support'
       fullPath: '/support'
       preLoaderRoute: typeof SupportRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/health': {
+      id: '/api/health'
+      path: '/api/health'
+      fullPath: '/api/health'
+      preLoaderRoute: typeof ApiHealthRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/docs/api': {
@@ -251,6 +271,7 @@ const rootRouteChildren: RootRouteChildren = {
   McpRoute: McpRouteWithChildren,
   ProductsRoute: ProductsRoute,
   SupportRoute: SupportRoute,
+  ApiHealthRoute: ApiHealthRoute,
   DocsApiRoute: DocsApiRoute,
   LegalPrivacyRoute: LegalPrivacyRoute,
   LegalTermsRoute: LegalTermsRoute,
