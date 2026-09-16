@@ -9,6 +9,8 @@ export const getRouter = () => {
     routeTree,
     context: { queryClient },
     scrollRestoration: true,
+    // The live site's canonical URLs all end in a slash (/products/, /docs/api/).
+    trailingSlash: "always",
     defaultPreloadStaleTime: 0,
   });
 
