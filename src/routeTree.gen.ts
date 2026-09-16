@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as CompanyRouteImport } from './routes/company'
 import { Route as ContactRouteImport } from './routes/contact'
+import { Route as McpRouteImport } from './routes/mcp'
 import { Route as ProductsRouteImport } from './routes/products'
 import { Route as SupportRouteImport } from './routes/support'
 import { Route as DocsApiRouteImport } from './routes/docs.api'
@@ -31,6 +32,11 @@ const CompanyRoute = CompanyRouteImport.update({
 const ContactRoute = ContactRouteImport.update({
   id: '/contact',
   path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const McpRoute = McpRouteImport.update({
+  id: '/mcp',
+  path: '/mcp',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ProductsRoute = ProductsRouteImport.update({
@@ -63,6 +69,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/company': typeof CompanyRoute
   '/contact': typeof ContactRoute
+  '/mcp': typeof McpRoute
   '/products': typeof ProductsRoute
   '/support': typeof SupportRoute
   '/docs/api': typeof DocsApiRoute
@@ -73,6 +80,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/company': typeof CompanyRoute
   '/contact': typeof ContactRoute
+  '/mcp': typeof McpRoute
   '/products': typeof ProductsRoute
   '/support': typeof SupportRoute
   '/docs/api': typeof DocsApiRoute
@@ -84,6 +92,7 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/company': typeof CompanyRoute
   '/contact': typeof ContactRoute
+  '/mcp': typeof McpRoute
   '/products': typeof ProductsRoute
   '/support': typeof SupportRoute
   '/docs/api': typeof DocsApiRoute
@@ -96,6 +105,7 @@ export interface FileRouteTypes {
     | '/'
     | '/company'
     | '/contact'
+    | '/mcp'
     | '/products'
     | '/support'
     | '/docs/api'
@@ -106,6 +116,7 @@ export interface FileRouteTypes {
     | '/'
     | '/company'
     | '/contact'
+    | '/mcp'
     | '/products'
     | '/support'
     | '/docs/api'
@@ -116,6 +127,7 @@ export interface FileRouteTypes {
     | '/'
     | '/company'
     | '/contact'
+    | '/mcp'
     | '/products'
     | '/support'
     | '/docs/api'
@@ -127,6 +139,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   CompanyRoute: typeof CompanyRoute
   ContactRoute: typeof ContactRoute
+  McpRoute: typeof McpRoute
   ProductsRoute: typeof ProductsRoute
   SupportRoute: typeof SupportRoute
   DocsApiRoute: typeof DocsApiRoute
@@ -155,6 +168,13 @@ declare module '@tanstack/react-router' {
       path: '/contact'
       fullPath: '/contact'
       preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mcp': {
+      id: '/mcp'
+      path: '/mcp'
+      fullPath: '/mcp'
+      preLoaderRoute: typeof McpRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/products': {
@@ -199,6 +219,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   CompanyRoute: CompanyRoute,
   ContactRoute: ContactRoute,
+  McpRoute: McpRoute,
   ProductsRoute: ProductsRoute,
   SupportRoute: SupportRoute,
   DocsApiRoute: DocsApiRoute,
