@@ -1,7 +1,6 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import {
   Outlet,
-  Link,
   createRootRouteWithContext,
   useRouter,
   HeadContent,
@@ -9,28 +8,112 @@ import {
 } from "@tanstack/react-router";
 import { useEffect, type ReactNode } from "react";
 
-import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import { useSiteBehaviour } from "../lib/use-site-behaviour";
 
 function NotFoundComponent() {
+  useSiteBehaviour();
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background px-4">
-      <div className="max-w-md text-center">
-        <h1 className="text-7xl font-bold text-foreground">404</h1>
-        <h2 className="mt-4 text-xl font-semibold text-foreground">Page not found</h2>
-        <p className="mt-2 text-sm text-muted-foreground">
-          The page you're looking for doesn't exist or has been moved.
-        </p>
-        <div className="mt-6">
-          <Link
-            to="/"
-            className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+    <>
+      <a className="skip-link" href="#main">
+        Skip to content
+      </a>
+
+      <header className="site-header">
+        <div className="shell site-header__inner">
+          <a className="brand" href="/">
+            <img
+              className="brand__mark"
+              src="/assets/img/snaptapp-mark.svg"
+              alt=""
+              width="30"
+              height="30"
+            />
+            <span>Snaptapp</span>
+            <span className="brand__sub">Studio</span>
+          </a>
+          <button
+            className="nav-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="primary-nav"
+            aria-label="Toggle navigation"
           >
-            Go home
-          </Link>
+            <span></span>
+          </button>
+          <nav className="nav" id="primary-nav" aria-label="Primary">
+            <a href="/products/">Products</a>
+            <a href="/company/">Company</a>
+            <a href="/support/">Support</a>
+            <a href="/contact/">Contact</a>
+            <a className="btn btn--primary btn--sm" href="https://moreorless.snaptapp.us">
+              Play More or Less
+            </a>
+          </nav>
         </div>
-      </div>
-    </div>
+      </header>
+
+      <main id="main">
+        <section className="hero">
+          <div className="shell">
+            <div className="hero__inner">
+              <p className="eyebrow">Error 404</p>
+              <h1>That page is not here.</h1>
+              <p className="lede">
+                The link is wrong, the page moved, or it never existed. Any of those is on us
+                to explain, so if you followed a link from somewhere on this site, please{" "}
+                <a href="mailto:support@snaptapp.us">tell us where</a>.
+              </p>
+              <div className="row hero__actions">
+                <a className="btn btn--primary" href="/">
+                  Back to home
+                </a>
+                <a className="btn btn--secondary" href="/products/">
+                  See products
+                </a>
+              </div>
+
+              <ul className="trust-strip">
+                <li>
+                  <a href="/company/">Company</a>
+                </li>
+                <li>
+                  <a href="/support/">Support</a>
+                </li>
+                <li>
+                  <a href="/contact/">Contact</a>
+                </li>
+                <li>
+                  <a href="/legal/privacy/">Privacy</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer className="site-footer">
+        <div className="shell">
+          <div className="footer-bottom">
+            <p>
+              &copy; <span data-year>2026</span> Snaptapp. All rights reserved.
+            </p>
+            <ul>
+              <li>
+                <a href="mailto:hello@snaptapp.us">hello@snaptapp.us</a>
+              </li>
+              <li>
+                <a href="/legal/privacy/">Privacy</a>
+              </li>
+              <li>
+                <a href="/legal/terms/">Terms</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+    </>
   );
 }
 
@@ -42,33 +125,33 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   }, [error]);
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background px-4">
-      <div className="max-w-md text-center">
-        <h1 className="text-xl font-semibold tracking-tight text-foreground">
-          This page didn't load
-        </h1>
-        <p className="mt-2 text-sm text-muted-foreground">
-          Something went wrong on our end. You can try refreshing or head back home.
-        </p>
-        <div className="mt-6 flex flex-wrap justify-center gap-2">
-          <button
-            onClick={() => {
-              router.invalidate();
-              reset();
-            }}
-            className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
-          >
-            Try again
-          </button>
-          <a
-            href="/"
-            className="inline-flex items-center justify-center rounded-md border border-input bg-background px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-accent"
-          >
-            Go home
-          </a>
+    <main id="main">
+      <section className="hero">
+        <div className="shell">
+          <div className="hero__inner">
+            <p className="eyebrow">Error</p>
+            <h1>This page didn't load.</h1>
+            <p className="lede">
+              Something went wrong on our end. Try again, or head back to the homepage.
+            </p>
+            <div className="row hero__actions">
+              <button
+                className="btn btn--primary"
+                onClick={() => {
+                  router.invalidate();
+                  reset();
+                }}
+              >
+                Try again
+              </button>
+              <a className="btn btn--secondary" href="/">
+                Back to home
+              </a>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
+      </section>
+    </main>
   );
 }
 
@@ -77,22 +160,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@Lovable" },
     ],
     links: [
-      {
-        rel: "stylesheet",
-        href: appCss,
-      },
-      { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+      { rel: "stylesheet", href: "/assets/css/site.css" },
+      { rel: "icon", href: "/favicon.svg", type: "image/svg+xml" },
+      { rel: "apple-touch-icon", href: "/assets/img/icon-180.png" },
+      { rel: "manifest", href: "/site.webmanifest" },
     ],
+    scripts: [{ src: "/assets/js/webmcp.js", defer: true }],
   }),
   shellComponent: RootShell,
   component: RootComponent,
@@ -102,7 +177,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
 function RootShell({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" className="no-js">
       <head>
         <HeadContent />
       </head>
