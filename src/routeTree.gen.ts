@@ -15,6 +15,7 @@ import { Route as ContactRouteImport } from './routes/contact'
 import { Route as McpRouteImport } from './routes/mcp'
 import { Route as ProductsRouteImport } from './routes/products'
 import { Route as SupportRouteImport } from './routes/support'
+import { Route as DotwellKnownJwksDotjsonRouteImport } from './routes/[.]well-known.jwks[.]json'
 import { Route as AgentSplatRouteImport } from './routes/agent.$'
 import { Route as ApiHealthRouteImport } from './routes/api/health'
 import { Route as DocsApiRouteImport } from './routes/docs.api'
@@ -52,6 +53,11 @@ const ProductsRoute = ProductsRouteImport.update({
 const SupportRoute = SupportRouteImport.update({
   id: '/support',
   path: '/support',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DotwellKnownJwksDotjsonRoute = DotwellKnownJwksDotjsonRouteImport.update({
+  id: '/.well-known/jwks.json',
+  path: '/.well-known/jwks.json',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AgentSplatRoute = AgentSplatRouteImport.update({
@@ -102,6 +108,7 @@ export interface FileRoutesByFullPath {
   '/mcp': typeof McpRouteWithChildren
   '/products': typeof ProductsRoute
   '/support': typeof SupportRoute
+  '/.well-known/jwks.json': typeof DotwellKnownJwksDotjsonRoute
   '/agent/$': typeof AgentSplatRoute
   '/api/health': typeof ApiHealthRoute
   '/docs/api': typeof DocsApiRoute
@@ -118,6 +125,7 @@ export interface FileRoutesByTo {
   '/mcp': typeof McpRouteWithChildren
   '/products': typeof ProductsRoute
   '/support': typeof SupportRoute
+  '/.well-known/jwks.json': typeof DotwellKnownJwksDotjsonRoute
   '/agent/$': typeof AgentSplatRoute
   '/api/health': typeof ApiHealthRoute
   '/docs/api': typeof DocsApiRoute
@@ -135,6 +143,7 @@ export interface FileRoutesById {
   '/mcp': typeof McpRouteWithChildren
   '/products': typeof ProductsRoute
   '/support': typeof SupportRoute
+  '/.well-known/jwks.json': typeof DotwellKnownJwksDotjsonRoute
   '/agent/$': typeof AgentSplatRoute
   '/api/health': typeof ApiHealthRoute
   '/docs/api': typeof DocsApiRoute
@@ -153,6 +162,7 @@ export interface FileRouteTypes {
     | '/mcp'
     | '/products'
     | '/support'
+    | '/.well-known/jwks.json'
     | '/agent/$'
     | '/api/health'
     | '/docs/api'
@@ -169,6 +179,7 @@ export interface FileRouteTypes {
     | '/mcp'
     | '/products'
     | '/support'
+    | '/.well-known/jwks.json'
     | '/agent/$'
     | '/api/health'
     | '/docs/api'
@@ -185,6 +196,7 @@ export interface FileRouteTypes {
     | '/mcp'
     | '/products'
     | '/support'
+    | '/.well-known/jwks.json'
     | '/agent/$'
     | '/api/health'
     | '/docs/api'
@@ -202,6 +214,7 @@ export interface RootRouteChildren {
   McpRoute: typeof McpRouteWithChildren
   ProductsRoute: typeof ProductsRoute
   SupportRoute: typeof SupportRoute
+  DotwellKnownJwksDotjsonRoute: typeof DotwellKnownJwksDotjsonRoute
   AgentSplatRoute: typeof AgentSplatRoute
   ApiHealthRoute: typeof ApiHealthRoute
   DocsApiRoute: typeof DocsApiRoute
@@ -253,6 +266,13 @@ declare module '@tanstack/react-router' {
       path: '/support'
       fullPath: '/support'
       preLoaderRoute: typeof SupportRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/.well-known/jwks.json': {
+      id: '/.well-known/jwks.json'
+      path: '/.well-known/jwks.json'
+      fullPath: '/.well-known/jwks.json'
+      preLoaderRoute: typeof DotwellKnownJwksDotjsonRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/agent/$': {
@@ -331,6 +351,7 @@ const rootRouteChildren: RootRouteChildren = {
   McpRoute: McpRouteWithChildren,
   ProductsRoute: ProductsRoute,
   SupportRoute: SupportRoute,
+  DotwellKnownJwksDotjsonRoute: DotwellKnownJwksDotjsonRoute,
   AgentSplatRoute: AgentSplatRoute,
   ApiHealthRoute: ApiHealthRoute,
   DocsApiRoute: DocsApiRoute,
