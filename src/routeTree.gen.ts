@@ -18,6 +18,7 @@ import { Route as SupportRouteImport } from './routes/support'
 import { Route as DocsApiRouteImport } from './routes/docs.api'
 import { Route as LegalPrivacyRouteImport } from './routes/legal.privacy'
 import { Route as LegalTermsRouteImport } from './routes/legal.terms'
+import { Route as McpSplatRouteImport } from './routes/mcp.$'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -64,40 +65,48 @@ const LegalTermsRoute = LegalTermsRouteImport.update({
   path: '/legal/terms',
   getParentRoute: () => rootRouteImport,
 } as any)
+const McpSplatRoute = McpSplatRouteImport.update({
+  id: '/$',
+  path: '/$',
+  getParentRoute: () => McpRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/company': typeof CompanyRoute
   '/contact': typeof ContactRoute
-  '/mcp': typeof McpRoute
+  '/mcp': typeof McpRouteWithChildren
   '/products': typeof ProductsRoute
   '/support': typeof SupportRoute
   '/docs/api': typeof DocsApiRoute
   '/legal/privacy': typeof LegalPrivacyRoute
   '/legal/terms': typeof LegalTermsRoute
+  '/mcp/$': typeof McpSplatRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/company': typeof CompanyRoute
   '/contact': typeof ContactRoute
-  '/mcp': typeof McpRoute
+  '/mcp': typeof McpRouteWithChildren
   '/products': typeof ProductsRoute
   '/support': typeof SupportRoute
   '/docs/api': typeof DocsApiRoute
   '/legal/privacy': typeof LegalPrivacyRoute
   '/legal/terms': typeof LegalTermsRoute
+  '/mcp/$': typeof McpSplatRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/company': typeof CompanyRoute
   '/contact': typeof ContactRoute
-  '/mcp': typeof McpRoute
+  '/mcp': typeof McpRouteWithChildren
   '/products': typeof ProductsRoute
   '/support': typeof SupportRoute
   '/docs/api': typeof DocsApiRoute
   '/legal/privacy': typeof LegalPrivacyRoute
   '/legal/terms': typeof LegalTermsRoute
+  '/mcp/$': typeof McpSplatRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -111,6 +120,7 @@ export interface FileRouteTypes {
     | '/docs/api'
     | '/legal/privacy'
     | '/legal/terms'
+    | '/mcp/$'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -122,6 +132,7 @@ export interface FileRouteTypes {
     | '/docs/api'
     | '/legal/privacy'
     | '/legal/terms'
+    | '/mcp/$'
   id:
     | '__root__'
     | '/'
@@ -133,13 +144,14 @@ export interface FileRouteTypes {
     | '/docs/api'
     | '/legal/privacy'
     | '/legal/terms'
+    | '/mcp/$'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   CompanyRoute: typeof CompanyRoute
   ContactRoute: typeof ContactRoute
-  McpRoute: typeof McpRoute
+  McpRoute: typeof McpRouteWithChildren
   ProductsRoute: typeof ProductsRoute
   SupportRoute: typeof SupportRoute
   DocsApiRoute: typeof DocsApiRoute
@@ -212,14 +224,31 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LegalTermsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/mcp/$': {
+      id: '/mcp/$'
+      path: '/$'
+      fullPath: '/mcp/$'
+      preLoaderRoute: typeof McpSplatRouteImport
+      parentRoute: typeof McpRoute
+    }
   }
 }
+
+interface McpRouteChildren {
+  McpSplatRoute: typeof McpSplatRoute
+}
+
+const McpRouteChildren: McpRouteChildren = {
+  McpSplatRoute: McpSplatRoute,
+}
+
+const McpRouteWithChildren = McpRoute._addFileChildren(McpRouteChildren)
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   CompanyRoute: CompanyRoute,
   ContactRoute: ContactRoute,
-  McpRoute: McpRoute,
+  McpRoute: McpRouteWithChildren,
   ProductsRoute: ProductsRoute,
   SupportRoute: SupportRoute,
   DocsApiRoute: DocsApiRoute,
