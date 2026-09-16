@@ -15,6 +15,7 @@ import { Route as ContactRouteImport } from './routes/contact'
 import { Route as McpRouteImport } from './routes/mcp'
 import { Route as ProductsRouteImport } from './routes/products'
 import { Route as SupportRouteImport } from './routes/support'
+import { Route as AgentSplatRouteImport } from './routes/agent.$'
 import { Route as ApiHealthRouteImport } from './routes/api/health'
 import { Route as DocsApiRouteImport } from './routes/docs.api'
 import { Route as LegalPrivacyRouteImport } from './routes/legal.privacy'
@@ -51,6 +52,11 @@ const ProductsRoute = ProductsRouteImport.update({
 const SupportRoute = SupportRouteImport.update({
   id: '/support',
   path: '/support',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AgentSplatRoute = AgentSplatRouteImport.update({
+  id: '/agent/$',
+  path: '/agent/$',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ApiHealthRoute = ApiHealthRouteImport.update({
@@ -96,6 +102,7 @@ export interface FileRoutesByFullPath {
   '/mcp': typeof McpRouteWithChildren
   '/products': typeof ProductsRoute
   '/support': typeof SupportRoute
+  '/agent/$': typeof AgentSplatRoute
   '/api/health': typeof ApiHealthRoute
   '/docs/api': typeof DocsApiRoute
   '/legal/privacy': typeof LegalPrivacyRoute
@@ -111,6 +118,7 @@ export interface FileRoutesByTo {
   '/mcp': typeof McpRouteWithChildren
   '/products': typeof ProductsRoute
   '/support': typeof SupportRoute
+  '/agent/$': typeof AgentSplatRoute
   '/api/health': typeof ApiHealthRoute
   '/docs/api': typeof DocsApiRoute
   '/legal/privacy': typeof LegalPrivacyRoute
@@ -127,6 +135,7 @@ export interface FileRoutesById {
   '/mcp': typeof McpRouteWithChildren
   '/products': typeof ProductsRoute
   '/support': typeof SupportRoute
+  '/agent/$': typeof AgentSplatRoute
   '/api/health': typeof ApiHealthRoute
   '/docs/api': typeof DocsApiRoute
   '/legal/privacy': typeof LegalPrivacyRoute
@@ -144,6 +153,7 @@ export interface FileRouteTypes {
     | '/mcp'
     | '/products'
     | '/support'
+    | '/agent/$'
     | '/api/health'
     | '/docs/api'
     | '/legal/privacy'
@@ -159,6 +169,7 @@ export interface FileRouteTypes {
     | '/mcp'
     | '/products'
     | '/support'
+    | '/agent/$'
     | '/api/health'
     | '/docs/api'
     | '/legal/privacy'
@@ -174,6 +185,7 @@ export interface FileRouteTypes {
     | '/mcp'
     | '/products'
     | '/support'
+    | '/agent/$'
     | '/api/health'
     | '/docs/api'
     | '/legal/privacy'
@@ -190,6 +202,7 @@ export interface RootRouteChildren {
   McpRoute: typeof McpRouteWithChildren
   ProductsRoute: typeof ProductsRoute
   SupportRoute: typeof SupportRoute
+  AgentSplatRoute: typeof AgentSplatRoute
   ApiHealthRoute: typeof ApiHealthRoute
   DocsApiRoute: typeof DocsApiRoute
   LegalPrivacyRoute: typeof LegalPrivacyRoute
@@ -240,6 +253,13 @@ declare module '@tanstack/react-router' {
       path: '/support'
       fullPath: '/support'
       preLoaderRoute: typeof SupportRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/agent/$': {
+      id: '/agent/$'
+      path: '/agent/$'
+      fullPath: '/agent/$'
+      preLoaderRoute: typeof AgentSplatRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/api/health': {
@@ -311,6 +331,7 @@ const rootRouteChildren: RootRouteChildren = {
   McpRoute: McpRouteWithChildren,
   ProductsRoute: ProductsRoute,
   SupportRoute: SupportRoute,
+  AgentSplatRoute: AgentSplatRoute,
   ApiHealthRoute: ApiHealthRoute,
   DocsApiRoute: DocsApiRoute,
   LegalPrivacyRoute: LegalPrivacyRoute,
