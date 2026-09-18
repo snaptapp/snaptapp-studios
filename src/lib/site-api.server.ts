@@ -96,25 +96,68 @@ const STUDIO = {
   name: "Snaptapp",
   url: ORIGIN,
   description:
-    "Independent studio shipping its own cross-platform games on real-time edge infrastructure. First title: More or Less.",
+    "Snaptapp is a small independent US studio that designs, builds, and operates its own cross-platform games, including the client, backend, and real-time edge infrastructure. Its first title, More or Less, is live.",
   founded: "2026",
-  country: "US",
+  country: "United States",
+  businessModel: "Own products only; Snaptapp does not take client work.",
+  responseTime: "General, press, licensing, and support enquiries are answered within two business days.",
   products: [
     {
       name: "More or Less",
       status: "live",
       url: "https://moreorless.snaptapp.us",
       tagline: "One fake number. Is the real answer more or less?",
-      platforms: ["Web now", "iOS and Android in development"],
+      description:
+        "A party trivia game about numbers. Every round presents a claim, a plausible but deliberately incorrect number, and a countdown. Players decide whether the real figure is higher or lower before time runs out.",
+      category: "Party trivia",
+      platforms: {
+        web: "live",
+        ios: "in development",
+        android: "in development",
+      },
+      players: "1–10 per room",
+      price: "Free to play",
+      modes: ["Standard", "Cutthroat", "Daily challenge", "Pass and play", "Multiplayer"],
+      technology: [
+        "Flutter",
+        "Cloudflare Durable Objects",
+        "Cloudflare Workers",
+        "Gemini on Vertex AI",
+        "Firebase",
+      ],
     },
   ],
   contacts: {
-    hello: "hello@snaptapp.us",
-    support: "support@snaptapp.us",
-    press: "press@snaptapp.us",
-    privacy: "privacy@snaptapp.us",
-    security: "security@snaptapp.us",
-    legal: "legal@snaptapp.us",
+    general: {
+      email: "hello@snaptapp.us",
+      purpose: "General enquiries, press, review builds, and licensing for Snaptapp titles.",
+      responseTime: "Within two business days",
+    },
+    support: {
+      email: "support@snaptapp.us",
+      purpose: "Product bugs, account problems, and billing questions.",
+      responseTime: "Within two business days",
+    },
+    press: {
+      email: "press@snaptapp.us",
+      purpose: "Interviews, review builds, and media asset requests.",
+      responseTime: "Include the deadline with the request",
+    },
+    privacy: {
+      email: "privacy@snaptapp.us",
+      purpose: "Access, correction, or deletion of personal data.",
+      responseTime: "Within 30 days, usually sooner",
+    },
+    security: {
+      email: "security@snaptapp.us",
+      purpose: "Responsible vulnerability disclosure.",
+      policy: `${ORIGIN}/.well-known/security.txt`,
+      responseTime: "Acknowledged within three business days",
+    },
+    legal: {
+      email: "legal@snaptapp.us",
+      purpose: "Contracts, copyright, and formal correspondence relating to the terms of service.",
+    },
   },
 };
 
@@ -214,6 +257,7 @@ function cardJson(body: unknown, status = 200, request?: Request, env?: Env): Re
 
 function discoveryDocuments() {
   return {
+    homepage: `${ORIGIN}/`,
     apiCatalog: `${ORIGIN}/.well-known/api-catalog`,
     openApi: `${ORIGIN}/openapi.json`,
     serviceDoc: `${ORIGIN}/docs/api/`,
@@ -224,7 +268,11 @@ function discoveryDocuments() {
     oauthAuthorizationServer: `${ORIGIN}/.well-known/oauth-authorization-server`,
     oauthProtectedResource: `${ORIGIN}/.well-known/oauth-protected-resource`,
     openIdConfiguration: `${ORIGIN}/.well-known/openid-configuration`,
+    jwks: `${ORIGIN}/.well-known/jwks.json`,
     authMd: `${ORIGIN}/auth.md`,
+    security: `${ORIGIN}/.well-known/security.txt`,
+    robots: `${ORIGIN}/robots.txt`,
+    sitemap: `${ORIGIN}/sitemap.xml`,
     health: `${ORIGIN}/api/health`,
   };
 }
@@ -238,12 +286,14 @@ function callTool(name: string): unknown {
         description: STUDIO.description,
         founded: STUDIO.founded,
         country: STUDIO.country,
+        businessModel: STUDIO.businessModel,
+        responseTime: STUDIO.responseTime,
         productCount: STUDIO.products.length,
       };
     case "list_products":
       return { products: STUDIO.products };
     case "get_contact_channels":
-      return { contacts: STUDIO.contacts, responseTime: "two business days" };
+      return { contactPage: `${ORIGIN}/contact/`, contacts: STUDIO.contacts };
     case "get_discovery_documents":
       return discoveryDocuments();
     default:
