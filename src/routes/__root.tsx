@@ -10,6 +10,8 @@ import { useEffect, type ReactNode } from "react";
 
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { useSiteBehaviour } from "../lib/use-site-behaviour";
+// Design system tokens (imported after the site stylesheet link below).
+import "../styles.css";
 
 function NotFoundComponent() {
   useSiteBehaviour();
