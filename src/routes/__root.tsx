@@ -10,6 +10,8 @@ import { useEffect, type ReactNode } from "react";
 
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { useSiteBehaviour } from "../lib/use-site-behaviour";
+// Design system tokens (imported after the site stylesheet link below).
+import "../styles.css";
 
 function NotFoundComponent() {
   useSiteBehaviour();
@@ -163,6 +165,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     ],
     links: [
       { rel: "stylesheet", href: "/assets/css/site.css" },
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap",
+      },
       { rel: "icon", href: "/favicon.svg", type: "image/svg+xml" },
       { rel: "apple-touch-icon", href: "/assets/img/icon-180.png" },
       { rel: "manifest", href: "/site.webmanifest" },
