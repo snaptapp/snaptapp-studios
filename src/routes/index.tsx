@@ -119,7 +119,7 @@ function PageIndex() {
               <div className="hero__inner">
                 <p className="eyebrow">Independent studio</p>
                 <h1>
-                  Games built on
+                  Games built on{" "}
                   <span className="text-gradient"><span className="nowrap">real-time</span> edge infrastructure</span>.
                 </h1>
                 <p className="lede">
