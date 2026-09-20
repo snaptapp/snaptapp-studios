@@ -19,4 +19,5 @@ replicating the current design exactly (no redesign — user decision).
 - [x] Port _headers security headers / content types where hosting allows
 - [x] Configure TOKEN_SIGNING_JWK as a secure runtime secret
 - [x] Verify MCP + OAuth end to end
-- [ ] Connect snaptapp.us and www.snaptapp.us, then complete the Cloudflare DNS cutover
+- [x] Connect snaptapp.us and www.snaptapp.us with snaptapp.us as primary
+- [ ] Publish the project, verify both live domains, then retire the legacy Cloudflare Worker
