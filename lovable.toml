@@ -1,4 +1,5 @@
 [[libraries]]
-project_id = "8806c3d0-8207-4d84-8d42-4534b6b552ef"
-version = "1.0.0"
-slug = "more-or-less-design-system-8cbfc8"
+  name = "More Or Less Design System"
+  project_id = "8806c3d0-8207-4d84-8d42-4534b6b552ef"
+  slug = "more-or-less-design-system-8cbfc8"
+  version = "1.0.0"
