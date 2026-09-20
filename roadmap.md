@@ -18,5 +18,5 @@ replicating the current design exactly (no redesign — user decision).
 - [x] Port _redirects aliases (/play, /about, /privacy, /docs, ...)
 - [x] Port _headers security headers / content types where hosting allows
 - [x] Configure TOKEN_SIGNING_JWK as a secure runtime secret
-- [ ] Verify MCP + OAuth end to end
+- [x] Verify MCP + OAuth end to end
 - [ ] Connect snaptapp.us and www.snaptapp.us, then complete the Cloudflare DNS cutover
