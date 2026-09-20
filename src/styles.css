@@ -1,6 +1,11 @@
 @import "tailwindcss" source(none);
 @source "../src";
 @import "tw-animate-css";
+/* More Or Less Design System tokens. Loaded last so its values take
+   precedence. Only the token layer is imported: the library's own
+   styles.css also resets html/body, which would override the existing
+   snaptapp site stylesheet. */
+@import "./design-system/more-or-less-design-system-8cbfc8/design-system/more-or-less-admin-site-72d612/design-system/theme/tokens.css";
 
 @custom-variant dark (&:is(.dark *));
 
