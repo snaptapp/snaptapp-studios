@@ -54,7 +54,7 @@ export const Route = createFileRoute("/legal/terms")({
       },
       {
             "property": "og:image:alt",
-            "content": "Snaptapp — independent studio"
+            "content": "Snaptapp — Independent Game Studio"
       },
       {
             "name": "twitter:card",
@@ -381,12 +381,11 @@ function PageLegalTerms() {
                     consumer resident in the UK, the EEA, or another jurisdiction whose law gives you
                     the right to bring proceedings locally, nothing here removes that right.
                   </p>
-                  <p>
-                    Before starting formal proceedings, please email
-                    <a href="mailto:legal@snaptapp.us">legal@snaptapp.us</a> with the details. Most
-                    disputes are a misunderstanding and we would rather resolve it in a week than in a
-                    year.
-                  </p>
+                   <p>
+                     Before starting formal proceedings, please email
+                     <a href="mailto:legal@snaptapp.us">legal@snaptapp.us</a> with the details so we
+                     have an opportunity to resolve the issue informally.
+                   </p>
       
                   <h2 id="general">15. General</h2>
                   <p>
@@ -422,10 +421,7 @@ function PageLegalTerms() {
                     <img className="brand__mark" src="/assets/img/snaptapp-mark.svg" alt="" width="30" height="30" />
                     <span>Snaptapp</span>
                   </a>
-                  <p>
-                    An independent studio shipping its own games on
-                    real-time edge infrastructure.
-                  </p>
+                   <p>An independent game studio building and operating its own titles.</p>
                 </div>
       
                 <div>
