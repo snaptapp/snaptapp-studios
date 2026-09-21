@@ -164,8 +164,6 @@ function PageIndex() {
                     className="product__screenshot"
                     src="/assets/img/more-or-less-home.png"
                     alt="More or Less game home screen showing play modes"
-                    width="631"
-                    height="1171"
                     loading="lazy"
                   />
                 </div>
