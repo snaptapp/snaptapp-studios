@@ -10,7 +10,7 @@ export const Route = createFileRoute("/company")({
       },
       {
             "name": "description",
-            "content": "Snaptapp is an independent studio founded in 2026. We ship our own games. Who we are, how we work, and how to reach us."
+            "content": "About Snaptapp, an independent US game studio founded in 2026 and creating original games for web and mobile."
       },
       {
             "name": "theme-color",
@@ -34,7 +34,7 @@ export const Route = createFileRoute("/company")({
       },
       {
             "property": "og:description",
-            "content": "An independent studio founded in 2026. We ship our own games. Who we are, how we work, and how to reach us."
+            "content": "About Snaptapp, an independent US game studio founded in 2026 and creating original games for web and mobile."
       },
       {
             "property": "og:url",
@@ -119,10 +119,10 @@ function PageCompany() {
                   <li><a href="/">Home</a></li>
                   <li>Company</li>
                 </ol>
-                 <h1>We build our own games, end to end.</h1>
+                 <h1>About Snaptapp</h1>
                 <p className="lede">
-                  Snaptapp is an independently owned studio, founded in 2026 and operating from
-                  the United States. We make our own games. We do not take client work.
+                   Snaptapp is an independent US game studio founded in 2026. We design, build, and
+                   operate our own games across web and mobile.
                 </p>
               </div>
             </section>
@@ -131,18 +131,14 @@ function PageCompany() {
               <div className="shell">
                 <div className="prose">
                   <p>
-                    Most mobile software fails in the seams — between the app and the API,
-                    between the API and whatever it depends on, between the demo and the tenth
-                    person joining at once. Snaptapp exists to own all of those seams on a small
-                    number of products rather than hand any of them off.
+                    We keep product development close to the people building it. Game design,
+                    client development, backend services, multiplayer systems, and operations are
+                    handled within the studio, which lets us make product and technical decisions
+                    together.
                   </p>
                   <p>
-                    In practice that means we write the client, the backend, and the edge layer
-                    ourselves, on managed infrastructure we can reason about. It means we would
-                    rather ship one mode that holds up under a full room than five that fall over.
-                    And it means we publish what is actually live, on
-                    <a href="/products/">one page</a>, rather than a roadmap dressed up as a
-                    catalogue.
+                    Our first title, More or Less, is live on the web, with iOS and Android versions
+                    in development. A second Snaptapp title is also in development.
                   </p>
                 </div>
               </div>
@@ -152,56 +148,56 @@ function PageCompany() {
               <div className="shell">
                 <div className="section-head reveal">
                   <p className="eyebrow">Operating principles</p>
-                  <h2>How we actually work</h2>
+                  <h2>How we work</h2>
                 </div>
       
                 <div className="grid grid--3 reveal">
                   <div className="card">
                     <span className="card__num">01</span>
-                    <h3>Ship, then talk</h3>
+                    <h3>Product first</h3>
                      <p>
-                       We announce products only when someone outside the studio can play them,
-                       not before.
+                       Technical decisions are made around the game and the player experience, not
+                       the other way around.
                      </p>
                   </div>
                   <div className="card">
                     <span className="card__num">02</span>
-                    <h3>Own the whole path</h3>
+                    <h3>End-to-end ownership</h3>
                      <p>
-                       Client, API, edge, and data model are built together, with clear ownership
-                       across the entire product.
+                       Client, backend, multiplayer systems, and operations are developed together
+                       so the product stays coherent across the full stack.
                      </p>
                   </div>
                   <div className="card">
                     <span className="card__num">03</span>
-                    <h3>Verify machine output</h3>
+                    <h3>Verify generated content</h3>
                     <p>
-                      Where we use generative models, output is grounded, then checked by
-                      deterministic rules that can reject it. Nothing reaches a player on trust.
+                      When generative models are used, their output is grounded and checked before
+                      it reaches players.
                     </p>
                   </div>
                   <div className="card">
                     <span className="card__num">04</span>
-                    <h3>Collect the minimum</h3>
+                    <h3>Collect only what's needed</h3>
                     <p>
-                      We take the data a product needs to function and say plainly what that is in
-                      our <a href="/legal/privacy/">privacy policy</a>. No quiet expansion.
+                      We collect the data needed to operate the product and explain what we collect
+                      in our <a href="/legal/privacy/">privacy policy</a>.
                     </p>
                   </div>
                   <div className="card">
                     <span className="card__num">05</span>
-                    <h3>Answer people</h3>
+                    <h3>Direct support</h3>
                     <p>
-                      Support reaches a human at the studio, not a queue. Two business days,
-                      usually much less.
+                      Support requests go directly to the studio, with a two-business-day response
+                      target.
                     </p>
                   </div>
                   <div className="card">
                     <span className="card__num">06</span>
-                    <h3>Stay small on purpose</h3>
+                    <h3>Stay lightweight</h3>
                     <p>
-                      Independently run, short decision path. That is why we can rewrite
-                      something in an afternoon when it is wrong.
+                      A small team and managed infrastructure keep the studio flexible and
+                      operating costs predictable.
                     </p>
                   </div>
                 </div>
@@ -212,13 +208,13 @@ function PageCompany() {
               <div className="shell">
                 <div className="section-head reveal">
                   <p className="eyebrow">Team</p>
-                  <h2>Who you are dealing with</h2>
+                  <h2>The team</h2>
                 </div>
                 <div className="grid grid--3 reveal">
                   <div className="card">
                     <h3>Michael T. Anderson</h3>
                     <p className="product__tagline">Founder &amp; Studio Lead</p>
-                    <p>Leading engineering, architecture, and game systems at Snaptapp.</p>
+                    <p>Leads engineering, architecture, and game systems at Snaptapp.</p>
                     <p className="mt-sm">
                       <a className="link-arrow" href="mailto:michael@snaptapp.us">
                         michael@snaptapp.us
@@ -244,7 +240,7 @@ function PageCompany() {
               <div className="shell">
                 <div className="section-head reveal">
                   <p className="eyebrow">Company details</p>
-                  <h2>The facts</h2>
+                  <h2>Company information</h2>
                 </div>
       
                 {/* Once the entity is formally registered, add two rows here:
@@ -306,9 +302,9 @@ function PageCompany() {
               <div className="shell">
                 <div className="cta reveal">
                   <p className="eyebrow">Get in touch</p>
-                  <h2>Press, licensing, or a question about a title</h2>
+                  <h2>Contact the studio</h2>
                   <p className="lede">
-                    Review builds, interviews, and anything about a Snaptapp product.
+                    For press, licensing, partnerships, or questions about Snaptapp and its games.
                   </p>
                   <div className="row mt-lg">
                     <a className="btn btn--primary" href="/contact/">Contact Snaptapp</a>
