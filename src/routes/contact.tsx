@@ -10,7 +10,7 @@ export const Route = createFileRoute("/contact")({
       },
       {
             "name": "description",
-            "content": "Contact Snaptapp. Support, press, licensing, privacy requests, and security reports. Each channel has a direct address and a stated response time."
+            "content": "Contact Snaptapp for support, press, licensing, privacy, security, and legal enquiries."
       },
       {
             "name": "theme-color",
@@ -34,7 +34,7 @@ export const Route = createFileRoute("/contact")({
       },
       {
             "property": "og:description",
-            "content": "Support, press, licensing, privacy requests, and security reports. Each channel has a direct address and a stated response time."
+            "content": "Contact Snaptapp for support, press, licensing, privacy, security, and legal enquiries."
       },
       {
             "property": "og:url",
@@ -121,8 +121,7 @@ function PageContact() {
                 </ol>
                 <h1>Contact Snaptapp</h1>
                 <p className="lede">
-                  Every address below goes to the studio and is read by a person. Pick the one
-                  that matches what you need and you will skip a routing step.
+                  Choose the contact address that best matches your request.
                 </p>
               </div>
             </section>
@@ -134,8 +133,8 @@ function PageContact() {
                      <p className="contact-card__label">General &amp; licensing</p>
                     <a href="mailto:hello@snaptapp.us">hello@snaptapp.us</a>
                     <p>
-                       Licensing for Snaptapp titles and anything else about the studio. Replies
-                       within two business days.
+                      General questions and licensing enquiries about Snaptapp and its games.
+                      Typical response time is two business days.
                     </p>
                   </div>
       
@@ -143,8 +142,9 @@ function PageContact() {
                     <p className="contact-card__label">Product support</p>
                     <a href="mailto:support@snaptapp.us">support@snaptapp.us</a>
                     <p>
-                      Bugs, account problems, billing questions. Check
-                      <a href="/support/">the support page</a> first — it covers the common ones.
+                      Bugs, account issues, and gameplay support. The
+                      <a href="/support/">support page</a> covers common questions and
+                      troubleshooting.
                     </p>
                   </div>
       
@@ -152,8 +152,8 @@ function PageContact() {
                      <p className="contact-card__label">Privacy &amp; data</p>
                     <a href="mailto:privacy@snaptapp.us">privacy@snaptapp.us</a>
                     <p>
-                      Access, correction, or deletion of your personal data. We respond within 30
-                      days, usually far sooner.
+                      Requests to access, correct, or delete personal data. We respond within 30
+                      days.
                     </p>
                   </div>
       
@@ -161,9 +161,9 @@ function PageContact() {
                      <p className="contact-card__label">Security</p>
                     <a href="mailto:security@snaptapp.us">security@snaptapp.us</a>
                     <p>
-                      Vulnerability reports. See
-                      <a href="/.well-known/security.txt">security.txt</a> for our policy and
-                      acknowledgement window.
+                      Vulnerability reports and security-related enquiries. See
+                      <a href="/.well-known/security.txt">security.txt</a> for reporting
+                      guidance.
                     </p>
                   </div>
       
@@ -171,8 +171,8 @@ function PageContact() {
                     <p className="contact-card__label">Press &amp; media</p>
                     <a href="mailto:press@snaptapp.us">press@snaptapp.us</a>
                     <p>
-                      Interviews, review builds, and asset requests. Tell us your deadline and we
-                      will work to it.
+                      Interview requests, review access, media enquiries, and press assets.
+                      Include your deadline when relevant.
                     </p>
                   </div>
       
@@ -180,19 +180,16 @@ function PageContact() {
                      <p className="contact-card__label">Legal</p>
                     <a href="mailto:legal@snaptapp.us">legal@snaptapp.us</a>
                     <p>
-                      Contracts, copyright, and formal correspondence relating to our
-                      <a href="/legal/terms/">terms of service</a>.
+                      Contracts, copyright matters, and formal legal correspondence relating to
+                      Snaptapp's <a href="/legal/terms/">terms of service</a>.
                     </p>
                   </div>
                 </div>
       
                 <div className="callout reveal mt-lg">
-                  <strong>Response times.</strong> Support and general enquiries: two business
-                  days. Security reports: acknowledged within three business days. Privacy
-                  requests: within 30 days, as required by applicable law. If you have not heard
-                  back in that window, resend to
-                  <a href="mailto:hello@snaptapp.us">hello@snaptapp.us</a> — something has gone
-                  wrong on our side and we want to know.
+                  <strong>Response times.</strong> General and support enquiries are typically
+                  answered within two business days. Security reports are acknowledged within
+                  three business days. Privacy requests are handled within 30 days.
                 </div>
               </div>
             </section>
@@ -201,29 +198,28 @@ function PageContact() {
               <div className="shell">
                 <div className="section-head reveal">
                   <p className="eyebrow">Before you write</p>
-                  <h2>Things that will get you a faster answer</h2>
+                  <h2>What to include</h2>
                 </div>
                 <div className="prose reveal">
                   <ul>
                     <li>
-                      <strong>Which product.</strong> Right now that is More or Less, but say so
-                      anyway.
+                      <strong>Product.</strong> Tell us which Snaptapp product the request is
+                      about.
                     </li>
                     <li>
-                      <strong>Platform and version.</strong> Web browser and version, or the phone
-                      model and OS version.
+                      <strong>Platform and version.</strong> Include your browser and version,
+                      or your device model and OS version.
                     </li>
                     <li>
-                      <strong>What you expected and what happened.</strong> One line each is
-                      plenty.
+                      <strong>What happened.</strong> A short description of what you expected
+                      and what happened instead.
                     </li>
                     <li>
-                      <strong>A screenshot.</strong> For anything visual, this saves an entire
-                      round trip.
+                      <strong>Screenshot.</strong> Include one when it helps show the issue.
                     </li>
                     <li>
-                      <strong>Your account email</strong> if the issue involves your profile,
-                      streak, or match history — but never your password. We will never ask for it.
+                      <strong>Account email.</strong> Include it for account-specific issues,
+                      but never send your password.
                     </li>
                   </ul>
                 </div>
