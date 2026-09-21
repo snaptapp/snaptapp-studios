@@ -8,6 +8,47 @@
    snaptapp site stylesheet. */
 @import "./design-system/more-or-less-design-system-8cbfc8/design-system/more-or-less-admin-site-72d612/design-system/theme/tokens.css";
 
+/*
+ * Studio palette override ("Campfire Night") — project theme layer.
+ * Warm charcoal/brown surfaces, warm off-white text, ember orange primary,
+ * soft yellow secondary. The vendor tokens above stay untouched; these
+ * later :root declarations win by cascade order.
+ */
+:root {
+  --ds-arena-color-bg: #1b1613;
+  --ds-arena-color-surface: #241e19;
+  --ds-arena-color-surface-raised: #2e2721;
+  --ds-arena-color-surface-sunken: #141110;
+  --ds-arena-color-border: #3b332b;
+  --ds-arena-color-border-strong: #57493c;
+  --ds-arena-color-text: #f4ede3;
+  --ds-arena-color-text-muted: #aba097;
+  --ds-arena-color-text-inverse: #1b1613;
+
+  /* Accent roles: "lime" slot carries the ember orange primary. */
+  --ds-arena-color-lime: #f47b34;
+  --ds-arena-color-lime-dim: #a8531d;
+  --ds-arena-color-lime-soft: rgba(244, 123, 52, 0.12);
+  --ds-arena-color-red: #e8604c;
+  --ds-arena-color-red-dim: #a03a2c;
+  --ds-arena-color-red-soft: rgba(232, 96, 76, 0.12);
+  --ds-arena-color-purple: #c97a94;
+  --ds-arena-color-purple-dim: #8a4e62;
+  --ds-arena-color-purple-soft: rgba(201, 122, 148, 0.14);
+  --ds-arena-color-amber: #e8c15a;
+  --ds-arena-color-amber-dim: #96793a;
+  --ds-arena-color-amber-soft: rgba(232, 193, 90, 0.12);
+  --ds-arena-color-focus: #f47b34;
+
+  --ds-arena-shadow-press-lime: 0 4px 0 #a8531d;
+  --ds-arena-shadow-press-red: 0 4px 0 #a03a2c;
+  --ds-arena-shadow-press-purple: 0 4px 0 #8a4e62;
+  --ds-arena-shadow-press-amber: 0 4px 0 #96793a;
+  --ds-arena-shadow-glow-lime: 0 0 24px rgba(244, 123, 52, 0.28);
+  --ds-arena-shadow-glow-purple: 0 0 28px rgba(201, 122, 148, 0.3);
+  --ds-arena-shadow-card: 0 2px 12px rgba(0, 0, 0, 0.45);
+}
+
 @custom-variant dark (&:is(.dark *));
 
 /*
