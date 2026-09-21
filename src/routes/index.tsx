@@ -6,11 +6,11 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       {
-            "title": "Snaptapp — independent studio"
+            "title": "Snaptapp — Independent Game Studio"
       },
       {
             "name": "description",
-            "content": "Snaptapp is an independent studio. We ship our own cross-platform games: Flutter client, real-time edge, the whole stack. First title: More or Less."
+            "content": "Independent game studio building cross-platform games on real-time edge infrastructure. First title: More or Less, a fast party trivia game about numbers."
       },
       {
             "name": "theme-color",
@@ -30,11 +30,11 @@ export const Route = createFileRoute("/")({
       },
       {
             "property": "og:title",
-            "content": "Snaptapp — independent studio"
+            "content": "Snaptapp — Independent Game Studio"
       },
       {
             "property": "og:description",
-            "content": "An independent studio shipping its own games on real-time edge infrastructure. First title: More or Less."
+            "content": "Independent game studio building cross-platform games on real-time edge infrastructure. First title: More or Less, a fast party trivia game about numbers."
       },
       {
             "property": "og:url",
@@ -54,7 +54,7 @@ export const Route = createFileRoute("/")({
       },
       {
             "property": "og:image:alt",
-            "content": "Snaptapp — independent studio"
+            "content": "Snaptapp — Independent Game Studio"
       },
       {
             "name": "twitter:card",
