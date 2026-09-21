@@ -37,10 +37,10 @@ body {
 .section {
   background-color: var(--ds-arena-color-bg);
   background-image: radial-gradient(
-    color-mix(in srgb, var(--ds-arena-color-border) 32%, transparent) calc(var(--ds-arena-space-1) / 4),
+    var(--ds-arena-color-surface-sunken) calc(var(--ds-arena-space-1) / 4),
     transparent calc(var(--ds-arena-space-1) / 4)
   );
-  background-size: var(--ds-arena-space-4) var(--ds-arena-space-4);
+  background-size: var(--ds-arena-space-5) var(--ds-arena-space-5);
 }
 
 .reading-section {
