@@ -134,10 +134,10 @@ function PageIndex() {
                 </div>
       
                 <ul className="trust-strip">
-                  <li>Founded 2026</li>
-                  <li>United States</li>
-                  <li>iOS · Android · Web</li>
-                  <li>1 product live</li>
+                  <li>More or Less</li>
+                  <li>Live on web</li>
+                  <li>Mobile in development</li>
+                  <li>Up to 10 players</li>
                 </ul>
               </div>
             </div>
@@ -189,14 +189,6 @@ function PageIndex() {
                       <dd>Up to 10 players per room</dd>
                     </div>
                   </dl>
-      
-                  <ul className="chips" aria-label="Technology used by More or Less">
-                    <li className="chip">Flutter</li>
-                    <li className="chip">Cloudflare Durable Objects</li>
-                    <li className="chip">Cloudflare Workers</li>
-                    <li className="chip">Gemini on Vertex AI</li>
-                    <li className="chip">Firebase</li>
-                  </ul>
       
                   <p className="mt-md">
                     <a className="link-arrow" href="https://moreorless.snaptapp.us">
@@ -280,7 +272,7 @@ function PageIndex() {
                     </svg>
                   </div>
                   <span className="card__num">03</span>
-                  <h3>Checked generated content</h3>
+                  <h3>Generated content, checked before play</h3>
                   <p>
                     Curated rounds come from a verified fact bank. Custom topics can be generated
                     on demand, with search grounding and automated checks before a round is shown.

@@ -124,7 +124,7 @@ function PageLegalTerms() {
               </div>
             </section>
       
-            <section className="section section--tight">
+            <section className="section section--tight reading-section">
               <div className="shell">
                 <div className="prose">
                   <ul className="doc-meta">

@@ -24,6 +24,29 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+.hero,
+.page-head {
+  background-color: var(--ds-arena-color-bg);
+  background-image: radial-gradient(
+    var(--ds-arena-color-border) calc(var(--ds-arena-space-1) / 4),
+    transparent calc(var(--ds-arena-space-1) / 4)
+  );
+  background-size: var(--ds-arena-space-4) var(--ds-arena-space-4);
+}
+
+.section {
+  background-color: var(--ds-arena-color-bg);
+  background-image: radial-gradient(
+    color-mix(in srgb, var(--ds-arena-color-border) 32%, transparent) calc(var(--ds-arena-space-1) / 4),
+    transparent calc(var(--ds-arena-space-1) / 4)
+  );
+  background-size: var(--ds-arena-space-4) var(--ds-arena-space-4);
+}
+
+.reading-section {
+  background-image: none;
+}
+
 img,
 svg,
 picture {
@@ -550,6 +573,10 @@ samp {
   padding: var(--ds-arena-space-6);
   border-radius: var(--ds-arena-radius-xl);
   border-color: var(--ds-arena-color-lime-dim);
+}
+
+#products .product {
+  border-color: var(--ds-arena-color-border-strong);
 }
 
 .product__art {
