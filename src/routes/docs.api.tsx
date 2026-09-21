@@ -170,7 +170,7 @@ function PageDocsApi() {
       
                   <h2 id="webmcp">WebMCP</h2>
                   <p>
-                    HTML pages call <code>navigator.modelContext.provideContext()</code> (and
+                    HTML pages call <code>navigator.modelContext.provideContext()</code> (and{" "}
                     <code>registerTool</code> when that is what the browser exposes) so in-page
                     agents can read studio facts and navigate the site.
                   </p>

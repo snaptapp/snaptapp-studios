@@ -197,7 +197,7 @@ function PageSupport() {
                 <h3 id="data-copy">Requesting a copy of your data</h3>
                 <p>
                   Email <a href="mailto:privacy@snaptapp.us">privacy@snaptapp.us</a> from the
-                  address on your account with the subject
+                  address on your account with the subject{" "}
                   <code>Data access request</code>. After we verify the request, we will provide
                   a machine-readable copy of the personal data associated with your account. We
                   respond within 30 days.
@@ -232,7 +232,7 @@ function PageSupport() {
                   retention period.
                 </p>
                 <div className="callout">
-                  <strong>Deleting the app is not the same as deleting your account.</strong>
+                  <strong>Deleting the app is not the same as deleting your account.</strong>{" "}
                   Removing the app stops use on that device, but it does not delete the account
                   or server-side profile. Use the deletion process above if you want the account
                   removed.
