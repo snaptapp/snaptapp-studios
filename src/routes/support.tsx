@@ -130,7 +130,7 @@ function PageSupport() {
             <div className="shell">
               <div className="prose">
                 <div className="callout">
-                  <strong>Need a human?</strong> Email
+                  <strong>Need a human?</strong> Email{" "}
                   <a href="mailto:support@snaptapp.us">support@snaptapp.us</a>. We typically
                   reply within two business days. Include your platform, app or browser version,
                   and a screenshot if it helps show the issue.
@@ -141,7 +141,7 @@ function PageSupport() {
                 <dl>
                   <dt>Where do I play?</dt>
                   <dd>
-                    In a browser at
+                    In a browser at{" "}
                     <a href="https://moreorless.snaptapp.us">moreorless.snaptapp.us</a>. The iOS
                     and Android builds are in development; when they land they will be linked
                     from <a href="/products/">the products page</a>.
@@ -149,7 +149,7 @@ function PageSupport() {
       
                   <dt>I think a fact is wrong.</dt>
                   <dd>
-                    Send the topic, the claim as it appeared, and the number shown to
+                    Send the topic, the claim as it appeared, and the number shown to{" "}
                     <a href="mailto:support@snaptapp.us">support@snaptapp.us</a>. We review
                     reported rounds and correct or remove anything that is inaccurate.
                   </dd>
@@ -178,7 +178,7 @@ function PageSupport() {
                   <dt>I lost my streak or my match history.</dt>
                   <dd>
                     Progress is tied to the account and sign-in method you used. If you signed
-                    in another way, you may be looking at a separate profile. Email
+                    in another way, you may be looking at a separate profile. Email{" "}
                     <a href="mailto:support@snaptapp.us">support@snaptapp.us</a> from the address
                     on the account and we can check.
                   </dd>
@@ -205,8 +205,8 @@ function PageSupport() {
       
                 <h3 id="delete">Deleting your account and data</h3>
                 <p>
-                  Use our
-                  <a href="https://forms.gle/jvzqpb9yCuDywtbT8" rel="noopener">account deletion request form</a>, or email
+                  Use our{" "}
+                  <a href="https://forms.gle/jvzqpb9yCuDywtbT8" rel="noopener">account deletion request form</a>, or email{" "}
                   <a href="mailto:privacy@snaptapp.us">privacy@snaptapp.us</a> from the address
                   on your account with the subject <code>Delete my account</code>. We will
                   verify the request before deleting the account.
@@ -240,10 +240,10 @@ function PageSupport() {
       
                 <h2 id="security">Reporting a security issue</h2>
                 <p>
-                  Send vulnerability reports to
+                  Send vulnerability reports to{" "}
                   <a href="mailto:security@snaptapp.us">security@snaptapp.us</a>. We acknowledge
                   reports within three business days and will provide updates as we investigate.
-                  Our disclosure policy is published at
+                  Our disclosure policy is published at{" "}
                   <a href="/.well-known/security.txt">/.well-known/security.txt</a>.
                 </p>
                 <p>
@@ -253,7 +253,7 @@ function PageSupport() {
       
                 <h2 id="status">Something is down</h2>
                 <p>
-                  If a product is unavailable, email
+                  If a product is unavailable, email{" "}
                   <a href="mailto:support@snaptapp.us">support@snaptapp.us</a> with what you are
                   seeing and roughly when it started. We do not currently publish a public
                   status page.

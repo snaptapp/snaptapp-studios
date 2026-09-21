@@ -139,8 +139,8 @@ function PageLegalPrivacy() {
                   This policy explains what personal data Snaptapp (&ldquo;Snaptapp&rdquo;,
                   &ldquo;we&rdquo;, &ldquo;us&rdquo;) collects when you use our websites and
                   applications, why we collect it, who processes it on our behalf, and what you
-                  can do about it. It applies to
-                  <a href="https://snaptapp.us/">snaptapp.us</a>, to
+                  can do about it. It applies to{" "}
+                  <a href="https://snaptapp.us/">snaptapp.us</a>, to{" "}
                   <a href="https://moreorless.snaptapp.us">More or Less</a>, and to any future
                   Snaptapp product that links to this page.
                 </p>
@@ -176,7 +176,7 @@ function PageLegalPrivacy() {
                 <h2 id="controller">1. Who is responsible</h2>
                 <p>
                   Snaptapp is the data controller for the personal data described in this policy.
-                  For any privacy matter, write to
+                  For any privacy matter, write to{" "}
                   <a href="mailto:privacy@snaptapp.us">privacy@snaptapp.us</a>. We do not
                   currently operate in a jurisdiction that requires us to appoint a data
                   protection officer; the founding partners handle privacy requests directly.
@@ -229,7 +229,7 @@ function PageLegalPrivacy() {
                 <p>
                   We do not collect precise GPS location, contacts, photos beyond an avatar you
                   deliberately upload, microphone or camera input, health data, or biometric data.
-                  We do not ask for payment card numbers — see
+                  We do not ask for payment card numbers — see{" "}
                   <a href="#processors">section 5</a>.
                 </p>
       
@@ -316,7 +316,7 @@ function PageLegalPrivacy() {
                 <h2 id="processors">5. Who we share it with</h2>
                 <p>
                   We do not sell personal data and we do not share it for cross-context behavioural
-                  advertising outside the advertising described in
+                  advertising outside the advertising described in{" "}
                   <a href="#advertising">section 6</a>. We use the following processors and service
                   providers, each under contract and each limited to the purpose listed:
                 </p>
@@ -396,7 +396,7 @@ function PageLegalPrivacy() {
                   </tbody>
                 </table>
                 <p>
-                  We may also disclose data where we are legally required to, to enforce our
+                  We may also disclose data where we are legally required to, to enforce our{" "}
                   <a href="/legal/terms/">terms of service</a>, or to protect the rights and
                   safety of our users. If Snaptapp is ever involved in a merger or acquisition, we
                   will give notice on this page before personal data becomes subject to a different
@@ -420,7 +420,7 @@ function PageLegalPrivacy() {
                     delete or opt out of the advertising ID.
                   </li>
                   <li>
-                    <strong>Anywhere</strong> — Google's own controls at
+                    <strong>Anywhere</strong> — Google's own controls at{" "}
                     <a href="https://adssettings.google.com/" rel="noopener">adssettings.google.com</a>.
                   </li>
                 </ul>
@@ -443,7 +443,7 @@ function PageLegalPrivacy() {
                 </p>
                 <p>
                   Generated facts are checked automatically and rejected when they fail our rules,
-                  but no automated check is perfect. If you spot an error, please
+                  but no automated check is perfect. If you spot an error, please{" "}
                   <a href="/support/#more-or-less">tell us</a>.
                 </p>
       
@@ -502,9 +502,9 @@ function PageLegalPrivacy() {
                   <li>Not be discriminated against for exercising any of these rights</li>
                 </ul>
                 <p>
-                  To exercise any of them, email
+                  To exercise any of them, email{" "}
                   <a href="mailto:privacy@snaptapp.us">privacy@snaptapp.us</a> from the address on
-                  your account. The step-by-step process for access and deletion is on our
+                  your account. The step-by-step process for access and deletion is on our{" "}
                   <a href="/support/#account">support page</a>. We respond within 30 days. There is
                   no charge, and we will not ask you to create an account in order to make a
                   request.
@@ -525,7 +525,7 @@ function PageLegalPrivacy() {
                   Our products are not directed to children under 13, and we do not knowingly
                   collect personal data from them. Where local law sets a higher age for consent to
                   data processing — 16 in parts of the EEA — that age applies instead. If you believe
-                  a child has given us personal data, email
+                  a child has given us personal data, email{" "}
                   <a href="mailto:privacy@snaptapp.us">privacy@snaptapp.us</a> and we will delete the
                   account and its data promptly.
                 </p>
@@ -548,8 +548,8 @@ function PageLegalPrivacy() {
                   they reach our services.
                 </p>
                 <p>
-                  No system is perfect. If you find a weakness, please report it to
-                  <a href="mailto:security@snaptapp.us">security@snaptapp.us</a> — our policy is at
+                  No system is perfect. If you find a weakness, please report it to{" "}
+                  <a href="mailto:security@snaptapp.us">security@snaptapp.us</a> — our policy is at{" "}
                   <a href="/.well-known/security.txt">/.well-known/security.txt</a>. If a breach ever
                   affects your personal data, we will notify you and any required regulator within the
                   legally mandated timeframe.
@@ -565,7 +565,7 @@ function PageLegalPrivacy() {
       
                 <h2 id="contact">14. Contact</h2>
                 <p>
-                  Privacy and data requests:
+                  Privacy and data requests:{" "}
                   <a href="mailto:privacy@snaptapp.us">privacy@snaptapp.us</a><br />
                   General enquiries: <a href="mailto:hello@snaptapp.us">hello@snaptapp.us</a><br />
                   Security: <a href="mailto:security@snaptapp.us">security@snaptapp.us</a>
