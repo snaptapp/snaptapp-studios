@@ -156,8 +156,16 @@ function PageIndex() {
               </div>
       
               <article className="product reveal">
-                <div className="product__art">
-                  <img src="/assets/img/more-or-less-icon.png" alt="More or Less app icon" width="272" height="272" loading="lazy" />
+                <div className="product__media">
+                  <div className="product__art">
+                    <img src="/assets/img/more-or-less-icon.png" alt="More or Less app icon" width="272" height="272" loading="lazy" />
+                  </div>
+                  <img
+                    className="product__screenshot"
+                    src="/assets/img/more-or-less-home.png"
+                    alt="More or Less game home screen showing play modes"
+                    loading="lazy"
+                  />
                 </div>
                 <div>
                   <div className="product__title">

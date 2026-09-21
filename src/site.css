@@ -597,6 +597,23 @@ samp {
   object-fit: cover;
 }
 
+.product__media {
+  display: grid;
+  justify-items: center;
+  gap: var(--ds-arena-space-4);
+}
+
+.product__screenshot {
+  display: block;
+  width: calc(var(--ds-arena-space-7) * 4);
+  max-width: 100%;
+  height: auto;
+  border-color: var(--ds-arena-color-border-strong);
+  border-style: solid;
+  border-width: calc(var(--ds-arena-space-1) / 4);
+  border-radius: var(--ds-arena-radius-lg);
+}
+
 .product__title {
   display: flex;
   flex-wrap: wrap;
@@ -970,6 +987,7 @@ samp {
   .grid--3,
   .contact-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .product { grid-template-columns: calc(var(--ds-arena-space-7) * 3) minmax(0, 1fr); }
+  #products .product { grid-template-columns: calc(var(--ds-arena-space-7) * 4) minmax(0, 1fr); }
 }
 
 @media (max-width: 54rem) {
