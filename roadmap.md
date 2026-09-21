@@ -1,10 +1,12 @@
 # Snaptapp site migration roadmap
 
-Goal: rebuild snaptapp.us (static site + Cloudflare Worker) as this Lovable app,
-replicating the current design exactly (no redesign — user decision).
+Goal: rebuild snaptapp.us as a Lovable app, preserving every URL and all content while applying the attached More Or Less design system across the public site.
 
 ## Tasks
 
+- [ ] Rebuild all public pages and shared navigation/footer in the attached design system
+- [ ] Increase SNAPTAPP wordmark legibility while preserving the design language
+- [ ] Verify all public pages at desktop and mobile sizes without changing URLs or content
 - [x] Port pages to TanStack routes, markup/CSS identical: /, /products/, /company/,
       /support/, /contact/, /legal/privacy/, /legal/terms/, /docs/api/, 404
 - [x] Keep site.css + brand assets served from public/
