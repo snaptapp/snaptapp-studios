@@ -142,7 +142,7 @@ function PageContact() {
                     <p className="contact-card__label">Product support</p>
                     <a href="mailto:support@snaptapp.us">support@snaptapp.us</a>
                     <p>
-                      Bugs, account issues, and gameplay support. The
+                      Bugs, account issues, and gameplay support. The{" "}
                       <a href="/support/">support page</a> covers common questions and
                       troubleshooting.
                     </p>
@@ -161,7 +161,7 @@ function PageContact() {
                      <p className="contact-card__label">Security</p>
                     <a href="mailto:security@snaptapp.us">security@snaptapp.us</a>
                     <p>
-                      Vulnerability reports and security-related enquiries. See
+                      Vulnerability reports and security-related enquiries. See{" "}
                       <a href="/.well-known/security.txt">security.txt</a> for reporting
                       guidance.
                     </p>

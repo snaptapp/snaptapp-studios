@@ -140,8 +140,8 @@ function PageLegalTerms() {
                   <p>
                     These terms are an agreement between you and Snaptapp
                     (&ldquo;Snaptapp&rdquo;, &ldquo;we&rdquo;, &ldquo;us&rdquo;) covering your use
-                    of our websites and applications, including
-                    <a href="https://snaptapp.us/">snaptapp.us</a> and
+                    of our websites and applications, including{" "}
+                    <a href="https://snaptapp.us/">snaptapp.us</a> and{" "}
                     <a href="https://moreorless.snaptapp.us">More or Less</a> (together, the
                     &ldquo;Services&rdquo;). By using the Services you accept these terms. If you
                     do not accept them, do not use the Services.
@@ -181,7 +181,7 @@ function PageLegalTerms() {
                   <h2 id="accounts">2. Your account</h2>
                   <p>
                     Some features need an account. You agree to give accurate information, to keep
-                    your credentials to yourself, and to tell us promptly at
+                    your credentials to yourself, and to tell us promptly at{" "}
                     <a href="mailto:support@snaptapp.us">support@snaptapp.us</a> if you think someone
                     else has access. You are responsible for activity under your account.
                   </p>
@@ -190,7 +190,7 @@ function PageLegalTerms() {
                     transfer an account, or use someone else's.
                   </p>
                   <p>
-                    You can close your account at any time using the process on our
+                    You can close your account at any time using the process on our{" "}
                     <a href="/support/#delete">support page</a>.
                   </p>
       
@@ -261,8 +261,8 @@ function PageLegalTerms() {
                     <strong>The Services are entertainment. Nothing in them is professional, medical,
                       financial, or legal advice, and no figure presented should be relied on for any
                       decision that matters.</strong
-                    >
-                    If you spot something wrong, tell us at
+                    >{" "}
+                    If you spot something wrong, tell us at{" "}
                     <a href="mailto:support@snaptapp.us">support@snaptapp.us</a> and we will check it.
                   </p>
       
@@ -270,7 +270,7 @@ function PageLegalTerms() {
                   <p>
                     The mobile applications are free to play and supported by advertising. We are not
                     responsible for the content of third-party advertisements or for anything you buy
-                    from an advertiser. How advertising affects your data is described in our
+                    from an advertiser. How advertising affects your data is described in our{" "}
                     <a href="/legal/privacy/#advertising">privacy policy</a>.
                   </p>
       
@@ -308,7 +308,7 @@ function PageLegalTerms() {
       
                   <h2 id="copyright">9. Copyright complaints</h2>
                   <p>
-                    If you believe material in the Services infringes your copyright, send a notice to
+                    If you believe material in the Services infringes your copyright, send a notice to{" "}
                     <a href="mailto:legal@snaptapp.us">legal@snaptapp.us</a> that identifies the work,
                     identifies the material and where it appears, gives your contact details, states
                     that you have a good-faith belief the use is unauthorised and that the information
@@ -382,14 +382,14 @@ function PageLegalTerms() {
                     the right to bring proceedings locally, nothing here removes that right.
                   </p>
                    <p>
-                     Before starting formal proceedings, please email
+                     Before starting formal proceedings, please email{" "}
                      <a href="mailto:legal@snaptapp.us">legal@snaptapp.us</a> with the details so we
                      have an opportunity to resolve the issue informally.
                    </p>
       
                   <h2 id="general">15. General</h2>
                   <p>
-                    These terms, together with our
+                    These terms, together with our{" "}
                     <a href="/legal/privacy/">privacy policy</a>, are the entire agreement between us
                     about the Services. If any provision is found unenforceable, the rest stays in
                     force. Our failure to enforce a provision is not a waiver of it. You may not assign

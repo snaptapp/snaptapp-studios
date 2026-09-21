@@ -139,16 +139,16 @@ function PageDocsApi() {
       
                   <h2 id="catalog">API catalog</h2>
                   <p>
-                    RFC 9727 catalog at
+                    RFC 9727 catalog at{" "}
                     <a href="/.well-known/api-catalog"><code>/.well-known/api-catalog</code></a>
-                    (<code>application/linkset+json</code>). OpenAPI is at
-                    <a href="/openapi.json"><code>/openapi.json</code></a>. Health is
+                    {" "}(<code>application/linkset+json</code>). OpenAPI is at{" "}
+                    <a href="/openapi.json"><code>/openapi.json</code></a>. Health is{" "}
                     <a href="/api/health"><code>GET /api/health</code></a>.
                   </p>
       
                   <h2 id="mcp">MCP</h2>
                   <p>
-                    Server card:
+                    Server card:{" "}
                     <a href="/.well-known/mcp/server-card.json"><code>/.well-known/mcp/server-card.json</code></a>.
                     Streamable HTTP endpoint: <code>POST https://snaptapp.us/mcp</code>.
                   </p>
@@ -170,14 +170,14 @@ function PageDocsApi() {
       
                   <h2 id="webmcp">WebMCP</h2>
                   <p>
-                    HTML pages call <code>navigator.modelContext.provideContext()</code> (and
+                    HTML pages call <code>navigator.modelContext.provideContext()</code> (and{" "}
                     <code>registerTool</code> when that is what the browser exposes) so in-page
                     agents can read studio facts and navigate the site.
                   </p>
       
                   <h2 id="more-or-less">More or Less</h2>
                   <p>
-                    The trivia game is a different origin:
+                    The trivia game is a different origin:{" "}
                     <a href="https://moreorless.snaptapp.us">moreorless.snaptapp.us</a>. Player
                     APIs authenticate with Firebase ID tokens, not the catalog OAuth on this host.
                   </p>
