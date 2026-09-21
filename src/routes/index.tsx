@@ -10,7 +10,7 @@ export const Route = createFileRoute("/")({
       },
       {
             "name": "description",
-            "content": "Independent game studio building cross-platform games on real-time edge infrastructure. First title: More or Less, a fast party trivia game about numbers."
+            "content": "Independent game studio creating original games for web and mobile. Our first title, More or Less, is live on the web."
       },
       {
             "name": "theme-color",
@@ -34,7 +34,7 @@ export const Route = createFileRoute("/")({
       },
       {
             "property": "og:description",
-            "content": "Independent game studio building cross-platform games on real-time edge infrastructure. First title: More or Less, a fast party trivia game about numbers."
+            "content": "Independent game studio creating original games for web and mobile. Our first title, More or Less, is live on the web."
       },
       {
             "property": "og:url",
@@ -80,7 +80,7 @@ export const Route = createFileRoute("/")({
             "type": "application/json"
       }
 ],
-    scripts: [{ type: "application/ld+json", children: "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"Organization\",\"@id\":\"https://snaptapp.us/#organization\",\"name\":\"Snaptapp\",\"alternateName\":\"Snaptapp Studio\",\"url\":\"https://snaptapp.us/\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://snaptapp.us/assets/img/icon-512.png\",\"width\":512,\"height\":512},\"image\":\"https://snaptapp.us/assets/img/og-default.png\",\"description\":\"Independent studio shipping its own cross-platform games on real-time edge infrastructure. First title: More or Less.\",\"foundingDate\":\"2026\",\"email\":\"hello@snaptapp.us\",\"address\":{\"@type\":\"PostalAddress\",\"addressCountry\":\"US\"},\"contactPoint\":[{\"@type\":\"ContactPoint\",\"contactType\":\"customer support\",\"email\":\"support@snaptapp.us\",\"availableLanguage\":\"English\"},{\"@type\":\"ContactPoint\",\"contactType\":\"press\",\"email\":\"hello@snaptapp.us\",\"availableLanguage\":\"English\"},{\"@type\":\"ContactPoint\",\"contactType\":\"technical support\",\"email\":\"security@snaptapp.us\",\"availableLanguage\":\"English\"}]},{\"@type\":\"WebSite\",\"@id\":\"https://snaptapp.us/#website\",\"url\":\"https://snaptapp.us/\",\"name\":\"Snaptapp\",\"publisher\":{\"@id\":\"https://snaptapp.us/#organization\"},\"inLanguage\":\"en-US\"},{\"@type\":\"SoftwareApplication\",\"@id\":\"https://snaptapp.us/products/#more-or-less\",\"name\":\"More or Less\",\"url\":\"https://moreorless.snaptapp.us\",\"applicationCategory\":\"GameApplication\",\"applicationSubCategory\":\"Trivia\",\"operatingSystem\":\"Web, iOS, Android\",\"publisher\":{\"@id\":\"https://snaptapp.us/#organization\"},\"description\":\"A party trivia game about numbers: one fake figure, a shot clock, and a room full of people guessing whether the real answer is more or less.\"}]}" }],
+    scripts: [{ type: "application/ld+json", children: "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"Organization\",\"@id\":\"https://snaptapp.us/#organization\",\"name\":\"Snaptapp\",\"alternateName\":\"Snaptapp Studio\",\"url\":\"https://snaptapp.us/\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://snaptapp.us/assets/img/icon-512.png\",\"width\":512,\"height\":512},\"image\":\"https://snaptapp.us/assets/img/og-default.png\",\"description\":\"Independent game studio creating original games for web and mobile. First title: More or Less.\",\"foundingDate\":\"2026\",\"email\":\"hello@snaptapp.us\",\"address\":{\"@type\":\"PostalAddress\",\"addressCountry\":\"US\"},\"contactPoint\":[{\"@type\":\"ContactPoint\",\"contactType\":\"customer support\",\"email\":\"support@snaptapp.us\",\"availableLanguage\":\"English\"},{\"@type\":\"ContactPoint\",\"contactType\":\"press\",\"email\":\"press@snaptapp.us\",\"availableLanguage\":\"English\"},{\"@type\":\"ContactPoint\",\"contactType\":\"technical support\",\"email\":\"security@snaptapp.us\",\"availableLanguage\":\"English\"}]},{\"@type\":\"WebSite\",\"@id\":\"https://snaptapp.us/#website\",\"url\":\"https://snaptapp.us/\",\"name\":\"Snaptapp\",\"publisher\":{\"@id\":\"https://snaptapp.us/#organization\"},\"inLanguage\":\"en-US\"},{\"@type\":\"SoftwareApplication\",\"@id\":\"https://snaptapp.us/products/#more-or-less\",\"name\":\"More or Less\",\"url\":\"https://moreorless.snaptapp.us\",\"applicationCategory\":\"GameApplication\",\"applicationSubCategory\":\"Trivia\",\"operatingSystem\":\"Web, iOS, Android\",\"publisher\":{\"@id\":\"https://snaptapp.us/#organization\"},\"description\":\"A party trivia game about numbers: one fake figure, a shot clock, and a room full of people guessing whether the real answer is more or less.\"}]}" }],
   }),
   component: PageIndex,
 });
@@ -117,16 +117,15 @@ function PageIndex() {
           <section className="hero">
             <div className="shell">
               <div className="hero__inner">
-                <p className="eyebrow">Independent studio</p>
-                <h1>We build and run our own games.</h1>
+                <p className="eyebrow">Independent game studio</p>
+                <h1>Original games for web and mobile.</h1>
                 <p className="lede">
-                  Snaptapp is an independent US game studio building original games for web and
-                  mobile. We develop and operate them end to end, from the client to the
-                  infrastructure behind it. Our first title, More or Less, is live now.
+                  Snaptapp is an independent US game studio. We design, build, and operate our own
+                  games across web and mobile. Our first title, More or Less, is live now.
                 </p>
                 <div className="row hero__actions">
                   <a className="btn btn--primary" href="/products/">
-                    See what we build
+                    Explore our games
                     <svg className="btn__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
                       <path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
@@ -149,10 +148,10 @@ function PageIndex() {
             <div className="shell">
               <div className="section-head reveal">
                 <p className="eyebrow">Products</p>
-                <h2>What we ship</h2>
+                <h2>Our games</h2>
                 <p className="lede">
-                  We would rather run a small number of products properly than announce a
-                  catalogue we cannot support. Here is the honest state of the shelf.
+                  More or Less is live on the web, with iOS and Android versions in development. A
+                  second Snaptapp title is also in development.
                 </p>
               </div>
       
@@ -169,11 +168,11 @@ function PageIndex() {
                     One fake number. Is the real answer more or less?
                   </p>
                   <p>
-                    A party trivia game about numbers. You get a claim and a plausible-looking
-                    figure, and a shot clock. Guess whether the real number is higher or lower
-                    before it runs out. Play solo, run an endless sudden-death streak, take the
-                    daily challenge, or put up to ten phones in the same room and let them
-                    fight it out over a synchronised clock.
+                    More or Less is a fast trivia game built around one simple question: is the
+                    real answer higher or lower? Every round gives you a claim and a believable
+                    but incorrect number. Make your call before time runs out, then see the actual
+                    figure. Play solo, take on the daily challenge, or compete with up to ten
+                    players in a room.
                   </p>
       
                   <dl className="product__meta">
@@ -214,15 +213,14 @@ function PageIndex() {
                 <div className="card card--empty">
                   <span className="badge badge--soon">In development</span>
                   <p className="muted small mt-xs">
-                    Product two is in build. We announce things when they are playable, not
-                    when they are pitched.
+                    A second Snaptapp title is in development. Details will be announced later.
                   </p>
                 </div>
                 <div className="card card--hover">
                   <h3>Press and licensing</h3>
                   <p>
-                    Review builds, interviews, and licensing for Snaptapp titles. We make our
-                    own games. We do not take client work.
+                    For review access, interviews, licensing, or media requests, contact the
+                    studio.
                   </p>
                   <p className="mt-sm">
                     <a className="link-arrow" href="/contact/">Contact the studio
@@ -241,7 +239,7 @@ function PageIndex() {
             <div className="shell">
               <div className="section-head reveal">
                 <p className="eyebrow">How we build</p>
-                <h2>Four decisions we make on every product</h2>
+                <h2>How the games are built</h2>
               </div>
       
               <div className="grid grid--2 reveal">
@@ -252,12 +250,10 @@ function PageIndex() {
                     </svg>
                   </div>
                   <span className="card__num">01</span>
-                  <h3>Real time is the default, not a feature</h3>
+                  <h3>Real-time multiplayer</h3>
                   <p>
-                    Shared sessions run on Cloudflare Durable Objects over persistent
-                    WebSockets, so every device in a room reads the same clock and the same
-                    state. Latency is a design constraint from the first commit, not something
-                    we try to patch in at the end.
+                    Party Room sessions use Cloudflare Durable Objects and WebSockets to keep
+                    every player on the same round and clock.
                   </p>
                 </div>
       
@@ -269,11 +265,10 @@ function PageIndex() {
                     </svg>
                   </div>
                   <span className="card__num">02</span>
-                  <h3>One codebase, every screen</h3>
+                  <h3>Cross-platform development</h3>
                   <p>
-                    We build in Flutter and ship the same product to iOS, Android, and
-                    the web. A fix lands once. A design system holds across phones, tablets,
-                    and desktop instead of drifting into three half-maintained forks.
+                    More or Less is built in Flutter for web, iOS, and Android, keeping core
+                    gameplay and interface code shared across platforms.
                   </p>
                 </div>
       
@@ -285,12 +280,10 @@ function PageIndex() {
                     </svg>
                   </div>
                   <span className="card__num">03</span>
-                  <h3>AI only where it is checkable</h3>
+                  <h3>Checked generated content</h3>
                   <p>
-                    Generated content is not shipped on trust. In More or Less, hand-verified
-                    facts are served first; anything the model produces is grounded against
-                    search, then run through deterministic guardrails that reject it outright
-                    if the numbers or the logic do not hold.
+                    Curated rounds come from a verified fact bank. Custom topics can be generated
+                    on demand, with search grounding and automated checks before a round is shown.
                   </p>
                 </div>
       
@@ -302,12 +295,10 @@ function PageIndex() {
                     </svg>
                   </div>
                   <span className="card__num">04</span>
-                  <h3>Abuse controls before launch</h3>
+                  <h3>Safety and reliability</h3>
                   <p>
-                    Player-supplied input hits a deterministic content filter at every entry
-                    point. Device attestation and bot checks sit in front of the API, and
-                    per-account quotas keep one bad actor from spending the whole room's
-                    budget.
+                    Content filtering, device attestation, bot protection, and account-level
+                    limits help protect the service from abuse.
                   </p>
                 </div>
               </div>
@@ -321,8 +312,8 @@ function PageIndex() {
                 <p className="eyebrow">Infrastructure</p>
                 <h2>What we run on</h2>
                 <p className="lede">
-                  Managed, boring, and globally distributed. We would rather spend the budget
-                  on the product than on operating our own metal.
+                  Our current stack uses managed services so a small team can run the product
+                  reliably without maintaining unnecessary infrastructure.
                 </p>
               </div>
       
@@ -356,10 +347,10 @@ function PageIndex() {
             <div className="shell">
               <div className="cta reveal">
                 <p className="eyebrow">Get in touch</p>
-                <h2>Play, press, or a question about More or Less?</h2>
+                <h2>Questions, press, or support?</h2>
                 <p className="lede">
-                  Press, licensing, and support all reach a real person. We answer within two
-                  business days.
+                  Use the contact page to reach the right inbox. Support and general enquiries are
+                  typically answered within two business days.
                 </p>
                 <div className="row mt-lg">
                   <a className="btn btn--primary" href="/contact/">Contact Snaptapp</a>

@@ -10,7 +10,7 @@ export const Route = createFileRoute("/products")({
       },
       {
             "name": "description",
-            "content": "Snaptapp products. More or Less is a party trivia game about numbers, live on the web with iOS and Android in development."
+            "content": "Snaptapp games. More or Less is a fast trivia game about numbers, live on the web with iOS and Android versions in development."
       },
       {
             "name": "theme-color",
@@ -34,7 +34,7 @@ export const Route = createFileRoute("/products")({
       },
       {
             "property": "og:description",
-            "content": "More or Less is a party trivia game about numbers, live on the web with iOS and Android in development."
+            "content": "Snaptapp games. More or Less is a fast trivia game about numbers, live on the web with iOS and Android versions in development."
       },
       {
             "property": "og:url",
@@ -121,8 +121,8 @@ function PageProducts() {
                 </ol>
                 <h1>Products</h1>
                  <p className="lede">
-                   One product is live, with another in development. New titles appear here as
-                   they become playable.
+                   More or Less is live on the web, with iOS and Android versions in development. A
+                   second Snaptapp title is also in development.
                  </p>
               </div>
             </section>
@@ -142,15 +142,15 @@ function PageProducts() {
                       One fake number. Is the real answer more or less?
                     </p>
                     <p>
-                      Every round gives you a claim, a number that looks entirely reasonable, and
-                      a countdown. The number is wrong on purpose. Your only job is to decide
-                      whether the real figure is higher or lower before the clock runs out, then
-                      watch the reveal explain exactly how far off you were.
+                      More or Less is a trivia game built around one simple decision: is the real
+                      answer higher or lower than the number on screen? Every round gives you a
+                      claim and a believable but incorrect number. Make your call before time runs
+                      out, then see the actual figure.
                     </p>
                      <p>
-                       Choose a curated topic or type your own. Curated rounds come from a verified
-                       fact bank, while custom topics are generated on demand and checked before
-                       they're shown.
+                       Choose from curated topics or enter your own. Curated rounds use a verified
+                       fact bank; custom topics are generated on demand and checked before they
+                       appear.
                      </p>
       
                     <dl className="product__meta">
@@ -196,41 +196,41 @@ function PageProducts() {
                   <div className="card">
                     <h3>Standard</h3>
                     <p>
-                      Five rounds on a topic of your choice, mixed difficulty, with a selectable
-                      pace — fast, normal, or relaxed.
+                      Five rounds on a topic of your choice, with mixed difficulty and fast,
+                      normal, or relaxed timing.
                     </p>
                   </div>
                   <div className="card">
                     <h3>Cutthroat</h3>
                     <p>
-                      Endless sudden death drawn from the whole fact bank. One wrong call and the
-                      run is over.
+                      An endless sudden-death run drawn from the full fact bank. One wrong answer
+                      ends the run.
                     </p>
                   </div>
                   <div className="card">
                     <h3>Daily Challenge</h3>
                     <p>
-                      The same five rounds for everyone, same fixed clock, once a day. Streaks
-                      carry over.
+                      The same five rounds for everyone each day, with a fixed timer and streak
+                      tracking.
                     </p>
                   </div>
                   <div className="card">
                     <h3>Versus 1v1</h3>
                     <p>
-                      Send a challenge, they play the identical pack whenever they like, and the
-                      result comes back to you.
+                      Challenge another player to the same set of rounds and compare results when
+                      both have finished.
                     </p>
                   </div>
                   <div className="card">
                     <h3>Party Room</h3>
                     <p>
-                      Up to ten phones in one room on a synchronised clock. Everyone sees the same
-                      round at the same moment.
+                      Up to ten players join the same room and play each round together on a shared
+                      clock.
                     </p>
                   </div>
                   <div className="card card--empty">
                     <span className="badge badge--soon">More coming</span>
-                    <p className="muted small mt-xs">New modes ship alongside the mobile release.</p>
+                    <p className="muted small mt-xs">Additional modes are planned alongside the mobile release.</p>
                   </div>
                 </div>
               </div>
@@ -239,15 +239,14 @@ function PageProducts() {
             <section className="section section--edge">
               <div className="shell">
                 <div className="section-head reveal">
-                  <p className="eyebrow">Pipeline</p>
-                  <h2>Product two</h2>
+                  <p className="eyebrow">In development</p>
+                  <h2>Next title</h2>
                    <p className="lede">
-                     Our second product is in development. We'll share more when it's ready to
-                     play.
+                     A second Snaptapp title is in development. More details will be shared later.
                    </p>
                 </div>
                 <p className="reveal">
-                  <a className="link-arrow" href="/contact/">Want early access? Tell us
+                  <a className="link-arrow" href="/contact/">Interested in early access? Contact us
                     <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true">
                       <path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
