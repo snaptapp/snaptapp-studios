@@ -194,10 +194,7 @@ function PageDocsApi() {
                     <img className="brand__mark" src="/assets/img/snaptapp-mark.svg" alt="" width="30" height="30" />
                     <span>Snaptapp</span>
                   </a>
-                  <p>
-                    An independent studio shipping its own games on
-                    real-time edge infrastructure.
-                  </p>
+                   <p>An independent game studio building and operating its own titles.</p>
                 </div>
       
                 <div>
