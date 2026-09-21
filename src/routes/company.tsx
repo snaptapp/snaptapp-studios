@@ -159,7 +159,10 @@ function PageCompany() {
                   <div className="card">
                     <span className="card__num">01</span>
                     <h3>Ship, then talk</h3>
-                     <p>We announce products when people can play them.</p>
+                     <p>
+                       We announce products only when someone outside the studio can play them,
+                       not before.
+                     </p>
                   </div>
                   <div className="card">
                     <span className="card__num">02</span>

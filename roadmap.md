@@ -23,4 +23,5 @@ Goal: rebuild snaptapp.us as a Lovable app, preserving every URL and all content
 - [x] Verify MCP + OAuth end to end
 - [x] Verify MCP tools return the real studio overview, products, and contact channels
 - [x] Connect snaptapp.us and www.snaptapp.us with snaptapp.us as primary
+- [x] Complete the targeted game-studio positioning copy pass
 - [ ] Publish the project, verify both live domains, then retire the legacy Cloudflare Worker
