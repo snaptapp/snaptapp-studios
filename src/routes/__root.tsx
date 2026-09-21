@@ -186,6 +186,13 @@ function RootShell({ children }: { children: ReactNode }) {
   return (
     <html lang="en" className="no-js">
       <head>
+        {/* Google tag (gtag.js) — one Google tag per page */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-7QMJL9732Z" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-7QMJL9732Z');`,
+          }}
+        />
         {/* Google Tag Manager */}
         <script
           dangerouslySetInnerHTML={{
