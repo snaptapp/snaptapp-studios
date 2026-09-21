@@ -261,7 +261,7 @@ function PageLegalTerms() {
                     <strong>The Services are entertainment. Nothing in them is professional, medical,
                       financial, or legal advice, and no figure presented should be relied on for any
                       decision that matters.</strong
-                    >
+                    >{" "}
                     If you spot something wrong, tell us at{" "}
                     <a href="mailto:support@snaptapp.us">support@snaptapp.us</a> and we will check it.
                   </p>
