@@ -372,6 +372,12 @@ samp {
   transform: translateY(calc(var(--ds-arena-space-1) * -1));
 }
 
+.btn:active {
+  transform: translateY(var(--ds-arena-space-1));
+  box-shadow: none;
+  transition-duration: var(--ds-arena-duration-fast);
+}
+
 .btn--primary {
   background: var(--ds-arena-color-lime);
   color: var(--ds-arena-color-primary-foreground);
