@@ -25,4 +25,7 @@ Goal: rebuild snaptapp.us as a Lovable app, preserving every URL and all content
 - [x] Connect snaptapp.us and www.snaptapp.us with snaptapp.us as primary
 - [x] Complete the targeted game-studio positioning copy pass
 - [x] Complete the copy-only rewrite for Home, Products, and Company
+- [x] Fix site-wide missing space before inline links (JSX whitespace) + Terms period gap
+- [x] Apply "Campfire Night" warm studio palette (orange primary, soft-yellow secondary, lime removed)
+- [ ] Evaluate palette in preview; then decide whether Anton/JetBrains Mono usage needs scaling back
 - [ ] Publish the project, verify both live domains, then retire the legacy Cloudflare Worker
