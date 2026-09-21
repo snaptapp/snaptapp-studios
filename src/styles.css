@@ -38,6 +38,7 @@
   --color-card-foreground: var(--card-foreground);
   --color-popover: var(--popover);
   --color-popover-foreground: var(--popover-foreground);
+  --font-sans: var(--ds-arena-font-body);
   --font-display: var(--ds-arena-font-display);
   --font-mono: var(--ds-arena-font-mono);
   --color-primary: var(--primary);

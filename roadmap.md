@@ -21,5 +21,6 @@ Goal: rebuild snaptapp.us as a Lovable app, preserving every URL and all content
 - [x] Port _headers security headers / content types where hosting allows
 - [x] Configure TOKEN_SIGNING_JWK as a secure runtime secret
 - [x] Verify MCP + OAuth end to end
+- [x] Verify MCP tools return the real studio overview, products, and contact channels
 - [x] Connect snaptapp.us and www.snaptapp.us with snaptapp.us as primary
 - [ ] Publish the project, verify both live domains, then retire the legacy Cloudflare Worker

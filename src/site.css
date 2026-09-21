@@ -250,7 +250,7 @@ samp {
   gap: var(--ds-arena-space-3);
   color: var(--ds-arena-color-text);
   font-family: var(--ds-arena-font-display);
-  font-size: var(--ds-arena-text-xl);
+  font-size: var(--ds-arena-text-display);
   letter-spacing: 0;
   line-height: 1;
   text-decoration: none;
@@ -263,8 +263,8 @@ samp {
 }
 
 .brand__mark {
-  width: var(--ds-arena-space-6);
-  height: var(--ds-arena-space-6);
+  width: var(--ds-arena-space-7);
+  height: var(--ds-arena-space-7);
   flex: none;
 }
 
@@ -277,6 +277,10 @@ samp {
   font-family: var(--ds-arena-font-mono);
   font-size: var(--ds-arena-text-xs);
   letter-spacing: var(--ds-arena-tracking-label);
+}
+
+.footer-about .brand {
+  font-size: var(--ds-arena-text-display);
 }
 
 .nav {
