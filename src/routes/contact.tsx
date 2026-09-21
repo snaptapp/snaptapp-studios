@@ -54,7 +54,7 @@ export const Route = createFileRoute("/contact")({
       },
       {
             "property": "og:image:alt",
-            "content": "Snaptapp — independent studio"
+            "content": "Snaptapp — Independent Game Studio"
       },
       {
             "name": "twitter:card",
@@ -131,11 +131,11 @@ function PageContact() {
               <div className="shell">
                 <div className="contact-grid reveal">
                   <div className="card contact-card">
-                    <p className="contact-card__label">General, press &amp; licensing</p>
+                     <p className="contact-card__label">General &amp; licensing</p>
                     <a href="mailto:hello@snaptapp.us">hello@snaptapp.us</a>
                     <p>
-                      Press, review builds, licensing for Snaptapp titles, and anything else
-                      about the studio. Replies within two business days.
+                       Licensing for Snaptapp titles and anything else about the studio. Replies
+                       within two business days.
                     </p>
                   </div>
       
@@ -149,7 +149,7 @@ function PageContact() {
                   </div>
       
                   <div className="card contact-card">
-                    <p className="contact-card__label">Privacy &amp; data requests</p>
+                     <p className="contact-card__label">Privacy &amp; data</p>
                     <a href="mailto:privacy@snaptapp.us">privacy@snaptapp.us</a>
                     <p>
                       Access, correction, or deletion of your personal data. We respond within 30
@@ -158,7 +158,7 @@ function PageContact() {
                   </div>
       
                   <div className="card contact-card">
-                    <p className="contact-card__label">Security disclosure</p>
+                     <p className="contact-card__label">Security</p>
                     <a href="mailto:security@snaptapp.us">security@snaptapp.us</a>
                     <p>
                       Vulnerability reports. See
@@ -177,7 +177,7 @@ function PageContact() {
                   </div>
       
                   <div className="card contact-card">
-                    <p className="contact-card__label">Legal notices</p>
+                     <p className="contact-card__label">Legal</p>
                     <a href="mailto:legal@snaptapp.us">legal@snaptapp.us</a>
                     <p>
                       Contracts, copyright, and formal correspondence relating to our
@@ -239,10 +239,7 @@ function PageContact() {
                     <img className="brand__mark" src="/assets/img/snaptapp-mark.svg" alt="" width="30" height="30" />
                     <span>Snaptapp</span>
                   </a>
-                  <p>
-                    An independent studio shipping its own games on real-time edge
-                    infrastructure.
-                  </p>
+                   <p>An independent game studio building and operating its own titles.</p>
                 </div>
       
                 <div>

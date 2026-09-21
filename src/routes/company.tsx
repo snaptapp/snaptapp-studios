@@ -54,7 +54,7 @@ export const Route = createFileRoute("/company")({
       },
       {
             "property": "og:image:alt",
-            "content": "Snaptapp — independent studio"
+            "content": "Snaptapp — Independent Game Studio"
       },
       {
             "name": "twitter:card",
@@ -119,7 +119,7 @@ function PageCompany() {
                   <li><a href="/">Home</a></li>
                   <li>Company</li>
                 </ol>
-                <h1>A small studio that ships</h1>
+                 <h1>We build our own games, end to end.</h1>
                 <p className="lede">
                   Snaptapp is an independently owned studio, founded in 2026 and operating from
                   the United States. We make our own games. We do not take client work.
@@ -159,18 +159,15 @@ function PageCompany() {
                   <div className="card">
                     <span className="card__num">01</span>
                     <h3>Ship, then talk</h3>
-                    <p>
-                      Nothing gets announced before someone outside the studio can use it. Our
-                      products page lists live software only.
-                    </p>
+                     <p>We announce products when people can play them.</p>
                   </div>
                   <div className="card">
                     <span className="card__num">02</span>
                     <h3>Own the whole path</h3>
-                    <p>
-                      Client, API, edge, and data model are built by the same people. There is no
-                      integration team to blame.
-                    </p>
+                     <p>
+                       Client, API, edge, and data model are built together, with clear ownership
+                       across the entire product.
+                     </p>
                   </div>
                   <div className="card">
                     <span className="card__num">03</span>
@@ -327,10 +324,7 @@ function PageCompany() {
                     <img className="brand__mark" src="/assets/img/snaptapp-mark.svg" alt="" width="30" height="30" />
                     <span>Snaptapp</span>
                   </a>
-                  <p>
-                    An independent studio shipping its own games on real-time edge
-                    infrastructure.
-                  </p>
+                   <p>An independent game studio building and operating its own titles.</p>
                 </div>
       
                 <div>

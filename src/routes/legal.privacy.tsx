@@ -54,7 +54,7 @@ export const Route = createFileRoute("/legal/privacy")({
       },
       {
             "property": "og:image:alt",
-            "content": "Snaptapp — independent studio"
+            "content": "Snaptapp — Independent Game Studio"
       },
       {
             "name": "twitter:card",
@@ -515,11 +515,10 @@ function PageLegalPrivacy() {
                   personal information for the purpose of inferring characteristics. You may use an
                   authorised agent, and we will verify their authority before acting.
                 </p>
-                <p>
-                  If you are in the UK or EEA and you think we have got this wrong, you can complain
-                  to your national supervisory authority. We would rather you told us first so we can
-                  fix it.
-                </p>
+                 <p>
+                   If you are in the UK or EEA and you think we have got this wrong, you can complain
+                   to your national supervisory authority.
+                 </p>
       
                 <h2 id="children">10. Children</h2>
                 <p>
@@ -589,10 +588,7 @@ function PageLegalPrivacy() {
                   <img className="brand__mark" src="/assets/img/snaptapp-mark.svg" alt="" width="30" height="30" />
                   <span>Snaptapp</span>
                 </a>
-                <p>
-                  An independent studio shipping its own games on
-                  real-time edge infrastructure.
-                </p>
+                 <p>An independent game studio building and operating its own titles.</p>
               </div>
       
               <div>

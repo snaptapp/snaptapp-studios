@@ -54,7 +54,7 @@ export const Route = createFileRoute("/products")({
       },
       {
             "property": "og:image:alt",
-            "content": "Snaptapp — independent studio"
+            "content": "Snaptapp — Independent Game Studio"
       },
       {
             "name": "twitter:card",
@@ -120,10 +120,10 @@ function PageProducts() {
                   <li>Products</li>
                 </ol>
                 <h1>Products</h1>
-                <p className="lede">
-                  One product live, one in build. This page is the source of truth for what
-                  actually exists — if it is not listed here, we have not shipped it.
-                </p>
+                 <p className="lede">
+                   One product is live, with another in development. New titles appear here as
+                   they become playable.
+                 </p>
               </div>
             </section>
       
@@ -147,12 +147,11 @@ function PageProducts() {
                       whether the real figure is higher or lower before the clock runs out, then
                       watch the reveal explain exactly how far off you were.
                     </p>
-                    <p>
-                      Pick from curated topics or type your own. Covered topics are assembled
-                      instantly from a hand-verified fact bank; anything else is generated
-                      on demand, grounded against live search, and rejected automatically if the
-                      numbers do not survive our guardrails.
-                    </p>
+                     <p>
+                       Choose a curated topic or type your own. Curated rounds come from a verified
+                       fact bank, while custom topics are generated on demand and checked before
+                       they're shown.
+                     </p>
       
                     <dl className="product__meta">
                       <div>
@@ -242,11 +241,10 @@ function PageProducts() {
                 <div className="section-head reveal">
                   <p className="eyebrow">Pipeline</p>
                   <h2>Product two</h2>
-                  <p className="lede">
-                    In build now. It is another mobile-first product using the same real-time
-                    foundation. We will list it here the day it is playable by someone outside
-                    the studio — not before.
-                  </p>
+                   <p className="lede">
+                     Our second product is in development. We'll share more when it's ready to
+                     play.
+                   </p>
                 </div>
                 <p className="reveal">
                   <a className="link-arrow" href="/contact/">Want early access? Tell us
@@ -267,10 +265,7 @@ function PageProducts() {
                     <img className="brand__mark" src="/assets/img/snaptapp-mark.svg" alt="" width="30" height="30" />
                     <span>Snaptapp</span>
                   </a>
-                  <p>
-                    An independent studio shipping its own games on real-time edge
-                    infrastructure.
-                  </p>
+                   <p>An independent game studio building and operating its own titles.</p>
                 </div>
       
                 <div>

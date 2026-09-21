@@ -118,14 +118,11 @@ function PageIndex() {
             <div className="shell">
               <div className="hero__inner">
                 <p className="eyebrow">Independent studio</p>
-                <h1>
-                  Games built on{" "}
-                  <span className="text-gradient"><span className="nowrap">real-time</span> edge infrastructure</span>.
-                </h1>
+                <h1>We build and run our own games.</h1>
                 <p className="lede">
-                  Snaptapp is a small US studio. We write the Flutter client, the backend, and
-                  the edge ourselves, then operate what we ship. No outsourced middle layer.
-                  Our first title, <strong>More or Less</strong>, is live.
+                  Snaptapp is an independent US game studio building original games for web and
+                  mobile. We develop and operate them end to end, from the client to the
+                  infrastructure behind it. Our first title, More or Less, is live now.
                 </p>
                 <div className="row hero__actions">
                   <a className="btn btn--primary" href="/products/">
@@ -381,10 +378,7 @@ function PageIndex() {
                   <img className="brand__mark" src="/assets/img/snaptapp-mark.svg" alt="" width="30" height="30" />
                   <span>Snaptapp</span>
                 </a>
-                <p>
-                  An independent studio shipping its own games on real-time edge
-                  infrastructure.
-                </p>
+                 <p>An independent game studio building and operating its own titles.</p>
               </div>
       
               <div>

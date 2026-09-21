@@ -54,7 +54,7 @@ export const Route = createFileRoute("/support")({
       },
       {
             "property": "og:image:alt",
-            "content": "Snaptapp — independent studio"
+            "content": "Snaptapp — Independent Game Studio"
       },
       {
             "name": "twitter:card",
@@ -152,8 +152,8 @@ function PageSupport() {
                     Tell us and we will check it. Send the topic, the claim as it appeared, and
                     the number shown to <a href="mailto:support@snaptapp.us">support@snaptapp.us</a>.
                     Verified corrections are applied to the fact bank, and rounds that fail
-                    review are pulled from rotation. This is the single most useful message you
-                    can send us.
+                     review are pulled from rotation. Those details give us what we need to verify
+                     the round and correct it.
                   </dd>
       
                   <dt>My topic was rejected.</dt>
@@ -279,10 +279,7 @@ function PageSupport() {
                   <img className="brand__mark" src="/assets/img/snaptapp-mark.svg" alt="" width="30" height="30" />
                   <span>Snaptapp</span>
                 </a>
-                <p>
-                  An independent studio shipping its own games on
-                  real-time edge infrastructure.
-                </p>
+                 <p>An independent game studio building and operating its own titles.</p>
               </div>
       
               <div>
