@@ -227,6 +227,16 @@ function RootShell({ children }: { children: ReactNode }) {
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
+  const router = useRouter();
+  const pathname = router.state.location.pathname;
+
+  // gtag only tracks the initial page load; send a page view on client-side
+  // route changes so single-page navigation is counted.
+  useEffect(() => {
+    (window as unknown as { gtag?: (...args: unknown[]) => void }).gtag?.("event", "page_view", {
+      page_path: pathname,
+    });
+  }, [pathname]);
 
   return (
     <QueryClientProvider client={queryClient}>
