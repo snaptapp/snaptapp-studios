@@ -1058,7 +1058,7 @@ samp {
 }
 .cookie-banner__inner {
   margin-inline: auto;
-  max-width: 64rem;
+  max-width: calc(var(--ds-arena-space-7) * 16);
   display: grid;
   gap: var(--ds-arena-space-3);
 }
