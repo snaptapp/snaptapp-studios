@@ -13,10 +13,7 @@ import { useSiteBehaviour } from "../lib/use-site-behaviour";
 // Design system tokens (imported after the site stylesheet link below).
 import "../styles.css";
 
-// Google Analytics measurement ID from the linked connector; falls back to the
-// original site tag if the connector var is absent at build time.
-const GA_MEASUREMENT_ID =
-  import.meta.env.VITE_LOVABLE_CONNECTOR_GOOGLE_ANALYTICS_API_KEY ?? "G-7QMJL9732Z";
+import { CookieConsent } from "../components/CookieConsent";
 
 function NotFoundComponent() {
   useSiteBehaviour();
