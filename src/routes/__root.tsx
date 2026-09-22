@@ -13,10 +13,7 @@ import { useSiteBehaviour } from "../lib/use-site-behaviour";
 // Design system tokens (imported after the site stylesheet link below).
 import "../styles.css";
 
-// Google Analytics measurement ID from the linked connector; falls back to the
-// original site tag if the connector var is absent at build time.
-const GA_MEASUREMENT_ID =
-  import.meta.env.VITE_LOVABLE_CONNECTOR_GOOGLE_ANALYTICS_API_KEY ?? "G-7QMJL9732Z";
+import { CookieConsent } from "../components/CookieConsent";
 
 function NotFoundComponent() {
   useSiteBehaviour();
@@ -191,33 +188,15 @@ function RootShell({ children }: { children: ReactNode }) {
   return (
     <html lang="en" className="no-js">
       <head>
-        {/* Google tag (gtag.js) — one Google tag per page */}
-        <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`} />
+        {/* Consent defaults: analytics tags are only loaded after opt-in. */}
         <script
           dangerouslySetInnerHTML={{
-            __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${GA_MEASUREMENT_ID}');`,
+            __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{analytics_storage:'denied',ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'});`,
           }}
         />
-        {/* Google Tag Manager */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-P6VT3TP3');`,
-          }}
-        />
-        {/* End Google Tag Manager */}
         <HeadContent />
       </head>
       <body className="ds-app">
-        {/* Google Tag Manager (noscript) */}
-        <noscript>
-          <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-P6VT3TP3"
-            height="0"
-            width="0"
-            style={{ display: "none", visibility: "hidden" }}
-          />
-        </noscript>
-        {/* End Google Tag Manager (noscript) */}
         {children}
         <Scripts />
       </body>
@@ -242,6 +221,7 @@ function RootComponent() {
     <QueryClientProvider client={queryClient}>
       {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
       <Outlet />
+      <CookieConsent />
     </QueryClientProvider>
   );
 }
