@@ -13,6 +13,11 @@ import { useSiteBehaviour } from "../lib/use-site-behaviour";
 // Design system tokens (imported after the site stylesheet link below).
 import "../styles.css";
 
+// Google Analytics measurement ID from the linked connector; falls back to the
+// original site tag if the connector var is absent at build time.
+const GA_MEASUREMENT_ID =
+  import.meta.env.VITE_LOVABLE_CONNECTOR_GOOGLE_ANALYTICS_API_KEY ?? "G-7QMJL9732Z";
+
 function NotFoundComponent() {
   useSiteBehaviour();
 
@@ -187,10 +192,10 @@ function RootShell({ children }: { children: ReactNode }) {
     <html lang="en" className="no-js">
       <head>
         {/* Google tag (gtag.js) — one Google tag per page */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-7QMJL9732Z" />
+        <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`} />
         <script
           dangerouslySetInnerHTML={{
-            __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-7QMJL9732Z');`,
+            __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${GA_MEASUREMENT_ID}');`,
           }}
         />
         {/* Google Tag Manager */}
