@@ -445,6 +445,7 @@ function PageLegalTerms() {
                   <h2>Legal</h2>
                   <ul>
                     <li><a href="/legal/privacy/">Privacy policy</a></li>
+                  <li><a href="/legal/cookies/">Cookie policy</a></li>
                     <li><a href="/legal/terms/">Terms of service</a></li>
                     <li><a href="/.well-known/security.txt">Security contact</a></li>
                     <li><a href="/docs/api/">API for agents</a></li>
@@ -457,6 +458,7 @@ function PageLegalTerms() {
                 <ul>
                   <li><a href="mailto:hello@snaptapp.us">hello@snaptapp.us</a></li>
                   <li><a href="/legal/privacy/">Privacy</a></li>
+                <li><a href="/legal/cookies/">Cookies</a></li>
                   <li><a href="/legal/terms/">Terms</a></li>
                 </ul>
               </div>
