@@ -98,3 +98,15 @@ export function setConsent(choice: ConsentChoice) {
 export function applyStoredConsent() {
   if (readConsent() === "granted") loadAnalytics();
 }
+
+/**
+ * Sends a custom event to Google Analytics. No-op unless the visitor has
+ * allowed analytics and the tag is loaded — events are never queued for
+ * visitors who declined or have not chosen yet.
+ */
+export function trackEvent(name: string, params: Record<string, string> = {}) {
+  if (typeof window === "undefined") return;
+  const w = window as AnalyticsWindow;
+  if (!w.__snaptappAnalyticsLoaded || !w.gtag) return;
+  w.gtag("event", name, params);
+}

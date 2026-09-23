@@ -33,6 +33,7 @@ import { Route as ApiHealthRouteImport } from './routes/api/health'
 import { Route as DocsIndexRouteImport } from './routes/docs.index'
 import { Route as DocsApiRouteImport } from './routes/docs.api'
 import { Route as LegalIndexRouteImport } from './routes/legal.index'
+import { Route as LegalCookiesRouteImport } from './routes/legal.cookies'
 import { Route as LegalPrivacyRouteImport } from './routes/legal.privacy'
 import { Route as LegalTermsRouteImport } from './routes/legal.terms'
 import { Route as McpSplatRouteImport } from './routes/mcp.$'
@@ -159,6 +160,11 @@ const LegalIndexRoute = LegalIndexRouteImport.update({
   path: '/legal/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const LegalCookiesRoute = LegalCookiesRouteImport.update({
+  id: '/legal/cookies',
+  path: '/legal/cookies',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const LegalPrivacyRoute = LegalPrivacyRouteImport.update({
   id: '/legal/privacy',
   path: '/legal/privacy',
@@ -208,6 +214,7 @@ export interface FileRoutesByFullPath {
   '/agent/$': typeof AgentSplatRoute
   '/api/health': typeof ApiHealthRoute
   '/docs/api': typeof DocsApiRoute
+  '/legal/cookies': typeof LegalCookiesRoute
   '/legal/privacy': typeof LegalPrivacyRoute
   '/legal/terms': typeof LegalTermsRoute
   '/mcp/$': typeof McpSplatRoute
@@ -239,6 +246,7 @@ export interface FileRoutesByTo {
   '/agent/$': typeof AgentSplatRoute
   '/api/health': typeof ApiHealthRoute
   '/docs/api': typeof DocsApiRoute
+  '/legal/cookies': typeof LegalCookiesRoute
   '/legal/privacy': typeof LegalPrivacyRoute
   '/legal/terms': typeof LegalTermsRoute
   '/mcp/$': typeof McpSplatRoute
@@ -271,6 +279,7 @@ export interface FileRoutesById {
   '/agent/$': typeof AgentSplatRoute
   '/api/health': typeof ApiHealthRoute
   '/docs/api': typeof DocsApiRoute
+  '/legal/cookies': typeof LegalCookiesRoute
   '/legal/privacy': typeof LegalPrivacyRoute
   '/legal/terms': typeof LegalTermsRoute
   '/mcp/$': typeof McpSplatRoute
@@ -304,6 +313,7 @@ export interface FileRouteTypes {
     | '/agent/$'
     | '/api/health'
     | '/docs/api'
+    | '/legal/cookies'
     | '/legal/privacy'
     | '/legal/terms'
     | '/mcp/$'
@@ -335,6 +345,7 @@ export interface FileRouteTypes {
     | '/agent/$'
     | '/api/health'
     | '/docs/api'
+    | '/legal/cookies'
     | '/legal/privacy'
     | '/legal/terms'
     | '/mcp/$'
@@ -366,6 +377,7 @@ export interface FileRouteTypes {
     | '/agent/$'
     | '/api/health'
     | '/docs/api'
+    | '/legal/cookies'
     | '/legal/privacy'
     | '/legal/terms'
     | '/mcp/$'
@@ -398,6 +410,7 @@ export interface RootRouteChildren {
   AgentSplatRoute: typeof AgentSplatRoute
   ApiHealthRoute: typeof ApiHealthRoute
   DocsApiRoute: typeof DocsApiRoute
+  LegalCookiesRoute: typeof LegalCookiesRoute
   LegalPrivacyRoute: typeof LegalPrivacyRoute
   LegalTermsRoute: typeof LegalTermsRoute
   OauthAuthorizeRoute: typeof OauthAuthorizeRoute
@@ -576,6 +589,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LegalIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/legal/cookies': {
+      id: '/legal/cookies'
+      path: '/legal/cookies'
+      fullPath: '/legal/cookies'
+      preLoaderRoute: typeof LegalCookiesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/legal/privacy': {
       id: '/legal/privacy'
       path: '/legal/privacy'
@@ -647,6 +667,7 @@ const rootRouteChildren: RootRouteChildren = {
   AgentSplatRoute: AgentSplatRoute,
   ApiHealthRoute: ApiHealthRoute,
   DocsApiRoute: DocsApiRoute,
+  LegalCookiesRoute: LegalCookiesRoute,
   LegalPrivacyRoute: LegalPrivacyRoute,
   LegalTermsRoute: LegalTermsRoute,
   OauthAuthorizeRoute: OauthAuthorizeRoute,
