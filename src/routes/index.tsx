@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 
+import { trackEvent } from "@/lib/analytics-consent";
 import { useSiteBehaviour } from "@/lib/use-site-behaviour";
 
 export const Route = createFileRoute("/")({
@@ -107,7 +108,7 @@ function PageIndex() {
               <a href="/company/">Company</a>
               <a href="/support/">Support</a>
               <a href="/contact/">Contact</a>
-              <a className="btn btn--primary btn--sm" href="https://moreorless.snaptapp.us">Play More or Less</a>
+              <a className="btn btn--primary btn--sm" href="https://moreorless.snaptapp.us" onClick={() => trackEvent("outbound_click", { destination: "moreorless.snaptapp.us", location: "header" })}>Play More or Less</a>
             </nav>
           </div>
         </header>
@@ -124,13 +125,13 @@ function PageIndex() {
                   games across web and mobile. Our first title, More or Less, is live now.
                 </p>
                 <div className="row hero__actions">
-                  <a className="btn btn--primary" href="/products/">
+                  <a className="btn btn--primary" href="/products/" onClick={() => trackEvent("cta_click", { cta: "explore_games", location: "hero" })}>
                     Explore our games
                     <svg className="btn__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
                       <path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
                   </a>
-                  <a className="btn btn--secondary" href="https://moreorless.snaptapp.us">Play More or Less</a>
+                  <a className="btn btn--secondary" href="https://moreorless.snaptapp.us" onClick={() => trackEvent("outbound_click", { destination: "moreorless.snaptapp.us", location: "hero" })}>Play More or Less</a>
                 </div>
       
                 <ul className="trust-strip">
@@ -199,7 +200,7 @@ function PageIndex() {
                   </dl>
       
                   <p className="mt-md">
-                    <a className="link-arrow" href="https://moreorless.snaptapp.us">
+                    <a className="link-arrow" href="https://moreorless.snaptapp.us" onClick={() => trackEvent("outbound_click", { destination: "moreorless.snaptapp.us", location: "product_card" })}>
                       Play at moreorless.snaptapp.us
                       <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true">
                         <path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" />
@@ -223,7 +224,7 @@ function PageIndex() {
                     studio.
                   </p>
                   <p className="mt-sm">
-                    <a className="link-arrow" href="/contact/">Contact the studio
+                    <a className="link-arrow" href="/contact/" onClick={() => trackEvent("cta_click", { cta: "contact_studio", location: "products_section" })}>Contact the studio
                       <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true">
                         <path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
@@ -353,8 +354,8 @@ function PageIndex() {
                   typically answered within two business days.
                 </p>
                 <div className="row mt-lg">
-                  <a className="btn btn--primary" href="/contact/">Contact Snaptapp</a>
-                  <a className="btn btn--ghost" href="mailto:hello@snaptapp.us">hello@snaptapp.us</a>
+                  <a className="btn btn--primary" href="/contact/" onClick={() => trackEvent("cta_click", { cta: "contact_snaptapp", location: "footer_cta" })}>Contact Snaptapp</a>
+                  <a className="btn btn--ghost" href="mailto:hello@snaptapp.us" onClick={() => trackEvent("cta_click", { cta: "email_hello", location: "footer_cta" })}>hello@snaptapp.us</a>
                 </div>
               </div>
             </div>
@@ -376,7 +377,7 @@ function PageIndex() {
                 <h2>Products</h2>
                 <ul>
                   <li><a href="/products/">All products</a></li>
-                  <li><a href="https://moreorless.snaptapp.us">More or Less</a></li>
+                  <li><a href="https://moreorless.snaptapp.us" onClick={() => trackEvent("outbound_click", { destination: "moreorless.snaptapp.us", location: "footer" })}>More or Less</a></li>
                 </ul>
               </div>
       
