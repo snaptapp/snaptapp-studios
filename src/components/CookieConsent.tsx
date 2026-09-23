@@ -43,7 +43,8 @@ export function CookieConsent() {
           <p className="eyebrow">Cookies</p>
           <p>
             We use analytics cookies to see which pages people visit. They only run if you
-            allow them. Details are in our <a href="/legal/privacy/">privacy policy</a>.
+            allow them. Details are in our <a href="/legal/privacy/">privacy policy</a> and{" "}
+            <a href="/legal/cookies/">cookie policy</a>.
           </p>
         </div>
         <div className="row cookie-banner__actions">
