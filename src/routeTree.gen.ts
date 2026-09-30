@@ -10,7 +10,9 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AuthenticatedRouteRouteImport } from './routes/_authenticated/route'
 import { Route as AboutRouteImport } from './routes/about'
+import { Route as AuthRouteImport } from './routes/auth'
 import { Route as CompanyRouteImport } from './routes/company'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as HelpRouteImport } from './routes/help'
@@ -39,15 +41,25 @@ import { Route as LegalTermsRouteImport } from './routes/legal.terms'
 import { Route as McpSplatRouteImport } from './routes/mcp.$'
 import { Route as OauthAuthorizeRouteImport } from './routes/oauth.authorize'
 import { Route as Oauth2SplatRouteImport } from './routes/oauth2.$'
+import { Route as AuthenticatedAdminInsightsRouteImport } from './routes/_authenticated/admin.insights'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AuthenticatedRouteRoute = AuthenticatedRouteRouteImport.update({
+  id: '/_authenticated',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const AboutRoute = AboutRouteImport.update({
   id: '/about',
   path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AuthRoute = AuthRouteImport.update({
+  id: '/auth',
+  path: '/auth',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CompanyRoute = CompanyRouteImport.update({
@@ -190,10 +202,17 @@ const Oauth2SplatRoute = Oauth2SplatRouteImport.update({
   path: '/oauth2/$',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AuthenticatedAdminInsightsRoute =
+  AuthenticatedAdminInsightsRouteImport.update({
+    id: '/admin/insights',
+    path: '/admin/insights',
+    getParentRoute: () => AuthenticatedRouteRoute,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/auth': typeof AuthRoute
   '/company': typeof CompanyRoute
   '/contact': typeof ContactRoute
   '/help': typeof HelpRoute
@@ -222,10 +241,12 @@ export interface FileRoutesByFullPath {
   '/oauth2/$': typeof Oauth2SplatRoute
   '/docs/': typeof DocsIndexRoute
   '/legal/': typeof LegalIndexRoute
+  '/admin/insights': typeof AuthenticatedAdminInsightsRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/auth': typeof AuthRoute
   '/company': typeof CompanyRoute
   '/contact': typeof ContactRoute
   '/help': typeof HelpRoute
@@ -254,11 +275,14 @@ export interface FileRoutesByTo {
   '/oauth2/$': typeof Oauth2SplatRoute
   '/docs': typeof DocsIndexRoute
   '/legal': typeof LegalIndexRoute
+  '/admin/insights': typeof AuthenticatedAdminInsightsRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/_authenticated': typeof AuthenticatedRouteRouteWithChildren
   '/about': typeof AboutRoute
+  '/auth': typeof AuthRoute
   '/company': typeof CompanyRoute
   '/contact': typeof ContactRoute
   '/help': typeof HelpRoute
@@ -287,12 +311,14 @@ export interface FileRoutesById {
   '/oauth2/$': typeof Oauth2SplatRoute
   '/docs/': typeof DocsIndexRoute
   '/legal/': typeof LegalIndexRoute
+  '/_authenticated/admin/insights': typeof AuthenticatedAdminInsightsRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
     | '/about'
+    | '/auth'
     | '/company'
     | '/contact'
     | '/help'
@@ -321,10 +347,12 @@ export interface FileRouteTypes {
     | '/oauth2/$'
     | '/docs/'
     | '/legal/'
+    | '/admin/insights'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/about'
+    | '/auth'
     | '/company'
     | '/contact'
     | '/help'
@@ -353,10 +381,13 @@ export interface FileRouteTypes {
     | '/oauth2/$'
     | '/docs'
     | '/legal'
+    | '/admin/insights'
   id:
     | '__root__'
     | '/'
+    | '/_authenticated'
     | '/about'
+    | '/auth'
     | '/company'
     | '/contact'
     | '/help'
@@ -385,11 +416,14 @@ export interface FileRouteTypes {
     | '/oauth2/$'
     | '/docs/'
     | '/legal/'
+    | '/_authenticated/admin/insights'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AuthenticatedRouteRoute: typeof AuthenticatedRouteRouteWithChildren
   AboutRoute: typeof AboutRoute
+  AuthRoute: typeof AuthRoute
   CompanyRoute: typeof CompanyRoute
   ContactRoute: typeof ContactRoute
   HelpRoute: typeof HelpRoute
@@ -428,11 +462,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/_authenticated': {
+      id: '/_authenticated'
+      path: ''
+      fullPath: '/'
+      preLoaderRoute: typeof AuthenticatedRouteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/about': {
       id: '/about'
       path: '/about'
       fullPath: '/about'
       preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/auth': {
+      id: '/auth'
+      path: '/auth'
+      fullPath: '/auth'
+      preLoaderRoute: typeof AuthRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/company': {
@@ -631,8 +679,26 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof Oauth2SplatRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/_authenticated/admin/insights': {
+      id: '/_authenticated/admin/insights'
+      path: '/admin/insights'
+      fullPath: '/admin/insights'
+      preLoaderRoute: typeof AuthenticatedAdminInsightsRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
   }
 }
+
+interface AuthenticatedRouteRouteChildren {
+  AuthenticatedAdminInsightsRoute: typeof AuthenticatedAdminInsightsRoute
+}
+
+const AuthenticatedRouteRouteChildren: AuthenticatedRouteRouteChildren = {
+  AuthenticatedAdminInsightsRoute: AuthenticatedAdminInsightsRoute,
+}
+
+const AuthenticatedRouteRouteWithChildren =
+  AuthenticatedRouteRoute._addFileChildren(AuthenticatedRouteRouteChildren)
 
 interface McpRouteChildren {
   McpSplatRoute: typeof McpSplatRoute
@@ -646,7 +712,9 @@ const McpRouteWithChildren = McpRoute._addFileChildren(McpRouteChildren)
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AuthenticatedRouteRoute: AuthenticatedRouteRouteWithChildren,
   AboutRoute: AboutRoute,
+  AuthRoute: AuthRoute,
   CompanyRoute: CompanyRoute,
   ContactRoute: ContactRoute,
   HelpRoute: HelpRoute,
