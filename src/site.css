@@ -1095,3 +1095,23 @@ samp {
   }
   .cookie-banner__status { grid-column: 1 / -1; }
 }
+
+/* Admin tools */
+.admin-narrow { max-width: calc(var(--ds-arena-space-7) * 8); }
+.admin-form { display: grid; gap: var(--ds-arena-space-4); margin-block: var(--ds-arena-space-5); }
+.admin-form label { display: grid; gap: var(--ds-arena-space-2); font-size: var(--ds-arena-text-sm); }
+.admin-form input, .admin-form select, .admin-form textarea {
+  background: var(--ds-arena-color-surface-sunken);
+  color: inherit;
+  border-width: var(--app-hairline);
+  border-style: solid;
+  border-color: var(--ds-arena-color-border);
+  border-radius: var(--ds-arena-radius-sm);
+  padding: var(--ds-arena-space-2);
+  font: inherit;
+}
+.admin-row { display: flex; flex-wrap: wrap; gap: var(--ds-arena-space-4); }
+.admin-table { width: 100%; border-collapse: collapse; }
+.admin-table th { text-align: left; font-size: var(--ds-arena-text-xs); padding-block: var(--ds-arena-space-2); }
+.admin-table td { padding-block: var(--ds-arena-space-1); padding-inline-end: var(--ds-arena-space-2); }
+.admin-summary { margin-block-start: var(--ds-arena-space-5); }
