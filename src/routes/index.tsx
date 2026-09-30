@@ -201,6 +201,15 @@ function PageIndex() {
                       </svg>
                     </a>
                   </p>
+                  <p className="mt-xs">
+                    <a className="link-arrow" href="/questions-with-numerical-answers/">
+                      Try example questions with numerical answers
+                      <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                        <path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    </a>
+                  </p>
+
                 </div>
               </article>
       

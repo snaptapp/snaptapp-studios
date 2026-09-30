@@ -147,11 +147,14 @@ function PageProducts() {
                       claim and a believable but incorrect number. Make your call before time runs
                       out, then see the actual figure.
                     </p>
-                     <p>
-                       Choose from curated topics or enter your own. Curated rounds use a verified
-                       fact bank; custom topics are generated on demand and checked before they
-                       appear.
-                     </p>
+                      <p>
+                        Choose from curated topics or enter your own. Curated rounds use a verified
+                        fact bank; custom topics are generated on demand and checked before they
+                        appear. Want a preview first? Browse{" "}
+                        <a href="/questions-with-numerical-answers/">questions with numerical answers</a>{" "}
+                        with their real values.
+                      </p>
+
       
                     <dl className="product__meta">
                       <div>
