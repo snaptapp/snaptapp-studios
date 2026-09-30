@@ -114,6 +114,9 @@ function NotFoundComponent() {
                 <a href="/legal/cookies/">Cookies</a>
               </li>
               <li>
+                <a href="/admin/insights/">Admin</a>
+              </li>
+              <li>
                 <a href="/legal/terms/">Terms</a>
               </li>
             </ul>
