@@ -133,13 +133,7 @@ function PageIndex() {
                   </a>
                   <a className="btn btn--secondary" href="https://moreorless.snaptapp.us" onClick={() => trackEvent("outbound_click", { destination: "moreorless.snaptapp.us", location: "hero" })}>Play More or Less</a>
                 </div>
-      
-                <ul className="trust-strip">
-                  <li>More or Less</li>
-                  <li>Live on web</li>
-                  <li>Mobile in development</li>
-                  <li>Up to 10 players</li>
-                </ul>
+
               </div>
             </div>
           </section>
