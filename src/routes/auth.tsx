@@ -33,7 +33,7 @@ function AuthPage() {
       const { error } = await supabase.auth.signInWithPassword({ email, password });
       setBusy(false);
       if (error) return setMsg(error.message);
-      navigate({ to: "/admin/insights" });
+      navigate({ to: "/admin/insights/" });
     } else {
       const { error } = await supabase.auth.signUp({
         email,

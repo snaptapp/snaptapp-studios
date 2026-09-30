@@ -8,7 +8,7 @@ export async function summarizePlacements(input: {
   startDate: string;
   endDate: string;
   rows: PlacementRow[];
-  notes?: string;
+  notes?: string | undefined;
 }) {
   const apiKey = process.env["LOVABLE_API_KEY"];
   if (!apiKey) throw new Error("AI is not configured for this project.");
