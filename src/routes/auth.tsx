@@ -1,6 +1,7 @@
 import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import { useState, type FormEvent } from "react";
 import { supabase } from "@/integrations/supabase/client";
+import { ADMIN_EMAIL_DOMAIN, createAdminAccount } from "@/lib/admin-signup.functions";
 
 export const Route = createFileRoute("/auth")({
   head: () => ({
