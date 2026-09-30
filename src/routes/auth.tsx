@@ -51,6 +51,7 @@ function AuthPage() {
     <main id="main" className="section">
       <div className="shell admin-narrow">
         <h1>{mode === "in" ? "Admin sign-in" : "Create admin account"}</h1>
+        {mode === "up" && <p>Only @{ADMIN_EMAIL_DOMAIN} email addresses can create an account.</p>}
         <form className="admin-form" onSubmit={submit}>
           <label>
             Email
