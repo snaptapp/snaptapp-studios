@@ -36,13 +36,14 @@ function AuthPage() {
       if (error) return setMsg(error.message);
       navigate({ to: "/admin/insights/" });
     } else {
-      const { error } = await supabase.auth.signUp({
-        email,
-        password,
-        options: { emailRedirectTo: `${window.location.origin}/auth` },
-      });
+      if (email.trim().toLowerCase().split("@")[1] !== ADMIN_EMAIL_DOMAIN) {
+        setBusy(false);
+        return setMsg(`Accounts are limited to @${ADMIN_EMAIL_DOMAIN} email addresses.`);
+      }
+      const result = await createAdminAccount({ data: { email, password } });
       setBusy(false);
-      setMsg(error ? error.message : "Check your email to confirm your account, then sign in.");
+      setMsg(result.message);
+      if (result.ok) setMode("in");
     }
   }
 
