@@ -24,10 +24,10 @@ export const gameDetailsTool = defineTool({
         `No Snaptapp game named "${game}". Known games: ${products.map((p) => p.name).join(", ") || "none"}.`
       );
     }
-    const detail = JSON.parse(JSON.stringify(match)) as Record<string, unknown>;
+    const text = JSON.stringify(match, null, 2);
     return {
-      content: [{ type: "text" as const, text: JSON.stringify(detail, null, 2) }],
-      structuredContent: { game: detail },
+      content: [{ type: "text" as const, text }],
+      structuredContent: { game: text },
     };
   },
 });
