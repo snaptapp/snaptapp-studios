@@ -16,7 +16,6 @@ import { Route as AuthRouteImport } from './routes/auth'
 import { Route as CompanyRouteImport } from './routes/company'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as HelpRouteImport } from './routes/help'
-import { Route as McpRouteImport } from './routes/mcp'
 import { Route as MoreOrLessRouteImport } from './routes/more-or-less'
 import { Route as MoreorlessRouteImport } from './routes/moreorless'
 import { Route as PlayRouteImport } from './routes/play'
@@ -39,7 +38,6 @@ import { Route as LegalIndexRouteImport } from './routes/legal.index'
 import { Route as LegalCookiesRouteImport } from './routes/legal.cookies'
 import { Route as LegalPrivacyRouteImport } from './routes/legal.privacy'
 import { Route as LegalTermsRouteImport } from './routes/legal.terms'
-import { Route as McpSplatRouteImport } from './routes/mcp.$'
 import { Route as OauthAuthorizeRouteImport } from './routes/oauth.authorize'
 import { Route as Oauth2SplatRouteImport } from './routes/oauth2.$'
 import { Route as AuthenticatedAdminInsightsRouteImport } from './routes/_authenticated/admin.insights'
@@ -76,11 +74,6 @@ const ContactRoute = ContactRouteImport.update({
 const HelpRoute = HelpRouteImport.update({
   id: '/help',
   path: '/help',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const McpRoute = McpRouteImport.update({
-  id: '/mcp',
-  path: '/mcp',
   getParentRoute: () => rootRouteImport,
 } as any)
 const MoreOrLessRoute = MoreOrLessRouteImport.update({
@@ -194,11 +187,6 @@ const LegalTermsRoute = LegalTermsRouteImport.update({
   path: '/legal/terms',
   getParentRoute: () => rootRouteImport,
 } as any)
-const McpSplatRoute = McpSplatRouteImport.update({
-  id: '/$',
-  path: '/$',
-  getParentRoute: () => McpRoute,
-} as any)
 const OauthAuthorizeRoute = OauthAuthorizeRouteImport.update({
   id: '/oauth/authorize',
   path: '/oauth/authorize',
@@ -223,7 +211,6 @@ export interface FileRoutesByFullPath {
   '/company': typeof CompanyRoute
   '/contact': typeof ContactRoute
   '/help': typeof HelpRoute
-  '/mcp': typeof McpRouteWithChildren
   '/more-or-less': typeof MoreOrLessRoute
   '/moreorless': typeof MoreorlessRoute
   '/play': typeof PlayRoute
@@ -244,7 +231,6 @@ export interface FileRoutesByFullPath {
   '/legal/cookies': typeof LegalCookiesRoute
   '/legal/privacy': typeof LegalPrivacyRoute
   '/legal/terms': typeof LegalTermsRoute
-  '/mcp/$': typeof McpSplatRoute
   '/oauth/authorize': typeof OauthAuthorizeRoute
   '/oauth2/$': typeof Oauth2SplatRoute
   '/docs/': typeof DocsIndexRoute
@@ -258,7 +244,6 @@ export interface FileRoutesByTo {
   '/company': typeof CompanyRoute
   '/contact': typeof ContactRoute
   '/help': typeof HelpRoute
-  '/mcp': typeof McpRouteWithChildren
   '/more-or-less': typeof MoreOrLessRoute
   '/moreorless': typeof MoreorlessRoute
   '/play': typeof PlayRoute
@@ -279,7 +264,6 @@ export interface FileRoutesByTo {
   '/legal/cookies': typeof LegalCookiesRoute
   '/legal/privacy': typeof LegalPrivacyRoute
   '/legal/terms': typeof LegalTermsRoute
-  '/mcp/$': typeof McpSplatRoute
   '/oauth/authorize': typeof OauthAuthorizeRoute
   '/oauth2/$': typeof Oauth2SplatRoute
   '/docs': typeof DocsIndexRoute
@@ -295,7 +279,6 @@ export interface FileRoutesById {
   '/company': typeof CompanyRoute
   '/contact': typeof ContactRoute
   '/help': typeof HelpRoute
-  '/mcp': typeof McpRouteWithChildren
   '/more-or-less': typeof MoreOrLessRoute
   '/moreorless': typeof MoreorlessRoute
   '/play': typeof PlayRoute
@@ -316,7 +299,6 @@ export interface FileRoutesById {
   '/legal/cookies': typeof LegalCookiesRoute
   '/legal/privacy': typeof LegalPrivacyRoute
   '/legal/terms': typeof LegalTermsRoute
-  '/mcp/$': typeof McpSplatRoute
   '/oauth/authorize': typeof OauthAuthorizeRoute
   '/oauth2/$': typeof Oauth2SplatRoute
   '/docs/': typeof DocsIndexRoute
@@ -332,7 +314,6 @@ export interface FileRouteTypes {
     | '/company'
     | '/contact'
     | '/help'
-    | '/mcp'
     | '/more-or-less'
     | '/moreorless'
     | '/play'
@@ -353,7 +334,6 @@ export interface FileRouteTypes {
     | '/legal/cookies'
     | '/legal/privacy'
     | '/legal/terms'
-    | '/mcp/$'
     | '/oauth/authorize'
     | '/oauth2/$'
     | '/docs/'
@@ -367,7 +347,6 @@ export interface FileRouteTypes {
     | '/company'
     | '/contact'
     | '/help'
-    | '/mcp'
     | '/more-or-less'
     | '/moreorless'
     | '/play'
@@ -388,7 +367,6 @@ export interface FileRouteTypes {
     | '/legal/cookies'
     | '/legal/privacy'
     | '/legal/terms'
-    | '/mcp/$'
     | '/oauth/authorize'
     | '/oauth2/$'
     | '/docs'
@@ -403,7 +381,6 @@ export interface FileRouteTypes {
     | '/company'
     | '/contact'
     | '/help'
-    | '/mcp'
     | '/more-or-less'
     | '/moreorless'
     | '/play'
@@ -424,7 +401,6 @@ export interface FileRouteTypes {
     | '/legal/cookies'
     | '/legal/privacy'
     | '/legal/terms'
-    | '/mcp/$'
     | '/oauth/authorize'
     | '/oauth2/$'
     | '/docs/'
@@ -440,7 +416,6 @@ export interface RootRouteChildren {
   CompanyRoute: typeof CompanyRoute
   ContactRoute: typeof ContactRoute
   HelpRoute: typeof HelpRoute
-  McpRoute: typeof McpRouteWithChildren
   MoreOrLessRoute: typeof MoreOrLessRoute
   MoreorlessRoute: typeof MoreorlessRoute
   PlayRoute: typeof PlayRoute
@@ -516,13 +491,6 @@ declare module '@tanstack/react-router' {
       path: '/help'
       fullPath: '/help'
       preLoaderRoute: typeof HelpRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/mcp': {
-      id: '/mcp'
-      path: '/mcp'
-      fullPath: '/mcp'
-      preLoaderRoute: typeof McpRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/more-or-less': {
@@ -679,13 +647,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LegalTermsRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/mcp/$': {
-      id: '/mcp/$'
-      path: '/$'
-      fullPath: '/mcp/$'
-      preLoaderRoute: typeof McpSplatRouteImport
-      parentRoute: typeof McpRoute
-    }
     '/oauth/authorize': {
       id: '/oauth/authorize'
       path: '/oauth/authorize'
@@ -721,16 +682,6 @@ const AuthenticatedRouteRouteChildren: AuthenticatedRouteRouteChildren = {
 const AuthenticatedRouteRouteWithChildren =
   AuthenticatedRouteRoute._addFileChildren(AuthenticatedRouteRouteChildren)
 
-interface McpRouteChildren {
-  McpSplatRoute: typeof McpSplatRoute
-}
-
-const McpRouteChildren: McpRouteChildren = {
-  McpSplatRoute: McpSplatRoute,
-}
-
-const McpRouteWithChildren = McpRoute._addFileChildren(McpRouteChildren)
-
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AuthenticatedRouteRoute: AuthenticatedRouteRouteWithChildren,
@@ -739,7 +690,6 @@ const rootRouteChildren: RootRouteChildren = {
   CompanyRoute: CompanyRoute,
   ContactRoute: ContactRoute,
   HelpRoute: HelpRoute,
-  McpRoute: McpRouteWithChildren,
   MoreOrLessRoute: MoreOrLessRoute,
   MoreorlessRoute: MoreorlessRoute,
   PlayRoute: PlayRoute,
