@@ -15,11 +15,15 @@ export const Route = createFileRoute("/auth")({
       { name: "robots", content: "noindex, nofollow" },
     ],
   }),
+  validateSearch: (s: Record<string, unknown>): { next?: string | undefined } => ({
+    next: typeof s.next === "string" && s.next.startsWith("/") && !s.next.startsWith("//") ? s.next : undefined,
+  }),
   component: AuthPage,
 });
 
 function AuthPage() {
   const navigate = useNavigate();
+  const { next } = Route.useSearch();
   const [mode, setMode] = useState<"in" | "up">("in");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -34,7 +38,8 @@ function AuthPage() {
       const { error } = await supabase.auth.signInWithPassword({ email, password });
       setBusy(false);
       if (error) return setMsg(error.message);
-      navigate({ to: "/admin/insights/" });
+      if (next) window.location.assign(next);
+      else navigate({ to: "/admin/insights/" });
     } else {
       if (email.trim().toLowerCase().split("@")[1] !== ADMIN_EMAIL_DOMAIN) {
         setBusy(false);
