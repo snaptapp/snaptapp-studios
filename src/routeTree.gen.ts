@@ -16,6 +16,7 @@ import { Route as AuthRouteImport } from './routes/auth'
 import { Route as CompanyRouteImport } from './routes/company'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as HelpRouteImport } from './routes/help'
+import { Route as McpRouteImport } from './routes/mcp'
 import { Route as MoreOrLessRouteImport } from './routes/more-or-less'
 import { Route as MoreorlessRouteImport } from './routes/moreorless'
 import { Route as PlayRouteImport } from './routes/play'
@@ -30,6 +31,7 @@ import { Route as TeamRouteImport } from './routes/team'
 import { Route as TermsRouteImport } from './routes/terms'
 import { Route as TosRouteImport } from './routes/tos'
 import { Route as DotwellKnownJwksDotjsonRouteImport } from './routes/[.]well-known.jwks[.]json'
+import { Route as Char91DotwellKnownChar93OauthProtectedResourceRouteImport } from './routes/[.well-known]/oauth-protected-resource'
 import { Route as AgentSplatRouteImport } from './routes/agent.$'
 import { Route as ApiHealthRouteImport } from './routes/api/health'
 import { Route as DocsIndexRouteImport } from './routes/docs.index'
@@ -40,6 +42,7 @@ import { Route as LegalPrivacyRouteImport } from './routes/legal.privacy'
 import { Route as LegalTermsRouteImport } from './routes/legal.terms'
 import { Route as OauthAuthorizeRouteImport } from './routes/oauth.authorize'
 import { Route as Oauth2SplatRouteImport } from './routes/oauth2.$'
+import { Route as DotlovableOauthConsentRouteImport } from './routes/[.]lovable.oauth.consent'
 import { Route as AuthenticatedAdminInsightsRouteImport } from './routes/_authenticated/admin.insights'
 
 const IndexRoute = IndexRouteImport.update({
@@ -74,6 +77,11 @@ const ContactRoute = ContactRouteImport.update({
 const HelpRoute = HelpRouteImport.update({
   id: '/help',
   path: '/help',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const McpRoute = McpRouteImport.update({
+  id: '/mcp',
+  path: '/mcp',
   getParentRoute: () => rootRouteImport,
 } as any)
 const MoreOrLessRoute = MoreOrLessRouteImport.update({
@@ -147,6 +155,12 @@ const DotwellKnownJwksDotjsonRoute = DotwellKnownJwksDotjsonRouteImport.update({
   path: '/.well-known/jwks.json',
   getParentRoute: () => rootRouteImport,
 } as any)
+const Char91DotwellKnownChar93OauthProtectedResourceRoute =
+  Char91DotwellKnownChar93OauthProtectedResourceRouteImport.update({
+    id: '/.well-known/oauth-protected-resource',
+    path: '/.well-known/oauth-protected-resource',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const AgentSplatRoute = AgentSplatRouteImport.update({
   id: '/agent/$',
   path: '/agent/$',
@@ -197,6 +211,11 @@ const Oauth2SplatRoute = Oauth2SplatRouteImport.update({
   path: '/oauth2/$',
   getParentRoute: () => rootRouteImport,
 } as any)
+const DotlovableOauthConsentRoute = DotlovableOauthConsentRouteImport.update({
+  id: '/.lovable/oauth/consent',
+  path: '/.lovable/oauth/consent',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const AuthenticatedAdminInsightsRoute =
   AuthenticatedAdminInsightsRouteImport.update({
     id: '/admin/insights',
@@ -211,6 +230,7 @@ export interface FileRoutesByFullPath {
   '/company': typeof CompanyRoute
   '/contact': typeof ContactRoute
   '/help': typeof HelpRoute
+  '/mcp': typeof McpRoute
   '/more-or-less': typeof MoreOrLessRoute
   '/moreorless': typeof MoreorlessRoute
   '/play': typeof PlayRoute
@@ -225,6 +245,7 @@ export interface FileRoutesByFullPath {
   '/terms': typeof TermsRoute
   '/tos': typeof TosRoute
   '/.well-known/jwks.json': typeof DotwellKnownJwksDotjsonRoute
+  '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
   '/agent/$': typeof AgentSplatRoute
   '/api/health': typeof ApiHealthRoute
   '/docs/api': typeof DocsApiRoute
@@ -235,6 +256,7 @@ export interface FileRoutesByFullPath {
   '/oauth2/$': typeof Oauth2SplatRoute
   '/docs/': typeof DocsIndexRoute
   '/legal/': typeof LegalIndexRoute
+  '/.lovable/oauth/consent': typeof DotlovableOauthConsentRoute
   '/admin/insights': typeof AuthenticatedAdminInsightsRoute
 }
 export interface FileRoutesByTo {
@@ -244,6 +266,7 @@ export interface FileRoutesByTo {
   '/company': typeof CompanyRoute
   '/contact': typeof ContactRoute
   '/help': typeof HelpRoute
+  '/mcp': typeof McpRoute
   '/more-or-less': typeof MoreOrLessRoute
   '/moreorless': typeof MoreorlessRoute
   '/play': typeof PlayRoute
@@ -258,6 +281,7 @@ export interface FileRoutesByTo {
   '/terms': typeof TermsRoute
   '/tos': typeof TosRoute
   '/.well-known/jwks.json': typeof DotwellKnownJwksDotjsonRoute
+  '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
   '/agent/$': typeof AgentSplatRoute
   '/api/health': typeof ApiHealthRoute
   '/docs/api': typeof DocsApiRoute
@@ -268,6 +292,7 @@ export interface FileRoutesByTo {
   '/oauth2/$': typeof Oauth2SplatRoute
   '/docs': typeof DocsIndexRoute
   '/legal': typeof LegalIndexRoute
+  '/.lovable/oauth/consent': typeof DotlovableOauthConsentRoute
   '/admin/insights': typeof AuthenticatedAdminInsightsRoute
 }
 export interface FileRoutesById {
@@ -279,6 +304,7 @@ export interface FileRoutesById {
   '/company': typeof CompanyRoute
   '/contact': typeof ContactRoute
   '/help': typeof HelpRoute
+  '/mcp': typeof McpRoute
   '/more-or-less': typeof MoreOrLessRoute
   '/moreorless': typeof MoreorlessRoute
   '/play': typeof PlayRoute
@@ -293,6 +319,7 @@ export interface FileRoutesById {
   '/terms': typeof TermsRoute
   '/tos': typeof TosRoute
   '/.well-known/jwks.json': typeof DotwellKnownJwksDotjsonRoute
+  '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
   '/agent/$': typeof AgentSplatRoute
   '/api/health': typeof ApiHealthRoute
   '/docs/api': typeof DocsApiRoute
@@ -303,6 +330,7 @@ export interface FileRoutesById {
   '/oauth2/$': typeof Oauth2SplatRoute
   '/docs/': typeof DocsIndexRoute
   '/legal/': typeof LegalIndexRoute
+  '/.lovable/oauth/consent': typeof DotlovableOauthConsentRoute
   '/_authenticated/admin/insights': typeof AuthenticatedAdminInsightsRoute
 }
 export interface FileRouteTypes {
@@ -314,6 +342,7 @@ export interface FileRouteTypes {
     | '/company'
     | '/contact'
     | '/help'
+    | '/mcp'
     | '/more-or-less'
     | '/moreorless'
     | '/play'
@@ -328,6 +357,7 @@ export interface FileRouteTypes {
     | '/terms'
     | '/tos'
     | '/.well-known/jwks.json'
+    | '/.well-known/oauth-protected-resource'
     | '/agent/$'
     | '/api/health'
     | '/docs/api'
@@ -338,6 +368,7 @@ export interface FileRouteTypes {
     | '/oauth2/$'
     | '/docs/'
     | '/legal/'
+    | '/.lovable/oauth/consent'
     | '/admin/insights'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -347,6 +378,7 @@ export interface FileRouteTypes {
     | '/company'
     | '/contact'
     | '/help'
+    | '/mcp'
     | '/more-or-less'
     | '/moreorless'
     | '/play'
@@ -361,6 +393,7 @@ export interface FileRouteTypes {
     | '/terms'
     | '/tos'
     | '/.well-known/jwks.json'
+    | '/.well-known/oauth-protected-resource'
     | '/agent/$'
     | '/api/health'
     | '/docs/api'
@@ -371,6 +404,7 @@ export interface FileRouteTypes {
     | '/oauth2/$'
     | '/docs'
     | '/legal'
+    | '/.lovable/oauth/consent'
     | '/admin/insights'
   id:
     | '__root__'
@@ -381,6 +415,7 @@ export interface FileRouteTypes {
     | '/company'
     | '/contact'
     | '/help'
+    | '/mcp'
     | '/more-or-less'
     | '/moreorless'
     | '/play'
@@ -395,6 +430,7 @@ export interface FileRouteTypes {
     | '/terms'
     | '/tos'
     | '/.well-known/jwks.json'
+    | '/.well-known/oauth-protected-resource'
     | '/agent/$'
     | '/api/health'
     | '/docs/api'
@@ -405,6 +441,7 @@ export interface FileRouteTypes {
     | '/oauth2/$'
     | '/docs/'
     | '/legal/'
+    | '/.lovable/oauth/consent'
     | '/_authenticated/admin/insights'
   fileRoutesById: FileRoutesById
 }
@@ -416,6 +453,7 @@ export interface RootRouteChildren {
   CompanyRoute: typeof CompanyRoute
   ContactRoute: typeof ContactRoute
   HelpRoute: typeof HelpRoute
+  McpRoute: typeof McpRoute
   MoreOrLessRoute: typeof MoreOrLessRoute
   MoreorlessRoute: typeof MoreorlessRoute
   PlayRoute: typeof PlayRoute
@@ -430,6 +468,7 @@ export interface RootRouteChildren {
   TermsRoute: typeof TermsRoute
   TosRoute: typeof TosRoute
   DotwellKnownJwksDotjsonRoute: typeof DotwellKnownJwksDotjsonRoute
+  Char91DotwellKnownChar93OauthProtectedResourceRoute: typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
   AgentSplatRoute: typeof AgentSplatRoute
   ApiHealthRoute: typeof ApiHealthRoute
   DocsApiRoute: typeof DocsApiRoute
@@ -440,6 +479,7 @@ export interface RootRouteChildren {
   Oauth2SplatRoute: typeof Oauth2SplatRoute
   DocsIndexRoute: typeof DocsIndexRoute
   LegalIndexRoute: typeof LegalIndexRoute
+  DotlovableOauthConsentRoute: typeof DotlovableOauthConsentRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -491,6 +531,13 @@ declare module '@tanstack/react-router' {
       path: '/help'
       fullPath: '/help'
       preLoaderRoute: typeof HelpRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mcp': {
+      id: '/mcp'
+      path: '/mcp'
+      fullPath: '/mcp'
+      preLoaderRoute: typeof McpRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/more-or-less': {
@@ -591,6 +638,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DotwellKnownJwksDotjsonRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/.well-known/oauth-protected-resource': {
+      id: '/.well-known/oauth-protected-resource'
+      path: '/.well-known/oauth-protected-resource'
+      fullPath: '/.well-known/oauth-protected-resource'
+      preLoaderRoute: typeof Char91DotwellKnownChar93OauthProtectedResourceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/agent/$': {
       id: '/agent/$'
       path: '/agent/$'
@@ -661,6 +715,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof Oauth2SplatRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/.lovable/oauth/consent': {
+      id: '/.lovable/oauth/consent'
+      path: '/.lovable/oauth/consent'
+      fullPath: '/.lovable/oauth/consent'
+      preLoaderRoute: typeof DotlovableOauthConsentRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/_authenticated/admin/insights': {
       id: '/_authenticated/admin/insights'
       path: '/admin/insights'
@@ -690,6 +751,7 @@ const rootRouteChildren: RootRouteChildren = {
   CompanyRoute: CompanyRoute,
   ContactRoute: ContactRoute,
   HelpRoute: HelpRoute,
+  McpRoute: McpRoute,
   MoreOrLessRoute: MoreOrLessRoute,
   MoreorlessRoute: MoreorlessRoute,
   PlayRoute: PlayRoute,
@@ -704,6 +766,8 @@ const rootRouteChildren: RootRouteChildren = {
   TermsRoute: TermsRoute,
   TosRoute: TosRoute,
   DotwellKnownJwksDotjsonRoute: DotwellKnownJwksDotjsonRoute,
+  Char91DotwellKnownChar93OauthProtectedResourceRoute:
+    Char91DotwellKnownChar93OauthProtectedResourceRoute,
   AgentSplatRoute: AgentSplatRoute,
   ApiHealthRoute: ApiHealthRoute,
   DocsApiRoute: DocsApiRoute,
@@ -714,6 +778,7 @@ const rootRouteChildren: RootRouteChildren = {
   Oauth2SplatRoute: Oauth2SplatRoute,
   DocsIndexRoute: DocsIndexRoute,
   LegalIndexRoute: LegalIndexRoute,
+  DotlovableOauthConsentRoute: DotlovableOauthConsentRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
