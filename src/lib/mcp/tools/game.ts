@@ -15,7 +15,7 @@ export const gameDetailsTool = defineTool({
   annotations: readHints,
   handler: async ({ game }) => {
     const { callTool } = await import("../../site-api.server");
-    const value = callTool("list_products") as { products: Array<{ name: string }> } | null;
+    const value = callTool("list_products") as { products: Product[] } | null;
     const products = value?.products ?? [];
     const wanted = game?.toLowerCase().replace(/\s+/g, " ").trim();
     const match = wanted ? products.find((p) => p.name.toLowerCase() === wanted) : products[0];
@@ -24,10 +24,10 @@ export const gameDetailsTool = defineTool({
         `No Snaptapp game named "${game}". Known games: ${products.map((p) => p.name).join(", ") || "none"}.`
       );
     }
-    const text = JSON.stringify(match, null, 2);
+    const detail = toGameJson(match);
     return {
-      content: [{ type: "text" as const, text }],
-      structuredContent: { game: text },
+      content: [{ type: "text" as const, text: JSON.stringify(detail, null, 2) }],
+      structuredContent: { game: detail },
     };
   },
 });
