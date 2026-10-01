@@ -277,7 +277,7 @@ function discoveryDocuments() {
   };
 }
 
-function callTool(name: string): unknown {
+export function callTool(name: string): unknown {
   switch (name) {
     case "get_studio_overview":
       return {
