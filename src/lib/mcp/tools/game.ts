@@ -4,6 +4,38 @@ import { TRIVIA_EXAMPLES } from "../site-content";
 
 const readHints = { readOnlyHint: true, idempotentHint: true, openWorldHint: false };
 
+interface Product {
+  name: string;
+  status: string;
+  url: string;
+  tagline: string;
+  description: string;
+  category: string;
+  platforms: { web: string; ios: string; android: string };
+  players: string;
+  price: string;
+  modes: string[];
+  technology: string[];
+}
+
+const toGameJson = (product: Product) => ({
+  name: product.name,
+  status: product.status,
+  url: product.url,
+  tagline: product.tagline,
+  description: product.description,
+  category: product.category,
+  platforms: {
+    web: product.platforms.web,
+    ios: product.platforms.ios,
+    android: product.platforms.android,
+  },
+  players: product.players,
+  price: product.price,
+  modes: product.modes.map((mode) => mode),
+  technology: product.technology.map((tech) => tech),
+});
+
 export const gameDetailsTool = defineTool({
   name: "get_game_details",
   title: "Game details",
