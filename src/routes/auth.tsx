@@ -1,4 +1,4 @@
-import { createFileRoute, useNavigate } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
 import { useState, type FormEvent } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { ADMIN_EMAIL_DOMAIN, createAdminAccount } from "@/lib/admin-signup.functions";
@@ -22,7 +22,6 @@ export const Route = createFileRoute("/auth")({
 });
 
 function AuthPage() {
-  const navigate = useNavigate();
   const { next } = Route.useSearch();
   const [mode, setMode] = useState<"in" | "up">("in");
   const [email, setEmail] = useState("");
