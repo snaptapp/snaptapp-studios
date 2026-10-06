@@ -376,7 +376,7 @@ function audienceAllowed(aud: unknown): boolean {
 function signingConfigError(err: unknown, request?: Request, env?: Env): Response | null {
   if (err instanceof SigningConfigurationError) {
     console.error("snaptapp-site signing configuration:", err.message);
-    return json({ error: "server_error", error_description: err.message }, 500, {}, request, env);
+    return json({ error: "server_error", error_description: "The server could not complete this request." }, 500, {}, request, env);
   }
   return null;
 }
