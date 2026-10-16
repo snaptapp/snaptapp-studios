@@ -38,7 +38,7 @@ function AuthPage() {
       setBusy(false);
       if (error) return setMsg(error.message);
       if (next) window.location.assign(next);
-      else window.location.assign("https://more-or-less-admin.lovable.app");
+      else window.location.assign("https://ops.snaptapp.us/admin");
     } else {
       if (email.trim().toLowerCase().split("@")[1] !== ADMIN_EMAIL_DOMAIN) {
         setBusy(false);
