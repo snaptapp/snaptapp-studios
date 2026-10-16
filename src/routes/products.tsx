@@ -152,7 +152,8 @@ function PageProducts() {
                         fact bank; custom topics are generated on demand and checked before they
                         appear. Want a preview first? Browse{" "}
                         <a href="/questions-with-numerical-answers/">questions with numerical answers</a>{" "}
-                        with their real values.
+                        with their real values, or read how the{" "}
+                        <a href="/higher-lower-game/">higher lower game</a> works.
                       </p>
 
       
