@@ -90,7 +90,7 @@ function InsightsPage() {
       <main className="section">
         <div className="shell admin-narrow">
           <h1>Admins only</h1>
-          <p>Your account doesn't have admin access yet. Ask the site owner to approve it.</p>
+          <p>Your account doesn't have admin access yet. Confirm your @snaptapp.us email, then sign in again.</p>
           <button className="btn btn--ghost" type="button" onClick={signOut}>Sign out</button>
         </div>
       </main>
