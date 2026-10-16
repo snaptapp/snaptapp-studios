@@ -274,7 +274,7 @@ function PageContact() {
                   <li><a href="/legal/privacy/">Privacy</a></li>
                 <li><a href="/legal/cookies/">Cookies</a></li>
                   <li><a href="/legal/terms/">Terms</a></li>
-                <li><a href="https://more-or-less-admin.lovable.app">Admin</a></li>
+                <li><a href="https://ops.snaptapp.us/admin">Admin</a></li>
                 </ul>
               </div>
             </div>
