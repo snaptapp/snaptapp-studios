@@ -142,11 +142,11 @@ function PageHigherLowerGame() {
 
               <h2>Modes</h2>
               <ul>
-                <li><strong>Standard</strong> &mdash; the classic run of higher or lower calls.</li>
-                <li><strong>Cutthroat</strong> &mdash; a harder mode for players who want less room for error.</li>
-                <li><strong>Daily Challenge</strong> &mdash; the same set of rounds for everyone each day.</li>
-                <li><strong>Versus 1v1</strong> &mdash; play head to head against one opponent.</li>
-                <li><strong>Party Room</strong> &mdash; a shared room for up to 10 players.</li>
+                <li><strong>Standard</strong></li>
+                <li><strong>Cutthroat</strong></li>
+                <li><strong>Daily Challenge</strong></li>
+                <li><strong>Versus 1v1</strong></li>
+                <li><strong>Party Room</strong> &mdash; up to 10 players</li>
               </ul>
 
               <h2>Where the numbers come from</h2>
