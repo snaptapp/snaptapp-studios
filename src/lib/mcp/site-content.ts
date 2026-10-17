@@ -13,14 +13,14 @@ export const SITE_PAGES: SitePage[] = [
     path: "/",
     title: "Snaptapp — independent game studio",
     summary:
-      "Studio homepage: what Snaptapp is, the More or Less product card, how the studio builds and operates its games, and contact entry points.",
+      "Studio homepage: what Snaptapp LLC is, the More or Less product card, how the studio builds and operates its games on Google Cloud and Vertex AI (Gemini, Search Grounding, Gemma 2, Cloud Run, Firestore), and contact entry points.",
     keywords: ["studio", "home", "overview", "more or less", "games"],
   },
   {
     path: "/products/",
     title: "Products",
     summary:
-      "Detail page for More or Less: game modes, player counts, platform status, curated fact bank, and generated topics checked before play.",
+      "Detail page for More or Less: game modes, player counts, platform status, Google Cloud & Vertex AI architecture (Gemini 3.5/3.8 Flash, Google Search Grounding, DDM-4, Fact Foundry, Gemma 2 SFT, Cloud Run, Firestore), and downloadable Architecture Brief.",
     keywords: ["products", "more or less", "modes", "platforms", "fact bank", "topics"],
   },
   {

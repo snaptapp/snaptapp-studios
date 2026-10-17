@@ -21,7 +21,7 @@ Modes: Standard (5 rounds), Cutthroat (endless sudden death), Daily Challenge (5
 
 ## Stack (honest)
 
-Flutter client, Cloudflare Workers + Durable Objects, Gemini on Vertex AI for generation, Firebase for auth and app services. Generated facts are grounded and run through deterministic guardrails.
+Google Cloud (project more-or-less-505908): Go microservice (agent-go) on Google Cloud Run calling Vertex AI Gemini 3.5 Flash-Lite with mandatory Google Search Grounding and deterministic DDM-4 distractor math; cold-path Fact Foundry and Auditor using Vertex AI Gemini 3.8 Flash + Search Grounding promoting verified facts into Cloud Firestore; Autonomous Fact Ombudsman on Vertex AI; Vertex AI SFT & Gemma 2 9B LoRA fine-tuning pipeline; Ops AI Copilots (Daily Blitz Strategist & Report Review Copilot) on Vertex AI; Firebase (Auth, Functions v2, Hosting, App Check); Flutter client; Cloudflare Workers + Durable Objects.
 
 ## What this skill is not
 

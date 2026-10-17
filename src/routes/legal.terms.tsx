@@ -138,7 +138,7 @@ function PageLegalTerms() {
                        state of formation. Keep both consistent with /legal/privacy/
                        and /company/. */}
                   <p>
-                    These terms are an agreement between you and Snaptapp
+                    These terms are an agreement between you and Snaptapp LLC, a Washington limited liability company
                     (&ldquo;Snaptapp&rdquo;, &ldquo;we&rdquo;, &ldquo;us&rdquo;) covering your use
                     of our websites and applications, including{" "}
                     <a href="https://snaptapp.us/">snaptapp.us</a> and{" "}
@@ -376,8 +376,7 @@ function PageLegalTerms() {
                   {/* Set the governing state below to your state of formation once the
                        entity is registered, and keep it consistent with /company/. */}
                   <p>
-                    These terms are governed by the laws of the United States and the state in which
-                    Snaptapp is established, without regard to conflict-of-laws rules. If you are a
+                    These terms are governed by the laws of the United States and the State of Washington, without regard to conflict-of-laws rules. If you are a
                     consumer resident in the UK, the EEA, or another jurisdiction whose law gives you
                     the right to bring proceedings locally, nothing here removes that right.
                   </p>

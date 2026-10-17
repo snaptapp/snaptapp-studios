@@ -136,7 +136,7 @@ function PageLegalPrivacy() {
                        sentence below with the full legal name, e.g.
                        "Snaptapp LLC, a Washington limited liability company". */}
                 <p>
-                  This policy explains what personal data Snaptapp (&ldquo;Snaptapp&rdquo;,
+                  This policy explains what personal data Snaptapp LLC, a Washington limited liability company (&ldquo;Snaptapp&rdquo;,
                   &ldquo;we&rdquo;, &ldquo;us&rdquo;) collects when you use our websites and
                   applications, why we collect it, who processes it on our behalf, and what you
                   can do about it. It applies to{" "}

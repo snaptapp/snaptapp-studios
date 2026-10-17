@@ -5,7 +5,7 @@ description: Use when an agent needs facts about Snaptapp, the studio behind sna
 
 # Snaptapp studio
 
-Snaptapp is an independent studio founded in 2026 in the United States. It ships its own cross-platform games (Flutter client, backend, and real-time edge). It does not take client work. Canonical site: https://snaptapp.us/
+Snaptapp LLC is an independent studio founded in 2026 in Washington State, United States (WA UBI 606 300 362). It builds and operates its own AI-native cross-platform games powered by Google Cloud, Vertex AI (Gemini 3.5 Flash-Lite, Gemini 3.8 Flash, Gemma 2 9B SFT), Google Search Grounding, Google Cloud Run, Cloud Firestore, Firebase, Flutter, and real-time edge infrastructure. Canonical site: https://snaptapp.us/ | Architecture Brief: https://snaptapp.us/assets/docs/Snaptapp_Google_Cloud_AI_Architecture_Brief.pdf
 
 ## Products
 
