@@ -114,7 +114,7 @@ function NotFoundComponent() {
                 <a href="/legal/cookies/">Cookies</a>
               </li>
               <li>
-                <a href="https://more-or-less-admin.lovable.app">Admin</a>
+                <a href="https://ops.snaptapp.us/admin">Admin</a>
               </li>
               <li>
                 <a href="/legal/terms/">Terms</a>

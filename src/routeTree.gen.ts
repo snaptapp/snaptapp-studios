@@ -16,6 +16,7 @@ import { Route as AuthRouteImport } from './routes/auth'
 import { Route as CompanyRouteImport } from './routes/company'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as HelpRouteImport } from './routes/help'
+import { Route as HigherLowerGameRouteImport } from './routes/higher-lower-game'
 import { Route as McpRouteImport } from './routes/mcp'
 import { Route as MoreOrLessRouteImport } from './routes/more-or-less'
 import { Route as MoreorlessRouteImport } from './routes/moreorless'
@@ -77,6 +78,11 @@ const ContactRoute = ContactRouteImport.update({
 const HelpRoute = HelpRouteImport.update({
   id: '/help',
   path: '/help',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HigherLowerGameRoute = HigherLowerGameRouteImport.update({
+  id: '/higher-lower-game',
+  path: '/higher-lower-game',
   getParentRoute: () => rootRouteImport,
 } as any)
 const McpRoute = McpRouteImport.update({
@@ -230,6 +236,7 @@ export interface FileRoutesByFullPath {
   '/company': typeof CompanyRoute
   '/contact': typeof ContactRoute
   '/help': typeof HelpRoute
+  '/higher-lower-game': typeof HigherLowerGameRoute
   '/mcp': typeof McpRoute
   '/more-or-less': typeof MoreOrLessRoute
   '/moreorless': typeof MoreorlessRoute
@@ -266,6 +273,7 @@ export interface FileRoutesByTo {
   '/company': typeof CompanyRoute
   '/contact': typeof ContactRoute
   '/help': typeof HelpRoute
+  '/higher-lower-game': typeof HigherLowerGameRoute
   '/mcp': typeof McpRoute
   '/more-or-less': typeof MoreOrLessRoute
   '/moreorless': typeof MoreorlessRoute
@@ -304,6 +312,7 @@ export interface FileRoutesById {
   '/company': typeof CompanyRoute
   '/contact': typeof ContactRoute
   '/help': typeof HelpRoute
+  '/higher-lower-game': typeof HigherLowerGameRoute
   '/mcp': typeof McpRoute
   '/more-or-less': typeof MoreOrLessRoute
   '/moreorless': typeof MoreorlessRoute
@@ -342,6 +351,7 @@ export interface FileRouteTypes {
     | '/company'
     | '/contact'
     | '/help'
+    | '/higher-lower-game'
     | '/mcp'
     | '/more-or-less'
     | '/moreorless'
@@ -378,6 +388,7 @@ export interface FileRouteTypes {
     | '/company'
     | '/contact'
     | '/help'
+    | '/higher-lower-game'
     | '/mcp'
     | '/more-or-less'
     | '/moreorless'
@@ -415,6 +426,7 @@ export interface FileRouteTypes {
     | '/company'
     | '/contact'
     | '/help'
+    | '/higher-lower-game'
     | '/mcp'
     | '/more-or-less'
     | '/moreorless'
@@ -453,6 +465,7 @@ export interface RootRouteChildren {
   CompanyRoute: typeof CompanyRoute
   ContactRoute: typeof ContactRoute
   HelpRoute: typeof HelpRoute
+  HigherLowerGameRoute: typeof HigherLowerGameRoute
   McpRoute: typeof McpRoute
   MoreOrLessRoute: typeof MoreOrLessRoute
   MoreorlessRoute: typeof MoreorlessRoute
@@ -531,6 +544,13 @@ declare module '@tanstack/react-router' {
       path: '/help'
       fullPath: '/help'
       preLoaderRoute: typeof HelpRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/higher-lower-game': {
+      id: '/higher-lower-game'
+      path: '/higher-lower-game'
+      fullPath: '/higher-lower-game'
+      preLoaderRoute: typeof HigherLowerGameRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/mcp': {
@@ -751,6 +771,7 @@ const rootRouteChildren: RootRouteChildren = {
   CompanyRoute: CompanyRoute,
   ContactRoute: ContactRoute,
   HelpRoute: HelpRoute,
+  HigherLowerGameRoute: HigherLowerGameRoute,
   McpRoute: McpRoute,
   MoreOrLessRoute: MoreOrLessRoute,
   MoreorlessRoute: MoreorlessRoute,
