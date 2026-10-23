@@ -163,6 +163,7 @@ function PageLegalPrivacy() {
                     <li><a href="#processors">Who we share it with</a></li>
                     <li><a href="#advertising">Advertising</a></li>
                     <li><a href="#ai">Custom topics and generated content</a></li>
+                    <li><a href="#staff">Staff sign-in and admin tools</a></li>
                     <li><a href="#retention">How long we keep it</a></li>
                     <li><a href="#rights">Your rights</a></li>
                     <li><a href="#children">Children</a></li>
@@ -333,8 +334,8 @@ function PageLegalPrivacy() {
                   <tbody>
                     <tr>
                       <td>
-                        Google — Firebase
-                        (<a href="https://firebase.google.com/support/privacy" rel="noopener">privacy</a>)
+                        Google Cloud
+                        (<a href="https://cloud.google.com/terms/cloud-privacy-notice" rel="noopener">privacy</a>)
                       </td>
                       <td>
                         Authentication, profile and gameplay database, file storage, analytics,
@@ -350,6 +351,16 @@ function PageLegalPrivacy() {
                       <td>
                         Generating trivia rounds from a custom topic, and hosting the service that
                         does it
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        Lovable
+                        (<a href="https://lovable.dev/privacy" rel="noopener">privacy</a>)
+                      </td>
+                      <td>
+                        Hosting this website, staff account sign-in, and routing staff requests to
+                        AI models for the internal insights tool
                       </td>
                     </tr>
                     <tr>
@@ -447,6 +458,27 @@ function PageLegalPrivacy() {
                   <a href="/support/#more-or-less">tell us</a>.
                 </p>
       
+                <h2 id="staff">8. Staff sign-in and admin tools</h2>
+                <p>
+                  The sign-in page on this website is for Snaptapp staff only. Accounts can only be
+                  created with a confirmed @snaptapp.us email address. We store the email address,
+                  a securely hashed password, and sign-in records needed to keep the account secure.
+                  Players do not sign in here, and nothing about a player account is stored on this
+                  website.
+                </p>
+                <p>
+                  After signing in, staff use our admin portal at ops.snaptapp.us to manage game
+                  content, review player reports, and view aggregate statistics. Access requires an
+                  admin role, and the portal processes player data only as described in this policy.
+                </p>
+                <p>
+                  The AI insights tool in the admin portal lets staff enter a date range and
+                  aggregate click counts for parts of this website. Those totals are sent to an AI
+                  model to summarize trends and suggest improvements. The tool does not send
+                  personal data, and click counts are only collected from visitors who accept
+                  analytics cookies.
+                </p>
+
                 <h2 id="retention">8. How long we keep it</h2>
                 <table>
                   <caption className="visually-hidden">
