@@ -106,7 +106,7 @@ function PageCompany() {
               height="30"
             />
             <span>Snaptapp</span>
-            <span className="brand__sub">Studio</span>
+            <span className="brand__sub">LLC</span>
           </a>
           <button
             className="nav-toggle"

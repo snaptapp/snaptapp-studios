@@ -98,7 +98,7 @@ function PageHigherLowerGame() {
           <a className="brand" href="/">
             <img className="brand__mark" src="/assets/img/snaptapp-mark.svg" alt="" width="30" height="30" />
             <span>Snaptapp</span>
-            <span className="brand__sub">Studio</span>
+            <span className="brand__sub">LLC</span>
           </a>
           <button className="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation">
             <span></span>
