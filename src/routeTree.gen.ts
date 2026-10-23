@@ -10,7 +10,6 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as AuthenticatedRouteRouteImport } from './routes/_authenticated/route'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as AuthRouteImport } from './routes/auth'
 import { Route as CompanyRouteImport } from './routes/company'
@@ -33,6 +32,7 @@ import { Route as TermsRouteImport } from './routes/terms'
 import { Route as TosRouteImport } from './routes/tos'
 import { Route as DotwellKnownJwksDotjsonRouteImport } from './routes/[.]well-known.jwks[.]json'
 import { Route as Char91DotwellKnownChar93OauthProtectedResourceRouteImport } from './routes/[.well-known]/oauth-protected-resource'
+import { Route as AdminInsightsRouteImport } from './routes/admin.insights'
 import { Route as AgentSplatRouteImport } from './routes/agent.$'
 import { Route as ApiHealthRouteImport } from './routes/api/health'
 import { Route as DocsIndexRouteImport } from './routes/docs.index'
@@ -44,15 +44,10 @@ import { Route as LegalTermsRouteImport } from './routes/legal.terms'
 import { Route as OauthAuthorizeRouteImport } from './routes/oauth.authorize'
 import { Route as Oauth2SplatRouteImport } from './routes/oauth2.$'
 import { Route as DotlovableOauthConsentRouteImport } from './routes/[.]lovable.oauth.consent'
-import { Route as AuthenticatedAdminInsightsRouteImport } from './routes/_authenticated/admin.insights'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const AuthenticatedRouteRoute = AuthenticatedRouteRouteImport.update({
-  id: '/_authenticated',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AboutRoute = AboutRouteImport.update({
@@ -167,6 +162,11 @@ const Char91DotwellKnownChar93OauthProtectedResourceRoute =
     path: '/.well-known/oauth-protected-resource',
     getParentRoute: () => rootRouteImport,
   } as any)
+const AdminInsightsRoute = AdminInsightsRouteImport.update({
+  id: '/admin/insights',
+  path: '/admin/insights',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const AgentSplatRoute = AgentSplatRouteImport.update({
   id: '/agent/$',
   path: '/agent/$',
@@ -222,12 +222,6 @@ const DotlovableOauthConsentRoute = DotlovableOauthConsentRouteImport.update({
   path: '/.lovable/oauth/consent',
   getParentRoute: () => rootRouteImport,
 } as any)
-const AuthenticatedAdminInsightsRoute =
-  AuthenticatedAdminInsightsRouteImport.update({
-    id: '/admin/insights',
-    path: '/admin/insights',
-    getParentRoute: () => AuthenticatedRouteRoute,
-  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -253,6 +247,7 @@ export interface FileRoutesByFullPath {
   '/tos': typeof TosRoute
   '/.well-known/jwks.json': typeof DotwellKnownJwksDotjsonRoute
   '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
+  '/admin/insights': typeof AdminInsightsRoute
   '/agent/$': typeof AgentSplatRoute
   '/api/health': typeof ApiHealthRoute
   '/docs/api': typeof DocsApiRoute
@@ -264,7 +259,6 @@ export interface FileRoutesByFullPath {
   '/docs/': typeof DocsIndexRoute
   '/legal/': typeof LegalIndexRoute
   '/.lovable/oauth/consent': typeof DotlovableOauthConsentRoute
-  '/admin/insights': typeof AuthenticatedAdminInsightsRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -290,6 +284,7 @@ export interface FileRoutesByTo {
   '/tos': typeof TosRoute
   '/.well-known/jwks.json': typeof DotwellKnownJwksDotjsonRoute
   '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
+  '/admin/insights': typeof AdminInsightsRoute
   '/agent/$': typeof AgentSplatRoute
   '/api/health': typeof ApiHealthRoute
   '/docs/api': typeof DocsApiRoute
@@ -301,12 +296,10 @@ export interface FileRoutesByTo {
   '/docs': typeof DocsIndexRoute
   '/legal': typeof LegalIndexRoute
   '/.lovable/oauth/consent': typeof DotlovableOauthConsentRoute
-  '/admin/insights': typeof AuthenticatedAdminInsightsRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/_authenticated': typeof AuthenticatedRouteRouteWithChildren
   '/about': typeof AboutRoute
   '/auth': typeof AuthRoute
   '/company': typeof CompanyRoute
@@ -329,6 +322,7 @@ export interface FileRoutesById {
   '/tos': typeof TosRoute
   '/.well-known/jwks.json': typeof DotwellKnownJwksDotjsonRoute
   '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
+  '/admin/insights': typeof AdminInsightsRoute
   '/agent/$': typeof AgentSplatRoute
   '/api/health': typeof ApiHealthRoute
   '/docs/api': typeof DocsApiRoute
@@ -340,7 +334,6 @@ export interface FileRoutesById {
   '/docs/': typeof DocsIndexRoute
   '/legal/': typeof LegalIndexRoute
   '/.lovable/oauth/consent': typeof DotlovableOauthConsentRoute
-  '/_authenticated/admin/insights': typeof AuthenticatedAdminInsightsRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -368,6 +361,7 @@ export interface FileRouteTypes {
     | '/tos'
     | '/.well-known/jwks.json'
     | '/.well-known/oauth-protected-resource'
+    | '/admin/insights'
     | '/agent/$'
     | '/api/health'
     | '/docs/api'
@@ -379,7 +373,6 @@ export interface FileRouteTypes {
     | '/docs/'
     | '/legal/'
     | '/.lovable/oauth/consent'
-    | '/admin/insights'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -405,6 +398,7 @@ export interface FileRouteTypes {
     | '/tos'
     | '/.well-known/jwks.json'
     | '/.well-known/oauth-protected-resource'
+    | '/admin/insights'
     | '/agent/$'
     | '/api/health'
     | '/docs/api'
@@ -416,11 +410,9 @@ export interface FileRouteTypes {
     | '/docs'
     | '/legal'
     | '/.lovable/oauth/consent'
-    | '/admin/insights'
   id:
     | '__root__'
     | '/'
-    | '/_authenticated'
     | '/about'
     | '/auth'
     | '/company'
@@ -443,6 +435,7 @@ export interface FileRouteTypes {
     | '/tos'
     | '/.well-known/jwks.json'
     | '/.well-known/oauth-protected-resource'
+    | '/admin/insights'
     | '/agent/$'
     | '/api/health'
     | '/docs/api'
@@ -454,12 +447,10 @@ export interface FileRouteTypes {
     | '/docs/'
     | '/legal/'
     | '/.lovable/oauth/consent'
-    | '/_authenticated/admin/insights'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  AuthenticatedRouteRoute: typeof AuthenticatedRouteRouteWithChildren
   AboutRoute: typeof AboutRoute
   AuthRoute: typeof AuthRoute
   CompanyRoute: typeof CompanyRoute
@@ -482,6 +473,7 @@ export interface RootRouteChildren {
   TosRoute: typeof TosRoute
   DotwellKnownJwksDotjsonRoute: typeof DotwellKnownJwksDotjsonRoute
   Char91DotwellKnownChar93OauthProtectedResourceRoute: typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
+  AdminInsightsRoute: typeof AdminInsightsRoute
   AgentSplatRoute: typeof AgentSplatRoute
   ApiHealthRoute: typeof ApiHealthRoute
   DocsApiRoute: typeof DocsApiRoute
@@ -502,13 +494,6 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/_authenticated': {
-      id: '/_authenticated'
-      path: ''
-      fullPath: '/'
-      preLoaderRoute: typeof AuthenticatedRouteRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/about': {
@@ -665,6 +650,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof Char91DotwellKnownChar93OauthProtectedResourceRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/admin/insights': {
+      id: '/admin/insights'
+      path: '/admin/insights'
+      fullPath: '/admin/insights'
+      preLoaderRoute: typeof AdminInsightsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/agent/$': {
       id: '/agent/$'
       path: '/agent/$'
@@ -742,30 +734,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DotlovableOauthConsentRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/_authenticated/admin/insights': {
-      id: '/_authenticated/admin/insights'
-      path: '/admin/insights'
-      fullPath: '/admin/insights'
-      preLoaderRoute: typeof AuthenticatedAdminInsightsRouteImport
-      parentRoute: typeof AuthenticatedRouteRoute
-    }
   }
 }
 
-interface AuthenticatedRouteRouteChildren {
-  AuthenticatedAdminInsightsRoute: typeof AuthenticatedAdminInsightsRoute
-}
-
-const AuthenticatedRouteRouteChildren: AuthenticatedRouteRouteChildren = {
-  AuthenticatedAdminInsightsRoute: AuthenticatedAdminInsightsRoute,
-}
-
-const AuthenticatedRouteRouteWithChildren =
-  AuthenticatedRouteRoute._addFileChildren(AuthenticatedRouteRouteChildren)
-
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  AuthenticatedRouteRoute: AuthenticatedRouteRouteWithChildren,
   AboutRoute: AboutRoute,
   AuthRoute: AuthRoute,
   CompanyRoute: CompanyRoute,
@@ -789,6 +762,7 @@ const rootRouteChildren: RootRouteChildren = {
   DotwellKnownJwksDotjsonRoute: DotwellKnownJwksDotjsonRoute,
   Char91DotwellKnownChar93OauthProtectedResourceRoute:
     Char91DotwellKnownChar93OauthProtectedResourceRoute,
+  AdminInsightsRoute: AdminInsightsRoute,
   AgentSplatRoute: AgentSplatRoute,
   ApiHealthRoute: ApiHealthRoute,
   DocsApiRoute: DocsApiRoute,
@@ -804,13 +778,3 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
