@@ -14,6 +14,36 @@ export type Database = {
   }
   public: {
     Tables: {
+      host_requests: {
+        Row: {
+          created_at: string
+          email: string
+          group_name: string | null
+          group_size: string | null
+          id: string
+          message: string | null
+          name: string
+        }
+        Insert: {
+          created_at?: string
+          email: string
+          group_name?: string | null
+          group_size?: string | null
+          id?: string
+          message?: string | null
+          name: string
+        }
+        Update: {
+          created_at?: string
+          email?: string
+          group_name?: string | null
+          group_size?: string | null
+          id?: string
+          message?: string | null
+          name?: string
+        }
+        Relationships: []
+      }
       user_roles: {
         Row: {
           id: string
