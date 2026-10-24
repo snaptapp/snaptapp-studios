@@ -34,3 +34,6 @@ dist-ssr
 # Lovable sandbox workspace directory
 .workspace/
 generate-key.js
+
+# Generated architecture brief HTML
+tools/brief/.build/

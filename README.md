@@ -169,8 +169,8 @@ Three things are written as accurately as possible but need your real details:
    company details table and to the contact page.
 
 Everything else on the site is factual as written: it was cross-checked against
-the actual product code (Flutter client, Cloudflare Durable Objects, Vertex AI
-generation, Firebase, and the AdMob integration disclosed in the privacy policy).
+the actual product code (Flutter client, Cloudflare Durable Objects, Gemini
+Enterprise Agent Platform generation, Firebase, and the AdMob integration disclosed in the privacy policy).
 
 ### Regenerating images
 

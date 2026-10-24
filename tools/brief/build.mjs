@@ -1,0 +1,50 @@
+import fs from "node:fs";
+import path from "node:path";
+import { execFileSync } from "node:child_process";
+
+const here = import.meta.dirname;
+const root = path.resolve(here, "../..");
+const outDir = path.join(here, ".build");
+const pdfOut = path.join(root, "public/assets/docs/Snaptapp_Google_Cloud_AI_Architecture_Brief.pdf");
+
+const read64 = (p) => fs.readFileSync(p).toString("base64");
+
+const template = fs.readFileSync(path.join(here, "brief.html"), "utf8");
+const html = template
+  .replaceAll("__INTER_FONT__", read64(path.join(root, "tools/brief-assets/inter-var.woff2")))
+  .replaceAll("__MONO_FONT__", read64(path.join(root, "tools/brief-assets/jbmono-var.woff2")))
+  .replaceAll("__SHOT__", read64(path.join(root, "public/assets/img/more-or-less-home.png")))
+  .replaceAll("__QR__", fs.readFileSync(path.join(root, "tools/brief-assets/qr.svg"), "utf8"));
+
+fs.mkdirSync(outDir, { recursive: true });
+const htmlPath = path.join(outDir, "brief.html");
+fs.writeFileSync(htmlPath, html);
+
+const chromeCandidates = [
+  "C:/Program Files/Google/Chrome/Application/chrome.exe",
+  "C:/Program Files (x86)/Google/Chrome/Application/chrome.exe",
+  "C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe",
+  "C:/Program Files/Microsoft/Edge/Application/msedge.exe",
+];
+const chrome = chromeCandidates.find((p) => fs.existsSync(p));
+if (!chrome) throw new Error("No Chrome or Edge binary found for PDF rendering.");
+
+const fileUrl = "file:///" + htmlPath.replaceAll("\\", "/");
+
+execFileSync(
+  chrome,
+  [
+    "--headless=new",
+    "--disable-gpu",
+    "--no-pdf-header-footer",
+    "--run-all-compositor-stages-before-draw",
+    "--virtual-time-budget=8000",
+    "--print-to-pdf=" + pdfOut,
+    fileUrl,
+  ],
+  { stdio: ["ignore", "pipe", "pipe"] },
+);
+
+const size = fs.statSync(pdfOut).size;
+console.log(`PDF  ${path.relative(root, pdfOut)}  ${(size / 1024).toFixed(0)} KB`);
+console.log(`HTML ${path.relative(root, htmlPath)}`);

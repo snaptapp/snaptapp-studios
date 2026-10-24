@@ -88,6 +88,7 @@
   },
   "private": true,
   "scripts": {
+    "brief": "node tools/brief/build.mjs",
     "build": "vite build",
     "build:dev": "vite build --mode development",
     "dev": "vite dev",

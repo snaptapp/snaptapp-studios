@@ -702,10 +702,12 @@ function PageIndex() {
               <strong>Google Cloud &amp; Gemini Enterprise Agent Platform Architecture Brief.</strong> Reviewing
               our stack for partnerships or the Google for Startups Cloud Program?{" "}
               <a href="/assets/docs/Snaptapp_Google_Cloud_AI_Architecture_Brief.pdf">
-                Download our 1-page Technical Architecture &amp; AI Workload Brief (PDF)
+                Download our 5-page Google Cloud &amp; Gemini Enterprise Agent Platform
+                Architecture Brief (PDF)
               </a>{" "}
-              covering our <code>more-or-less-505908</code> production services, Search
-              grounding audit receipts, DDM-4 math guardrails, and Gemini Enterprise Agent Platform SFT pipeline.
+              covering our <code>more-or-less-505908</code> production services on Google
+              Cloud, Search grounding audit receipts, DDM-4 math guardrails, and the Gemini
+              Enterprise Agent Platform SFT pipeline.
             </div>
           </div>
         </section>
