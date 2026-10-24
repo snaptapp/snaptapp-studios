@@ -345,7 +345,7 @@ function PageLegalPrivacy() {
                     </tr>
                     <tr>
                       <td>
-                        Google Cloud — Vertex AI
+                        Google Cloud — Gemini Enterprise Agent Platform
                         (<a href="https://cloud.google.com/terms/cloud-privacy-notice" rel="noopener">privacy</a>)
                       </td>
                       <td>
@@ -444,7 +444,7 @@ function PageLegalPrivacy() {
                 <p>
                   When you type a custom topic, that text is checked by a content filter and, if it
                   is not already covered by our curated fact bank, sent to a Google generative model
-                  on Vertex AI together with instructions to produce trivia rounds. The model is
+                  on Gemini Enterprise Agent Platform together with instructions to produce trivia rounds. The model is
                   also permitted to run web searches to ground the numbers it returns.
                 </p>
                 <p>

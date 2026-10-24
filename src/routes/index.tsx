@@ -7,12 +7,12 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       {
-        title: "Snaptapp — AI-Native Game Studio on Google Cloud & Vertex AI",
+        title: "Snaptapp — AI-Native Game Studio on Google Cloud & Gemini Enterprise Agent Platform",
       },
       {
         name: "description",
         content:
-          "Snaptapp LLC is an independent US game studio building original real-time games powered by Google Cloud, Vertex AI (Gemini & Gemma), Google Search Grounding, and Cloud Run. Our first title, More or Less, is live on the web.",
+          "Snaptapp LLC is an independent US game studio building original real-time games powered by Google Cloud, Gemini Enterprise Agent Platform (Gemini & Gemma), Google Search Grounding, and Cloud Run. Our first title, More or Less, is live on the web.",
       },
       {
         name: "theme-color",
@@ -32,12 +32,12 @@ export const Route = createFileRoute("/")({
       },
       {
         property: "og:title",
-        content: "Snaptapp — AI-Native Game Studio on Google Cloud & Vertex AI",
+        content: "Snaptapp — AI-Native Game Studio on Google Cloud & Gemini Enterprise Agent Platform",
       },
       {
         property: "og:description",
         content:
-          "Independent US game studio building original real-time games powered by Google Cloud, Vertex AI (Gemini 3.5 & 3.8 Flash, Gemma 2), Google Search Grounding, and Cloud Run.",
+          "Independent US game studio building original real-time games powered by Google Cloud, Gemini Enterprise Agent Platform (Gemini 3.5 Flash Lite & 3.8 Flash, Gemma 2), Google Search Grounding, and Cloud Run.",
       },
       {
         property: "og:url",
@@ -104,7 +104,7 @@ export const Route = createFileRoute("/")({
               },
               image: "https://snaptapp.us/assets/img/og-default.png",
               description:
-                "Independent US game studio building original AI-native games on Google Cloud, Vertex AI (Gemini & Gemma), Google Search Grounding, Cloud Run, and Firebase. First title: More or Less.",
+                "Independent US game studio building original AI-native games on Google Cloud, Gemini Enterprise Agent Platform (Gemini & Gemma), Google Search Grounding, Cloud Run, and Firebase. First title: More or Less.",
               foundingDate: "2026",
               email: "hello@snaptapp.us",
               address: {
@@ -117,8 +117,8 @@ export const Route = createFileRoute("/")({
               },
               knowsAbout: [
                 "Google Cloud",
-                "Vertex AI",
-                "Gemini 3.5 Flash-Lite",
+                "Gemini Enterprise Agent Platform",
+                "Gemini 3.5 Flash Lite",
                 "Gemini 3.8 Flash",
                 "Google Search Grounding",
                 "Gemma 2 9B Supervised Fine-Tuning",
@@ -166,7 +166,7 @@ export const Route = createFileRoute("/")({
               operatingSystem: "Web, iOS, Android",
               publisher: { "@id": "https://snaptapp.us/#organization" },
               description:
-                "An AI-native party trivia game about numbers powered by Vertex AI (Gemini 3.5 Flash-Lite & Gemini 3.8 Flash), Google Search Grounding, Google Cloud Run, and Cloud Firestore.",
+                "An AI-native party trivia game about numbers powered by Gemini Enterprise Agent Platform (Gemini 3.5 Flash Lite & Gemini 3.8 Flash), Google Search Grounding, Google Cloud Run, and Cloud Firestore.",
             },
           ],
         }),
@@ -234,14 +234,14 @@ function PageIndex() {
           <div className="shell">
             <div className="hero__inner">
               <p className="eyebrow">
-                Independent game studio · Built on Google Cloud &amp; Vertex AI
+                Independent game studio · Built on Google Cloud &amp; Gemini Enterprise Agent Platform
               </p>
               <h1>Original AI-native games for web and mobile.</h1>
               <p className="lede">
                 Snaptapp LLC is an independent US game studio. We design, build, and
                 operate our own multiplayer games across web and mobile on a deep{" "}
-                <strong>Google Cloud</strong> and <strong>Vertex AI</strong> architecture
-                (Gemini 3.5 Flash-Lite, Gemini 3.8 Flash, Google Search Grounding, Gemma 2
+                <strong>Google Cloud</strong> and <strong>Gemini Enterprise Agent Platform</strong> architecture
+                (Gemini 3.5 Flash Lite, Gemini 3.8 Flash, Google Search Grounding, Gemma 2
                 9B SFT, Cloud Run, and Cloud Firestore). Our first title, More or Less, is
                 live now.
               </p>
@@ -298,7 +298,7 @@ function PageIndex() {
               </div>
 
               <ul className="trust-strip" aria-label="Core Google Cloud and AI stack">
-                <li>Vertex AI Gemini 3.5 &amp; 3.8 Flash</li>
+                <li>Gemini 3.5 Flash Lite &amp; Gemini 3.8 Flash</li>
                 <li>Google Search Grounding</li>
                 <li>Google Cloud Run (Go Agent)</li>
                 <li>Gemma 2 9B Fine-Tuning</li>
@@ -317,7 +317,7 @@ function PageIndex() {
               <p className="lede">
                 More or Less is live on the web, with iOS and Android versions in
                 development. A second AI-native Snaptapp title is also in development on
-                our shared Google Cloud and Vertex AI pipeline.
+                our shared Google Cloud and Gemini Enterprise Agent Platform pipeline.
               </p>
             </div>
 
@@ -358,11 +358,11 @@ function PageIndex() {
                 <p>
                   Under the hood, custom topics are streamed in real time by our Go
                   microservice (<code>agent-go</code>) on <strong>Google Cloud Run</strong>{" "}
-                  using <strong>Vertex AI Gemini 3.5 Flash-Lite</strong> with mandatory{" "}
+                  using <strong>Gemini 3.5 Flash Lite</strong> with mandatory{" "}
                   <strong>Google Search Grounding</strong> and deterministic{" "}
                   <strong>Distractor Derivation Model (DDM-4)</strong> guardrails, while
                   curated topics serve from our <strong>Cloud Firestore</strong> fact bank
-                  continuously audited by <strong>Vertex AI Gemini 3.8 Flash</strong>.
+                  continuously audited by <strong>Gemini 3.8 Flash</strong>.
                 </p>
 
                 <dl className="product__meta">
@@ -372,7 +372,7 @@ function PageIndex() {
                   </div>
                   <div>
                     <dt>AI Engine</dt>
-                    <dd>Vertex AI Gemini 3.5 &amp; 3.8 Flash + Search Grounding</dd>
+                    <dd>Gemini 3.5 Flash Lite &amp; Gemini 3.8 Flash + Search Grounding</dd>
                   </div>
                   <div>
                     <dt>Cloud Stack</dt>
@@ -418,7 +418,7 @@ function PageIndex() {
                     className="link-arrow"
                     href="/assets/docs/Snaptapp_Google_Cloud_AI_Architecture_Brief.pdf"
                   >
-                    Read the Google Cloud &amp; Vertex AI Architecture Brief (PDF)
+                    Read the Google Cloud &amp; Gemini Enterprise Agent Platform Architecture Brief (PDF)
                     <svg
                       width="15"
                       height="15"
@@ -464,7 +464,7 @@ function PageIndex() {
                 <span className="badge badge--soon">In development</span>
                 <p className="muted small mt-xs">
                   A second Snaptapp title is in development on our Google Cloud &amp;
-                  Vertex AI architecture. Details will be announced later.
+                  Gemini Enterprise Agent Platform architecture. Details will be announced later.
                 </p>
               </div>
               <div className="card card--hover">
@@ -511,11 +511,11 @@ function PageIndex() {
         <section className="section section--edge" id="approach">
           <div className="shell">
             <div className="section-head reveal">
-              <p className="eyebrow">How we build · Google Cloud &amp; Vertex AI</p>
+              <p className="eyebrow">How we build · Google Cloud &amp; Gemini Enterprise Agent Platform</p>
               <h2>AI-native architecture from generation to verification</h2>
               <p className="lede">
                 Every Snaptapp game is built around a multi-agent Google Cloud pipeline (
-                <code>more-or-less-505908</code>) that pairs Vertex AI generative models
+                <code>more-or-less-505908</code>) that pairs Gemini Enterprise Agent Platform generative models
                 and Google Search grounding with deterministic mathematical guardrails.
               </p>
             </div>
@@ -544,7 +544,7 @@ function PageIndex() {
                 <p>
                   Our Go microservice (<code>agent-go</code>) on{" "}
                   <strong>Google Cloud Run</strong> calls{" "}
-                  <strong>Vertex AI Gemini 3.5 Flash-Lite</strong> with mandatory{" "}
+                  <strong>Gemini 3.5 Flash Lite</strong> with mandatory{" "}
                   <strong>Google Search Grounding</strong>, streaming NDJSON rounds in
                   under two seconds while our deterministic <code>DDM-4</code> kernel
                   calibrates distractors.
@@ -574,7 +574,7 @@ function PageIndex() {
                 <h3>Autonomous Fact Foundry &amp; Auditor</h3>
                 <p>
                   A cold-path pipeline powered by{" "}
-                  <strong>Vertex AI Gemini 3.8 Flash</strong> and Google Search grounding
+                  <strong>Gemini 3.8 Flash</strong> and Google Search grounding
                   crawls subjects, cross-verifies claims against primary web sources,
                   precomputes <code>DDM-4</code> sweeps across surprise factors{" "}
                   <code>0–3</code>, and gates promotion into{" "}
@@ -597,7 +597,7 @@ function PageIndex() {
                 <h3>Adversarial Fact Ombudsman</h3>
                 <p>
                   When a player disputes a fact, an autonomous referee on{" "}
-                  <strong>Cloud Run</strong> and <strong>Vertex AI</strong> runs
+                  <strong>Cloud Run</strong> and <strong>Gemini Enterprise Agent Platform</strong> runs
                   adversarial counter-evidence Google Search queries against authoritative
                   sources to issue real-time verification or eviction rulings.
                 </p>
@@ -615,11 +615,11 @@ function PageIndex() {
                   </svg>
                 </div>
                 <span className="card__num">04</span>
-                <h3>Vertex AI SFT &amp; Gemma 2 Pipeline</h3>
+                <h3>Gemini SFT &amp; Gemma 2 Pipeline</h3>
                 <p>
                   Audited Firestore facts export via our hermetic Go pipeline (
                   <code>export-sft --format vertex</code>) into{" "}
-                  <strong>Vertex AI Gemini supervised fine-tuning</strong> corpora and{" "}
+                  <strong>Gemini Enterprise Agent Platform supervised fine-tuning</strong> corpora and{" "}
                   <strong>Gemma 2 9B (google/gemma-2-9b-it)</strong> LoRA adapters,
                   enforced by a 7-metric zero-tolerance evaluation gate.
                 </p>
@@ -639,7 +639,7 @@ function PageIndex() {
                 <span className="card__num">05</span>
                 <h3>AI Ops Copilots &amp; Multiplayer Edge</h3>
                 <p>
-                  Our admin portal runs a <strong>Vertex AI Gemini 3.8 Flash</strong>{" "}
+                  Our admin portal runs a <strong>Gemini 3.8 Flash</strong>{" "}
                   Daily Blitz Strategist and Report Review Copilot with tool calling,
                   while Party Room sessions sync up to 10 players in sub-20ms over
                   Durable Object WebSockets.
@@ -690,7 +690,7 @@ function PageIndex() {
               <p className="eyebrow">Infrastructure · GCP Project more-or-less-505908</p>
               <h2>What we run on</h2>
               <p className="lede">
-                Our production stack combines Google Cloud and Vertex AI for grounded
+                Our production stack combines Google Cloud and Gemini Enterprise Agent Platform for grounded
                 generative inference, fact auditing, fine-tuning, and persistence with
                 low-latency WebSocket room coordination.
               </p>
@@ -699,11 +699,11 @@ function PageIndex() {
             <dl className="stats reveal">
               <div>
                 <dt>Live AI Inference</dt>
-                <dd>Vertex AI Gemini 3.5</dd>
+                <dd>Gemini 3.5 Flash Lite</dd>
               </div>
               <div>
                 <dt>Foundry &amp; Copilots</dt>
-                <dd>Vertex AI Gemini 3.8</dd>
+                <dd>Gemini 3.8 Flash</dd>
               </div>
               <div>
                 <dt>Grounding &amp; SFT</dt>
@@ -724,13 +724,13 @@ function PageIndex() {
             </dl>
 
             <div className="callout reveal mt-lg">
-              <strong>Google Cloud &amp; Vertex AI Architecture Brief.</strong> Reviewing
+              <strong>Google Cloud &amp; Gemini Enterprise Agent Platform Architecture Brief.</strong> Reviewing
               our stack for partnerships or the Google for Startups Cloud Program?{" "}
               <a href="/assets/docs/Snaptapp_Google_Cloud_AI_Architecture_Brief.pdf">
                 Download our 1-page Technical Architecture &amp; AI Workload Brief (PDF)
               </a>{" "}
               covering our <code>more-or-less-505908</code> production services, Search
-              grounding audit receipts, DDM-4 math guardrails, and Vertex AI SFT pipeline.
+              grounding audit receipts, DDM-4 math guardrails, and Gemini Enterprise Agent Platform SFT pipeline.
             </div>
           </div>
         </section>
@@ -792,7 +792,7 @@ function PageIndex() {
               </a>
               <p>
                 An independent US game studio (Snaptapp LLC) building AI-native titles on
-                Google Cloud, Vertex AI, and Flutter.
+                Google Cloud, Gemini Enterprise Agent Platform, and Flutter.
               </p>
             </div>
 

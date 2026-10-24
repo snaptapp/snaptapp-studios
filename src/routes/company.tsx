@@ -11,7 +11,7 @@ export const Route = createFileRoute("/company")({
       {
         name: "description",
         content:
-          "About Snaptapp LLC, an independent US game studio founded in 2026 in Washington State, building original AI-native games on Google Cloud, Vertex AI, and Flutter.",
+          "About Snaptapp LLC, an independent US game studio founded in 2026 in Washington State, building original AI-native games on Google Cloud, Gemini Enterprise Agent Platform, and Flutter.",
       },
       {
         name: "theme-color",
@@ -36,7 +36,7 @@ export const Route = createFileRoute("/company")({
       {
         property: "og:description",
         content:
-          "About Snaptapp LLC, an independent US game studio founded in 2026 in Washington State, building original AI-native games on Google Cloud, Vertex AI, and Flutter.",
+          "About Snaptapp LLC, an independent US game studio founded in 2026 in Washington State, building original AI-native games on Google Cloud, Gemini Enterprise Agent Platform, and Flutter.",
       },
       {
         property: "og:url",
@@ -147,7 +147,7 @@ function PageCompany() {
             <p className="lede">
               Snaptapp LLC is an independent US game studio founded in 2026 in Washington
               State. We design, build, and operate our own AI-native games across web and
-              mobile on Google Cloud and Vertex AI.
+              mobile on Google Cloud and Gemini Enterprise Agent Platform.
             </p>
           </div>
         </section>
@@ -158,7 +158,7 @@ function PageCompany() {
               <p>
                 We keep product development close to the people building it. Game design,
                 Flutter client development, Go microservices on{" "}
-                <strong>Google Cloud Run</strong>, <strong>Vertex AI</strong> model
+                <strong>Google Cloud Run</strong>, <strong>Gemini Enterprise Agent Platform</strong> model
                 pipelines (<code>gemini-3.5-flash-lite</code>,{" "}
                 <code>gemini-3.8-flash</code>, and fine-tuned <code>gemma-2-9b-it</code>
                 ), <strong>Cloud Firestore</strong> data systems, real-time multiplayer,
@@ -170,7 +170,7 @@ function PageCompany() {
                 Snaptapp title is also in development. For a technical overview of our
                 cloud and AI architecture, see our{" "}
                 <a href="/assets/docs/Snaptapp_Google_Cloud_AI_Architecture_Brief.pdf">
-                  Google Cloud &amp; Vertex AI Architecture Brief (PDF)
+                  Google Cloud &amp; Gemini Enterprise Agent Platform Architecture Brief (PDF)
                 </a>
                 .
               </p>
@@ -198,7 +198,7 @@ function PageCompany() {
                 <span className="card__num">02</span>
                 <h3>End-to-end ownership</h3>
                 <p>
-                  Client, Google Cloud Run backend, Vertex AI pipelines, multiplayer
+                  Client, Google Cloud Run backend, Gemini Enterprise Agent Platform pipelines, multiplayer
                   systems, and operations are developed together so the product stays
                   coherent across the full stack.
                 </p>
@@ -207,7 +207,7 @@ function PageCompany() {
                 <span className="card__num">03</span>
                 <h3>Grounded &amp; verified AI</h3>
                 <p>
-                  Every generative round from Vertex AI Gemini is grounded in Google
+                  Every generative round from Gemini is grounded in Google
                   Search, checked by our deterministic DDM-4 math guardrails, and audited
                   by our Fact Foundry before promotion into Cloud Firestore.
                 </p>
@@ -232,7 +232,7 @@ function PageCompany() {
                 <span className="card__num">06</span>
                 <h3>Managed cloud scale</h3>
                 <p>
-                  Running serverless workloads on Google Cloud Run, Vertex AI, Cloud
+                  Running serverless workloads on Google Cloud Run, Gemini Enterprise Agent Platform, Cloud
                   Firestore, and Firebase lets a small team operate globally with
                   predictable economics.
                 </p>
@@ -252,7 +252,7 @@ function PageCompany() {
                 <h3>Michael T. Anderson</h3>
                 <p className="product__tagline">Founder &amp; Studio Lead</p>
                 <p>
-                  Leads engineering, Google Cloud &amp; Vertex AI architecture, and game
+                  Leads engineering, Google Cloud &amp; Gemini Enterprise Agent Platform architecture, and game
                   systems at Snaptapp LLC.
                 </p>
                 <p className="mt-sm">
@@ -349,7 +349,7 @@ function PageCompany() {
                   <tr>
                     <th scope="row">Cloud &amp; AI platform</th>
                     <td>
-                      Google Cloud &amp; Vertex AI (Project{" "}
+                      Google Cloud &amp; Gemini Enterprise Agent Platform (Project{" "}
                       <code>more-or-less-505908</code>) —{" "}
                       <a href="/assets/docs/Snaptapp_Google_Cloud_AI_Architecture_Brief.pdf">
                         Architecture Brief (PDF)
@@ -425,7 +425,7 @@ function PageCompany() {
               </a>
               <p>
                 An independent US game studio (Snaptapp LLC) building AI-native titles on
-                Google Cloud, Vertex AI, and Flutter.
+                Google Cloud, Gemini Enterprise Agent Platform, and Flutter.
               </p>
             </div>
 

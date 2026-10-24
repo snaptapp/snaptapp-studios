@@ -305,7 +305,7 @@ function PagePlayerFaq() {
               <h3>If you type a custom topic</h3>
               <p>
                 The topic text is checked by a content filter and may be sent to a Google model on
-                Vertex AI with Snaptapp&rsquo;s instructions. Your identity is not sent with it. A
+                Gemini Enterprise Agent Platform with Snaptapp&rsquo;s instructions. Your identity is not sent with it. A
                 round built for a custom topic can be cached and reused for other players who
                 enter the same topic, so do not type anything you would not want repeated.
               </p>

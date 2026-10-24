@@ -34,3 +34,6 @@ Goal: rebuild snaptapp.us as a Lovable app, preserving every URL and all content
       clock, reveal, answer handling) and link it from Support, Products and the footer
 - [ ] Find five small game-night hosts who could trial More or Less — blocked: the research
       run was cancelled, and the /hosts/ page that would collect their requests was never built
+- [ ] Regenerate the Architecture Brief PDF with the Gemini Enterprise Agent Platform name
+      (19 old-brand mentions remain) — blocked: it was rendered by headless Chrome from HTML
+      that is not in this repo, so the source document is needed
