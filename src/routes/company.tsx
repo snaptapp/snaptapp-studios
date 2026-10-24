@@ -325,8 +325,8 @@ function PageCompany() {
                     <td>Snaptapp LLC (Washington limited liability company)</td>
                   </tr>
                   <tr>
-                    <th scope="row">Jurisdiction &amp; registration</th>
-                    <td>Washington, United States (WA UBI 606 300 362 · EIN 43-2180036)</td>
+                    <th scope="row">Jurisdiction</th>
+                    <td>Washington, United States</td>
                   </tr>
                   <tr>
                     <th scope="row">Principal address</th>
