@@ -1,7 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState, type FormEvent } from "react";
 import { supabase } from "@/integrations/supabase/client";
-import { ADMIN_EMAIL_DOMAIN, createAdminAccount } from "@/lib/admin-signup.functions";
 
 export const Route = createFileRoute("/auth")({
   head: () => ({
@@ -29,7 +28,6 @@ function safeNext(v: unknown): string | undefined {
 
 function AuthPage() {
   const { next } = Route.useSearch();
-  const [mode, setMode] = useState<"in" | "up">("in");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [msg, setMsg] = useState<string | null>(null);
@@ -39,30 +37,19 @@ function AuthPage() {
     e.preventDefault();
     setBusy(true);
     setMsg(null);
-    if (mode === "in") {
-      const { error } = await supabase.auth.signInWithPassword({ email, password });
-      setBusy(false);
-      if (error) return setMsg(error.message);
-      const target = next ? new URL(next, window.location.origin) : null;
-      if (target && target.origin === window.location.origin) window.location.assign(target.pathname + target.search + target.hash);
-      else window.location.assign("https://ops.snaptapp.us/admin");
-    } else {
-      if (email.trim().toLowerCase().split("@")[1] !== ADMIN_EMAIL_DOMAIN) {
-        setBusy(false);
-        return setMsg(`Accounts are limited to @${ADMIN_EMAIL_DOMAIN} email addresses.`);
-      }
-      const result = await createAdminAccount({ data: { email, password } });
-      setBusy(false);
-      setMsg(result.message);
-      if (result.ok) setMode("in");
-    }
+    const { error } = await supabase.auth.signInWithPassword({ email, password });
+    setBusy(false);
+    if (error) return setMsg(error.message);
+    const target = next ? new URL(next, window.location.origin) : null;
+    if (target && target.origin === window.location.origin) window.location.assign(target.pathname + target.search + target.hash);
+    else window.location.assign("https://ops.snaptapp.us/admin");
   }
 
   return (
     <main id="main" className="section">
       <div className="shell admin-narrow">
-        <h1>{mode === "in" ? "Admin sign-in" : "Create admin account"}</h1>
-        {mode === "up" && <p>Only @{ADMIN_EMAIL_DOMAIN} email addresses can create an account.</p>}
+        <h1>Admin sign-in</h1>
+        <p>New admin accounts are added by the studio owner.</p>
         <form className="admin-form" onSubmit={submit}>
           <label>
             Email
@@ -79,15 +66,10 @@ function AuthPage() {
             />
           </label>
           <button className="btn btn--primary" type="submit" disabled={busy}>
-            {busy ? "Please wait…" : mode === "in" ? "Sign in" : "Create account"}
+            {busy ? "Please wait…" : "Sign in"}
           </button>
           {msg && <p role="status">{msg}</p>}
         </form>
-        <p>
-          <button className="btn btn--ghost btn--sm" type="button" onClick={() => setMode(mode === "in" ? "up" : "in")}>
-            {mode === "in" ? "Need an account? Create one" : "Have an account? Sign in"}
-          </button>
-        </p>
       </div>
     </main>
   );
