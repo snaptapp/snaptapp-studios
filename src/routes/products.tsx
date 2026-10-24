@@ -36,7 +36,7 @@ export const Route = createFileRoute("/products")({
       {
         property: "og:description",
         content:
-          "More or Less is a fast party trivia game about numbers powered by Gemini Enterprise Agent Platform (Gemini & Gemma), Google Search Grounding, Cloud Run, and Cloud Firestore.",
+          "More or Less is a fast trivia game about numbers from SNAPTAPP LLC: decide if the real answer is more or less before time runs out. Solo, Daily Challenge, Versus, and Party Rooms for up to 10 players.",
       },
       {
         property: "og:url",
