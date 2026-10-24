@@ -293,9 +293,12 @@ function PageProducts() {
                 <p>
                   Player disputes trigger our <strong>Autonomous Fact Ombudsman</strong>{" "}
                   on Cloud Run + Gemini Enterprise Agent Platform to run adversarial Google Search checks and
-                  evict debunked claims. On <code>ops.snaptapp.us</code>,{" "}
-                  <strong>Gemini 3.8 Flash</strong> powers our Daily Blitz
-                  Strategist, Report Review Copilot, and Placement Insights.
+                  evict debunked claims. Our ops console (<code>ops.snaptapp.us</code>) is
+                  a <strong>TanStack Start</strong> app on <strong>Cloudflare Workers</strong>,
+                  gated by <strong>Firebase Auth</strong> admin claims, with role-managed
+                  server functions over <strong>Cloud Firestore</strong> fact curation and
+                  dispute queues. <strong>Gemini 3.8 Flash</strong> powers the Daily Blitz
+                  Strategist, Report Review Copilot, and Placement Insights copilots.
                 </p>
               </div>
             </div>

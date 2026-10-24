@@ -608,10 +608,14 @@ function PageIndex() {
                 <span className="card__num">05</span>
                 <h3>AI Ops Copilots &amp; Multiplayer Edge</h3>
                 <p>
-                  Our admin portal runs a <strong>Gemini 3.8 Flash</strong>{" "}
-                  Daily Blitz Strategist and Report Review Copilot with tool calling,
-                  while Party Room sessions sync up to 10 players in sub-20ms over
-                  Durable Object WebSockets.
+                  Our ops console (<code>ops.snaptapp.us</code>) is a{" "}
+                  <strong>TanStack Start</strong> app on <strong>Cloudflare Workers</strong>,
+                  gated by <strong>Firebase Auth</strong> admin claims, with role-managed
+                  server functions over <strong>Cloud Firestore</strong> fact curation and
+                  dispute queues. <strong>Gemini 3.8 Flash</strong> copilots — Daily Blitz
+                  Strategist, Report Review Copilot, and Placement Insights — run on{" "}
+                  <strong>Gemini Enterprise Agent Platform</strong>. Party Room sessions
+                  sync up to 10 players in sub-20ms over Durable Object WebSockets.
                 </p>
               </div>
 
