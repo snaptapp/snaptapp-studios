@@ -31,7 +31,7 @@ export const Route = createFileRoute("/products")({
       },
       {
         property: "og:title",
-        content: "Products & AI Architecture — Snaptapp",
+        content: "More or Less, the Trivia Game About Numbers — Snaptapp Games",
       },
       {
         property: "og:description",
