@@ -16,10 +16,16 @@ export const Route = createFileRoute("/auth")({
     ],
   }),
   validateSearch: (s: Record<string, unknown>): { next?: string | undefined } => ({
-    next: typeof s.next === "string" && s.next.startsWith("/") && !s.next.startsWith("//") ? s.next : undefined,
+    next: safeNext(s.next),
   }),
   component: AuthPage,
 });
+
+function safeNext(v: unknown): string | undefined {
+  if (typeof v !== "string" || !v.startsWith("/") || v.startsWith("//")) return undefined;
+  if (/[\\\u0000-\u001f\u007f]/.test(v)) return undefined;
+  return v;
+}
 
 function AuthPage() {
   const { next } = Route.useSearch();
@@ -37,7 +43,8 @@ function AuthPage() {
       const { error } = await supabase.auth.signInWithPassword({ email, password });
       setBusy(false);
       if (error) return setMsg(error.message);
-      if (next) window.location.assign(next);
+      const target = next ? new URL(next, window.location.origin) : null;
+      if (target && target.origin === window.location.origin) window.location.assign(target.pathname + target.search + target.hash);
       else window.location.assign("https://ops.snaptapp.us/admin");
     } else {
       if (email.trim().toLowerCase().split("@")[1] !== ADMIN_EMAIL_DOMAIN) {
