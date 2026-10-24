@@ -7,12 +7,12 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       {
-        title: "Snaptapp — AI-Native Game Studio on Google Cloud & Gemini Enterprise Agent Platform",
+        title: "Snaptapp — Independent Game Studio, Makers of More or Less",
       },
       {
         name: "description",
         content:
-          "Snaptapp LLC is an independent US game studio building original real-time games powered by Google Cloud, Gemini Enterprise Agent Platform (Gemini & Gemma), Google Search Grounding, and Cloud Run. Our first title, More or Less, is live on the web.",
+          "Snaptapp is an independent US game studio making original games for web and mobile. Its first title, More or Less, a trivia game about numbers, is live on the web.",
       },
       {
         name: "theme-color",
@@ -32,12 +32,12 @@ export const Route = createFileRoute("/")({
       },
       {
         property: "og:title",
-        content: "Snaptapp — AI-Native Game Studio on Google Cloud & Gemini Enterprise Agent Platform",
+        content: "Snaptapp — Independent Game Studio, Makers of More or Less",
       },
       {
         property: "og:description",
         content:
-          "Independent US game studio building original real-time games powered by Google Cloud, Gemini Enterprise Agent Platform (Gemini 3.5 Flash Lite & 3.8 Flash, Gemma 2), Google Search Grounding, and Cloud Run.",
+          "Snaptapp is an independent US game studio making original games for web and mobile. Its first title, More or Less, a trivia game about numbers, is live on the web.",
       },
       {
         property: "og:url",
@@ -107,14 +107,6 @@ export const Route = createFileRoute("/")({
                 "Independent US game studio building original AI-native games on Google Cloud, Gemini Enterprise Agent Platform (Gemini & Gemma), Google Search Grounding, Cloud Run, and Firebase. First title: More or Less.",
               foundingDate: "2026",
               email: "hello@snaptapp.us",
-              address: {
-                "@type": "PostalAddress",
-                streetAddress: "522 W Riverside Ave Ste N",
-                addressLocality: "Spokane",
-                addressRegion: "WA",
-                postalCode: "99201",
-                addressCountry: "US",
-              },
               knowsAbout: [
                 "Google Cloud",
                 "Gemini Enterprise Agent Platform",
