@@ -485,9 +485,9 @@ function PageIndex() {
               <p className="eyebrow">How we build · Google Cloud &amp; Gemini Enterprise Agent Platform</p>
               <h2>AI-native architecture from generation to verification</h2>
               <p className="lede">
-                Every Snaptapp game is built around a multi-agent Google Cloud pipeline (
-                <code>more-or-less-505908</code>) that pairs Gemini Enterprise Agent Platform generative models
-                and Google Search grounding with deterministic mathematical guardrails.
+                Every Snaptapp game is built around a multi-agent Google Cloud pipeline
+                that pairs Gemini Enterprise Agent Platform generative models and Google
+                Search grounding with deterministic mathematical guardrails.
               </p>
             </div>
 
@@ -662,7 +662,7 @@ function PageIndex() {
         <section className="section section--edge" id="stack">
           <div className="shell">
             <div className="section-head reveal">
-              <p className="eyebrow">Infrastructure · GCP Project more-or-less-505908</p>
+              <p className="eyebrow">Infrastructure · Google Cloud</p>
               <h2>What we run on</h2>
               <p className="lede">
                 Our production stack combines Google Cloud and Gemini Enterprise Agent Platform for grounded
@@ -705,9 +705,9 @@ function PageIndex() {
                 Download our 5-page Google Cloud &amp; Gemini Enterprise Agent Platform
                 Architecture Brief (PDF)
               </a>{" "}
-              covering our <code>more-or-less-505908</code> production services on Google
-              Cloud, Search grounding audit receipts, DDM-4 math guardrails, and the Gemini
-              Enterprise Agent Platform SFT pipeline.
+              covering our production services on Google Cloud, Search grounding audit
+              receipts, DDM-4 math guardrails, and the Gemini Enterprise Agent Platform SFT
+              pipeline.
             </div>
           </div>
         </section>

@@ -119,4 +119,4 @@ This endpoint requires POST and a `token` field. It returns `{ "revoked": true }
 
 ## More or Less player APIs
 
-Party rooms, trivia generation, and disputes are **not** this resource. They authenticate with Firebase ID tokens issued for project `more-or-less-505908`. Play the game at `https://moreorless.snaptapp.us`.
+Party rooms, trivia generation, and disputes are **not** this resource. They authenticate with Firebase ID tokens issued for the More or Less Firebase project. Play the game at `https://moreorless.snaptapp.us`.

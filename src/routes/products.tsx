@@ -253,7 +253,7 @@ function PageProducts() {
         <section className="section section--edge" id="ai-architecture">
           <div className="shell">
             <div className="section-head reveal">
-              <p className="eyebrow">Google Cloud Project · more-or-less-505908</p>
+              <p className="eyebrow">Google Cloud Project</p>
               <h2>Google Cloud &amp; Gemini Enterprise Agent Platform pipeline</h2>
               <p className="lede">
                 More or Less combines low-latency Gemini Enterprise Agent Platform inference and Google Search

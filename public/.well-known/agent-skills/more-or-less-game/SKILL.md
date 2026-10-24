@@ -21,7 +21,7 @@ Modes: Standard (5 rounds), Cutthroat (endless sudden death), Daily Challenge (5
 
 ## Stack (honest)
 
-Google Cloud (project more-or-less-505908): Go microservice (agent-go) on Google Cloud Run calling Gemini 3.5 Flash Lite on Gemini Enterprise Agent Platform with mandatory Google Search Grounding and deterministic DDM-4 distractor math to build custom topic decks on the fly; cold-path Fact Foundry and Auditor using Google Search Grounding on Gemini Enterprise Agent Platform promoting verified facts into Cloud Firestore; Autonomous Fact Ombudsman on Cloud Run driven by Gemini 3.8 Flash on Gemini Enterprise Agent Platform; Gemini Enterprise Agent Platform supervised fine-tuning & Gemma 2 9B LoRA fine-tuning pipeline; Ops AI Copilots (Daily Blitz Strategist & Report Review Copilot) on Gemini Enterprise Agent Platform; Firebase (Auth, Functions v2, Hosting, App Check); Flutter client; Cloudflare Workers + Durable Objects.
+Google Cloud: Go microservice (agent-go) on Google Cloud Run calling Gemini 3.5 Flash Lite on Gemini Enterprise Agent Platform with mandatory Google Search Grounding and deterministic DDM-4 distractor math to build custom topic decks on the fly; cold-path Fact Foundry and Auditor using Google Search Grounding on Gemini Enterprise Agent Platform promoting verified facts into Cloud Firestore; Autonomous Fact Ombudsman on Cloud Run driven by Gemini 3.8 Flash on Gemini Enterprise Agent Platform; Gemini Enterprise Agent Platform supervised fine-tuning & Gemma 2 9B LoRA fine-tuning pipeline; Ops AI Copilots (Daily Blitz Strategist & Report Review Copilot) on Gemini Enterprise Agent Platform; Firebase (Auth, Functions v2, Hosting, App Check); Flutter client; Cloudflare Workers + Durable Objects.
 
 ## What this skill is not
 

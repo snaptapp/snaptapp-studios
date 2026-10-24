@@ -349,8 +349,7 @@ function PageCompany() {
                   <tr>
                     <th scope="row">Cloud &amp; AI platform</th>
                     <td>
-                      Google Cloud &amp; Gemini Enterprise Agent Platform (Project{" "}
-                      <code>more-or-less-505908</code>) —{" "}
+                      Google Cloud &amp; Gemini Enterprise Agent Platform —{" "}
                       <a href="/assets/docs/Snaptapp_Google_Cloud_AI_Architecture_Brief.pdf">
                         Architecture Brief (PDF)
                       </a>
