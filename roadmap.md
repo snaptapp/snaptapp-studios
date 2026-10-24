@@ -4,6 +4,7 @@ Goal: rebuild snaptapp.us as a Lovable app, preserving every URL and all content
 
 ## Tasks
 
+- [x] Prevent the original palette flashing before the studio palette on initial load
 - [x] Rebuild all public pages and shared navigation/footer in the attached design system
 - [x] Increase SNAPTAPP wordmark legibility while preserving the design language
 - [x] Verify all public pages at desktop and mobile sizes without changing URLs or content
