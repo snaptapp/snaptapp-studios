@@ -878,7 +878,7 @@ function PageIndex() {
                 <a href="/legal/terms/">Terms</a>
               </li>
               <li>
-                <a href="https://ops.snaptapp.us/admin">Admin</a>
+                <a href="https://snaptapp.us/auth">Admin</a>
               </li>
             </ul>
           </div>
