@@ -225,17 +225,14 @@ function PageIndex() {
         <section className="hero">
           <div className="shell">
             <div className="hero__inner">
-              <p className="eyebrow">
-                Independent game studio · Built on Google Cloud &amp; Gemini Enterprise Agent Platform
-              </p>
-              <h1>Original AI-native games for web and mobile.</h1>
+              <p className="eyebrow">SNAPTAPP LLC · Independent game studio</p>
+              <h1>More or Less: the trivia game about numbers.</h1>
               <p className="lede">
-                Snaptapp LLC is an independent US game studio. We design, build, and
-                operate our own multiplayer games across web and mobile on a deep{" "}
-                <strong>Google Cloud</strong> and <strong>Gemini Enterprise Agent Platform</strong> architecture
-                (Gemini 3.5 Flash Lite, Gemini 3.8 Flash, Google Search Grounding, Gemma 2
-                9B SFT, Cloud Run, and Cloud Firestore). Our first title, More or Less, is
-                live now.
+                Every round shows a claim with a believable but wrong number. Decide
+                whether the real answer is more or less before the shot clock runs out.
+                Play solo, take on the Daily Challenge, go head to head in Versus, or
+                bring up to 10 friends into a Party Room. Live now on the web, with iOS
+                and Android in development.
               </p>
               <div className="row hero__actions">
                 <a
@@ -289,12 +286,11 @@ function PageIndex() {
                 </a>
               </div>
 
-              <ul className="trust-strip" aria-label="Core Google Cloud and AI stack">
-                <li>Gemini 3.5 Flash Lite &amp; Gemini 3.8 Flash</li>
-                <li>Google Search Grounding</li>
-                <li>Google Cloud Run (Go Agent)</li>
-                <li>Gemma 2 9B Fine-Tuning</li>
-                <li>Cloud Firestore &amp; Firebase App Check</li>
+              <ul className="trust-strip" aria-label="More or Less at a glance">
+                <li>Live on web</li>
+                <li>Mobile in development</li>
+                <li>Up to 10 players</li>
+                <li>New Daily Challenge every day</li>
               </ul>
             </div>
           </div>

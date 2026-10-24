@@ -6,12 +6,12 @@ export const Route = createFileRoute("/products")({
   head: () => ({
     meta: [
       {
-        title: "Products & AI Architecture — Snaptapp",
+        title: "More or Less, the Trivia Game About Numbers — Snaptapp Games",
       },
       {
         name: "description",
         content:
-          "Snaptapp games and Google Cloud + Gemini Enterprise Agent Platform architecture. More or Less is a fast party trivia game about numbers powered by Gemini 3.5 Flash Lite, Gemini 3.8 Flash, Google Search Grounding, Cloud Run, and Cloud Firestore.",
+          "More or Less is a fast trivia game about numbers from SNAPTAPP LLC: decide if the real answer is more or less before time runs out. Solo, Daily Challenge, Versus, and Party Rooms for up to 10 players.",
       },
       {
         name: "theme-color",
@@ -31,12 +31,12 @@ export const Route = createFileRoute("/products")({
       },
       {
         property: "og:title",
-        content: "Products & AI Architecture — Snaptapp",
+        content: "More or Less, the Trivia Game About Numbers — Snaptapp Games",
       },
       {
         property: "og:description",
         content:
-          "More or Less is a fast party trivia game about numbers powered by Gemini Enterprise Agent Platform (Gemini & Gemma), Google Search Grounding, Cloud Run, and Cloud Firestore.",
+          "More or Less is a fast trivia game about numbers from SNAPTAPP LLC: decide if the real answer is more or less before time runs out. Solo, Daily Challenge, Versus, and Party Rooms for up to 10 players.",
       },
       {
         property: "og:url",
@@ -143,12 +143,13 @@ function PageProducts() {
               </li>
               <li>Products</li>
             </ol>
-            <h1>Products &amp; AI Stack</h1>
+            <h1>More or Less</h1>
             <p className="lede">
-              More or Less is live on the web, with iOS and Android versions in
-              development. Every round is backed by our multi-agent{" "}
-              <strong>Google Cloud</strong> and <strong>Gemini Enterprise Agent Platform</strong> verification
-              pipeline.
+              A fast trivia game about numbers. Each round gives you a claim and a
+              believable but wrong number; call MORE or LESS before time runs out.
+              Modes include Standard, Cutthroat, Daily Challenge, Versus 1v1, and
+              Party Room for up to 10 players. Live on the web, with iOS and Android
+              versions in development.
             </p>
           </div>
         </section>
