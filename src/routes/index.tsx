@@ -158,7 +158,7 @@ export const Route = createFileRoute("/")({
               operatingSystem: "Web, iOS, Android",
               publisher: { "@id": "https://snaptapp.us/#organization" },
               description:
-                "An AI-native party trivia game about numbers powered by Gemini Enterprise Agent Platform (Gemini 3.5 Flash Lite & Gemini 3.8 Flash), Google Search Grounding, Google Cloud Run, and Cloud Firestore.",
+                "An AI-native party trivia game about numbers powered by Gemini Enterprise Agent Platform (Gemini 3.5 Flash Lite builds custom topic decks, Gemini 3.8 Flash is the fact dispute ombudsman), Google Search Grounding, Google Cloud Run, and Cloud Firestore.",
             },
           ],
         }),
@@ -345,13 +345,15 @@ function PageIndex() {
                   runs out, then see the verified figure and source context.
                 </p>
                 <p>
-                  Under the hood, custom topics are streamed in real time by our Go
-                  microservice (<code>agent-go</code>) on <strong>Google Cloud Run</strong>{" "}
-                  using <strong>Gemini 3.5 Flash Lite</strong> with mandatory{" "}
+                  Under the hood, custom topic decks are built on the fly and streamed in
+                  real time by our Go microservice (<code>agent-go</code>) on{" "}
+                  <strong>Google Cloud Run</strong> using{" "}
+                  <strong>Gemini 3.5 Flash Lite</strong> with mandatory{" "}
                   <strong>Google Search Grounding</strong> and deterministic{" "}
                   <strong>Distractor Derivation Model (DDM-4)</strong> guardrails, while
                   curated topics serve from our <strong>Cloud Firestore</strong> fact bank
-                  continuously audited by <strong>Gemini 3.8 Flash</strong>.
+                  and disputed claims are re-verified by our{" "}
+                  <strong>Gemini 3.8 Flash</strong> fact ombudsman.
                 </p>
 
                 <dl className="product__meta">
@@ -361,7 +363,7 @@ function PageIndex() {
                   </div>
                   <div>
                     <dt>AI Engine</dt>
-                    <dd>Gemini 3.5 Flash Lite &amp; Gemini 3.8 Flash + Search Grounding</dd>
+                    <dd>Gemini 3.5 Flash Lite (decks) · Gemini 3.8 Flash (ombudsman) · Search Grounding</dd>
                   </div>
                   <div>
                     <dt>Cloud Stack</dt>
@@ -514,9 +516,9 @@ function PageIndex() {
                   Our Go microservice (<code>agent-go</code>) on{" "}
                   <strong>Google Cloud Run</strong> calls{" "}
                   <strong>Gemini 3.5 Flash Lite</strong> with mandatory{" "}
-                  <strong>Google Search Grounding</strong>, streaming NDJSON rounds in
-                  under two seconds while our deterministic <code>DDM-4</code> kernel
-                  calibrates distractors.
+                  <strong>Google Search Grounding</strong> to build custom topic decks on
+                  the fly, streaming NDJSON rounds in under two seconds while our
+                  deterministic <code>DDM-4</code> kernel calibrates distractors.
                 </p>
               </div>
 
@@ -542,11 +544,10 @@ function PageIndex() {
                 <span className="card__num">02</span>
                 <h3>Autonomous Fact Foundry &amp; Auditor</h3>
                 <p>
-                  A cold-path pipeline powered by{" "}
-                  <strong>Gemini 3.8 Flash</strong> and Google Search grounding
-                  crawls subjects, cross-verifies claims against primary web sources,
-                  precomputes <code>DDM-4</code> sweeps across surprise factors{" "}
-                  <code>0–3</code>, and gates promotion into{" "}
+                  A cold-path pipeline on <strong>Gemini Enterprise Agent Platform</strong>{" "}
+                  with Google Search grounding crawls subjects, cross-verifies claims
+                  against primary web sources, precomputes <code>DDM-4</code> sweeps across
+                  surprise factors <code>0–3</code>, and gates promotion into{" "}
                   <strong>Cloud Firestore</strong>.
                 </p>
               </div>
@@ -566,9 +567,10 @@ function PageIndex() {
                 <h3>Adversarial Fact Ombudsman</h3>
                 <p>
                   When a player disputes a fact, an autonomous referee on{" "}
-                  <strong>Cloud Run</strong> and <strong>Gemini Enterprise Agent Platform</strong> runs
-                  adversarial counter-evidence Google Search queries against authoritative
-                  sources to issue real-time verification or eviction rulings.
+                  <strong>Cloud Run</strong>, driven by <strong>Gemini 3.8 Flash</strong> on{" "}
+                  <strong>Gemini Enterprise Agent Platform</strong>, runs adversarial
+                  counter-evidence Google Search queries against authoritative sources to
+                  issue real-time verification or eviction rulings.
                 </p>
               </div>
 
@@ -612,7 +614,7 @@ function PageIndex() {
                   <strong>TanStack Start</strong> app on <strong>Cloudflare Workers</strong>,
                   gated by <strong>Firebase Auth</strong> admin claims, with role-managed
                   server functions over <strong>Cloud Firestore</strong> fact curation and
-                  dispute queues. <strong>Gemini 3.8 Flash</strong> copilots — Daily Blitz
+                  dispute queues. <strong>Gemini</strong> copilots — Daily Blitz
                   Strategist, Report Review Copilot, and Placement Insights — run on{" "}
                   <strong>Gemini Enterprise Agent Platform</strong>. Party Room sessions
                   sync up to 10 players in sub-20ms over Durable Object WebSockets.
@@ -671,11 +673,11 @@ function PageIndex() {
 
             <dl className="stats reveal">
               <div>
-                <dt>Live AI Inference</dt>
+                <dt>Custom Deck Generation</dt>
                 <dd>Gemini 3.5 Flash Lite</dd>
               </div>
               <div>
-                <dt>Foundry &amp; Copilots</dt>
+                <dt>Fact Dispute Ombudsman</dt>
                 <dd>Gemini 3.8 Flash</dd>
               </div>
               <div>
