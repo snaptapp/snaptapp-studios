@@ -152,8 +152,7 @@ function PageHigherLowerGame() {
               <h2>Where the numbers come from</h2>
               <p>
                 Curated rounds come from a verified fact bank. Custom topics can be generated on
-                demand and are checked before they are shown. For examples, see these{" "}
-                <a href="/questions-with-numerical-answers/">questions with numerical answers</a>.
+                demand and are checked before they are shown.
               </p>
 
               <h2>Platforms</h2>

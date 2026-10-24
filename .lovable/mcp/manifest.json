@@ -210,7 +210,7 @@
       {
         "name": "get_trivia_examples",
         "title": "Example numerical trivia",
-        "description": "Return verified example numerical trivia questions with their real values and units, as published on snaptapp.us. Useful for explaining or demonstrating how More or Less rounds work.",
+        "description": "Return verified example numerical trivia questions with their real values and units. Useful for explaining or demonstrating how More or Less rounds work.",
         "annotations": {
           "readOnlyHint": true,
           "idempotentHint": true,
