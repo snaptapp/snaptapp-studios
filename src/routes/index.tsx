@@ -37,7 +37,7 @@ export const Route = createFileRoute("/")({
       {
         property: "og:description",
         content:
-          "Independent US game studio building original real-time games powered by Google Cloud, Gemini Enterprise Agent Platform (Gemini 3.5 & 3.8 Flash, Gemma 2), Google Search Grounding, and Cloud Run.",
+          "Independent US game studio building original real-time games powered by Google Cloud, Gemini Enterprise Agent Platform (Gemini 3.5 Flash Lite & 3.8 Flash, Gemma 2), Google Search Grounding, and Cloud Run.",
       },
       {
         property: "og:url",
@@ -615,7 +615,7 @@ function PageIndex() {
                   </svg>
                 </div>
                 <span className="card__num">04</span>
-                <h3>Gemini Enterprise Agent Platform SFT &amp; Gemma 2 Pipeline</h3>
+                <h3>Gemini SFT &amp; Gemma 2 Pipeline</h3>
                 <p>
                   Audited Firestore facts export via our hermetic Go pipeline (
                   <code>export-sft --format vertex</code>) into{" "}

@@ -204,7 +204,7 @@ function PageProducts() {
                   </div>
                   <div>
                     <dt>Google Cloud AI</dt>
-                    <dd>Gemini Enterprise Agent Platform (Gemini 3.5 &amp; 3.8 Flash · Gemma 2 9B)</dd>
+                    <dd>Gemini Enterprise Agent Platform (Gemini 3.5 Flash Lite &amp; 3.8 Flash · Gemma 2 9B)</dd>
                   </div>
                   <div>
                     <dt>Backend &amp; Data</dt>
@@ -255,7 +255,7 @@ function PageProducts() {
           <div className="shell">
             <div className="section-head reveal">
               <p className="eyebrow">Google Cloud Project · more-or-less-505908</p>
-              <h2>Gemini Enterprise Agent Platform &amp; Google Cloud pipeline</h2>
+              <h2>Google Cloud &amp; Gemini Enterprise Agent Platform pipeline</h2>
               <p className="lede">
                 More or Less combines low-latency Gemini Enterprise Agent Platform inference and Google Search
                 grounding with deterministic verification so generative rounds never
@@ -286,7 +286,7 @@ function PageProducts() {
                   claims against authoritative sources, precompute distractor sweeps, and
                   promote audited facts to <strong>Cloud Firestore</strong>. Active facts
                   export via <code>agent-go export-sft --format vertex</code> to fine-tune{" "}
-                  <strong>Gemini Enterprise Agent Platform Gemini</strong> and <strong>Gemma 2 9B</strong>{" "}
+                  <strong>Gemini</strong> and <strong>Gemma 2 9B</strong>{" "}
                   adapters.
                 </p>
               </div>
@@ -316,7 +316,7 @@ function PageProducts() {
               <div className="card">
                 <h3>Standard</h3>
                 <p>
-                  Five rounds on any curated or custom Gemini Enterprise Agent Platform-generated topic, with
+                  Five rounds on any curated or custom AI-generated topic, with
                   mixed difficulty and fast (7s), normal (12s), or relaxed (30s) timing.
                 </p>
               </div>
@@ -331,7 +331,7 @@ function PageProducts() {
                 <h3>Daily Challenge</h3>
                 <p>
                   The same verified rounds for everyone each UTC day—planned with our
-                  Gemini Enterprise Agent Platform Daily Strategist—with a fixed timer and streak tracking.
+                  Gemini Daily Strategist—with a fixed timer and streak tracking.
                 </p>
               </div>
               <div className="card">
@@ -365,8 +365,8 @@ function PageProducts() {
               <p className="eyebrow">In development</p>
               <h2>Next title</h2>
               <p className="lede">
-                A second Snaptapp title is in development on our Google Cloud &amp; Vertex
-                AI stack. More details will be shared later.
+                A second Snaptapp title is in development on our Google Cloud &amp; Gemini Enterprise Agent Platform
+                stack. More details will be shared later.
               </p>
             </div>
             <p className="reveal">

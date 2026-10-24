@@ -207,7 +207,7 @@ function PageCompany() {
                 <span className="card__num">03</span>
                 <h3>Grounded &amp; verified AI</h3>
                 <p>
-                  Every generative round from Gemini Enterprise Agent Platform Gemini is grounded in Google
+                  Every generative round from Gemini is grounded in Google
                   Search, checked by our deterministic DDM-4 math guardrails, and audited
                   by our Fact Foundry before promotion into Cloud Firestore.
                 </p>
