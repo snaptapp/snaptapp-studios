@@ -15,7 +15,7 @@ const projectRef = import.meta.env["VITE_SUPABASE_PROJECT_ID"] ?? "project-ref-u
 
 export default defineMcp<AppContext>({
   name: "snaptapp-studio-reimagined",
-  title: "Snaptapp Studio Reimagined",
+  title: "SNAPTAPP LLC",
   version: "1.2.0",
   instructions:
     "Tools for Snaptapp, an independent US game studio, and its live game More or Less. " +
