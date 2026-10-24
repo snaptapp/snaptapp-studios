@@ -184,12 +184,14 @@ function PageProducts() {
                 <p>
                   Choose from curated topics or enter any custom topic on demand. Curated
                   rounds draw from our verified <strong>Cloud Firestore</strong> fact bank
-                  (built by our <strong>Gemini 3.8 Flash</strong> Fact Foundry);
-                  custom topics are generated live by our Go microservice (
-                  <code>agent-go</code>) on <strong>Google Cloud Run</strong> using{" "}
+                  (built by our <strong>Fact Foundry</strong>); custom topic decks are
+                  generated live by our Go microservice (<code>agent-go</code>) on{" "}
+                  <strong>Google Cloud Run</strong> using{" "}
                   <strong>Gemini 3.5 Flash Lite</strong> with mandatory{" "}
                   <strong>Google Search Grounding</strong> and deterministic{" "}
-                  <strong>DDM-4</strong> distractor math. Want a preview first? Read how the{" "}
+                  <strong>DDM-4</strong> distractor math. Disputed claims are re-checked by
+                  our <strong>Gemini 3.8 Flash</strong> fact ombudsman. Want a preview
+                  first? Read how the{" "}
                   <a href="/higher-lower-game/">higher lower game</a> works, or start with the{" "}
                   <a href="/player-faq/">Player FAQ</a>.
                 </p>
@@ -201,7 +203,7 @@ function PageProducts() {
                   </div>
                   <div>
                     <dt>Google Cloud AI</dt>
-                    <dd>Gemini Enterprise Agent Platform (Gemini 3.5 Flash Lite &amp; 3.8 Flash · Gemma 2 9B)</dd>
+                    <dd>Gemini Enterprise Agent Platform (Gemini 3.5 Flash Lite decks · Gemini 3.8 Flash ombudsman · Gemma 2 9B)</dd>
                   </div>
                   <div>
                     <dt>Backend &amp; Data</dt>
@@ -278,10 +280,11 @@ function PageProducts() {
                 <span className="card__num">02</span>
                 <h3>Fact Foundry &amp; Gemma 2 SFT</h3>
                 <p>
-                  Our offline <strong>Fact Foundry</strong> uses{" "}
-                  <strong>Gemini 3.8 Flash</strong> to crawl topics, verify
-                  claims against authoritative sources, precompute distractor sweeps, and
-                  promote audited facts to <strong>Cloud Firestore</strong>. Active facts
+                  Our offline <strong>Fact Foundry</strong> crawls topics with{" "}
+                  <strong>Google Search grounding</strong> on{" "}
+                  <strong>Gemini Enterprise Agent Platform</strong>, verifies claims
+                  against authoritative sources, precomputes distractor sweeps, and
+                  promotes audited facts to <strong>Cloud Firestore</strong>. Active facts
                   export via <code>agent-go export-sft --format vertex</code> to fine-tune{" "}
                   <strong>Gemini</strong> and <strong>Gemma 2 9B</strong>{" "}
                   adapters.
@@ -292,13 +295,14 @@ function PageProducts() {
                 <h3>Fact Ombudsman &amp; Ops Copilots</h3>
                 <p>
                   Player disputes trigger our <strong>Autonomous Fact Ombudsman</strong>{" "}
-                  on Cloud Run + Gemini Enterprise Agent Platform to run adversarial Google Search checks and
-                  evict debunked claims. Our ops console (<code>ops.snaptapp.us</code>) is
-                  a <strong>TanStack Start</strong> app on <strong>Cloudflare Workers</strong>,
-                  gated by <strong>Firebase Auth</strong> admin claims, with role-managed
-                  server functions over <strong>Cloud Firestore</strong> fact curation and
-                  dispute queues. <strong>Gemini 3.8 Flash</strong> powers the Daily Blitz
-                  Strategist, Report Review Copilot, and Placement Insights copilots.
+                  on Cloud Run, where <strong>Gemini 3.8 Flash</strong> runs adversarial
+                  Google Search checks and evicts debunked claims. Our ops console (
+                  <code>ops.snaptapp.us</code>) is a <strong>TanStack Start</strong> app on{" "}
+                  <strong>Cloudflare Workers</strong>, gated by{" "}
+                  <strong>Firebase Auth</strong> admin claims, with role-managed server
+                  functions over <strong>Cloud Firestore</strong> fact curation and dispute
+                  queues. <strong>Gemini</strong> powers the Daily Blitz Strategist, Report
+                  Review Copilot, and Placement Insights copilots.
                 </p>
               </div>
             </div>

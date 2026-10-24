@@ -119,7 +119,7 @@ const STUDIO = {
       price: "Free to play",
       modes: ["Standard", "Cutthroat", "Daily challenge", "Pass and play", "Multiplayer"],
       technology: [
-        "Gemini Enterprise Agent Platform (Gemini 3.5 Flash Lite & Gemini 3.8 Flash)",
+        "Gemini Enterprise Agent Platform (Gemini 3.5 Flash Lite for custom topic decks, Gemini 3.8 Flash for the fact dispute ombudsman)",
         "Google Search Grounding",
         "Gemini Enterprise Agent Platform Supervised Fine-Tuning & Gemma 2 9B LoRA",
         "Google Cloud Run (Go GenAI Agent)",
