@@ -68,7 +68,7 @@ export const triviaExamplesTool = defineTool({
   name: "get_trivia_examples",
   title: "Example numerical trivia",
   description:
-    "Return verified example numerical trivia questions with their real values and units, as published on snaptapp.us. Useful for explaining or demonstrating how More or Less rounds work.",
+    "Return verified example numerical trivia questions with their real values and units. Useful for explaining or demonstrating how More or Less rounds work.",
   inputSchema: {
     category: z.string().trim().max(40).optional().describe("Filter by category, e.g. 'Science & Space'."),
     limit: z.number().int().min(1).max(10).optional().describe("Maximum number of examples (default all)."),
@@ -86,7 +86,6 @@ export const triviaExamplesTool = defineTool({
       category: fact.category,
     }));
     const result = {
-      source: "https://snaptapp.us/questions-with-numerical-answers/",
       note: "Values are kept to the accuracy the game serves; a few change with better measurement.",
       examples,
     };

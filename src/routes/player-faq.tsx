@@ -211,11 +211,7 @@ function PagePlayerFaq() {
               </p>
               <p>
                 Custom topics are generated on demand and checked before they reach the table.
-                Curated topics draw on a verified fact bank. See these{" "}
-                <a href="/questions-with-numerical-answers/">
-                  questions with numerical answers
-                </a>{" "}
-                for examples with their real values, or the{" "}
+                Curated topics draw on a verified fact bank. See the{" "}
                 <a href="/higher-lower-game/">higher lower game</a> page for the format.
               </p>
 

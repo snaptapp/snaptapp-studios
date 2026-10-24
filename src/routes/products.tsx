@@ -188,11 +188,7 @@ function PageProducts() {
                   <code>agent-go</code>) on <strong>Google Cloud Run</strong> using{" "}
                   <strong>Gemini 3.5 Flash Lite</strong> with mandatory{" "}
                   <strong>Google Search Grounding</strong> and deterministic{" "}
-                  <strong>DDM-4</strong> distractor math. Want a preview first? Browse{" "}
-                  <a href="/questions-with-numerical-answers/">
-                    questions with numerical answers
-                  </a>{" "}
-                  with their real values, read how the{" "}
+                  <strong>DDM-4</strong> distractor math. Want a preview first? Read how the{" "}
                   <a href="/higher-lower-game/">higher lower game</a> works, or start with the{" "}
                   <a href="/player-faq/">Player FAQ</a>.
                 </p>

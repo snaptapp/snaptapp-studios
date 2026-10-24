@@ -50,13 +50,6 @@ export const SITE_PAGES: SitePage[] = [
     keywords: ["api", "docs", "openapi", "mcp", "oauth", "agents", "discovery"],
   },
   {
-    path: "/questions-with-numerical-answers/",
-    title: "Questions with numerical answers",
-    summary:
-      "Ten verified numerical trivia questions with their real values, explaining the More or Less game mechanic.",
-    keywords: ["trivia", "numerical", "questions", "answers", "facts", "examples"],
-  },
-  {
     path: "/legal/privacy/",
     title: "Privacy policy",
     summary: "What data the studio site and More or Less collect, how it is used, and how to request access or deletion.",
@@ -85,7 +78,7 @@ export interface TriviaExample {
 }
 
 /**
- * The verified example facts published on /questions-with-numerical-answers/.
+ * The verified example facts served through the trivia examples tool.
  * Values are kept to the accuracy the game serves.
  */
 export const TRIVIA_EXAMPLES: TriviaExample[] = [
