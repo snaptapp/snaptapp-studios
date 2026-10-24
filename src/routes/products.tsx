@@ -11,7 +11,7 @@ export const Route = createFileRoute("/products")({
       {
         name: "description",
         content:
-          "Snaptapp games and Google Cloud + Vertex AI architecture. More or Less is a fast party trivia game about numbers powered by Gemini 3.5 Flash-Lite, Gemini 3.8 Flash, Google Search Grounding, Cloud Run, and Cloud Firestore.",
+          "Snaptapp games and Google Cloud + Gemini Enterprise Agent Platform architecture. More or Less is a fast party trivia game about numbers powered by Gemini 3.5 Flash Lite, Gemini 3.8 Flash, Google Search Grounding, Cloud Run, and Cloud Firestore.",
       },
       {
         name: "theme-color",
@@ -36,7 +36,7 @@ export const Route = createFileRoute("/products")({
       {
         property: "og:description",
         content:
-          "More or Less is a fast party trivia game about numbers powered by Vertex AI (Gemini & Gemma), Google Search Grounding, Cloud Run, and Cloud Firestore.",
+          "More or Less is a fast party trivia game about numbers powered by Gemini Enterprise Agent Platform (Gemini & Gemma), Google Search Grounding, Cloud Run, and Cloud Firestore.",
       },
       {
         property: "og:url",
@@ -147,7 +147,7 @@ function PageProducts() {
             <p className="lede">
               More or Less is live on the web, with iOS and Android versions in
               development. Every round is backed by our multi-agent{" "}
-              <strong>Google Cloud</strong> and <strong>Vertex AI</strong> verification
+              <strong>Google Cloud</strong> and <strong>Gemini Enterprise Agent Platform</strong> verification
               pipeline.
             </p>
           </div>
@@ -183,10 +183,10 @@ function PageProducts() {
                 <p>
                   Choose from curated topics or enter any custom topic on demand. Curated
                   rounds draw from our verified <strong>Cloud Firestore</strong> fact bank
-                  (built by our <strong>Vertex AI Gemini 3.8 Flash</strong> Fact Foundry);
+                  (built by our <strong>Gemini 3.8 Flash</strong> Fact Foundry);
                   custom topics are generated live by our Go microservice (
                   <code>agent-go</code>) on <strong>Google Cloud Run</strong> using{" "}
-                  <strong>Vertex AI Gemini 3.5 Flash-Lite</strong> with mandatory{" "}
+                  <strong>Gemini 3.5 Flash Lite</strong> with mandatory{" "}
                   <strong>Google Search Grounding</strong> and deterministic{" "}
                   <strong>DDM-4</strong> distractor math. Want a preview first? Browse{" "}
                   <a href="/questions-with-numerical-answers/">
@@ -204,7 +204,7 @@ function PageProducts() {
                   </div>
                   <div>
                     <dt>Google Cloud AI</dt>
-                    <dd>Vertex AI (Gemini 3.5 &amp; 3.8 Flash · Gemma 2 9B)</dd>
+                    <dd>Gemini Enterprise Agent Platform (Gemini 3.5 &amp; 3.8 Flash · Gemma 2 9B)</dd>
                   </div>
                   <div>
                     <dt>Backend &amp; Data</dt>
@@ -255,9 +255,9 @@ function PageProducts() {
           <div className="shell">
             <div className="section-head reveal">
               <p className="eyebrow">Google Cloud Project · more-or-less-505908</p>
-              <h2>Vertex AI &amp; Google Cloud pipeline</h2>
+              <h2>Gemini Enterprise Agent Platform &amp; Google Cloud pipeline</h2>
               <p className="lede">
-                More or Less combines low-latency Vertex AI inference and Google Search
+                More or Less combines low-latency Gemini Enterprise Agent Platform inference and Google Search
                 grounding with deterministic verification so generative rounds never
                 hallucinate numbers.
               </p>
@@ -270,7 +270,7 @@ function PageProducts() {
                 <p>
                   Uncached custom topics route via OIDC to <code>agent-go</code> on{" "}
                   <strong>Google Cloud Run</strong>, invoking{" "}
-                  <strong>Vertex AI Gemini 3.5 Flash-Lite</strong> with{" "}
+                  <strong>Gemini 3.5 Flash Lite</strong> with{" "}
                   <code>google_search</code> grounding. Each stream emits a{" "}
                   <code>grounding_receipt</code> verifying web queries and support spans
                   before our deterministic <code>DDM-4</code> kernel derives the decoy
@@ -282,11 +282,11 @@ function PageProducts() {
                 <h3>Fact Foundry &amp; Gemma 2 SFT</h3>
                 <p>
                   Our offline <strong>Fact Foundry</strong> uses{" "}
-                  <strong>Vertex AI Gemini 3.8 Flash</strong> to crawl topics, verify
+                  <strong>Gemini 3.8 Flash</strong> to crawl topics, verify
                   claims against authoritative sources, precompute distractor sweeps, and
                   promote audited facts to <strong>Cloud Firestore</strong>. Active facts
                   export via <code>agent-go export-sft --format vertex</code> to fine-tune{" "}
-                  <strong>Vertex AI Gemini</strong> and <strong>Gemma 2 9B</strong>{" "}
+                  <strong>Gemini Enterprise Agent Platform Gemini</strong> and <strong>Gemma 2 9B</strong>{" "}
                   adapters.
                 </p>
               </div>
@@ -295,9 +295,9 @@ function PageProducts() {
                 <h3>Fact Ombudsman &amp; Ops Copilots</h3>
                 <p>
                   Player disputes trigger our <strong>Autonomous Fact Ombudsman</strong>{" "}
-                  on Cloud Run + Vertex AI to run adversarial Google Search checks and
+                  on Cloud Run + Gemini Enterprise Agent Platform to run adversarial Google Search checks and
                   evict debunked claims. On <code>ops.snaptapp.us</code>,{" "}
-                  <strong>Vertex AI Gemini 3.8 Flash</strong> powers our Daily Blitz
+                  <strong>Gemini 3.8 Flash</strong> powers our Daily Blitz
                   Strategist, Report Review Copilot, and Placement Insights.
                 </p>
               </div>
@@ -316,7 +316,7 @@ function PageProducts() {
               <div className="card">
                 <h3>Standard</h3>
                 <p>
-                  Five rounds on any curated or custom Vertex AI-generated topic, with
+                  Five rounds on any curated or custom Gemini Enterprise Agent Platform-generated topic, with
                   mixed difficulty and fast (7s), normal (12s), or relaxed (30s) timing.
                 </p>
               </div>
@@ -331,7 +331,7 @@ function PageProducts() {
                 <h3>Daily Challenge</h3>
                 <p>
                   The same verified rounds for everyone each UTC day—planned with our
-                  Vertex AI Daily Strategist—with a fixed timer and streak tracking.
+                  Gemini Enterprise Agent Platform Daily Strategist—with a fixed timer and streak tracking.
                 </p>
               </div>
               <div className="card">
@@ -409,7 +409,7 @@ function PageProducts() {
               </a>
               <p>
                 An independent US game studio (Snaptapp LLC) building AI-native titles on
-                Google Cloud, Vertex AI, and Flutter.
+                Google Cloud, Gemini Enterprise Agent Platform, and Flutter.
               </p>
             </div>
 

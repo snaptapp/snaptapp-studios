@@ -96,7 +96,7 @@ const STUDIO = {
   name: "Snaptapp",
   url: ORIGIN,
   description:
-    "Snaptapp LLC is an independent US studio that designs, builds, and operates original AI-native cross-platform games powered by Google Cloud, Vertex AI (Gemini 3.5 Flash-Lite, Gemini 3.8 Flash, and Gemma 2 9B SFT), Google Search Grounding, Cloud Run, Cloud Firestore, Firebase, and real-time edge infrastructure. Its first title, More or Less, is live.",
+    "Snaptapp LLC is an independent US studio that designs, builds, and operates original AI-native cross-platform games powered by Google Cloud, Gemini Enterprise Agent Platform (Gemini 3.5 Flash Lite, Gemini 3.8 Flash, and Gemma 2 9B SFT), Google Search Grounding, Cloud Run, Cloud Firestore, Firebase, and real-time edge infrastructure. Its first title, More or Less, is live.",
   founded: "2026",
   country: "United States",
   businessModel: "Own products only; Snaptapp does not take client work.",
@@ -119,9 +119,9 @@ const STUDIO = {
       price: "Free to play",
       modes: ["Standard", "Cutthroat", "Daily challenge", "Pass and play", "Multiplayer"],
       technology: [
-        "Vertex AI (Gemini 3.5 Flash-Lite & Gemini 3.8 Flash)",
+        "Gemini Enterprise Agent Platform (Gemini 3.5 Flash Lite & Gemini 3.8 Flash)",
         "Google Search Grounding",
-        "Vertex AI Supervised Fine-Tuning & Gemma 2 9B LoRA",
+        "Gemini Enterprise Agent Platform Supervised Fine-Tuning & Gemma 2 9B LoRA",
         "Google Cloud Run (Go GenAI Agent)",
         "Cloud Firestore & Firebase (Functions v2, Auth, App Check)",
         "Flutter",
