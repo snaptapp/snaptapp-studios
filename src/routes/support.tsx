@@ -160,6 +160,13 @@ function PageSupport() {
                     declined if they are unsafe, target private individuals, or do not lead to a
                     clear numeric answer. Try a broader topic with a measurable result.
                   </dd>
+
+                  <dt>How do I start playing?</dt>
+                  <dd>
+                    The <a href="/player-faq/">Player FAQ</a> walks through starting a game as a
+                    guest, how the five rounds and the shot clock work, and what happens to the
+                    answers you give.
+                  </dd>
       
                   <dt>The timer feels out of sync in a party room.</dt>
                   <dd>

@@ -192,8 +192,9 @@ function PageProducts() {
                   <a href="/questions-with-numerical-answers/">
                     questions with numerical answers
                   </a>{" "}
-                  with their real values, or read how the{" "}
-                  <a href="/higher-lower-game/">higher lower game</a> works.
+                  with their real values, read how the{" "}
+                  <a href="/higher-lower-game/">higher lower game</a> works, or start with the{" "}
+                  <a href="/player-faq/">Player FAQ</a>.
                 </p>
 
                 <dl className="product__meta">
