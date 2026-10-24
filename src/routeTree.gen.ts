@@ -20,6 +20,7 @@ import { Route as McpRouteImport } from './routes/mcp'
 import { Route as MoreOrLessRouteImport } from './routes/more-or-less'
 import { Route as MoreorlessRouteImport } from './routes/moreorless'
 import { Route as PlayRouteImport } from './routes/play'
+import { Route as PlayerFaqRouteImport } from './routes/player-faq'
 import { Route as PressRouteImport } from './routes/press'
 import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
@@ -98,6 +99,11 @@ const MoreorlessRoute = MoreorlessRouteImport.update({
 const PlayRoute = PlayRouteImport.update({
   id: '/play',
   path: '/play',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PlayerFaqRoute = PlayerFaqRouteImport.update({
+  id: '/player-faq',
+  path: '/player-faq',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PressRoute = PressRouteImport.update({
@@ -235,6 +241,7 @@ export interface FileRoutesByFullPath {
   '/more-or-less': typeof MoreOrLessRoute
   '/moreorless': typeof MoreorlessRoute
   '/play': typeof PlayRoute
+  '/player-faq': typeof PlayerFaqRoute
   '/press': typeof PressRoute
   '/privacy': typeof PrivacyRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
@@ -272,6 +279,7 @@ export interface FileRoutesByTo {
   '/more-or-less': typeof MoreOrLessRoute
   '/moreorless': typeof MoreorlessRoute
   '/play': typeof PlayRoute
+  '/player-faq': typeof PlayerFaqRoute
   '/press': typeof PressRoute
   '/privacy': typeof PrivacyRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
@@ -310,6 +318,7 @@ export interface FileRoutesById {
   '/more-or-less': typeof MoreOrLessRoute
   '/moreorless': typeof MoreorlessRoute
   '/play': typeof PlayRoute
+  '/player-faq': typeof PlayerFaqRoute
   '/press': typeof PressRoute
   '/privacy': typeof PrivacyRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
@@ -349,6 +358,7 @@ export interface FileRouteTypes {
     | '/more-or-less'
     | '/moreorless'
     | '/play'
+    | '/player-faq'
     | '/press'
     | '/privacy'
     | '/privacy-policy'
@@ -386,6 +396,7 @@ export interface FileRouteTypes {
     | '/more-or-less'
     | '/moreorless'
     | '/play'
+    | '/player-faq'
     | '/press'
     | '/privacy'
     | '/privacy-policy'
@@ -423,6 +434,7 @@ export interface FileRouteTypes {
     | '/more-or-less'
     | '/moreorless'
     | '/play'
+    | '/player-faq'
     | '/press'
     | '/privacy'
     | '/privacy-policy'
@@ -461,6 +473,7 @@ export interface RootRouteChildren {
   MoreOrLessRoute: typeof MoreOrLessRoute
   MoreorlessRoute: typeof MoreorlessRoute
   PlayRoute: typeof PlayRoute
+  PlayerFaqRoute: typeof PlayerFaqRoute
   PressRoute: typeof PressRoute
   PrivacyRoute: typeof PrivacyRoute
   PrivacyPolicyRoute: typeof PrivacyPolicyRoute
@@ -564,6 +577,13 @@ declare module '@tanstack/react-router' {
       path: '/play'
       fullPath: '/play'
       preLoaderRoute: typeof PlayRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/player-faq': {
+      id: '/player-faq'
+      path: '/player-faq'
+      fullPath: '/player-faq'
+      preLoaderRoute: typeof PlayerFaqRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/press': {
@@ -749,6 +769,7 @@ const rootRouteChildren: RootRouteChildren = {
   MoreOrLessRoute: MoreOrLessRoute,
   MoreorlessRoute: MoreorlessRoute,
   PlayRoute: PlayRoute,
+  PlayerFaqRoute: PlayerFaqRoute,
   PressRoute: PressRoute,
   PrivacyRoute: PrivacyRoute,
   PrivacyPolicyRoute: PrivacyPolicyRoute,

@@ -29,3 +29,7 @@ Goal: rebuild snaptapp.us as a Lovable app, preserving every URL and all content
 - [x] Apply "Campfire Night" warm studio palette (orange primary, soft-yellow secondary, lime removed)
 - [ ] Evaluate palette in preview; then decide whether Anton/JetBrains Mono usage needs scaling back
 - [ ] Publish the project, verify both live domains, then retire the legacy Cloudflare Worker
+- [x] Build /player-faq/ from a live guest playthrough (guest entry, round format, shot
+      clock, reveal, answer handling) and link it from Support, Products and the footer
+- [ ] Find five small game-night hosts who could trial More or Less — blocked: the research
+      run was cancelled, and the /hosts/ page that would collect their requests was never built
