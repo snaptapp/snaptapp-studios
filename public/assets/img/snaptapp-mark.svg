@@ -2,15 +2,15 @@
   <title>Snaptapp</title>
   <defs>
     <linearGradient id="stGrad" x1="2" y1="30" x2="30" y2="2" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#22d3ee"/>
-      <stop offset="0.52" stop-color="#7be0a4"/>
-      <stop offset="1" stop-color="#ccff00"/>
+      <stop offset="0" stop-color="#c97a94"/>
+      <stop offset="0.52" stop-color="#f4ede3"/>
+      <stop offset="1" stop-color="#e8c15a"/>
     </linearGradient>
   </defs>
   <rect x="1.25" y="1.25" width="29.5" height="29.5" rx="8.5" fill="url(#stGrad)"/>
-  <g fill="none" stroke="#07080b">
+  <g fill="none" stroke="#1b1613">
     <circle cx="16" cy="16" r="12.4" stroke-width="1.4" opacity="0.4"/>
     <circle cx="16" cy="16" r="8.3" stroke-width="2.3"/>
   </g>
-  <circle cx="16" cy="16" r="4" fill="#07080b"/>
+  <circle cx="16" cy="16" r="4" fill="#1b1613"/>
 </svg>
