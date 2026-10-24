@@ -286,11 +286,12 @@ function PageIndex() {
                 </a>
               </div>
 
-              <ul className="trust-strip" aria-label="More or Less at a glance">
-                <li>Live on web</li>
-                <li>Mobile in development</li>
-                <li>Up to 10 players</li>
-                <li>New Daily Challenge every day</li>
+              <ul className="trust-strip" aria-label="Core Google Cloud and AI stack">
+                <li>Gemini 3.5 Flash Lite & Gemini 3.8 Flash</li>
+                <li>Google Search Grounding</li>
+                <li>Google Cloud Run (Go Agent)</li>
+                <li>Gemma 2 9B Fine-Tuning</li>
+                <li>Cloud Firestore & Firebase App Check</li>
               </ul>
             </div>
           </div>
