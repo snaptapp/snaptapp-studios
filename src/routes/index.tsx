@@ -94,7 +94,7 @@ export const Route = createFileRoute("/")({
               "@id": "https://snaptapp.us/#organization",
               name: "Snaptapp",
               legalName: "Snaptapp LLC",
-              alternateName: "Snaptapp Studio",
+              alternateName: "SNAPTAPP LLC",
               url: "https://snaptapp.us/",
               logo: {
                 "@type": "ImageObject",
