@@ -25,7 +25,6 @@ import { Route as PressRouteImport } from './routes/press'
 import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
 import { Route as ProductsRouteImport } from './routes/products'
-import { Route as QuestionsWithNumericalAnswersRouteImport } from './routes/questions-with-numerical-answers'
 import { Route as SecurityRouteImport } from './routes/security'
 import { Route as SupportRouteImport } from './routes/support'
 import { Route as TeamRouteImport } from './routes/team'
@@ -126,12 +125,6 @@ const ProductsRoute = ProductsRouteImport.update({
   path: '/products',
   getParentRoute: () => rootRouteImport,
 } as any)
-const QuestionsWithNumericalAnswersRoute =
-  QuestionsWithNumericalAnswersRouteImport.update({
-    id: '/questions-with-numerical-answers',
-    path: '/questions-with-numerical-answers',
-    getParentRoute: () => rootRouteImport,
-  } as any)
 const SecurityRoute = SecurityRouteImport.update({
   id: '/security',
   path: '/security',
@@ -246,7 +239,6 @@ export interface FileRoutesByFullPath {
   '/privacy': typeof PrivacyRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
   '/products': typeof ProductsRoute
-  '/questions-with-numerical-answers': typeof QuestionsWithNumericalAnswersRoute
   '/security': typeof SecurityRoute
   '/support': typeof SupportRoute
   '/team': typeof TeamRoute
@@ -284,7 +276,6 @@ export interface FileRoutesByTo {
   '/privacy': typeof PrivacyRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
   '/products': typeof ProductsRoute
-  '/questions-with-numerical-answers': typeof QuestionsWithNumericalAnswersRoute
   '/security': typeof SecurityRoute
   '/support': typeof SupportRoute
   '/team': typeof TeamRoute
@@ -323,7 +314,6 @@ export interface FileRoutesById {
   '/privacy': typeof PrivacyRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
   '/products': typeof ProductsRoute
-  '/questions-with-numerical-answers': typeof QuestionsWithNumericalAnswersRoute
   '/security': typeof SecurityRoute
   '/support': typeof SupportRoute
   '/team': typeof TeamRoute
@@ -363,7 +353,6 @@ export interface FileRouteTypes {
     | '/privacy'
     | '/privacy-policy'
     | '/products'
-    | '/questions-with-numerical-answers'
     | '/security'
     | '/support'
     | '/team'
@@ -401,7 +390,6 @@ export interface FileRouteTypes {
     | '/privacy'
     | '/privacy-policy'
     | '/products'
-    | '/questions-with-numerical-answers'
     | '/security'
     | '/support'
     | '/team'
@@ -439,7 +427,6 @@ export interface FileRouteTypes {
     | '/privacy'
     | '/privacy-policy'
     | '/products'
-    | '/questions-with-numerical-answers'
     | '/security'
     | '/support'
     | '/team'
@@ -478,7 +465,6 @@ export interface RootRouteChildren {
   PrivacyRoute: typeof PrivacyRoute
   PrivacyPolicyRoute: typeof PrivacyPolicyRoute
   ProductsRoute: typeof ProductsRoute
-  QuestionsWithNumericalAnswersRoute: typeof QuestionsWithNumericalAnswersRoute
   SecurityRoute: typeof SecurityRoute
   SupportRoute: typeof SupportRoute
   TeamRoute: typeof TeamRoute
@@ -612,13 +598,6 @@ declare module '@tanstack/react-router' {
       path: '/products'
       fullPath: '/products'
       preLoaderRoute: typeof ProductsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/questions-with-numerical-answers': {
-      id: '/questions-with-numerical-answers'
-      path: '/questions-with-numerical-answers'
-      fullPath: '/questions-with-numerical-answers'
-      preLoaderRoute: typeof QuestionsWithNumericalAnswersRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/security': {
@@ -774,7 +753,6 @@ const rootRouteChildren: RootRouteChildren = {
   PrivacyRoute: PrivacyRoute,
   PrivacyPolicyRoute: PrivacyPolicyRoute,
   ProductsRoute: ProductsRoute,
-  QuestionsWithNumericalAnswersRoute: QuestionsWithNumericalAnswersRoute,
   SecurityRoute: SecurityRoute,
   SupportRoute: SupportRoute,
   TeamRoute: TeamRoute,
