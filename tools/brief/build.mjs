@@ -1,6 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { execFileSync } from "node:child_process";
+import { PDFDocument } from "pdf-lib";
 
 const here = import.meta.dirname;
 const root = path.resolve(here, "../..");
@@ -44,6 +45,27 @@ execFileSync(
   ],
   { stdio: ["ignore", "pipe", "pipe"] },
 );
+
+const doc = await PDFDocument.load(fs.readFileSync(pdfOut));
+doc.setTitle("Snaptapp LLC — Google Cloud & Gemini Enterprise Agent Platform Architecture Brief");
+doc.setAuthor("Snaptapp LLC");
+doc.setSubject(
+  "Google Cloud & Gemini Enterprise Agent Platform architecture brief for More or Less",
+);
+doc.setKeywords([
+  "Google Cloud",
+  "Gemini Enterprise Agent Platform",
+  "Gemini 3.5 Flash Lite",
+  "Gemini 3.8 Flash",
+  "More or Less",
+  "architecture",
+]);
+doc.setCreator("Snaptapp LLC");
+doc.setProducer("Snaptapp LLC");
+doc.setLanguage("en");
+doc.setCreationDate(new Date());
+doc.setModificationDate(new Date());
+fs.writeFileSync(pdfOut, await doc.save());
 
 const size = fs.statSync(pdfOut).size;
 console.log(`PDF  ${path.relative(root, pdfOut)}  ${(size / 1024).toFixed(0)} KB`);
