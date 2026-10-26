@@ -22,7 +22,7 @@ export const SAMPLE_DECK: RoundFact[] = [
   {
     topic: "Ocean",
     prompt: "Number of hearts in a common octopus",
-    target: 1,
+    target: 5,
     answer: 3,
     unit: "hearts",
     detail: "Two hearts pump blood through the gills and a third pumps it to the rest of the body.",
