@@ -4,6 +4,7 @@ import { AnswerButton, Badge, Button, Card, CardLabel, CardTitle, ResultBanner, 
 import { useHaptics } from "@/design-system/more-or-less-design-system-8cbfc8/lib/motion";
 import { correctChoice, judgeRound, ROUND_SECONDS, SAMPLE_DECK, secondsRemaining, type RoundChoice } from "@/lib/sample-round";
 import { trackEvent } from "@/lib/analytics-consent";
+import { gameUrl } from "@/lib/game-link";
 import "./sample-round.css";
 
 export function SampleRound({ placement, variant = "card" }: { placement: "homepage" | "higher_lower"; variant?: "card" | "phone" }) {
@@ -138,7 +139,7 @@ export function SampleRound({ placement, variant = "card" }: { placement: "homep
         </div>
         <Button variant="ghost" onClick={() => {
           trackEvent("outbound_click", { destination: "moreorless.snaptapp.us", location: `${placement}_sample_round` });
-          window.location.assign("https://moreorless.snaptapp.us");
+          window.location.assign(gameUrl(`${placement}_sample_round`));
         }}>Play the full game <ExternalLink aria-hidden="true" /></Button>
       </section>
     );
@@ -188,7 +189,7 @@ export function SampleRound({ placement, variant = "card" }: { placement: "homep
       <div className="sample-round-actions">
         <Button onClick={() => {
           trackEvent("outbound_click", { destination: "moreorless.snaptapp.us", location: `${placement}_sample_round` });
-          window.location.assign("https://moreorless.snaptapp.us");
+          window.location.assign(gameUrl(`${placement}_sample_round`));
         }}>Play the full game <ExternalLink aria-hidden="true" /></Button>
       </div>
     </section>
