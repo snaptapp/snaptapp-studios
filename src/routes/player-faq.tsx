@@ -136,8 +136,8 @@ function PagePlayerFaq() {
 
                 <dt>Does my guest progress come back?</dt>
                 <dd>
-                  No. If you close the tab or reload the page, you are returned to the opening
-                  screen and a new guest run starts from level 1. A guest run is a one-off.
+                  Solitaire keeps a personal Top 10 locally on your device. Those runs are
+                  self-reported when synced online; Arena match history is server-verified.
                 </dd>
 
                 <dt>How do I keep my progress?</dt>
@@ -163,98 +163,34 @@ function PagePlayerFaq() {
               </dl>
 
               <h2 id="rounds">How a round works</h2>
-              <p>
-                A standard game is <strong>five rounds on one topic</strong>. Each round puts a
-                claim on screen with a number next to it. That number is not the real answer
-                &mdash; it is a believable fake. Your job is to decide whether the true figure is
-                higher or lower before the shot clock runs out.
-              </p>
-              <p>
-                For example: &ldquo;Orbital velocity of the International Space Station in
-                mph&rdquo; shown as <strong>7000.0 MPH</strong>. You tap{" "}
-                <strong>Guess MORE</strong> or <strong>Guess LESS</strong>. The real figure is
-                17,500 mph, so MORE is the right call.
-              </p>
+              <p>Each question shows a claim and a believable but incorrect number. Decide whether the real answer is MORE or LESS. Both current modes are 60-second sprints, not fixed five-round games.</p>
+              <p>For example: a cheetah’s top sprint speed shown as <strong>40 mph</strong>. The real figure is about 70 mph, so MORE is the right call.</p>
 
-              <h3>The shot clock</h3>
-              <p>
-                A round is timed and the clock is on screen the whole time (&ldquo;Shot clock: 12
-                seconds remaining&rdquo;). You pick the pace before the game starts:
-              </p>
-              <ul>
-                <li><strong>FAST &mdash; 7 seconds</strong> for quick reflexes.</li>
-                <li><strong>NORMAL &mdash; 12 seconds</strong>, the balanced read.</li>
-                <li>
-                  <strong>RELAXED &mdash; 30 seconds</strong> if you want time to think.
-                </li>
-              </ul>
-              <p>If the clock runs out before you answer, the round simply moves on.</p>
+              <h3>The match clock</h3>
+              <p>Solitaire uses an absolute 60-second wall clock: backgrounding grants no extra time. Arena uses a 60-second server match clock. Each question has a 1-second preview and a 750 ms feedback window; you advance at your own pace. Arena allows 2,000 ms client lag tolerance.</p>
 
-              <h3>What you see after you answer</h3>
-              <p>
-                The reveal tells you whether you were right, then shows the number you were
-                given, the true number, and the points you scored &mdash; for instance
-                &ldquo;CORRECT! THE ANSWER IS MORE. Presented: 7000.0 MPH, True number: 17,500.0
-                MPH. Points: +2,894 PTS.&rdquo; Underneath is a short explanation of the fact, and
-                a <strong>Report this fact</strong> button if something looks off.
-              </p>
-              <p>
-                <strong>NEXT ROUND (2/5)</strong> moves you on; the <kbd>Enter</kbd> or{" "}
-                <kbd>Space</kbd> key does the same thing.
-              </p>
+              <h3>Scoring and skips</h3>
+              <p>Correct answers earn up to 1,000 points, decaying by 1 point per 10 ms after the preview: <code>1000 − floor(max(0, responseMs − 1000) / 10)</code>. Wrong answers cost 500 points. Skips and unanswered questions earn 0.</p>
+              <p>Solitaire allows unlimited permanent skips and never repeats skipped questions. Arena also allows skips. Feedback reveals whether your call was correct before you continue.</p>
 
-              <h3>Picking a topic</h3>
-              <p>
-                Before a standard game you choose a topic. Trending decks are listed &mdash; Space
-                Records, Apex Predators, Fast Food Stats &mdash; and you can enter a custom topic
-                instead. A topic costs 2 tokens, and one choice runs all five rounds.
-              </p>
-              <p>
-                Custom topics are generated on demand and checked before they reach the table.
-                Curated topics draw on a verified fact bank. See the{" "}
-                <a href="/higher-lower-game/">higher lower game</a> page for the format.
-              </p>
+              <h3>Where the deck comes from</h3>
+              <p>Solitaire uses a 200-question offline qualified serving-snapshot deck generated via DDM-4. Arena gives every entrant the identical frozen deck, with independent progression over WebSockets. The studio website’s three-round sample has its own 12-second round timer; it is not a full-game mode.</p>
 
               <h2 id="modes">Modes at a glance</h2>
               <table>
-                <thead>
-                  <tr>
-                    <th>Mode</th>
-                    <th>What it is</th>
-                  </tr>
-                </thead>
+                <thead><tr><th>Mode</th><th>What it is</th></tr></thead>
                 <tbody>
-                  <tr>
-                    <td>Standard</td>
-                    <td>Five rounds on a topic you pick, against the shot clock you pick.</td>
-                  </tr>
-                  <tr>
-                    <td>Today&rsquo;s Pack</td>
-                    <td>One shared pack for everyone, with a countdown to the next one.</td>
-                  </tr>
-                  <tr>
-                    <td>Daily Blitz</td>
-                    <td>The fast version of the daily challenge.</td>
-                  </tr>
-                  <tr>
-                    <td>Solitaire</td>
-                    <td>Play alone at your own pace.</td>
-                  </tr>
-                  <tr>
-                    <td>Arena</td>
-                    <td>Competitive play against other players.</td>
-                  </tr>
+                  <tr><td>Solitaire Mode</td><td>Client-authoritative offline solo speed-run. Personal Top 10 saved on device; self-reported runs sync to Firebase Functions when online.</td></tr>
+                  <tr><td>Arena Mode</td><td>Server-authoritative multiplayer sprint, up to 100 entrants. Lobbies start 20 seconds after the first human joins or immediately at 100; bots fill to 8 if fewer than 8 humans join (easy 60%, medium 75%, hard 90%).</td></tr>
                 </tbody>
               </table>
-              <p>
-                Playing with other people in a room &mdash; up to 10 players &mdash; is described
-                on the <a href="/products/">Products</a> page.
-              </p>
+              <p>Arena standings sort by score descending, total answer time ascending, then entrant ID. Match persistence is server-verified. See the <a href="/products/">Products</a> page for the technology behind both modes.</p>
 
               <h2 id="answers">What happens to my answers</h2>
               <p>
-                More or Less is played online, so the round you are looking at was assembled and
-                served by Snaptapp&rsquo;s servers. The full details are in the{" "}
+                Solitaire runs offline from a serving-snapshot deck and keeps a local personal Top 10,
+                syncing self-reported runs when online. Arena is server-authoritative and saves
+                verified ranked matches. The full details are in the{" "}
                 <a href="/legal/privacy/">Privacy Policy</a>; this is the short version for a
                 player.
               </p>
@@ -265,7 +201,7 @@ function PagePlayerFaq() {
                   Your score, which calls you got right and which you got wrong, and how long you
                   took.
                 </li>
-                <li>Streaks, daily challenge results, head-to-head outcomes, leaderboard standings.</li>
+                <li>Local Solitaire run history and server-verified Arena match results and standings.</li>
                 <li>Topics you enter, and room membership while a session is active.</li>
                 <li>
                   Device and technical details: browser or device model, operating system, app
@@ -290,8 +226,8 @@ function PagePlayerFaq() {
 
               <h3>Playing as a guest</h3>
               <p>
-                A guest run has no email address attached to it, because no account exists. The
-                game still has to serve the round, so the technical data above &mdash; including
+                A guest run has no email address attached to it, because no account exists. When the
+                game makes online requests, the technical data above &mdash; including
                 the IP address the request came from &mdash; is processed by the edge network that
                 delivers the game, for delivery, rate limiting and abuse prevention. Automated
                 checks produce a pass-or-fail signal and a signed token; they are not used to
@@ -374,7 +310,7 @@ function PagePlayerFaq() {
           <div className="shell">
             <div className="section-head reveal">
               <p className="eyebrow">More or Less</p>
-              <h2>Start a five-round game</h2>
+              <h2>Start a 60-second match</h2>
             </div>
             <p className="mt-md reveal">
               <a className="btn btn--primary" href="https://moreorless.snaptapp.us">Play More or Less</a>

@@ -1,6 +1,7 @@
 import { defineTool, ToolError } from "@lovable.dev/mcp-js";
 import { z } from "zod";
 import { TRIVIA_EXAMPLES } from "../site-content";
+import type { GAME_MODE_DETAILS } from "../../game-modes";
 
 const readHints = { readOnlyHint: true, idempotentHint: true, openWorldHint: false };
 
@@ -15,6 +16,7 @@ interface Product {
   players: string;
   price: string;
   modes: string[];
+  modeDetails: typeof GAME_MODE_DETAILS;
   technology: string[];
 }
 
@@ -33,6 +35,7 @@ const toGameJson = (product: Product) => ({
   players: product.players,
   price: product.price,
   modes: product.modes.map((mode) => mode),
+  modeDetails: product.modeDetails,
   technology: product.technology.map((tech) => tech),
 });
 

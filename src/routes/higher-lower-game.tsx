@@ -37,7 +37,7 @@ export const Route = createFileRoute("/higher-lower-game")({
       {
         property: "og:description",
         content:
-          "A free higher lower trivia game about numbers. Play solo, daily, 1v1, or in a Party Room with up to 10 players.",
+          "A free higher lower trivia game about numbers. Play a 60-second offline Solitaire sprint or a server-authoritative Arena match with up to 100 entrants.",
       },
       {
         property: "og:url",
@@ -144,12 +144,10 @@ function PageHigherLowerGame() {
 
               <h2>Modes</h2>
               <ul>
-                <li><strong>Standard</strong></li>
-                <li><strong>Cutthroat</strong></li>
-                <li><strong>Daily Challenge</strong></li>
-                <li><strong>Versus 1v1</strong></li>
-                <li><strong>Party Room</strong> &mdash; up to 10 players</li>
+                <li><strong>Solitaire Mode</strong> &mdash; a 60-second offline solo sprint from a 200-question DDM-4 deck. Unlimited permanent skips; personal Top 10 saved on device.</li>
+                <li><strong>Arena Mode</strong> &mdash; a 60-second server-authoritative sprint with up to 100 entrants, the same frozen deck and independent pacing. Lobbies start after 20 seconds or when full; seeded bots fill to 8 when fewer than 8 humans join.</li>
               </ul>
+              <p>Both modes have a 1-second question preview and 750 ms feedback. Correct answers earn up to 1,000 points, decaying by 1 point per 10 ms after the preview; wrong answers cost 500 points, and skips or unanswered questions earn 0. The sample above uses its own 12-second round clock.</p>
 
               <h2>Where the numbers come from</h2>
               <p>
