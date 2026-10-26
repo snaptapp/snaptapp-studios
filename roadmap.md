@@ -4,7 +4,7 @@ Goal: rebuild snaptapp.us as a Lovable app, preserving every URL and all content
 
 ## Tasks
 
-- [ ] Replace outdated game modes across public pages and agent data with current Solitaire and Arena rules
+- [x] Replace outdated game modes across public pages and agent data with current Solitaire and Arena rules
 - [x] Add and verify a shared playable sample round on Home and /higher-lower-game/
 - [x] Prevent the original palette flashing before the studio palette on initial load
 - [x] Rebuild all public pages and shared navigation/footer in the attached design system
