@@ -87,7 +87,8 @@ export function SampleRound({ placement }: { placement: "homepage" | "higher_low
         <h2>Make your call</h2>
       </div>
       <Card>
-        <div className="sample-round-stack">
+        <div className="sample-round-stack sample-round-body">
+          <div className="sample-round-stack sample-round-question">
           <div className="sample-round-top">
             <Badge tone="amber">Wildlife</Badge>
             <Button variant="ghost" size="sm" aria-label={sound ? "Mute sound" : "Enable sound"} aria-pressed={sound} title={sound ? "Mute sound" : "Enable sound"} onClick={() => setSound(!sound)}>
@@ -99,6 +100,8 @@ export function SampleRound({ placement }: { placement: "homepage" | "higher_low
             <CardTitle>{SAMPLE_FACT.prompt}</CardTitle>
             <p className="sample-round-number">{SAMPLE_FACT.target} {SAMPLE_FACT.unit}</p>
           </div>
+          </div>
+          <div className="sample-round-stack sample-round-controls">
           <ShotClock remaining={remaining} total={ROUND_SECONDS} label={phase === "ready" ? "12-second round" : "Shot clock"} />
           {phase === "ready" && <Button size="lg" onClick={start}><Play aria-hidden="true" /> Start round</Button>}
           {phase === "playing" && (
@@ -115,6 +118,7 @@ export function SampleRound({ placement }: { placement: "homepage" | "higher_low
               <div><Button variant="ghost" onClick={start}><RotateCcw aria-hidden="true" /> Replay round</Button></div>
             </div>
           )}
+          </div>
         </div>
       </Card>
       <div className="sample-round-actions">
