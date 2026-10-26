@@ -1,4 +1,4 @@
-import { describe, expect, test } from "bun:test";
+import { describe, expect, test } from "vitest";
 import { judgeSampleRound, secondsRemaining, ROUND_SECONDS, SAMPLE_FACT } from "./sample-round";
 
 describe("sample round", () => {
