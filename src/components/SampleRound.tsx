@@ -53,7 +53,7 @@ export function SampleRound({ placement, variant = "card" }: { placement: "homep
     cue(verdict === "correct" ? "confirm" : "error");
     trackEvent("sample_round_answer", {
       location: placement,
-      round: index + 1,
+      round: String(index + 1),
       choice: choice ?? "timeout",
       result: verdict,
       seconds_left: left.toFixed(1),
