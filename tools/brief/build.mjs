@@ -38,6 +38,8 @@ execFileSync(
   [
     "--headless=new",
     "--disable-gpu",
+    // Root in a container cannot use the Chrome sandbox; our own HTML is the only input.
+    ...(typeof process.getuid === "function" && process.getuid() === 0 ? ["--no-sandbox"] : []),
     "--no-pdf-header-footer",
     "--run-all-compositor-stages-before-draw",
     "--virtual-time-budget=8000",
