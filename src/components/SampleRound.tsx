@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { ArrowUp, ArrowDown, ExternalLink, Play, RotateCcw, Volume2, VolumeX } from "lucide-react";
+import { ExternalLink, Play, RotateCcw, Volume2, VolumeX } from "lucide-react";
 import { AnswerButton, Badge, Button, Card, CardLabel, CardTitle, ResultBanner, ShotClock, StatValue } from "@/design-system/more-or-less-design-system-8cbfc8";
 import { useHaptics } from "@/design-system/more-or-less-design-system-8cbfc8/lib/motion";
 import { judgeSampleRound, ROUND_SECONDS, SAMPLE_FACT, secondsRemaining, type RoundChoice } from "@/lib/sample-round";
@@ -112,8 +112,8 @@ export function SampleRound({ placement, variant = "card" }: { placement: "homep
                 <Button size="lg" onClick={start}><Play aria-hidden="true" /> Start round</Button>
               ) : (
                 <div className="sample-round-answers sample-phone-answers">
-                  <AnswerButton choice="more" onClick={() => finish("more")}><ArrowUp aria-hidden="true" /> MORE</AnswerButton>
-                  <AnswerButton choice="less" onClick={() => finish("less")}><ArrowDown aria-hidden="true" /> LESS</AnswerButton>
+                  <AnswerButton choice="more" onClick={() => finish("more")}>MORE</AnswerButton>
+                  <AnswerButton choice="less" onClick={() => finish("less")}>LESS</AnswerButton>
                 </div>
               )}
             </>
@@ -153,8 +153,8 @@ export function SampleRound({ placement, variant = "card" }: { placement: "homep
           {phase === "ready" && <Button size="lg" onClick={start}><Play aria-hidden="true" /> Start round</Button>}
           {phase === "playing" && (
             <div className="sample-round-answers">
-              <AnswerButton choice="more" onClick={() => finish("more")}><ArrowUp aria-hidden="true" /> MORE</AnswerButton>
-              <AnswerButton choice="less" onClick={() => finish("less")}><ArrowDown aria-hidden="true" /> LESS</AnswerButton>
+              <AnswerButton choice="more" onClick={() => finish("more")}>MORE</AnswerButton>
+              <AnswerButton choice="less" onClick={() => finish("less")}>LESS</AnswerButton>
             </div>
           )}
           {phase === "revealed" && (
