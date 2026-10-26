@@ -118,6 +118,7 @@ export function SampleRound({ placement }: { placement: "homepage" | "higher_low
               <div><Button variant="ghost" onClick={start}><RotateCcw aria-hidden="true" /> Replay round</Button></div>
             </div>
           )}
+          </div>
         </div>
       </Card>
       <div className="sample-round-actions">
