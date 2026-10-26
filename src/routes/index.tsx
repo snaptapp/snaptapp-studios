@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { SampleRound } from "@/components/SampleRound";
 
 import { trackEvent } from "@/lib/analytics-consent";
 import { useSiteBehaviour } from "@/lib/use-site-behaviour";
@@ -429,6 +430,8 @@ function PageIndex() {
                 </p>
               </div>
             </article>
+
+            <SampleRound placement="homepage" />
 
             <div className="grid grid--2 reveal mt-gap">
               <div className="card card--empty">
