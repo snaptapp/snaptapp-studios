@@ -100,3 +100,40 @@
   padding: var(--ds-arena-space-4); border-radius: var(--ds-arena-radius-lg); background: var(--ds-arena-color-surface);
 }
 .sample-phone-struck { font-family: var(--ds-arena-font-display); font-size: var(--ds-arena-text-xl); color: var(--ds-arena-color-text-muted); }
+/* Demo re-theme (deliberate deviation, user request): scoped to the sample round only.
+   Restores the design system's original game palette (near-black surfaces, neon lime)
+   so the demo contrasts the warm page scheme and matches the live game. */
+.sample-round-layout,
+.sample-phone-wrap {
+  --ds-arena-color-bg: #0a0b0d;
+  --ds-arena-color-surface: #14161c;
+  --ds-arena-color-surface-raised: #1b1e26;
+  --ds-arena-color-surface-sunken: #0f1116;
+  --ds-arena-color-border: #262a34;
+  --ds-arena-color-border-strong: #3a4050;
+  --ds-arena-color-text: #f5f7fa;
+  --ds-arena-color-text-muted: #8d95a6;
+  --ds-arena-color-text-inverse: #0a0b0d;
+  --ds-arena-color-lime: #d7f24a;
+  --ds-arena-color-lime-dim: #8ea22c;
+  --ds-arena-color-lime-soft: rgba(215, 242, 74, 0.12);
+  --ds-arena-color-red: #f2495c;
+  --ds-arena-color-red-dim: #a3283a;
+  --ds-arena-color-red-soft: rgba(242, 73, 92, 0.12);
+  --ds-arena-color-purple: #a76cff;
+  --ds-arena-color-purple-dim: #6b3fb5;
+  --ds-arena-color-purple-soft: rgba(167, 108, 255, 0.14);
+  --ds-arena-color-amber: #f6c344;
+  --ds-arena-color-amber-dim: #a8842a;
+  --ds-arena-color-amber-soft: rgba(246, 195, 68, 0.12);
+  --ds-arena-color-focus: #d7f24a;
+  --ds-arena-color-primary-foreground: #0a0b0d;
+  --ds-arena-color-danger-foreground: #ffffff;
+  --ds-arena-shadow-press-lime: 0 4px 0 #8ea22c;
+  --ds-arena-shadow-press-red: 0 4px 0 #a3283a;
+  --ds-arena-shadow-press-purple: 0 4px 0 #6b3fb5;
+  --ds-arena-shadow-press-amber: 0 4px 0 #a8842a;
+  --ds-arena-shadow-glow-lime: 0 0 24px rgba(215, 242, 74, 0.35);
+  --ds-arena-shadow-glow-purple: 0 0 28px rgba(167, 108, 255, 0.35);
+  --ds-arena-shadow-card: 0 2px 12px rgba(0, 0, 0, 0.5);
+}
