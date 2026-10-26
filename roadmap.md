@@ -38,4 +38,4 @@ Goal: rebuild snaptapp.us as a Lovable app, preserving every URL and all content
 - [ ] Regenerate the Architecture Brief PDF with the Gemini Enterprise Agent Platform name
       (19 old-brand mentions remain) — blocked: it was rendered by headless Chrome from HTML
       that is not in this repo, so the source document is needed
-- [ ] Tune sample round for small screens (touch targets, spacing, type, no overflow)
+- [x] Tune sample round for small screens (touch targets, spacing, type, no overflow)
