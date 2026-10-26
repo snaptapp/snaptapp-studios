@@ -47,6 +47,12 @@ export function SampleRound({ placement }: { placement: "homepage" | "higher_low
     setOutcome(verdict);
     setPhase("revealed");
     cue(verdict === "correct" ? "confirm" : "error");
+    trackEvent("sample_round_answer", {
+      location: placement,
+      choice: choice ?? "timeout",
+      result: verdict,
+      seconds_left: left.toFixed(1),
+    });
   }
 
   useEffect(() => {
@@ -65,6 +71,7 @@ export function SampleRound({ placement }: { placement: "homepage" | "higher_low
   useEffect(() => () => { void audio.current?.close().catch(() => {}); }, []);
 
   function start() {
+    trackEvent(phase === "revealed" ? "sample_round_replay" : "sample_round_start", { location: placement });
     settled.current = false;
     deadline.current = performance.now() + ROUND_SECONDS * 1000;
     setRemaining(ROUND_SECONDS);
