@@ -48,13 +48,4 @@
 /* Small screens: tighter spacing, full-width actions, numbers that never overflow. */
 .sample-round-layout, .sample-round-stack > * { min-width: 0; }
 .sample-round-number, .sample-round-detail { overflow-wrap: anywhere; }
-@media (max-width: 40rem) {
-  .sample-round-layout { gap: var(--ds-arena-space-4); margin-top: var(--ds-arena-space-5); }
-  .sample-round-stack { gap: var(--ds-arena-space-4); }
-  .sample-round-answers { gap: var(--ds-arena-space-3); }
-  .sample-round-number { font-size: var(--ds-arena-text-xl); }
-  .sample-round-stack > button,
-  .sample-round-actions > button,
-  .sample-round-reveal button { width: 100%; justify-content: center; }
-  .sample-round-answers > button { min-height: var(--ds-arena-space-7); }
-}
+.sample-round-answers > button { min-height: var(--ds-arena-space-7); }
