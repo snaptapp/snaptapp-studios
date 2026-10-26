@@ -63,3 +63,40 @@
   .sample-round-answers { gap: var(--ds-arena-space-3); }
   .sample-round-answers > button { min-height: var(--ds-arena-space-6); }
 }
+/* Phone-style round (homepage hero), modeled on the live mobile game screen. */
+.sample-phone-wrap { display: grid; gap: var(--ds-arena-space-4); justify-items: center; min-width: 0; }
+.sample-phone {
+  display: flex; flex-direction: column; gap: var(--ds-arena-space-5);
+  width: 100%; max-width: calc(var(--ds-arena-space-7) * 6);
+  aspect-ratio: 9 / 17;
+  padding: var(--ds-arena-space-5);
+  background: var(--ds-arena-color-bg);
+  border-style: solid; border-width: var(--ds-arena-space-1); border-color: var(--ds-arena-color-border-strong);
+  border-radius: var(--ds-arena-radius-xl);
+  box-shadow: var(--ds-arena-shadow-card);
+}
+.sample-phone-top { display: flex; align-items: center; justify-content: space-between; gap: var(--ds-arena-space-3); }
+.sample-phone-prompt {
+  padding: var(--ds-arena-space-4);
+  border-style: solid; border-width: calc(var(--ds-arena-space-1) / 2); border-color: var(--ds-arena-color-border-strong);
+  border-radius: var(--ds-arena-radius-lg);
+  background: var(--ds-arena-color-surface);
+  font-family: var(--ds-arena-font-body); font-size: var(--ds-arena-text-md); font-weight: 700;
+  color: var(--ds-arena-color-text); text-align: center;
+}
+.sample-phone-dial {
+  align-self: center; display: grid; place-items: center; align-content: center; gap: var(--ds-arena-space-2);
+  width: 60%; aspect-ratio: 1;
+  border-radius: var(--ds-arena-radius-pill);
+  border-style: solid; border-width: calc(var(--ds-arena-space-1) / 4); border-color: var(--ds-arena-color-border-strong);
+  background: var(--ds-arena-color-surface);
+}
+.sample-phone-number { font-family: var(--ds-arena-font-display); font-size: var(--ds-arena-text-display); color: var(--ds-arena-color-amber); line-height: 1; }
+.sample-phone > :last-child, .sample-phone-reveal > :last-child { margin-top: auto; }
+.sample-phone-answers > button { min-height: var(--ds-arena-space-7); }
+.sample-phone-reveal { display: flex; flex-direction: column; gap: var(--ds-arena-space-4); flex: 1; }
+.sample-phone-result {
+  display: grid; justify-items: center; gap: var(--ds-arena-space-3); text-align: center;
+  padding: var(--ds-arena-space-4); border-radius: var(--ds-arena-radius-lg); background: var(--ds-arena-color-surface);
+}
+.sample-phone-struck { font-family: var(--ds-arena-font-display); font-size: var(--ds-arena-text-xl); color: var(--ds-arena-color-text-muted); }

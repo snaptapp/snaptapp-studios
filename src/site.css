@@ -1115,3 +1115,7 @@ samp {
 .admin-table th { text-align: left; font-size: var(--ds-arena-text-xs); padding-block: var(--ds-arena-space-2); }
 .admin-table td { padding-block: var(--ds-arena-space-1); padding-inline-end: var(--ds-arena-space-2); }
 .admin-summary { margin-block-start: var(--ds-arena-space-5); }
+
+/* Homepage hero: copy left, playable phone round right. */
+.hero__split { display: grid; gap: var(--ds-arena-space-7); align-items: center; }
+@media (min-width: 64rem) { .hero__split { grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); } }
