@@ -20,8 +20,8 @@ export const SITE_PAGES: SitePage[] = [
     path: "/products/",
     title: "Products",
     summary:
-      "Detail page for More or Less: game modes, player counts, platform status, Google Cloud & Gemini Enterprise Agent Platform architecture (Gemini 3.5 Flash Lite / 3.8 Flash, Google Search Grounding, DDM-4, Fact Foundry, Gemma 2 SFT, Cloud Run, Firestore), and downloadable Architecture Brief.",
-    keywords: ["products", "more or less", "modes", "platforms", "fact bank", "topics"],
+      "More or Less: Solitaire Mode (offline 60-second sprint, 200-question DDM-4 deck, local Top 10) and Arena Mode (server-authoritative 60-second sprint, up to 100 entrants, bot backfill to 8), signed speed scoring, platform status, Google Cloud & Gemini Enterprise Agent Platform architecture, and downloadable Architecture Brief.",
+    keywords: ["products", "more or less", "modes", "solitaire", "arena", "scoring", "platforms", "fact bank", "topics"],
   },
   {
     path: "/company/",

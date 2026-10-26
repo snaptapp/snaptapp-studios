@@ -232,8 +232,8 @@ function PageIndex() {
               <p className="lede">
                 Every round shows a claim with a believable but wrong number. Decide
                 whether the real answer is more or less before the shot clock runs out.
-                Play solo, take on the Daily Challenge, go head to head in Versus, or
-                bring up to 10 friends into a Party Room. Live now on the web, with iOS
+                Sprint offline in Solitaire Mode, or compete in Arena Mode with up to
+                100 entrants. Both are 60-second matches. Live now on the web, with iOS
                 and Android in development.
               </p>
               <div className="row hero__actions">
@@ -375,7 +375,7 @@ function PageIndex() {
                   </div>
                   <div>
                     <dt>Multiplayer</dt>
-                    <dd>Up to 10 players per room (sub-20ms sync)</dd>
+                    <dd>Arena: up to 100 entrants · Server-authoritative WebSockets</dd>
                   </div>
                 </dl>
 
@@ -621,8 +621,11 @@ function PageIndex() {
                   server functions over <strong>Cloud Firestore</strong> fact curation and
                   dispute queues. <strong>Gemini</strong> copilots — Daily Blitz
                   Strategist, Report Review Copilot, and Placement Insights — run on{" "}
-                  <strong>Gemini Enterprise Agent Platform</strong>. Party Room sessions
-                  sync up to 10 players in sub-20ms over Durable Object WebSockets.
+                  <strong>Gemini Enterprise Agent Platform</strong>. Arena matches use
+                  server-authoritative <strong>Cloudflare Workers Durable Objects</strong>
+                  {" "}(<code>ArenaMatchmaker</code>, <code>ArenaEvent</code> SQLite), with up
+                  to 100 entrants advancing independently over the same frozen deck via
+                  WebSockets. Solitaire runs offline from a 200-question DDM-4 snapshot.
                 </p>
               </div>
 

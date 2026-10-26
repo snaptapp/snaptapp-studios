@@ -30,6 +30,7 @@ import {
   signingPublicJwk,
   verifyEs256Jwt,
 } from "./signing.server";
+import { GAME_MODES, GAME_MODE_DETAILS } from "./game-modes";
 
 export interface Env {
   TOKEN_SIGNING_JWK?: string;
@@ -115,9 +116,10 @@ const STUDIO = {
         ios: "in development",
         android: "in development",
       },
-      players: "1–10 per room",
+      players: "1 offline in Solitaire; up to 100 entrants in Arena",
       price: "Free to play",
-      modes: ["Standard", "Cutthroat", "Daily challenge", "Pass and play", "Multiplayer"],
+      modes: GAME_MODES,
+      modeDetails: GAME_MODE_DETAILS,
       technology: [
         "Gemini Enterprise Agent Platform (Gemini 3.5 Flash Lite for custom topic decks, Gemini 3.8 Flash for the fact dispute ombudsman)",
         "Google Search Grounding",
