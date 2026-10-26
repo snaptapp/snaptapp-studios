@@ -577,14 +577,14 @@
         <span>8 facts</span>
       </div>
       <ul class="bullets">
-        <li><strong>One call per round.</strong> Players decide whether the true figure is higher or lower than a believable decoy before the shot clock expires.</li>
+        <li><strong>One call per round.</strong> Players decide whether the true figure is higher or lower than a believable decoy before the 60-second match clock expires.</li>
         <li><strong>Grounded by default.</strong> Custom topics call Gemini 3.5 Flash Lite with mandatory Google Search grounding; curated rounds serve from a verified fact bank.</li>
         <li><strong>Receipts, not promises.</strong> Every generated round carries a <code>grounding_receipt</code> recording its web queries and support spans.</li>
         <li><strong>The model never picks the decoy.</strong> DDM-4, a deterministic kernel shared by Go and TypeScript, derives every distractor number.</li>
         <li><strong>Audited before promotion.</strong> Gemini 3.8 Flash cross-checks claims against primary sources; a 7-metric, 0.0% redline gate admits facts to Firestore.</li>
         <li><strong>Disputes get a referee.</strong> The Fact Ombudsman runs adversarial Search checks on Cloud Run and evicts debunked facts in real time.</li>
         <li><strong>Fine-tuned on its own facts.</strong> Audited facts export into Gemini SFT corpora and Gemma 2 9B LoRA adapters.</li>
-        <li><strong>Built for rooms.</strong> Up to 10 players sync on Durable Object WebSockets with a sub-20 ms shot clock.</li>
+        <li><strong>Two ways to play.</strong> Solitaire runs offline and client-authoritative; Arena seats up to 100 entrants on server-authoritative Durable Objects.</li>
       </ul>
       <div class="playnote">
         <span class="ptag">Live</span>
@@ -610,8 +610,8 @@
         <dl>
           <div class="f"><dt>Title</dt><dd>More or Less <span>· live on web</span></dd></div>
           <div class="f"><dt>Platforms</dt><dd>Web now <span>· iOS &amp; Android in development</span></dd></div>
-          <div class="f"><dt>Players</dt><dd>1–10 per room <span>· sub-20 ms sync</span></dd></div>
-          <div class="f"><dt>Price</dt><dd>Free to play <span>· 5 live modes</span></dd></div>
+          <div class="f"><dt>Players</dt><dd>Solo <span>· up to 100 in Arena</span></dd></div>
+          <div class="f"><dt>Price</dt><dd>Free to play <span>· 2 live modes</span></dd></div>
         </dl>
       </div>
       <div class="factgroup">
@@ -708,7 +708,7 @@
     <div class="pipe">
       <div class="num">05</div>
       <h3>Stream &amp; sync</h3>
-      <p>NDJSON rounds stream to a Durable Object room; ten players share one shot clock.</p>
+      <p>NDJSON rounds stream to a Durable Object match; up to 100 entrants share one server clock.</p>
       <p class="pipe-why">The room clock, not the model, sets the deadline.</p>
       <div class="pipe-out"><b style="color:var(--cyan)">→</b> synchronized round</div>
       <span class="tag">under 2 s</span>
@@ -721,7 +721,7 @@
         <h3>Latency ladder</h3>
         <span>log scale · documented budgets</span>
       </div>
-      <svg viewBox="0 0 400 214" width="100%" role="img" aria-label="Latency ladder from under one millisecond to thirty seconds">
+      <svg viewBox="0 0 420 214" width="100%" role="img" aria-label="Latency ladder from under one millisecond to sixty seconds">
         <defs>
           <linearGradient id="gCyan" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#22d3ee" stop-opacity="0.55"/><stop offset="1" stop-color="#22d3ee"/></linearGradient>
           <linearGradient id="gMint" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#7be0a4" stop-opacity="0.5"/><stop offset="1" stop-color="#7be0a4"/></linearGradient>
@@ -746,25 +746,25 @@
           <text x="110" y="45" text-anchor="end">Curated snapshot</text>
           <text x="110" y="75" text-anchor="end">Warm cache</text>
           <text x="110" y="105" text-anchor="end">Generated round</text>
-          <text x="110" y="135" text-anchor="end">Fast clock</text>
-          <text x="110" y="165" text-anchor="end">Normal clock</text>
-          <text x="110" y="195" text-anchor="end">Relaxed clock</text>
+          <text x="110" y="135" text-anchor="end">Preview window</text>
+          <text x="110" y="165" text-anchor="end">Feedback window</text>
+          <text x="110" y="195" text-anchor="end">Match clock</text>
         </g>
         <g>
           <rect x="120" y="36" width="15.5" height="12" rx="2.5" fill="url(#gCyan)"/>
           <rect x="120" y="66" width="66.9" height="12" rx="2.5" fill="url(#gMint)"/>
           <rect x="120" y="96" width="185.1" height="12" rx="2.5" fill="url(#gVolt)"/>
-          <rect x="120" y="126" width="213.1" height="12" rx="2.5" fill="url(#gPurp)" opacity="0.8"/>
-          <rect x="120" y="156" width="225.1" height="12" rx="2.5" fill="url(#gPurp)" opacity="0.9"/>
-          <rect x="120" y="186" width="245.6" height="12" rx="2.5" fill="url(#gPurp)"/>
+          <rect x="120" y="126" width="169.7" height="12" rx="2.5" fill="url(#gPurp)" opacity="0.8"/>
+          <rect x="120" y="156" width="163.3" height="12" rx="2.5" fill="url(#gPurp)" opacity="0.9"/>
+          <rect x="120" y="186" width="261.1" height="12" rx="2.5" fill="url(#gPurp)"/>
         </g>
         <g font-family="JBMono" font-size="6.4" fill="#8d95a9">
           <text x="140.5" y="45">&lt; 1 ms</text>
           <text x="191.9" y="75">&lt; 10 ms</text>
           <text x="310.1" y="105">&lt; 2 s</text>
-          <text x="338.1" y="135">7 s</text>
-          <text x="350.1" y="165">12 s</text>
-          <text x="370.6" y="195">30 s</text>
+          <text x="294.7" y="135">1.0 s</text>
+          <text x="288.3" y="165">750 ms</text>
+          <text x="386.1" y="195">60 s</text>
         </g>
       </svg>
       <div class="legend">
@@ -816,7 +816,7 @@
       <div class="rv-card">
         <div class="rv-label">Call</div>
         <div class="rv-call">MORE</div>
-        <div class="rv-clock">12 s shot clock<br>5 rounds · Standard</div>
+        <div class="rv-clock">60 s match clock<br>Solitaire · offline</div>
       </div>
       <div class="rv-arrow">→</div>
       <div class="rv-card">
