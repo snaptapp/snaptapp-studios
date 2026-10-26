@@ -22,7 +22,10 @@ describe("sample round", () => {
 describe("sample deck", () => {
   test("has three pre-baked rounds with mixed answers", () => {
     expect(SAMPLE_DECK).toHaveLength(3);
-    expect(SAMPLE_DECK.map(correctChoice)).toEqual(["more", "less", "more"]);
+    expect(SAMPLE_DECK.map(correctChoice)).toEqual(["more", "less", "less"]);
     expect(judgeRound(SAMPLE_DECK[1]!, "less", 3)).toBe("correct");
+    expect(SAMPLE_DECK[2]!.target).toBe(5);
+    expect(judgeRound(SAMPLE_DECK[2]!, "less", 3)).toBe("correct");
+    expect(judgeRound(SAMPLE_DECK[2]!, "more", 3)).toBe("wrong");
   });
 });

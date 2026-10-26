@@ -12,3 +12,4 @@
 - Keep the studio palette under html:root and limit Tailwind source scanning to template files so vendor token ordering cannot change colors between initial rendering and hydration.
 - Compose both public sample rounds from one client-side SampleRound and shared pure judging/timing logic; use attached Arena controls and haptics so both placements behave consistently without game-server calls.
 - Keep full-game mode data in src/lib/game-modes.ts for machine-readable product details; the studio sample's timing remains separate because it is not the full game.
+- The downloadable brief PDF is generated from tools/brief/brief.html by tools/brief/build.mjs (CHROME_PATH overrides the browser binary); never edit the PDF in place.
