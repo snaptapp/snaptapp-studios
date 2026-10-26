@@ -225,6 +225,7 @@ function PageIndex() {
         {/* ---------------- Hero ---------------- */}
         <section className="hero">
           <div className="shell">
+            <div className="hero__split">
             <div className="hero__inner">
               <p className="eyebrow">SNAPTAPP LLC · Independent game studio</p>
               <h1>More or Less: the trivia game about numbers.</h1>
@@ -294,6 +295,8 @@ function PageIndex() {
                 <li>Gemma 2 9B Fine-Tuning</li>
                 <li>Cloud Firestore & Firebase App Check</li>
               </ul>
+            </div>
+            <SampleRound placement="homepage" variant="phone" />
             </div>
           </div>
         </section>
@@ -431,7 +434,6 @@ function PageIndex() {
               </div>
             </article>
 
-            <SampleRound placement="homepage" />
 
             <div className="grid grid--2 reveal mt-gap">
               <div className="card card--empty">
