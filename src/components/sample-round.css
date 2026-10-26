@@ -45,3 +45,7 @@
 @media (prefers-reduced-motion: reduce) {
   .sample-round-reveal { animation: none; }
 }
+/* Small screens: tighter spacing, full-width actions, numbers that never overflow. */
+.sample-round-layout, .sample-round-stack > * { min-width: 0; }
+.sample-round-number, .sample-round-detail { overflow-wrap: anywhere; }
+.sample-round-answers > button { min-height: var(--ds-arena-space-7); }
