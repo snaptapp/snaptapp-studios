@@ -13,3 +13,4 @@
 - Compose both public sample rounds from one client-side SampleRound and shared pure judging/timing logic; use attached Arena controls and haptics so both placements behave consistently without game-server calls.
 - Keep full-game mode data in src/lib/game-modes.ts for machine-readable product details; the studio sample's timing remains separate because it is not the full game.
 - The downloadable brief PDF is generated from tools/brief/brief.html by tools/brief/build.mjs (CHROME_PATH overrides the browser binary); never edit the PDF in place.
+- Outbound links to the game go through gameUrl() in src/lib/game-link.ts so GA4 attributes game sessions to the sending placement; studio and game share GA4 property G-885KHVT2FY and the snaptapp.us _ga cookie.
