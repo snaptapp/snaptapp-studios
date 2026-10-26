@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { SampleRound } from "@/components/SampleRound";
 
 import { useSiteBehaviour } from "@/lib/use-site-behaviour";
 
@@ -131,6 +132,7 @@ function PageHigherLowerGame() {
 
         <section className="section section--tight">
           <div className="shell">
+            <SampleRound placement="higher_lower" />
             <div className="prose">
               <h2>How to play</h2>
               <p>
