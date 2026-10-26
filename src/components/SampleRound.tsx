@@ -6,7 +6,7 @@ import { judgeSampleRound, ROUND_SECONDS, SAMPLE_FACT, secondsRemaining, type Ro
 import { trackEvent } from "@/lib/analytics-consent";
 import "./sample-round.css";
 
-export function SampleRound({ placement }: { placement: "homepage" | "higher_lower" }) {
+export function SampleRound({ placement, variant = "card" }: { placement: "homepage" | "higher_lower"; variant?: "card" | "phone" }) {
   const [phase, setPhase] = useState<"ready" | "playing" | "revealed">("ready");
   const [remaining, setRemaining] = useState(ROUND_SECONDS);
   const [outcome, setOutcome] = useState<"correct" | "wrong">("wrong");
@@ -78,6 +78,53 @@ export function SampleRound({ placement }: { placement: "homepage" | "higher_low
     setTimedOut(false);
     setPhase("playing");
     cue("tick");
+  }
+
+  if (variant === "phone") {
+    return (
+      <section className="sample-phone-wrap" aria-label="More or Less sample round">
+        <div className="sample-phone">
+          <div className="sample-phone-top">
+            <Badge tone="lime">Sample round</Badge>
+            <Button variant="ghost" size="sm" aria-label={sound ? "Mute sound" : "Enable sound"} aria-pressed={sound} title={sound ? "Mute sound" : "Enable sound"} onClick={() => setSound(!sound)}>
+              {sound ? <Volume2 aria-hidden="true" /> : <VolumeX aria-hidden="true" />}
+            </Button>
+          </div>
+          {phase === "revealed" ? (
+            <div className="sample-phone-reveal sample-round-reveal" aria-live="polite" aria-atomic="true">
+              <ResultBanner outcome={outcome}>{timedOut ? "Time’s up — it's MORE" : outcome === "correct" ? "Correct! The answer is MORE" : "Wrong — the answer is MORE"}</ResultBanner>
+              <div className="sample-phone-result">
+                <s className="sample-phone-struck">{SAMPLE_FACT.target}</s>
+                <StatValue value="≈70" unit="mph" tone={outcome} />
+                <p className="sample-round-detail">{SAMPLE_FACT.detail}</p>
+              </div>
+              <Button size="lg" onClick={start}><RotateCcw aria-hidden="true" /> Play again</Button>
+            </div>
+          ) : (
+            <>
+              <ShotClock remaining={remaining} total={ROUND_SECONDS} label="Shot clock" />
+              <div className="sample-phone-prompt">{SAMPLE_FACT.prompt}</div>
+              <div className="sample-phone-dial">
+                <span className="sample-phone-number">{SAMPLE_FACT.target}</span>
+                <Badge tone="lime">{SAMPLE_FACT.unit}</Badge>
+              </div>
+              {phase === "ready" ? (
+                <Button size="lg" onClick={start}><Play aria-hidden="true" /> Start round</Button>
+              ) : (
+                <div className="sample-round-answers sample-phone-answers">
+                  <AnswerButton choice="more" onClick={() => finish("more")}><ArrowUp aria-hidden="true" /> MORE</AnswerButton>
+                  <AnswerButton choice="less" onClick={() => finish("less")}><ArrowDown aria-hidden="true" /> LESS</AnswerButton>
+                </div>
+              )}
+            </>
+          )}
+        </div>
+        <Button variant="ghost" onClick={() => {
+          trackEvent("outbound_click", { destination: "moreorless.snaptapp.us", location: `${placement}_sample_round` });
+          window.location.assign("https://moreorless.snaptapp.us");
+        }}>Play the full game <ExternalLink aria-hidden="true" /></Button>
+      </section>
+    );
   }
 
   return (
