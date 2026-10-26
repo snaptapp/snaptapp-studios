@@ -11,7 +11,7 @@ export const Route = createFileRoute("/products")({
       {
         name: "description",
         content:
-          "More or Less is a fast trivia game about numbers from SNAPTAPP LLC: decide if the real answer is more or less before time runs out. Solo, Daily Challenge, Versus, and Party Rooms for up to 10 players.",
+          "More or Less is a fast trivia game about numbers from SNAPTAPP LLC: decide if the real answer is more or less before time runs out. Offline Solitaire and live Arena: 60-second sprints, with up to 100 entrants in Arena.",
       },
       {
         name: "theme-color",
@@ -36,7 +36,7 @@ export const Route = createFileRoute("/products")({
       {
         property: "og:description",
         content:
-          "More or Less is a fast trivia game about numbers from SNAPTAPP LLC: decide if the real answer is more or less before time runs out. Solo, Daily Challenge, Versus, and Party Rooms for up to 10 players.",
+          "More or Less is a fast trivia game about numbers from SNAPTAPP LLC: decide if the real answer is more or less before time runs out. Offline Solitaire and live Arena: 60-second sprints, with up to 100 entrants in Arena.",
       },
       {
         property: "og:url",
@@ -147,8 +147,8 @@ function PageProducts() {
             <p className="lede">
               A fast trivia game about numbers. Each round gives you a claim and a
               believable but wrong number; call MORE or LESS before time runs out.
-              Modes include Standard, Cutthroat, Daily Challenge, Versus 1v1, and
-              Party Room for up to 10 players. Live on the web, with iOS and Android
+              Play a 60-second offline sprint in Solitaire Mode, or compete in
+              Arena Mode with up to 100 entrants. Live on the web, with iOS and Android
               versions in development.
             </p>
           </div>
@@ -211,7 +211,7 @@ function PageProducts() {
                   </div>
                   <div>
                     <dt>Players &amp; Price</dt>
-                    <dd>1–10 per room · Free to play</dd>
+                    <dd>Solitaire: 1 · Arena: up to 100 · Free to play</dd>
                   </div>
                 </dl>
 
@@ -313,51 +313,28 @@ function PageProducts() {
           <div className="shell">
             <div className="section-head reveal">
               <p className="eyebrow">More or Less</p>
-              <h2>Five ways to play</h2>
+              <h2>Two ways to play</h2>
             </div>
 
             <div className="grid grid--3 reveal">
               <div className="card">
-                <h3>Standard</h3>
-                <p>
-                  Five rounds on any curated or custom AI-generated topic, with
-                  mixed difficulty and fast (7s), normal (12s), or relaxed (30s) timing.
-                </p>
+                <h3>Solitaire Mode</h3>
+                <p>Solo speed-run, fully playable offline. The client runs the match without a server matchmaker, using a 200-question offline qualified serving-snapshot deck generated via DDM-4.</p>
+                <p>The 60-second absolute wall clock keeps running when you background the app. A 1-second question preview and 750 ms feedback window keep the sprint self-paced.</p>
+                <p>Unlimited permanent skips award 0 points; skipped questions never repeat. Your personal Top 10 is saved locally on device, and self-reported runs sync to Firebase Functions when online.</p>
               </div>
               <div className="card">
-                <h3>Cutthroat</h3>
-                <p>
-                  An endless sudden-death run drawn from the verified Cloud Firestore fact
-                  bank. One wrong answer ends the run.
-                </p>
+                <h3>Arena Mode</h3>
+                <p>Live, server-authoritative multiplayer managed by Cloudflare Workers Durable Objects (<code>ArenaMatchmaker</code>, <code>ArenaEvent</code> SQLite). Public lobbies start 20 seconds after the first human joins, or immediately at 100 entrants.</p>
+                <p>If fewer than 8 humans join, seeded bots fill the lobby to 8: easy 60%, medium 75%, hard 90%. All entrants receive the same frozen deck and advance independently over WebSockets.</p>
+                <p>A 60-second server match clock, 1-second preview and 750 ms private feedback govern play. Skips are allowed, with 2,000 ms client lag tolerance. Ranked matches are saved with server verification.</p>
               </div>
               <div className="card">
-                <h3>Daily Challenge</h3>
-                <p>
-                  The same verified rounds for everyone each UTC day—planned with our
-                  Gemini Daily Strategist—with a fixed timer and streak tracking.
-                </p>
-              </div>
-              <div className="card">
-                <h3>Versus 1v1</h3>
-                <p>
-                  Challenge another player to the same set of rounds and track live
-                  round-by-round progress via Cloud Firestore and iOS Live Activities.
-                </p>
-              </div>
-              <div className="card">
-                <h3>Party Room</h3>
-                <p>
-                  Up to ten players join the same room and play each round together on a
-                  synchronized sub-20ms WebSocket shot clock.
-                </p>
-              </div>
-              <div className="card card--empty">
-                <span className="badge badge--soon">60-Second Blitz</span>
-                <p className="muted small mt-xs">
-                  Rapid-fire 15-question daily time-attack mode alongside the mobile
-                  release.
-                </p>
+                <h3>Scoring &amp; standings</h3>
+                <p>Both modes use signed integer scoring (<code>launchScore</code>). Correct answers earn up to 1,000 points, decaying by 1 point per 10 ms after the 1-second preview:</p>
+                <p><code>1000 − floor(max(0, responseMs − 1000) / 10)</code></p>
+                <p>Wrong answers: −500 points. Skips and unanswered questions: 0 points.</p>
+                <p>Arena standings sort by score descending, then total answer time ascending, then entrant ID as the final tiebreaker.</p>
               </div>
             </div>
           </div>
