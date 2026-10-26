@@ -14,6 +14,27 @@ export type Database = {
   }
   public: {
     Tables: {
+      deck_generations: {
+        Row: {
+          created_at: string
+          id: string
+          topic: string
+          visitor_hash: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          topic: string
+          visitor_hash: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          topic?: string
+          visitor_hash?: string
+        }
+        Relationships: []
+      }
       host_requests: {
         Row: {
           created_at: string
