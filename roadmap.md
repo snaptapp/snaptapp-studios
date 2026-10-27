@@ -39,3 +39,5 @@ Goal: rebuild snaptapp.us as a Lovable app, preserving every URL and all content
 - [x] Regenerate the Architecture Brief PDF from tools/brief/brief.html with the current
       brand names and the real Solitaire/Arena rules (60 s clock, 1 s preview, 750 ms feedback)
 - [x] Tune sample round for small screens (touch targets, spacing, type, no overflow)
+- [x] Add Bob Turner and Chris Anderson to the Company team section (Bob, Michael, Chris order)
+- [x] Change the Company page's primary domain row to snaptappllc.com
