@@ -18,7 +18,12 @@
       "/oauth/*",
       "/oauth2/*",
       "/agent/*",
-      "/.well-known/jwks.json"
+      "/.well-known/jwks.json",
+      "/.well-known/oauth-protected-resource",
+      "/.well-known/oauth-authorization-server",
+      "/.well-known/openid-configuration",
+      "/.well-known/api-catalog",
+      "/.well-known/mcp/server-card.json"
     ]
   },
   "vars": {
