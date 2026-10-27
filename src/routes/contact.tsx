@@ -38,7 +38,7 @@ export const Route = createFileRoute("/contact")({
       },
       {
             "property": "og:url",
-            "content": "https://snaptapp.us/contact/"
+            "content": "https://snaptappllc.com/contact/"
       },
       {
             "property": "og:image",
@@ -64,7 +64,7 @@ export const Route = createFileRoute("/contact")({
     links: [
       {
             "rel": "canonical",
-            "href": "https://snaptapp.us/contact/"
+            "href": "https://snaptappllc.com/contact/"
       },
       {
             "rel": "api-catalog",

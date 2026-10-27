@@ -41,7 +41,7 @@ export const Route = createFileRoute("/higher-lower-game")({
       },
       {
         property: "og:url",
-        content: "https://snaptapp.us/higher-lower-game/",
+        content: "https://snaptappllc.com/higher-lower-game/",
       },
       {
         property: "og:image",
@@ -67,7 +67,7 @@ export const Route = createFileRoute("/higher-lower-game")({
     links: [
       {
         rel: "canonical",
-        href: "https://snaptapp.us/higher-lower-game/",
+        href: "https://snaptappllc.com/higher-lower-game/",
       },
       {
         rel: "api-catalog",

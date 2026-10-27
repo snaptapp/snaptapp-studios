@@ -20,7 +20,7 @@ export const Route = createFileRoute("/player-faq")({
           "Play as a guest with no account, learn the round format and shot clock, and see how your answers are handled.",
       },
       { property: "og:type", content: "article" },
-      { property: "og:url", content: "https://snaptapp.us/player-faq/" },
+      { property: "og:url", content: "https://snaptappllc.com/player-faq/" },
       {
         property: "og:image",
         content: "https://snaptapp.us/assets/img/og-default.png",
@@ -38,7 +38,7 @@ export const Route = createFileRoute("/player-faq")({
       },
     ],
     links: [
-      { rel: "canonical", href: "https://snaptapp.us/player-faq/" },
+      { rel: "canonical", href: "https://snaptappllc.com/player-faq/" },
       { rel: "api-catalog", href: "/.well-known/api-catalog" },
       { rel: "service-doc", href: "/docs/api/" },
       {

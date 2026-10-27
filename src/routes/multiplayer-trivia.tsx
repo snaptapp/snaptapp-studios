@@ -38,7 +38,7 @@ export const Route = createFileRoute("/multiplayer-trivia")({
       },
       {
         property: "og:url",
-        content: "https://snaptapp.us/multiplayer-trivia/",
+        content: "https://snaptappllc.com/multiplayer-trivia/",
       },
       {
         property: "og:image",
@@ -64,7 +64,7 @@ export const Route = createFileRoute("/multiplayer-trivia")({
     links: [
       {
         rel: "canonical",
-        href: "https://snaptapp.us/multiplayer-trivia/",
+        href: "https://snaptappllc.com/multiplayer-trivia/",
       },
       {
         rel: "api-catalog",
