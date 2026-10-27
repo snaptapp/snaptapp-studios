@@ -137,7 +137,7 @@ function PageSoloTriviaSpeedrun() {
               <h2>Scoring</h2>
               <p>A correct answer earns up to 1,000 points, losing 1 point per 10 ms after the preview. A wrong answer costs 500, so guessing has a price. The sample above uses its own 12-second round clock.</p>
               <h2>Your Top 10</h2>
-              <p>Your best ten runs are saved on your device and sync to your account when you are back online.</p>
+              <p>Your best ten runs are saved on your device and sync once you are back online.</p>
               <h2>Want competition?</h2>
               <p>Take on up to 100 players in <a href="/multiplayer-trivia/">live multiplayer trivia</a> with Arena Mode.</p>
             </div>
