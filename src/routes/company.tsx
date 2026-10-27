@@ -249,10 +249,59 @@ function PageCompany() {
             </div>
             <div className="grid grid--3 reveal">
               <div className="card">
+                <h3>Bob Turner</h3>
+                <p className="product__tagline">Founder</p>
+                <p className="mt-sm">
+                  <a className="link-arrow" href="mailto:bob.turner@snaptappllc.com">
+                    bob.turner@snaptappllc.com
+                    <svg
+                      width="15"
+                      height="15"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M3 8h9M8.5 4.5 12 8l-3.5 3.5"
+                        stroke="currentColor"
+                        strokeWidth="1.7"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </a>
+                </p>
+                <p className="mt-sm">
+                  <a
+                    className="link-arrow"
+                    href="https://www.linkedin.com/in/bobmturner/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    LinkedIn
+                    <svg
+                      width="15"
+                      height="15"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M3 8h9M8.5 4.5 12 8l-3.5 3.5"
+                        stroke="currentColor"
+                        strokeWidth="1.7"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </a>
+                </p>
+              </div>
+              <div className="card">
                 <h3>Michael T. Anderson</h3>
-                <p className="product__tagline">Founder &amp; Studio Lead</p>
+                <p className="product__tagline">Founder & Studio Lead</p>
                 <p>
-                  Leads engineering, Google Cloud &amp; Gemini Enterprise Agent Platform architecture, and game
+                  Leads engineering, Google Cloud & Gemini Enterprise Agent Platform architecture, and game
                   systems at Snaptapp LLC.
                 </p>
                 <p className="mt-sm">
@@ -283,6 +332,30 @@ function PageCompany() {
                     rel="noopener noreferrer"
                   >
                     LinkedIn
+                    <svg
+                      width="15"
+                      height="15"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M3 8h9M8.5 4.5 12 8l-3.5 3.5"
+                        stroke="currentColor"
+                        strokeWidth="1.7"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </a>
+                </p>
+              </div>
+              <div className="card">
+                <h3>Chris Anderson</h3>
+                <p className="product__tagline">Founder</p>
+                <p className="mt-sm">
+                  <a className="link-arrow" href="mailto:chris@snaptapp.us">
+                    chris@snaptapp.us
                     <svg
                       width="15"
                       height="15"
@@ -343,7 +416,7 @@ function PageCompany() {
                   <tr>
                     <th scope="row">Primary domain</th>
                     <td>
-                      <a href="https://snaptapp.us/">snaptapp.us</a>
+                      <a href="https://snaptappllc.com/">snaptappllc.com</a>
                     </td>
                   </tr>
                   <tr>
