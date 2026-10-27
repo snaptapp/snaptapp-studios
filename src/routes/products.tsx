@@ -44,7 +44,7 @@ export const Route = createFileRoute("/products")({
       },
       {
         property: "og:image",
-        content: "https://snaptapp.us/assets/img/og-default.png",
+        content: "https://snaptappllc.com/assets/img/og-default.png",
       },
       {
         property: "og:image:width",
@@ -466,7 +466,7 @@ function PageProducts() {
                 <a href="/legal/terms/">Terms</a>
               </li>
               <li>
-                <a href="https://snaptapp.us/auth">Admin</a>
+                <a href="https://snaptappllc.com/auth">Admin</a>
               </li>
             </ul>
           </div>

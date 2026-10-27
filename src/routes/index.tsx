@@ -46,7 +46,7 @@ export const Route = createFileRoute("/")({
       },
       {
         property: "og:image",
-        content: "https://snaptapp.us/assets/img/og-default.png",
+        content: "https://snaptappllc.com/assets/img/og-default.png",
       },
       {
         property: "og:image:width",
@@ -92,18 +92,18 @@ export const Route = createFileRoute("/")({
           "@graph": [
             {
               "@type": "Organization",
-              "@id": "https://snaptapp.us/#organization",
+              "@id": "https://snaptappllc.com/#organization",
               name: "Snaptapp",
               legalName: "Snaptapp LLC",
               alternateName: "SNAPTAPP LLC",
-              url: "https://snaptapp.us/",
+              url: "https://snaptappllc.com/",
               logo: {
                 "@type": "ImageObject",
-                url: "https://snaptapp.us/assets/img/icon-512.png",
+                url: "https://snaptappllc.com/assets/img/icon-512.png",
                 width: 512,
                 height: 512,
               },
-              image: "https://snaptapp.us/assets/img/og-default.png",
+              image: "https://snaptappllc.com/assets/img/og-default.png",
               description:
                 "Independent US game studio building original AI-native games on Google Cloud, Gemini Enterprise Agent Platform (Gemini & Gemma), Google Search Grounding, Cloud Run, and Firebase. First title: More or Less.",
               foundingDate: "2026",
@@ -143,21 +143,21 @@ export const Route = createFileRoute("/")({
             },
             {
               "@type": "WebSite",
-              "@id": "https://snaptapp.us/#website",
-              url: "https://snaptapp.us/",
+              "@id": "https://snaptappllc.com/#website",
+              url: "https://snaptappllc.com/",
               name: "Snaptapp",
-              publisher: { "@id": "https://snaptapp.us/#organization" },
+              publisher: { "@id": "https://snaptappllc.com/#organization" },
               inLanguage: "en-US",
             },
             {
               "@type": "SoftwareApplication",
-              "@id": "https://snaptapp.us/products/#more-or-less",
+              "@id": "https://snaptappllc.com/products/#more-or-less",
               name: "More or Less",
               url: "https://moreorless.snaptapp.us",
               applicationCategory: "GameApplication",
               applicationSubCategory: "Trivia",
               operatingSystem: "Web, iOS, Android",
-              publisher: { "@id": "https://snaptapp.us/#organization" },
+              publisher: { "@id": "https://snaptappllc.com/#organization" },
               description:
                 "An AI-native party trivia game about numbers powered by Gemini Enterprise Agent Platform (Gemini 3.5 Flash Lite builds custom topic decks, Gemini 3.8 Flash is the fact dispute ombudsman), Google Search Grounding, Google Cloud Run, and Cloud Firestore.",
             },
@@ -863,7 +863,7 @@ function PageIndex() {
                 <a href="/legal/terms/">Terms</a>
               </li>
               <li>
-                <a href="https://snaptapp.us/auth">Admin</a>
+                <a href="https://snaptappllc.com/auth">Admin</a>
               </li>
             </ul>
           </div>
