@@ -250,7 +250,11 @@ function PageCompany() {
             <div className="grid grid--3 reveal">
               <div className="card">
                 <h3>Bob Turner</h3>
-                <p className="product__tagline">Founder</p>
+                <p className="product__tagline">Managing Director</p>
+                <p>
+                  Oversees business operations, program execution, and studio governance at
+                  Snaptapp LLC.
+                </p>
                 <p className="mt-sm">
                   <a className="link-arrow" href="mailto:bob.turner@snaptappllc.com">
                     bob.turner@snaptappllc.com
@@ -299,7 +303,7 @@ function PageCompany() {
               </div>
               <div className="card">
                 <h3>Michael T. Anderson</h3>
-                <p className="product__tagline">Founder & Studio Lead</p>
+                <p className="product__tagline">Technical Director</p>
                 <p>
                   Leads engineering, Google Cloud & Gemini Enterprise Agent Platform architecture, and game
                   systems at Snaptapp LLC.
@@ -352,7 +356,10 @@ function PageCompany() {
               </div>
               <div className="card">
                 <h3>Chris Anderson</h3>
-                <p className="product__tagline">Founder</p>
+                <p className="product__tagline">Creative Lead</p>
+                <p>
+                  Directs game design, creative direction, and player experience at Snaptapp LLC.
+                </p>
                 <p className="mt-sm">
                   <a className="link-arrow" href="mailto:chris@snaptapp.us">
                     chris@snaptapp.us
