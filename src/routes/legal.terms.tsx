@@ -38,7 +38,7 @@ export const Route = createFileRoute("/legal/terms")({
       },
       {
             "property": "og:url",
-            "content": "https://snaptapp.us/legal/terms/"
+            "content": "https://snaptappllc.com/legal/terms/"
       },
       {
             "property": "og:image",
@@ -64,7 +64,7 @@ export const Route = createFileRoute("/legal/terms")({
     links: [
       {
             "rel": "canonical",
-            "href": "https://snaptapp.us/legal/terms/"
+            "href": "https://snaptappllc.com/legal/terms/"
       },
       {
             "rel": "api-catalog",

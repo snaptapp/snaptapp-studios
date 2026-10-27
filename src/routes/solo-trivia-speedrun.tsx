@@ -38,7 +38,7 @@ export const Route = createFileRoute("/solo-trivia-speedrun")({
       },
       {
         property: "og:url",
-        content: "https://snaptapp.us/solo-trivia-speedrun/",
+        content: "https://snaptappllc.com/solo-trivia-speedrun/",
       },
       {
         property: "og:image",
@@ -64,7 +64,7 @@ export const Route = createFileRoute("/solo-trivia-speedrun")({
     links: [
       {
         rel: "canonical",
-        href: "https://snaptapp.us/solo-trivia-speedrun/",
+        href: "https://snaptappllc.com/solo-trivia-speedrun/",
       },
       {
         rel: "api-catalog",
