@@ -7,7 +7,7 @@ import { trackEvent } from "@/lib/analytics-consent";
 import { gameUrl } from "@/lib/game-link";
 import "./sample-round.css";
 
-export function SampleRound({ placement, variant = "card" }: { placement: "homepage" | "higher_lower"; variant?: "card" | "phone" }) {
+export function SampleRound({ placement, variant = "card" }: { placement: "homepage" | "higher_lower" | "arena" | "solitaire"; variant?: "card" | "phone" }) {
   const [phase, setPhase] = useState<"ready" | "playing" | "revealed">("ready");
   const [remaining, setRemaining] = useState(ROUND_SECONDS);
   const [outcome, setOutcome] = useState<"correct" | "wrong">("wrong");
