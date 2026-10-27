@@ -239,12 +239,15 @@ function PageIndex() {
               <div className="row hero__actions">
                 <a
                   className="btn btn--primary"
-                  href="/products/"
+                  href="https://moreorless.snaptapp.us"
                   onClick={() =>
-                    trackEvent("cta_click", { cta: "explore_games", location: "hero" })
+                    trackEvent("outbound_click", {
+                      destination: "moreorless.snaptapp.us",
+                      location: "hero",
+                    })
                   }
                 >
-                  Explore our games
+                  Play More or Less
                   <svg
                     className="btn__arrow"
                     width="16"
@@ -264,15 +267,12 @@ function PageIndex() {
                 </a>
                 <a
                   className="btn btn--secondary"
-                  href="https://moreorless.snaptapp.us"
+                  href="/products/"
                   onClick={() =>
-                    trackEvent("outbound_click", {
-                      destination: "moreorless.snaptapp.us",
-                      location: "hero",
-                    })
+                    trackEvent("cta_click", { cta: "explore_games", location: "hero" })
                   }
                 >
-                  Play More or Less
+                  Explore our games
                 </a>
                 <a
                   className="btn btn--ghost"
