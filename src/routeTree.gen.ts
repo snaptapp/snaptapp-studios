@@ -19,6 +19,7 @@ import { Route as HigherLowerGameRouteImport } from './routes/higher-lower-game'
 import { Route as McpRouteImport } from './routes/mcp'
 import { Route as MoreOrLessRouteImport } from './routes/more-or-less'
 import { Route as MoreorlessRouteImport } from './routes/moreorless'
+import { Route as MultiplayerTriviaRouteImport } from './routes/multiplayer-trivia'
 import { Route as PlayRouteImport } from './routes/play'
 import { Route as PlayerFaqRouteImport } from './routes/player-faq'
 import { Route as PressRouteImport } from './routes/press'
@@ -26,6 +27,7 @@ import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
 import { Route as ProductsRouteImport } from './routes/products'
 import { Route as SecurityRouteImport } from './routes/security'
+import { Route as SoloTriviaSpeedrunRouteImport } from './routes/solo-trivia-speedrun'
 import { Route as SupportRouteImport } from './routes/support'
 import { Route as TeamRouteImport } from './routes/team'
 import { Route as TermsRouteImport } from './routes/terms'
@@ -95,6 +97,11 @@ const MoreorlessRoute = MoreorlessRouteImport.update({
   path: '/moreorless',
   getParentRoute: () => rootRouteImport,
 } as any)
+const MultiplayerTriviaRoute = MultiplayerTriviaRouteImport.update({
+  id: '/multiplayer-trivia',
+  path: '/multiplayer-trivia',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const PlayRoute = PlayRouteImport.update({
   id: '/play',
   path: '/play',
@@ -128,6 +135,11 @@ const ProductsRoute = ProductsRouteImport.update({
 const SecurityRoute = SecurityRouteImport.update({
   id: '/security',
   path: '/security',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SoloTriviaSpeedrunRoute = SoloTriviaSpeedrunRouteImport.update({
+  id: '/solo-trivia-speedrun',
+  path: '/solo-trivia-speedrun',
   getParentRoute: () => rootRouteImport,
 } as any)
 const SupportRoute = SupportRouteImport.update({
@@ -233,6 +245,7 @@ export interface FileRoutesByFullPath {
   '/mcp': typeof McpRoute
   '/more-or-less': typeof MoreOrLessRoute
   '/moreorless': typeof MoreorlessRoute
+  '/multiplayer-trivia': typeof MultiplayerTriviaRoute
   '/play': typeof PlayRoute
   '/player-faq': typeof PlayerFaqRoute
   '/press': typeof PressRoute
@@ -240,6 +253,7 @@ export interface FileRoutesByFullPath {
   '/privacy-policy': typeof PrivacyPolicyRoute
   '/products': typeof ProductsRoute
   '/security': typeof SecurityRoute
+  '/solo-trivia-speedrun': typeof SoloTriviaSpeedrunRoute
   '/support': typeof SupportRoute
   '/team': typeof TeamRoute
   '/terms': typeof TermsRoute
@@ -270,6 +284,7 @@ export interface FileRoutesByTo {
   '/mcp': typeof McpRoute
   '/more-or-less': typeof MoreOrLessRoute
   '/moreorless': typeof MoreorlessRoute
+  '/multiplayer-trivia': typeof MultiplayerTriviaRoute
   '/play': typeof PlayRoute
   '/player-faq': typeof PlayerFaqRoute
   '/press': typeof PressRoute
@@ -277,6 +292,7 @@ export interface FileRoutesByTo {
   '/privacy-policy': typeof PrivacyPolicyRoute
   '/products': typeof ProductsRoute
   '/security': typeof SecurityRoute
+  '/solo-trivia-speedrun': typeof SoloTriviaSpeedrunRoute
   '/support': typeof SupportRoute
   '/team': typeof TeamRoute
   '/terms': typeof TermsRoute
@@ -308,6 +324,7 @@ export interface FileRoutesById {
   '/mcp': typeof McpRoute
   '/more-or-less': typeof MoreOrLessRoute
   '/moreorless': typeof MoreorlessRoute
+  '/multiplayer-trivia': typeof MultiplayerTriviaRoute
   '/play': typeof PlayRoute
   '/player-faq': typeof PlayerFaqRoute
   '/press': typeof PressRoute
@@ -315,6 +332,7 @@ export interface FileRoutesById {
   '/privacy-policy': typeof PrivacyPolicyRoute
   '/products': typeof ProductsRoute
   '/security': typeof SecurityRoute
+  '/solo-trivia-speedrun': typeof SoloTriviaSpeedrunRoute
   '/support': typeof SupportRoute
   '/team': typeof TeamRoute
   '/terms': typeof TermsRoute
@@ -347,6 +365,7 @@ export interface FileRouteTypes {
     | '/mcp'
     | '/more-or-less'
     | '/moreorless'
+    | '/multiplayer-trivia'
     | '/play'
     | '/player-faq'
     | '/press'
@@ -354,6 +373,7 @@ export interface FileRouteTypes {
     | '/privacy-policy'
     | '/products'
     | '/security'
+    | '/solo-trivia-speedrun'
     | '/support'
     | '/team'
     | '/terms'
@@ -384,6 +404,7 @@ export interface FileRouteTypes {
     | '/mcp'
     | '/more-or-less'
     | '/moreorless'
+    | '/multiplayer-trivia'
     | '/play'
     | '/player-faq'
     | '/press'
@@ -391,6 +412,7 @@ export interface FileRouteTypes {
     | '/privacy-policy'
     | '/products'
     | '/security'
+    | '/solo-trivia-speedrun'
     | '/support'
     | '/team'
     | '/terms'
@@ -421,6 +443,7 @@ export interface FileRouteTypes {
     | '/mcp'
     | '/more-or-less'
     | '/moreorless'
+    | '/multiplayer-trivia'
     | '/play'
     | '/player-faq'
     | '/press'
@@ -428,6 +451,7 @@ export interface FileRouteTypes {
     | '/privacy-policy'
     | '/products'
     | '/security'
+    | '/solo-trivia-speedrun'
     | '/support'
     | '/team'
     | '/terms'
@@ -459,6 +483,7 @@ export interface RootRouteChildren {
   McpRoute: typeof McpRoute
   MoreOrLessRoute: typeof MoreOrLessRoute
   MoreorlessRoute: typeof MoreorlessRoute
+  MultiplayerTriviaRoute: typeof MultiplayerTriviaRoute
   PlayRoute: typeof PlayRoute
   PlayerFaqRoute: typeof PlayerFaqRoute
   PressRoute: typeof PressRoute
@@ -466,6 +491,7 @@ export interface RootRouteChildren {
   PrivacyPolicyRoute: typeof PrivacyPolicyRoute
   ProductsRoute: typeof ProductsRoute
   SecurityRoute: typeof SecurityRoute
+  SoloTriviaSpeedrunRoute: typeof SoloTriviaSpeedrunRoute
   SupportRoute: typeof SupportRoute
   TeamRoute: typeof TeamRoute
   TermsRoute: typeof TermsRoute
@@ -558,6 +584,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof MoreorlessRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/multiplayer-trivia': {
+      id: '/multiplayer-trivia'
+      path: '/multiplayer-trivia'
+      fullPath: '/multiplayer-trivia'
+      preLoaderRoute: typeof MultiplayerTriviaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/play': {
       id: '/play'
       path: '/play'
@@ -605,6 +638,13 @@ declare module '@tanstack/react-router' {
       path: '/security'
       fullPath: '/security'
       preLoaderRoute: typeof SecurityRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/solo-trivia-speedrun': {
+      id: '/solo-trivia-speedrun'
+      path: '/solo-trivia-speedrun'
+      fullPath: '/solo-trivia-speedrun'
+      preLoaderRoute: typeof SoloTriviaSpeedrunRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/support': {
@@ -747,6 +787,7 @@ const rootRouteChildren: RootRouteChildren = {
   McpRoute: McpRoute,
   MoreOrLessRoute: MoreOrLessRoute,
   MoreorlessRoute: MoreorlessRoute,
+  MultiplayerTriviaRoute: MultiplayerTriviaRoute,
   PlayRoute: PlayRoute,
   PlayerFaqRoute: PlayerFaqRoute,
   PressRoute: PressRoute,
@@ -754,6 +795,7 @@ const rootRouteChildren: RootRouteChildren = {
   PrivacyPolicyRoute: PrivacyPolicyRoute,
   ProductsRoute: ProductsRoute,
   SecurityRoute: SecurityRoute,
+  SoloTriviaSpeedrunRoute: SoloTriviaSpeedrunRoute,
   SupportRoute: SupportRoute,
   TeamRoute: TeamRoute,
   TermsRoute: TermsRoute,

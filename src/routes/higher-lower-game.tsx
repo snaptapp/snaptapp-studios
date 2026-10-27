@@ -147,6 +147,7 @@ function PageHigherLowerGame() {
                 <li><strong>Solitaire Mode</strong> &mdash; a 60-second offline solo sprint from a 200-question DDM-4 deck. Unlimited permanent skips; personal Top 10 saved on device.</li>
                 <li><strong>Arena Mode</strong> &mdash; a 60-second server-authoritative sprint with up to 100 entrants, the same frozen deck and independent pacing. Lobbies start after 20 seconds or when full; seeded bots fill to 8 when fewer than 8 humans join.</li>
               </ul>
+              <p>Read more about <a href="/solo-trivia-speedrun/">Solitaire speed-runs</a> and <a href="/multiplayer-trivia/">Arena multiplayer</a>.</p>
               <p>Both modes have a 1-second question preview and 750 ms feedback. Correct answers earn up to 1,000 points, decaying by 1 point per 10 ms after the preview; wrong answers cost 500 points, and skips or unanswered questions earn 0. The sample above uses its own 12-second round clock.</p>
 
               <h2>Where the numbers come from</h2>
