@@ -42,7 +42,7 @@ export const Route = createFileRoute("/legal/terms")({
       },
       {
             "property": "og:image",
-            "content": "https://snaptapp.us/assets/img/og-default.png"
+            "content": "https://snaptappllc.com/assets/img/og-default.png"
       },
       {
             "property": "og:image:width",
@@ -459,7 +459,7 @@ function PageLegalTerms() {
                   <li><a href="/legal/privacy/">Privacy</a></li>
                 <li><a href="/legal/cookies/">Cookies</a></li>
                   <li><a href="/legal/terms/">Terms</a></li>
-                <li><a href="https://snaptapp.us/auth">Admin</a></li>
+                <li><a href="https://snaptappllc.com/auth">Admin</a></li>
                 </ul>
               </div>
             </div>
