@@ -416,7 +416,7 @@ function PageCompany() {
                   <tr>
                     <th scope="row">Primary domain</th>
                     <td>
-                      <a href="https://snaptapp.us/">snaptapp.us</a>
+                      <a href="https://snaptappllc.com/">snaptappllc.com</a>
                     </td>
                   </tr>
                   <tr>
