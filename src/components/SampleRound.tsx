@@ -113,7 +113,7 @@ export function SampleRound({ placement, variant = "card" }: { placement: "homep
               <ResultBanner outcome={outcome}>{timedOut ? `Time’s up — it's ${word}` : outcome === "correct" ? `Correct! The answer is ${word}` : `Wrong — the answer is ${word}`}</ResultBanner>
               <div className="sample-phone-result">
                 <s className="sample-phone-struck">{fact.target}</s>
-                <StatValue value={`≈${fact.answer}`} unit={fact.unit} tone={outcome} />
+                <StatValue value={fact.answer} unit={fact.unit} tone={outcome} />
                 <p className="sample-round-detail">{fact.detail}</p>
               </div>
               <Button size="lg" onClick={next}>{lastRound ? <><RotateCcw aria-hidden="true" /> Play again</> : <><Play aria-hidden="true" /> Next round</>}</Button>
@@ -178,7 +178,7 @@ export function SampleRound({ placement, variant = "card" }: { placement: "homep
           {phase === "revealed" && (
             <div className="sample-round-stack sample-round-reveal" aria-live="polite" aria-atomic="true">
               <ResultBanner outcome={outcome}>{timedOut ? `Time’s up — the answer is ${word}` : outcome === "correct" ? `Correct — ${word}!` : `Not quite — the answer is ${word}`}</ResultBanner>
-              <StatValue value={`≈${fact.answer}`} unit={fact.unit} tone={outcome} />
+              <StatValue value={fact.answer} unit={fact.unit} tone={outcome} />
               <p className="sample-round-detail">{fact.detail}</p>
               <div><Button variant="ghost" onClick={next}>{lastRound ? <><RotateCcw aria-hidden="true" /> Play again</> : <><Play aria-hidden="true" /> Next round</>}</Button></div>
             </div>
