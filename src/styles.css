@@ -17,37 +17,37 @@
  * tokens are emitted later in the initial server-rendered stylesheet.
  */
 html:root {
-  --ds-arena-color-bg: #17131a;
-  --ds-arena-color-surface: #211b25;
-  --ds-arena-color-surface-raised: #2b2330;
-  --ds-arena-color-surface-sunken: #110e13;
-  --ds-arena-color-border: #3a3040;
-  --ds-arena-color-border-strong: #57485f;
-  --ds-arena-color-text: #f4ede3;
-  --ds-arena-color-text-muted: #ada2b0;
-  --ds-arena-color-text-inverse: #17131a;
+  --ds-arena-color-bg: #14101a;
+  --ds-arena-color-surface: #1e1826;
+  --ds-arena-color-surface-raised: #292133;
+  --ds-arena-color-surface-sunken: #0f0c13;
+  --ds-arena-color-border: #382e42;
+  --ds-arena-color-border-strong: #55465f;
+  --ds-arena-color-text: #f6f0e8;
+  --ds-arena-color-text-muted: #a99db0;
+  --ds-arena-color-text-inverse: #14101a;
 
   /* Accent roles follow the logo: "lime" slot carries the berry rose primary. */
-  --ds-arena-color-lime: #e08aa6;
-  --ds-arena-color-lime-dim: #9a5068;
-  --ds-arena-color-lime-soft: rgba(224, 138, 166, 0.14);
-  --ds-arena-color-red: #e8604c;
-  --ds-arena-color-red-dim: #a03a2c;
-  --ds-arena-color-red-soft: rgba(232, 96, 76, 0.12);
-  --ds-arena-color-purple: #b48ad6;
-  --ds-arena-color-purple-dim: #765296;
-  --ds-arena-color-purple-soft: rgba(180, 138, 214, 0.14);
-  --ds-arena-color-amber: #e8c15a;
-  --ds-arena-color-amber-dim: #96793a;
-  --ds-arena-color-amber-soft: rgba(232, 193, 90, 0.12);
-  --ds-arena-color-focus: #e08aa6;
+  --ds-arena-color-lime: #ff5f8b;
+  --ds-arena-color-lime-dim: #a83a5c;
+  --ds-arena-color-lime-soft: rgba(255, 95, 139, 0.14);
+  --ds-arena-color-red: #ff4f3d;
+  --ds-arena-color-red-dim: #a83320;
+  --ds-arena-color-red-soft: rgba(255, 79, 61, 0.13);
+  --ds-arena-color-purple: #b98cf0;
+  --ds-arena-color-purple-dim: #7c52a8;
+  --ds-arena-color-purple-soft: rgba(185, 140, 240, 0.15);
+  --ds-arena-color-amber: #f2c75e;
+  --ds-arena-color-amber-dim: #9c7c34;
+  --ds-arena-color-amber-soft: rgba(242, 199, 94, 0.13);
+  --ds-arena-color-focus: #ff5f8b;
 
-  --ds-arena-shadow-press-lime: 0 4px 0 #9a5068;
-  --ds-arena-shadow-press-red: 0 4px 0 #a03a2c;
-  --ds-arena-shadow-press-purple: 0 4px 0 #765296;
-  --ds-arena-shadow-press-amber: 0 4px 0 #96793a;
-  --ds-arena-shadow-glow-lime: 0 0 24px rgba(224, 138, 166, 0.3);
-  --ds-arena-shadow-glow-purple: 0 0 28px rgba(180, 138, 214, 0.3);
+  --ds-arena-shadow-press-lime: 0 4px 0 #a83a5c;
+  --ds-arena-shadow-press-red: 0 4px 0 #a83320;
+  --ds-arena-shadow-press-purple: 0 4px 0 #7c52a8;
+  --ds-arena-shadow-press-amber: 0 4px 0 #9c7c34;
+  --ds-arena-shadow-glow-lime: 0 0 24px rgba(255, 95, 139, 0.32);
+  --ds-arena-shadow-glow-purple: 0 0 28px rgba(185, 140, 240, 0.32);
   --ds-arena-shadow-card: 0 2px 12px rgba(0, 0, 0, 0.45);
 }
 
