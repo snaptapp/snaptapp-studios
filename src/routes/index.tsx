@@ -272,7 +272,7 @@ function PageIndex() {
                     trackEvent("cta_click", { cta: "explore_games", location: "hero" })
                   }
                 >
-                  Explore our games
+                  Learn More
                 </a>
                 <a
                   className="btn btn--ghost"
