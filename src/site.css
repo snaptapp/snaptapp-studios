@@ -218,6 +218,10 @@ samp {
   text-transform: uppercase;
 }
 
+.contact-card__label {
+  display: flex;
+}
+
 .eyebrow::before {
   content: "";
   width: var(--ds-arena-space-6);
@@ -888,7 +892,7 @@ samp {
 
 .toc ol { margin: 0; columns: 2; column-gap: var(--ds-arena-space-7); }
 
-.contact-card a {
+.contact-card > a {
   display: inline-block;
   max-width: 100%;
   margin-bottom: var(--ds-arena-space-3);
