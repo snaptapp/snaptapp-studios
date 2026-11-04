@@ -38,11 +38,11 @@ export const Route = createFileRoute("/support")({
       },
       {
             "property": "og:url",
-            "content": "https://snaptapp.us/support/"
+            "content": "https://snaptappllc.com/support/"
       },
       {
             "property": "og:image",
-            "content": "https://snaptapp.us/assets/img/og-default.png"
+            "content": "https://snaptappllc.com/assets/img/og-default.png"
       },
       {
             "property": "og:image:width",
@@ -64,7 +64,7 @@ export const Route = createFileRoute("/support")({
     links: [
       {
             "rel": "canonical",
-            "href": "https://snaptapp.us/support/"
+            "href": "https://snaptappllc.com/support/"
       },
       {
             "rel": "api-catalog",
@@ -164,15 +164,17 @@ function PageSupport() {
                   <dt>How do I start playing?</dt>
                   <dd>
                     The <a href="/player-faq/">Player FAQ</a> walks through starting a game as a
-                    guest, how the five rounds and the shot clock work, and what happens to the
+                    guest, how Solitaire and Arena clocks and scoring work, and what happens to the
                     answers you give.
                   </dd>
       
-                  <dt>The timer feels out of sync in a party room.</dt>
+                  <dt>The timer feels out of sync in Arena.</dt>
                   <dd>
-                    Party Room players use the same server-managed round timer. If you notice a
-                    timing problem, send us the room code, roughly when it happened, and how
-                    many players were connected.
+                    Arena uses a 60-second server match clock with a 2,000 ms client lag
+                    allowance. Players advance independently over the same frozen deck.
+                    If you notice a timing problem, send us the match details, roughly when
+                    it happened, and how many entrants were connected. Solitaire uses an
+                    absolute wall clock offline; backgrounding does not pause its 60 seconds.
                   </dd>
       
                   <dt>No sound in the browser.</dt>
@@ -182,10 +184,11 @@ function PageSupport() {
                     tab and system audio are not muted.
                   </dd>
       
-                  <dt>I lost my streak or my match history.</dt>
+                  <dt>I lost my match history.</dt>
                   <dd>
-                    Progress is tied to the account and sign-in method you used. If you signed
-                    in another way, you may be looking at a separate profile. Email{" "}
+                    Solitaire keeps a personal Top 10 on your device and syncs self-reported
+                    runs to Firebase Functions when online. Arena saves server-verified ranked
+                    matches. Include the mode, device and sign-in method when you email{" "}
                     <a href="mailto:support@snaptapp.us">support@snaptapp.us</a> from the address
                     on the account and we can check.
                   </dd>
@@ -317,7 +320,7 @@ function PageSupport() {
                 <li><a href="/legal/privacy/">Privacy</a></li>
                 <li><a href="/legal/cookies/">Cookies</a></li>
                 <li><a href="/legal/terms/">Terms</a></li>
-                <li><a href="https://snaptapp.us/auth">Admin</a></li>
+                <li><a href="https://snaptappllc.com/auth">Admin</a></li>
               </ul>
             </div>
           </div>

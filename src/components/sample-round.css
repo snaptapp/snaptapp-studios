@@ -1,0 +1,139 @@
+.sample-round-layout {
+  display: grid;
+  gap: var(--ds-arena-space-5);
+  margin-top: var(--ds-arena-space-6);
+}
+.sample-round-stack {
+  display: grid;
+  gap: var(--ds-arena-space-5);
+}
+.sample-round-top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--ds-arena-space-3);
+}
+.sample-round-answers {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: var(--ds-arena-space-4);
+}
+.sample-round-number {
+  font-family: var(--ds-arena-font-display);
+  font-size: var(--ds-arena-text-display);
+  color: var(--ds-arena-color-amber);
+  text-align: center;
+}
+.sample-round-detail {
+  font-family: var(--ds-arena-font-body);
+  font-size: var(--ds-arena-text-md);
+  color: var(--ds-arena-color-text);
+}
+.sample-round-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--ds-arena-space-4);
+}
+.sample-round-reveal {
+  animation: sample-round-reveal var(--ds-arena-duration-fast) var(--ds-arena-ease-out);
+}
+@keyframes sample-round-reveal {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .sample-round-reveal { animation: none; }
+}
+/* Small screens: tighter spacing, full-width actions, numbers that never overflow. */
+.sample-round-layout, .sample-round-stack > * { min-width: 0; }
+.sample-round-number, .sample-round-detail { overflow-wrap: anywhere; }
+.sample-round-answers > button { min-height: var(--ds-arena-space-7); }
+/* Short landscape screens (user-requested breakpoint): side-by-side, tighter spacing. */
+@media (orientation: landscape) and (max-height: 600px) {
+  .sample-round-layout { gap: var(--ds-arena-space-3); margin-top: var(--ds-arena-space-4); }
+  .sample-round-stack { gap: var(--ds-arena-space-3); }
+  .sample-round-body {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: center;
+    gap: var(--ds-arena-space-5);
+  }
+  .sample-round-number { font-size: var(--ds-arena-text-xl); text-align: start; }
+  .sample-round-detail { font-size: var(--ds-arena-text-sm); }
+  .sample-round-answers { gap: var(--ds-arena-space-3); }
+  .sample-round-answers > button { min-height: var(--ds-arena-space-6); }
+}
+/* Phone-style round (homepage hero), modeled on the live mobile game screen. */
+.sample-phone-wrap { display: grid; gap: var(--ds-arena-space-4); justify-items: center; min-width: 0; }
+.sample-phone {
+  display: flex; flex-direction: column; gap: var(--ds-arena-space-5);
+  width: 100%; max-width: calc(var(--ds-arena-space-7) * 6);
+  aspect-ratio: 9 / 17;
+  padding: var(--ds-arena-space-5);
+  background: var(--ds-arena-color-bg);
+  border-style: solid; border-width: var(--ds-arena-space-1); border-color: var(--ds-arena-color-border-strong);
+  border-radius: var(--ds-arena-radius-xl);
+  box-shadow: var(--ds-arena-shadow-card);
+}
+.sample-phone-top { display: flex; align-items: center; justify-content: space-between; gap: var(--ds-arena-space-3); }
+.sample-phone-prompt {
+  padding: var(--ds-arena-space-4);
+  border-style: solid; border-width: calc(var(--ds-arena-space-1) / 2); border-color: var(--ds-arena-color-border-strong);
+  border-radius: var(--ds-arena-radius-lg);
+  background: var(--ds-arena-color-surface);
+  font-family: var(--ds-arena-font-body); font-size: var(--ds-arena-text-md); font-weight: 700;
+  color: var(--ds-arena-color-text); text-align: center;
+}
+.sample-phone-dial {
+  align-self: center; display: grid; place-items: center; align-content: center; gap: var(--ds-arena-space-2);
+  width: 60%; aspect-ratio: 1;
+  border-radius: var(--ds-arena-radius-pill);
+  border-style: solid; border-width: calc(var(--ds-arena-space-1) / 4); border-color: var(--ds-arena-color-border-strong);
+  background: var(--ds-arena-color-surface);
+}
+.sample-phone-number { font-family: var(--ds-arena-font-display); font-size: var(--ds-arena-text-display); color: var(--ds-arena-color-amber); line-height: 1; }
+.sample-phone > :last-child, .sample-phone-reveal > :last-child { margin-top: auto; }
+.sample-phone-answers > button { min-height: var(--ds-arena-space-7); }
+.sample-phone-reveal { display: flex; flex-direction: column; gap: var(--ds-arena-space-4); flex: 1; }
+.sample-phone-result {
+  display: grid; justify-items: center; gap: var(--ds-arena-space-3); text-align: center;
+  padding: var(--ds-arena-space-4); border-radius: var(--ds-arena-radius-lg); background: var(--ds-arena-color-surface);
+}
+.sample-phone-struck { font-family: var(--ds-arena-font-display); font-size: var(--ds-arena-text-xl); color: var(--ds-arena-color-text-muted); }
+/* Demo re-theme (deliberate deviation, user request): scoped to the sample round only.
+   Restores the design system's original game palette (near-black surfaces, neon lime)
+   so the demo contrasts the warm page scheme and matches the live game. */
+.sample-round-layout,
+.sample-phone-wrap {
+  --ds-arena-color-bg: #0a0b0d;
+  --ds-arena-color-surface: #14161c;
+  --ds-arena-color-surface-raised: #1b1e26;
+  --ds-arena-color-surface-sunken: #0f1116;
+  --ds-arena-color-border: #262a34;
+  --ds-arena-color-border-strong: #3a4050;
+  --ds-arena-color-text: #f5f7fa;
+  --ds-arena-color-text-muted: #8d95a6;
+  --ds-arena-color-text-inverse: #0a0b0d;
+  --ds-arena-color-lime: #d7f24a;
+  --ds-arena-color-lime-dim: #8ea22c;
+  --ds-arena-color-lime-soft: rgba(215, 242, 74, 0.12);
+  --ds-arena-color-red: #f2495c;
+  --ds-arena-color-red-dim: #a3283a;
+  --ds-arena-color-red-soft: rgba(242, 73, 92, 0.12);
+  --ds-arena-color-purple: #a76cff;
+  --ds-arena-color-purple-dim: #6b3fb5;
+  --ds-arena-color-purple-soft: rgba(167, 108, 255, 0.14);
+  --ds-arena-color-amber: #f6c344;
+  --ds-arena-color-amber-dim: #a8842a;
+  --ds-arena-color-amber-soft: rgba(246, 195, 68, 0.12);
+  --ds-arena-color-focus: #d7f24a;
+  --ds-arena-color-primary-foreground: #0a0b0d;
+  --ds-arena-color-danger-foreground: #ffffff;
+  --ds-arena-shadow-press-lime: 0 4px 0 #8ea22c;
+  --ds-arena-shadow-press-red: 0 4px 0 #a3283a;
+  --ds-arena-shadow-press-purple: 0 4px 0 #6b3fb5;
+  --ds-arena-shadow-press-amber: 0 4px 0 #a8842a;
+  --ds-arena-shadow-glow-lime: 0 0 24px rgba(215, 242, 74, 0.35);
+  --ds-arena-shadow-glow-purple: 0 0 28px rgba(167, 108, 255, 0.35);
+  --ds-arena-shadow-card: 0 2px 12px rgba(0, 0, 0, 0.5);
+}

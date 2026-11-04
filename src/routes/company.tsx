@@ -40,11 +40,11 @@ export const Route = createFileRoute("/company")({
       },
       {
         property: "og:url",
-        content: "https://snaptapp.us/company/",
+        content: "https://snaptappllc.com/company/",
       },
       {
         property: "og:image",
-        content: "https://snaptapp.us/assets/img/og-default.png",
+        content: "https://snaptappllc.com/assets/img/og-default.png",
       },
       {
         property: "og:image:width",
@@ -66,7 +66,7 @@ export const Route = createFileRoute("/company")({
     links: [
       {
         rel: "canonical",
-        href: "https://snaptapp.us/company/",
+        href: "https://snaptappllc.com/company/",
       },
       {
         rel: "api-catalog",
@@ -249,10 +249,63 @@ function PageCompany() {
             </div>
             <div className="grid grid--3 reveal">
               <div className="card">
-                <h3>Michael T. Anderson</h3>
-                <p className="product__tagline">Founder &amp; Studio Lead</p>
+                <h3>Bob Turner</h3>
+                <p className="product__tagline">Managing Director</p>
                 <p>
-                  Leads engineering, Google Cloud &amp; Gemini Enterprise Agent Platform architecture, and game
+                  Oversees business operations, program execution, and studio governance at
+                  Snaptapp LLC.
+                </p>
+                <p className="mt-sm">
+                  <a className="link-arrow" href="mailto:bob.turner@snaptappllc.com">
+                    bob.turner@snaptappllc.com
+                    <svg
+                      width="15"
+                      height="15"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M3 8h9M8.5 4.5 12 8l-3.5 3.5"
+                        stroke="currentColor"
+                        strokeWidth="1.7"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </a>
+                </p>
+                <p className="mt-sm">
+                  <a
+                    className="link-arrow"
+                    href="https://www.linkedin.com/in/bobmturner/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    LinkedIn
+                    <svg
+                      width="15"
+                      height="15"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M3 8h9M8.5 4.5 12 8l-3.5 3.5"
+                        stroke="currentColor"
+                        strokeWidth="1.7"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </a>
+                </p>
+              </div>
+              <div className="card">
+                <h3>Michael T. Anderson</h3>
+                <p className="product__tagline">Technical Director</p>
+                <p>
+                  Leads engineering, Google Cloud & Gemini Enterprise Agent Platform architecture, and game
                   systems at Snaptapp LLC.
                 </p>
                 <p className="mt-sm">
@@ -283,6 +336,33 @@ function PageCompany() {
                     rel="noopener noreferrer"
                   >
                     LinkedIn
+                    <svg
+                      width="15"
+                      height="15"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M3 8h9M8.5 4.5 12 8l-3.5 3.5"
+                        stroke="currentColor"
+                        strokeWidth="1.7"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </a>
+                </p>
+              </div>
+              <div className="card">
+                <h3>Chris Anderson</h3>
+                <p className="product__tagline">Creative Lead</p>
+                <p>
+                  Directs game design, creative direction, and player experience at Snaptapp LLC.
+                </p>
+                <p className="mt-sm">
+                  <a className="link-arrow" href="mailto:chris@snaptapp.us">
+                    chris@snaptapp.us
                     <svg
                       width="15"
                       height="15"
@@ -343,7 +423,7 @@ function PageCompany() {
                   <tr>
                     <th scope="row">Primary domain</th>
                     <td>
-                      <a href="https://snaptapp.us/">snaptapp.us</a>
+                      <a href="https://snaptappllc.com/">snaptappllc.com</a>
                     </td>
                   </tr>
                   <tr>
@@ -500,7 +580,7 @@ function PageCompany() {
                 <a href="/legal/terms/">Terms</a>
               </li>
               <li>
-                <a href="https://snaptapp.us/auth">Admin</a>
+                <a href="https://snaptappllc.com/auth">Admin</a>
               </li>
             </ul>
           </div>

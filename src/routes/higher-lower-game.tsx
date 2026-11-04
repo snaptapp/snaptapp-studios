@@ -1,4 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { SampleRound } from "@/components/SampleRound";
+import { gameUrl } from "@/lib/game-link";
 
 import { useSiteBehaviour } from "@/lib/use-site-behaviour";
 
@@ -36,15 +38,15 @@ export const Route = createFileRoute("/higher-lower-game")({
       {
         property: "og:description",
         content:
-          "A free higher lower trivia game about numbers. Play solo, daily, 1v1, or in a Party Room with up to 10 players.",
+          "A free higher lower trivia game about numbers. Play a 60-second offline Solitaire sprint or a server-authoritative Arena match with up to 100 entrants.",
       },
       {
         property: "og:url",
-        content: "https://snaptapp.us/higher-lower-game/",
+        content: "https://snaptappllc.com/higher-lower-game/",
       },
       {
         property: "og:image",
-        content: "https://snaptapp.us/assets/img/og-default.png",
+        content: "https://snaptappllc.com/assets/img/og-default.png",
       },
       {
         property: "og:image:width",
@@ -66,7 +68,7 @@ export const Route = createFileRoute("/higher-lower-game")({
     links: [
       {
         rel: "canonical",
-        href: "https://snaptapp.us/higher-lower-game/",
+        href: "https://snaptappllc.com/higher-lower-game/",
       },
       {
         rel: "api-catalog",
@@ -131,6 +133,7 @@ function PageHigherLowerGame() {
 
         <section className="section section--tight">
           <div className="shell">
+            <SampleRound placement="higher_lower" />
             <div className="prose">
               <h2>How to play</h2>
               <p>
@@ -140,14 +143,27 @@ function PageHigherLowerGame() {
                 no multiple choice &mdash; one decision against the shot clock.
               </p>
 
+              <h2>What a match looks like</h2>
+              <ol>
+                <li>A question appears with its claimed number. You get a 1-second preview before answers count.</li>
+                <li>Press <strong>MORE</strong> if the real answer is higher, or <strong>LESS</strong> if it is lower. In Solitaire you can also skip.</li>
+                <li>The real answer is revealed for 750 ms, then the next question starts.</li>
+                <li>You keep answering until the 60-second match clock runs out. Faster correct calls score more.</li>
+              </ol>
+
               <h2>Modes</h2>
               <ul>
-                <li><strong>Standard</strong></li>
-                <li><strong>Cutthroat</strong></li>
-                <li><strong>Daily Challenge</strong></li>
-                <li><strong>Versus 1v1</strong></li>
-                <li><strong>Party Room</strong> &mdash; up to 10 players</li>
+                <li><strong>Solitaire Mode</strong> &mdash; a 60-second offline solo sprint from a 200-question DDM-4 deck. Unlimited permanent skips; personal Top 10 saved on device.</li>
+                <li><strong>Arena Mode</strong> &mdash; a 60-second server-authoritative sprint with up to 100 entrants, the same frozen deck and independent pacing. Lobbies start after 20 seconds or when full; seeded bots fill to 8 when fewer than 8 humans join.</li>
               </ul>
+              <p>Read more about <a href="/solo-trivia-speedrun/">Solitaire speed-runs</a> and <a href="/multiplayer-trivia/">Arena multiplayer</a>.</p>
+
+              <h2>Scoring</h2>
+              <p>Correct answers earn up to 1,000 points, decaying by 1 point per 10 ms after the preview; wrong answers cost 500 points, and skips or unanswered questions earn 0. Because a wrong call costs points, guessing is risky. In Arena, ties are broken by total answer time. The sample above uses its own 12-second round clock.</p>
+              <p>
+                Ready for a full match? <a href={gameUrl("higher_lower_body")}>Play More or Less in your browser</a>. It's free.
+              </p>
+
 
               <h2>Where the numbers come from</h2>
               <p>
@@ -225,7 +241,7 @@ function PageHigherLowerGame() {
               <li><a href="/legal/privacy/">Privacy</a></li>
               <li><a href="/legal/cookies/">Cookies</a></li>
               <li><a href="/legal/terms/">Terms</a></li>
-                <li><a href="https://snaptapp.us/auth">Admin</a></li>
+                <li><a href="https://snaptappllc.com/auth">Admin</a></li>
             </ul>
           </div>
         </div>

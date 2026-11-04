@@ -4,6 +4,8 @@ Goal: rebuild snaptapp.us as a Lovable app, preserving every URL and all content
 
 ## Tasks
 
+- [x] Replace outdated game modes across public pages and agent data with current Solitaire and Arena rules
+- [x] Add and verify a shared playable sample round on Home and /higher-lower-game/
 - [x] Prevent the original palette flashing before the studio palette on initial load
 - [x] Rebuild all public pages and shared navigation/footer in the attached design system
 - [x] Increase SNAPTAPP wordmark legibility while preserving the design language
@@ -34,6 +36,8 @@ Goal: rebuild snaptapp.us as a Lovable app, preserving every URL and all content
       clock, reveal, answer handling) and link it from Support, Products and the footer
 - [ ] Find five small game-night hosts who could trial More or Less — blocked: the research
       run was cancelled, and the /hosts/ page that would collect their requests was never built
-- [ ] Regenerate the Architecture Brief PDF with the Gemini Enterprise Agent Platform name
-      (19 old-brand mentions remain) — blocked: it was rendered by headless Chrome from HTML
-      that is not in this repo, so the source document is needed
+- [x] Regenerate the Architecture Brief PDF from tools/brief/brief.html with the current
+      brand names and the real Solitaire/Arena rules (60 s clock, 1 s preview, 750 ms feedback)
+- [x] Tune sample round for small screens (touch targets, spacing, type, no overflow)
+- [x] Add Bob Turner and Chris Anderson to the Company team section (Bob, Michael, Chris order)
+- [x] Change the Company page's primary domain row to snaptappllc.com

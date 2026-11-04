@@ -38,11 +38,11 @@ export const Route = createFileRoute("/docs/api")({
       },
       {
             "property": "og:url",
-            "content": "https://snaptapp.us/docs/api/"
+            "content": "https://snaptappllc.com/docs/api/"
       },
       {
             "property": "og:image",
-            "content": "https://snaptapp.us/assets/img/og-default.png"
+            "content": "https://snaptappllc.com/assets/img/og-default.png"
       },
       {
             "property": "og:image:width",
@@ -64,7 +64,7 @@ export const Route = createFileRoute("/docs/api")({
     links: [
       {
             "rel": "canonical",
-            "href": "https://snaptapp.us/docs/api/"
+            "href": "https://snaptappllc.com/docs/api/"
       },
       {
             "rel": "api-catalog",
@@ -233,7 +233,7 @@ function PageDocsApi() {
                   <li><a href="/legal/privacy/">Privacy</a></li>
                 <li><a href="/legal/cookies/">Cookies</a></li>
                   <li><a href="/legal/terms/">Terms</a></li>
-                <li><a href="https://snaptapp.us/auth">Admin</a></li>
+                <li><a href="https://snaptappllc.com/auth">Admin</a></li>
                 </ul>
               </div>
             </div>

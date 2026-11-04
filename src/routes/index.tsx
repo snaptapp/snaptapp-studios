@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { SampleRound } from "@/components/SampleRound";
 
 import { trackEvent } from "@/lib/analytics-consent";
 import { useSiteBehaviour } from "@/lib/use-site-behaviour";
@@ -41,11 +42,11 @@ export const Route = createFileRoute("/")({
       },
       {
         property: "og:url",
-        content: "https://snaptapp.us/",
+        content: "https://snaptappllc.com/",
       },
       {
         property: "og:image",
-        content: "https://snaptapp.us/assets/img/og-default.png",
+        content: "https://snaptappllc.com/assets/img/og-default.png",
       },
       {
         property: "og:image:width",
@@ -67,7 +68,7 @@ export const Route = createFileRoute("/")({
     links: [
       {
         rel: "canonical",
-        href: "https://snaptapp.us/",
+        href: "https://snaptappllc.com/",
       },
       {
         rel: "api-catalog",
@@ -91,18 +92,18 @@ export const Route = createFileRoute("/")({
           "@graph": [
             {
               "@type": "Organization",
-              "@id": "https://snaptapp.us/#organization",
+              "@id": "https://snaptappllc.com/#organization",
               name: "Snaptapp",
               legalName: "Snaptapp LLC",
               alternateName: "SNAPTAPP LLC",
-              url: "https://snaptapp.us/",
+              url: "https://snaptappllc.com/",
               logo: {
                 "@type": "ImageObject",
-                url: "https://snaptapp.us/assets/img/icon-512.png",
+                url: "https://snaptappllc.com/assets/img/icon-512.png",
                 width: 512,
                 height: 512,
               },
-              image: "https://snaptapp.us/assets/img/og-default.png",
+              image: "https://snaptappllc.com/assets/img/og-default.png",
               description:
                 "Independent US game studio building original AI-native games on Google Cloud, Gemini Enterprise Agent Platform (Gemini & Gemma), Google Search Grounding, Cloud Run, and Firebase. First title: More or Less.",
               foundingDate: "2026",
@@ -142,21 +143,21 @@ export const Route = createFileRoute("/")({
             },
             {
               "@type": "WebSite",
-              "@id": "https://snaptapp.us/#website",
-              url: "https://snaptapp.us/",
+              "@id": "https://snaptappllc.com/#website",
+              url: "https://snaptappllc.com/",
               name: "Snaptapp",
-              publisher: { "@id": "https://snaptapp.us/#organization" },
+              publisher: { "@id": "https://snaptappllc.com/#organization" },
               inLanguage: "en-US",
             },
             {
               "@type": "SoftwareApplication",
-              "@id": "https://snaptapp.us/products/#more-or-less",
+              "@id": "https://snaptappllc.com/products/#more-or-less",
               name: "More or Less",
               url: "https://moreorless.snaptapp.us",
               applicationCategory: "GameApplication",
               applicationSubCategory: "Trivia",
               operatingSystem: "Web, iOS, Android",
-              publisher: { "@id": "https://snaptapp.us/#organization" },
+              publisher: { "@id": "https://snaptappllc.com/#organization" },
               description:
                 "An AI-native party trivia game about numbers powered by Gemini Enterprise Agent Platform (Gemini 3.5 Flash Lite builds custom topic decks, Gemini 3.8 Flash is the fact dispute ombudsman), Google Search Grounding, Google Cloud Run, and Cloud Firestore.",
             },
@@ -224,25 +225,29 @@ function PageIndex() {
         {/* ---------------- Hero ---------------- */}
         <section className="hero">
           <div className="shell">
+            <div className="hero__split">
             <div className="hero__inner">
               <p className="eyebrow">SNAPTAPP LLC · Independent game studio</p>
               <h1>More or Less: the trivia game about numbers.</h1>
               <p className="lede">
                 Every round shows a claim with a believable but wrong number. Decide
                 whether the real answer is more or less before the shot clock runs out.
-                Play solo, take on the Daily Challenge, go head to head in Versus, or
-                bring up to 10 friends into a Party Room. Live now on the web, with iOS
+                Sprint offline in Solitaire Mode, or compete in Arena Mode with up to
+                100 entrants. Both are 60-second matches. Live now on the web, with iOS
                 and Android in development.
               </p>
               <div className="row hero__actions">
                 <a
                   className="btn btn--primary"
-                  href="/products/"
+                  href="https://moreorless.snaptapp.us"
                   onClick={() =>
-                    trackEvent("cta_click", { cta: "explore_games", location: "hero" })
+                    trackEvent("outbound_click", {
+                      destination: "moreorless.snaptapp.us",
+                      location: "hero",
+                    })
                   }
                 >
-                  Explore our games
+                  Play More or Less
                   <svg
                     className="btn__arrow"
                     width="16"
@@ -262,15 +267,12 @@ function PageIndex() {
                 </a>
                 <a
                   className="btn btn--secondary"
-                  href="https://moreorless.snaptapp.us"
+                  href="/products/"
                   onClick={() =>
-                    trackEvent("outbound_click", {
-                      destination: "moreorless.snaptapp.us",
-                      location: "hero",
-                    })
+                    trackEvent("cta_click", { cta: "explore_games", location: "hero" })
                   }
                 >
-                  Play More or Less
+                  Learn More
                 </a>
                 <a
                   className="btn btn--ghost"
@@ -293,6 +295,8 @@ function PageIndex() {
                 <li>Gemma 2 9B Fine-Tuning</li>
                 <li>Cloud Firestore & Firebase App Check</li>
               </ul>
+            </div>
+            <SampleRound placement="homepage" variant="phone" />
             </div>
           </div>
         </section>
@@ -371,7 +375,7 @@ function PageIndex() {
                   </div>
                   <div>
                     <dt>Multiplayer</dt>
-                    <dd>Up to 10 players per room (sub-20ms sync)</dd>
+                    <dd>Arena: up to 100 entrants · Server-authoritative WebSockets</dd>
                   </div>
                 </dl>
 
@@ -429,6 +433,7 @@ function PageIndex() {
                 </p>
               </div>
             </article>
+
 
             <div className="grid grid--2 reveal mt-gap">
               <div className="card card--empty">
@@ -616,8 +621,11 @@ function PageIndex() {
                   server functions over <strong>Cloud Firestore</strong> fact curation and
                   dispute queues. <strong>Gemini</strong> copilots — Daily Blitz
                   Strategist, Report Review Copilot, and Placement Insights — run on{" "}
-                  <strong>Gemini Enterprise Agent Platform</strong>. Party Room sessions
-                  sync up to 10 players in sub-20ms over Durable Object WebSockets.
+                  <strong>Gemini Enterprise Agent Platform</strong>. Arena matches use
+                  server-authoritative <strong>Cloudflare Workers Durable Objects</strong>
+                  {" "}(<code>ArenaMatchmaker</code>, <code>ArenaEvent</code> SQLite), with up
+                  to 100 entrants advancing independently over the same frozen deck via
+                  WebSockets. Solitaire runs offline from a 200-question DDM-4 snapshot.
                 </p>
               </div>
 
@@ -855,7 +863,7 @@ function PageIndex() {
                 <a href="/legal/terms/">Terms</a>
               </li>
               <li>
-                <a href="https://snaptapp.us/auth">Admin</a>
+                <a href="https://snaptappllc.com/auth">Admin</a>
               </li>
             </ul>
           </div>

@@ -38,11 +38,11 @@ export const Route = createFileRoute("/legal/privacy")({
       },
       {
             "property": "og:url",
-            "content": "https://snaptapp.us/legal/privacy/"
+            "content": "https://snaptappllc.com/legal/privacy/"
       },
       {
             "property": "og:image",
-            "content": "https://snaptapp.us/assets/img/og-default.png"
+            "content": "https://snaptappllc.com/assets/img/og-default.png"
       },
       {
             "property": "og:image:width",
@@ -64,7 +64,7 @@ export const Route = createFileRoute("/legal/privacy")({
     links: [
       {
             "rel": "canonical",
-            "href": "https://snaptapp.us/legal/privacy/"
+            "href": "https://snaptappllc.com/legal/privacy/"
       },
       {
             "rel": "api-catalog",
@@ -659,7 +659,7 @@ function PageLegalPrivacy() {
                 <li><a href="/legal/privacy/">Privacy</a></li>
                 <li><a href="/legal/cookies/">Cookies</a></li>
                 <li><a href="/legal/terms/">Terms</a></li>
-                <li><a href="https://snaptapp.us/auth">Admin</a></li>
+                <li><a href="https://snaptappllc.com/auth">Admin</a></li>
               </ul>
             </div>
           </div>

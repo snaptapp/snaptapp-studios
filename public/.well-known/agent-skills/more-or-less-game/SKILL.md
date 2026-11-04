@@ -17,7 +17,15 @@ Support: https://snaptapp.us/support/#more-or-less
 2. They guess MORE or LESS before the shot clock runs out.
 3. The game reveals `true_number` and a short explanation.
 
-Modes: Standard (5 rounds), Cutthroat (endless sudden death), Daily Challenge (5 rounds, 12s), Versus 1v1, Party Room (up to 10 phones, Durable Object WebSocket).
+## Current modes
+
+**Solitaire Mode:** Client-authoritative solo speed-run, fully playable offline without a server matchmaker. Uses a 200-question offline qualified serving-snapshot deck generated via DDM-4. The match lasts 60 seconds (`matchMs: 60000`) on an absolute wall clock; backgrounding adds no time. Each question has a 1-second preview (`previewMs: 1000`) and 750 ms feedback (`feedbackMs: 750`), with self-paced progression. Unlimited permanent skips award 0 points and skipped questions never repeat. Local personal Top 10 history stays on device; self-reported runs sync to Firebase Functions when online.
+
+**Arena Mode:** Server-authoritative multiplayer sprint managed by Cloudflare Workers Durable Objects (`ArenaMatchmaker`, `ArenaEvent` SQLite). On-demand public lobbies cap at 100 entrants and start 20 seconds after the first human joins, or immediately at 100. If fewer than 8 humans join, seeded bots fill to 8 (easy 60%, medium 75%, hard 90%). All players receive the identical frozen deck and advance independently over WebSockets. The server match clock lasts 60 seconds, with a 1-second preview, 750 ms private feedback, skips allowed, and 2,000 ms client lag tolerance. Standings sort by score descending, total answer time ascending, then entrant ID. Ranked match persistence is server-verified.
+
+**Scoring (both modes):** Signed integer `launchScore`. Correct: up to 1,000 points, using `1000 - floor(max(0, responseMs - 1000) / 10)`. Wrong: -500. Skip or unanswered: 0.
+
+The studio website's three-round, 12-second-per-round sample is a separate demonstration, not a full-game mode.
 
 ## Stack (honest)
 

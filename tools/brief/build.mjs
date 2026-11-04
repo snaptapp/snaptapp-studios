@@ -22,13 +22,14 @@ const htmlPath = path.join(outDir, "brief.html");
 fs.writeFileSync(htmlPath, html);
 
 const chromeCandidates = [
+  process.env.CHROME_PATH,
   "C:/Program Files/Google/Chrome/Application/chrome.exe",
   "C:/Program Files (x86)/Google/Chrome/Application/chrome.exe",
   "C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe",
   "C:/Program Files/Microsoft/Edge/Application/msedge.exe",
-];
+].filter(Boolean);
 const chrome = chromeCandidates.find((p) => fs.existsSync(p));
-if (!chrome) throw new Error("No Chrome or Edge binary found for PDF rendering.");
+if (!chrome) throw new Error("No Chrome or Edge binary found for PDF rendering. Set CHROME_PATH.");
 
 const fileUrl = "file:///" + htmlPath.replaceAll("\\", "/");
 
@@ -37,6 +38,8 @@ execFileSync(
   [
     "--headless=new",
     "--disable-gpu",
+    // Root in a container cannot use the Chrome sandbox; our own HTML is the only input.
+    ...(typeof process.getuid === "function" && process.getuid() === 0 ? ["--no-sandbox"] : []),
     "--no-pdf-header-footer",
     "--run-all-compositor-stages-before-draw",
     "--virtual-time-budget=8000",

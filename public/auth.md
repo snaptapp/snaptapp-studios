@@ -2,7 +2,9 @@
 
 You are an agent. Snaptapp publishes a **catalog-only** registration surface: discover, optionally register, optionally start a human claim, exchange for a scoped access token, then call public studio APIs. This is not a general-purpose OAuth or OIDC login for people, and it is not valid for More or Less player APIs.
 
-The studio homepage, API catalog, health endpoint, and MCP tools on `https://snaptapp.us` are public. A token is optional for `catalog.read` and `mcp.invoke`. Player APIs for More or Less live on a separate origin and use Firebase ID tokens.
+Every path below is relative to the origin that served this document, for example `https://mcp.snaptapp.us`. That origin is also the token issuer (`iss`) and audience (`aud`). The apex `snaptapp.us` redirects to the studio's company site and is not an API origin.
+
+The studio homepage, API catalog, health endpoint, and MCP tools on this origin are public. A token is optional for `catalog.read` and `mcp.invoke`. Player APIs for More or Less live on a separate origin and use Firebase ID tokens.
 
 ## What this server does not do
 
@@ -15,8 +17,8 @@ The studio homepage, API catalog, health endpoint, and MCP tools on `https://sna
 
 ## Audience
 
-- Resource: `https://snaptapp.us` (use this as `aud` on access tokens)
-- Authorization server: `https://snaptapp.us`
+- Resource: the origin serving this document (send it as `aud` on access tokens)
+- Authorization server: the same origin
 - Human contact: `hello@snaptapp.us`
 
 ## Step 1. Discover
@@ -24,30 +26,30 @@ The studio homepage, API catalog, health endpoint, and MCP tools on `https://sna
 ### 1a. Fetch Protected Resource Metadata
 
 ```http
-GET https://snaptapp.us/.well-known/oauth-protected-resource
+GET /.well-known/oauth-protected-resource
 ```
 
 Fields:
 
-- `resource`: canonical resource identifier. Use this as `aud`.
-- `authorization_servers`: `https://snaptapp.us`
+- `resource`: canonical resource identifier. Use it as `aud`.
+- `authorization_servers`: the origin serving this document
 - `scopes_supported`: `catalog.read`, `mcp.invoke`
 - `bearer_methods_supported`: `header`
 
 ### 1b. Fetch Authorization Server metadata
 
 ```http
-GET https://snaptapp.us/.well-known/oauth-authorization-server
+GET /.well-known/oauth-authorization-server
 ```
 
 The `agent_auth` block lists `register_uri`, identity types, and claim/revocation URLs.
 
-OpenID Connect discovery is also published at `https://snaptapp.us/.well-known/openid-configuration`. It describes the same catalog token endpoint. It does not mean this host is a full OIDC provider.
+OpenID Connect discovery is also published at `/.well-known/openid-configuration`. It describes the same catalog token endpoint. It does not mean this host is a full OIDC provider.
 
 ## Step 2. Register
 
 ```http
-POST https://snaptapp.us/agent/identity
+POST /agent/identity
 Content-Type: application/json
 ```
 
@@ -57,7 +59,7 @@ Content-Type: application/json
 { "type": "anonymous" }
 ```
 
-Response includes `identity_assertion`, `claim_token`, and `scopes`. Both tokens are ES256 JWTs (`header.payload.signature`). Verify them with `GET https://snaptapp.us/.well-known/jwks.json`. Exchange the assertion at the token endpoint with `grant_type=urn:ietf:params:oauth:grant-type:jwt-bearer`. Catalog APIs stay callable without this step.
+Response includes `identity_assertion`, `claim_token`, and `scopes`. Both tokens are ES256 JWTs (`header.payload.signature`). Verify them with `GET /.well-known/jwks.json`. Exchange the assertion at the token endpoint with `grant_type=urn:ietf:params:oauth:grant-type:jwt-bearer`. Catalog APIs stay callable without this step.
 
 ### Service auth (anonymous alias)
 
@@ -72,7 +74,7 @@ This is the same as anonymous registration plus a `claim_token`. The response st
 ```json
 {
   "type": "identity_assertion",
-  "assertion": "<ES256 identity JWT issued by https://snaptapp.us>"
+  "assertion": "<ES256 identity JWT issued by this server's origin>"
 }
 ```
 
@@ -85,7 +87,7 @@ Anonymous registration also returns a `claim_token`. Email `hello@snaptapp.us` i
 ## Step 3. Token
 
 ```http
-POST https://snaptapp.us/oauth2/token
+POST /oauth2/token
 Content-Type: application/x-www-form-urlencoded
 ```
 
@@ -95,21 +97,21 @@ Supported grants:
 - `grant_type=urn:ietf:params:oauth:grant-type:jwt-bearer` with `assertion` set to a valid identity JWT from this server
 - `grant_type=urn:workos:agent-auth:grant-type:claim` with a valid `claim_token` (currently always `authorization_pending`)
 
-Access tokens are ES256 JWTs (`token_use=access`, `token_class=catalog_hint`, `aud=https://snaptapp.us`, scopes `catalog.read` and `mcp.invoke`). Send them as `Authorization: Bearer …`. They are unauthenticated hints for catalog and MCP callers on this origin only. They are not credentials for `moreorless.snaptapp.us` or any other host. Do not accept them as login, session, or player identity. Unsigned or tampered assertions are rejected.
+Access tokens are ES256 JWTs (`token_use=access`, `token_class=catalog_hint`, `aud=<the origin serving this document>`, scopes `catalog.read` and `mcp.invoke`). Send them as `Authorization: Bearer …`. They are unauthenticated hints for catalog and MCP callers on the issuing origin only. They are not credentials for `moreorless.snaptapp.us` or any other host. Do not accept them as login, session, or player identity. Unsigned or tampered assertions are rejected.
 
 ## Step 4. Call APIs
 
-- Health: `GET https://snaptapp.us/api/health`
-- OpenAPI: `GET https://snaptapp.us/openapi.json`
-- MCP Streamable HTTP: `POST https://snaptapp.us/mcp` with `Accept: application/json, text/event-stream` (406 otherwise). `HEAD /mcp` is an empty probe.
-- Human docs: `https://snaptapp.us/docs/api/`
+- Health: `GET /api/health`
+- OpenAPI: `GET /openapi.json`
+- MCP Streamable HTTP: `POST /mcp` with `Accept: application/json, text/event-stream` (406 otherwise). `HEAD /mcp` is an empty probe.
+- Human docs: `/docs/api/` on the studio's company site
 
 MCP tools on this origin do not require a bearer token today.
 
 ## Revocation
 
 ```http
-POST https://snaptapp.us/oauth2/revoke
+POST /oauth2/revoke
 Content-Type: application/x-www-form-urlencoded
 
 token=<access_token>

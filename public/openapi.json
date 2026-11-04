@@ -12,8 +12,8 @@
   },
   "servers": [
     {
-      "url": "https://snaptapp.us",
-      "description": "Production"
+      "url": "/",
+      "description": "The origin serving this document"
     }
   ],
   "security": [],
@@ -98,7 +98,9 @@
         "responses": {
           "200": { "description": "JSON-RPC response" },
           "202": { "description": "Accepted notification" },
-          "406": { "description": "Accept did not list both application/json and text/event-stream" }
+          "406": {
+            "description": "Accept did not list both application/json and text/event-stream"
+          }
         }
       }
     },
@@ -184,7 +186,9 @@
           }
         },
         "responses": {
-          "200": { "description": "Acknowledgement. Tokens are not persisted, so this is a no-op." },
+          "200": {
+            "description": "Acknowledgement. Tokens are not persisted, so this is a no-op."
+          },
           "400": { "description": "token is required" },
           "405": { "description": "POST required" }
         }
