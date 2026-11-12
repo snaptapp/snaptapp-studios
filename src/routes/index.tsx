@@ -287,6 +287,9 @@ function PageIndex() {
                   Architecture Brief (PDF)
                 </a>
               </div>
+              <p>
+                New to the game? <a href="/higher-lower-game/">How the higher or lower game works</a>
+              </p>
 
               <ul className="trust-strip" aria-label="Core Google Cloud and AI stack">
                 <li>Gemini 3.5 Flash Lite & Gemini 3.8 Flash</li>
