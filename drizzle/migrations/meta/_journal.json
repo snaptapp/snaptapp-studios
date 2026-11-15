@@ -29,6 +29,13 @@
       "when": 1793028503139,
       "tag": "0003_migration",
       "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1794776662541,
+      "tag": "0004_restrict_role_checks_to_caller",
+      "breakpoints": true
     }
   ]
 }
