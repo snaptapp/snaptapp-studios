@@ -23,7 +23,7 @@
       founded: "2026",
       liveProduct: {
         name: "More or Less",
-        url: "https://moreorless.snaptapp.us",
+        url: "https://moreorless.app",
       },
     };
   }
@@ -34,7 +34,7 @@
         {
           name: "More or Less",
           status: "live",
-          url: "https://moreorless.snaptapp.us",
+          url: "https://moreorless.app",
           page: "/products/",
           tagline: "One fake number. Is the real answer more or less?",
         },

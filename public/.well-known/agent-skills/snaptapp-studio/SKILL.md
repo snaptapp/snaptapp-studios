@@ -9,7 +9,7 @@ Snaptapp LLC is an independent studio founded in 2026 in Washington State, Unite
 
 ## Products
 
-- **More or Less** (live): party trivia about numbers. Play at https://moreorless.snaptapp.us. iOS and Android clients are in development.
+- **More or Less** (live): party trivia about numbers. Play at https://moreorless.app. iOS and Android clients are in development.
 - A second product is in build and is not announced yet.
 
 ## Contact

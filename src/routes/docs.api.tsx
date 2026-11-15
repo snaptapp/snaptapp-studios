@@ -106,7 +106,7 @@ function PageDocsApi() {
                 <a href="/company/">Company</a>
                 <a href="/support/">Support</a>
                 <a href="/contact/">Contact</a>
-                <a className="btn btn--primary btn--sm" href="https://moreorless.snaptapp.us">Play More or Less</a
+                <a className="btn btn--primary btn--sm" href="https://moreorless.app">Play More or Less</a
                 >
               </nav>
             </div>
@@ -178,7 +178,7 @@ function PageDocsApi() {
                   <h2 id="more-or-less">More or Less</h2>
                   <p>
                     The trivia game is a different origin:{" "}
-                    <a href="https://moreorless.snaptapp.us">moreorless.snaptapp.us</a>. Player
+                    <a href="https://moreorless.app">moreorless.app</a>. Player
                     APIs authenticate with Firebase ID tokens, not the catalog OAuth on this host.
                   </p>
                 </div>
@@ -201,7 +201,7 @@ function PageDocsApi() {
                   <h2>Products</h2>
                   <ul>
                     <li><a href="/products/">All products</a></li>
-                    <li><a href="https://moreorless.snaptapp.us">More or Less</a></li>
+                    <li><a href="https://moreorless.app">More or Less</a></li>
                   </ul>
                 </div>
       

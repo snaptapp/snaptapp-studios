@@ -126,7 +126,7 @@ function PageProducts() {
             <a href="/contact/">Contact</a>
             <a
               className="btn btn--primary btn--sm"
-              href="https://moreorless.snaptapp.us"
+              href="https://moreorless.app"
             >
               Play More or Less
             </a>
@@ -216,7 +216,7 @@ function PageProducts() {
                 </dl>
 
                 <div className="row">
-                  <a className="btn btn--primary" href="https://moreorless.snaptapp.us">
+                  <a className="btn btn--primary" href="https://moreorless.app">
                     Play now
                     <svg
                       className="btn__arrow"
@@ -401,7 +401,7 @@ function PageProducts() {
                   <a href="/products/">All products</a>
                 </li>
                 <li>
-                  <a href="https://moreorless.snaptapp.us">More or Less</a>
+                  <a href="https://moreorless.app">More or Less</a>
                 </li>
                 <li>
                   <a href="/assets/docs/Snaptapp_Google_Cloud_AI_Architecture_Brief.pdf">

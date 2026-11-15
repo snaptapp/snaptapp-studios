@@ -110,7 +110,7 @@ function PageHigherLowerGame() {
             <a href="/company/">Company</a>
             <a href="/support/">Support</a>
             <a href="/contact/">Contact</a>
-            <a className="btn btn--primary btn--sm" href="https://moreorless.snaptapp.us">Play More or Less</a>
+            <a className="btn btn--primary btn--sm" href="https://moreorless.app">Play More or Less</a>
           </nav>
         </div>
       </header>
@@ -187,7 +187,7 @@ function PageHigherLowerGame() {
               <h2>Play the higher lower game now</h2>
             </div>
             <p className="mt-md reveal">
-              <a className="btn btn--primary" href="https://moreorless.snaptapp.us">Play More or Less</a>
+              <a className="btn btn--primary" href="https://moreorless.app">Play More or Less</a>
               <a className="btn btn--ghost" href="/products/">About the game</a>
             </p>
           </div>
@@ -209,7 +209,7 @@ function PageHigherLowerGame() {
               <h2>Products</h2>
               <ul>
                 <li><a href="/products/">All products</a></li>
-                <li><a href="https://moreorless.snaptapp.us">More or Less</a></li>
+                <li><a href="https://moreorless.app">More or Less</a></li>
               </ul>
             </div>
 

@@ -153,7 +153,7 @@ export const Route = createFileRoute("/")({
               "@type": "SoftwareApplication",
               "@id": "https://snaptappllc.com/products/#more-or-less",
               name: "More or Less",
-              url: "https://moreorless.snaptapp.us",
+              url: "https://moreorless.app",
               applicationCategory: "GameApplication",
               applicationSubCategory: "Trivia",
               operatingSystem: "Web, iOS, Android",
@@ -207,10 +207,10 @@ function PageIndex() {
             <a href="/contact/">Contact</a>
             <a
               className="btn btn--primary btn--sm"
-              href="https://moreorless.snaptapp.us"
+              href="https://moreorless.app"
               onClick={() =>
                 trackEvent("outbound_click", {
-                  destination: "moreorless.snaptapp.us",
+                  destination: "moreorless.app",
                   location: "header",
                 })
               }
@@ -239,10 +239,10 @@ function PageIndex() {
               <div className="row hero__actions">
                 <a
                   className="btn btn--primary"
-                  href="https://moreorless.snaptapp.us"
+                  href="https://moreorless.app"
                   onClick={() =>
                     trackEvent("outbound_click", {
-                      destination: "moreorless.snaptapp.us",
+                      destination: "moreorless.app",
                       location: "hero",
                     })
                   }
@@ -385,15 +385,15 @@ function PageIndex() {
                 <p className="mt-md">
                   <a
                     className="link-arrow"
-                    href="https://moreorless.snaptapp.us"
+                    href="https://moreorless.app"
                     onClick={() =>
                       trackEvent("outbound_click", {
-                        destination: "moreorless.snaptapp.us",
+                        destination: "moreorless.app",
                         location: "product_card",
                       })
                     }
                   >
-                    Play at moreorless.snaptapp.us
+                    Play at moreorless.app
                     <svg
                       width="15"
                       height="15"
@@ -792,10 +792,10 @@ function PageIndex() {
                 </li>
                 <li>
                   <a
-                    href="https://moreorless.snaptapp.us"
+                    href="https://moreorless.app"
                     onClick={() =>
                       trackEvent("outbound_click", {
-                        destination: "moreorless.snaptapp.us",
+                        destination: "moreorless.app",
                         location: "footer",
                       })
                     }

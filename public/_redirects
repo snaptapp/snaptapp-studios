@@ -2,9 +2,9 @@
 # https://developers.cloudflare.com/workers/static-assets/redirects/
 
 # Short links to the first product.
-/play           https://moreorless.snaptapp.us  302
-/moreorless     https://moreorless.snaptapp.us  302
-/more-or-less   https://moreorless.snaptapp.us  302
+/play           https://moreorless.app  302
+/moreorless     https://moreorless.app  302
+/more-or-less   https://moreorless.app  302
 
 # Friendly aliases for pages people guess at.
 /about          /company/                       301

@@ -1,10 +1,9 @@
 // Outbound links to the More or Less game carry UTM tags so Google Analytics
 // can attribute game sessions to the studio page and placement that sent them.
-// Both sites share GA4 property G-885KHVT2FY, and as subdomains of snaptapp.us
-// they share the _ga cookie, so a tagged click continues the same visitor's
-// journey with the demo as its session source.
+// The sites are on separate domains; cross-domain identity depends on the
+// GA4 linker being configured on both sites, not a shared cookie.
 
-export const GAME_ORIGIN = "https://moreorless.snaptapp.us";
+export const GAME_ORIGIN = "https://moreorless.app";
 
 export function gameUrl(content: string): string {
   const params = new URLSearchParams({

@@ -75,7 +75,7 @@ function PagePlayerFaq() {
             <a href="/company/">Company</a>
             <a href="/support/">Support</a>
             <a href="/contact/">Contact</a>
-            <a className="btn btn--primary btn--sm" href="https://moreorless.snaptapp.us">Play More or Less</a>
+            <a className="btn btn--primary btn--sm" href="https://moreorless.app">Play More or Less</a>
           </nav>
         </div>
       </header>
@@ -122,7 +122,7 @@ function PagePlayerFaq() {
               <dl>
                 <dt>How do I start without signing up?</dt>
                 <dd>
-                  Open <a href="https://moreorless.snaptapp.us">the game</a> and choose{" "}
+                  Open <a href="https://moreorless.app">the game</a> and choose{" "}
                   <strong>PLAY AS GUEST</strong>. You land straight in the arcade, where the
                   modes are listed. Nothing else is asked of you.
                 </dd>
@@ -313,7 +313,7 @@ function PagePlayerFaq() {
               <h2>Start a 60-second match</h2>
             </div>
             <p className="mt-md reveal">
-              <a className="btn btn--primary" href="https://moreorless.snaptapp.us">Play More or Less</a>
+              <a className="btn btn--primary" href="https://moreorless.app">Play More or Less</a>
               <a className="btn btn--ghost" href="/support/">Contact support</a>
             </p>
           </div>
@@ -335,7 +335,7 @@ function PagePlayerFaq() {
               <h2>Products</h2>
               <ul>
                 <li><a href="/products/">All products</a></li>
-                <li><a href="https://moreorless.snaptapp.us">More or Less</a></li>
+                <li><a href="https://moreorless.app">More or Less</a></li>
                 <li><a href="/player-faq/">Player FAQ</a></li>
               </ul>
             </div>
