@@ -287,7 +287,7 @@ function PageIndex() {
                   Architecture Brief (PDF)
                 </a>
               </div>
-              <p>
+              <p className="hero__helper">
                 New to the game? <a href="/higher-lower-game/">How the higher or lower game works</a>
               </p>
 

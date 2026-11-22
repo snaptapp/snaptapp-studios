@@ -464,6 +464,25 @@ samp {
   margin-top: var(--ds-arena-space-6);
 }
 
+.hero__helper {
+  margin-top: var(--ds-arena-space-4);
+  color: var(--ds-arena-color-text-muted);
+}
+
+/* In the two-column hero the copy column is too narrow for all three
+   buttons on one line, which orphans the last one. Give the primary CTA
+   its own row there so the group wraps as 1 + 2 instead. */
+@media (min-width: 64rem) and (max-width: 69rem) {
+  .hero__actions .btn--primary {
+    flex-basis: 100%;
+  }
+  .hero__actions .btn--secondary,
+  .hero__actions .btn--ghost {
+    flex-grow: 1;
+    flex-basis: 0;
+  }
+}
+
 .trust-strip {
   display: flex;
   flex-wrap: wrap;
