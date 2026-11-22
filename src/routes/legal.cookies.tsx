@@ -106,7 +106,7 @@ function PageLegalCookies() {
               <a href="/company/">Company</a>
               <a href="/support/">Support</a>
               <a href="/contact/">Contact</a>
-              <a className="btn btn--primary btn--sm" href="https://moreorless.snaptapp.us">Play More or Less</a>
+              <a className="btn btn--primary btn--sm" href="https://moreorless.app">Play More or Less</a>
             </nav>
           </div>
         </header>
@@ -202,7 +202,7 @@ function PageLegalCookies() {
                 <h2>Products</h2>
                 <ul>
                   <li><a href="/products/">All products</a></li>
-                  <li><a href="https://moreorless.snaptapp.us">More or Less</a></li>
+                  <li><a href="https://moreorless.app">More or Less</a></li>
                 </ul>
               </div>
 

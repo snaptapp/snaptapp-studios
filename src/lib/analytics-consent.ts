@@ -69,9 +69,9 @@ export function loadAnalytics() {
 
   gtag("js", new Date());
   // The game shares this GA4 property; the linker keeps one visitor identity
-  // across snaptapp.us and moreorless.snaptapp.us for decorated link clicks.
+  // across snaptapp.us and moreorless.app for decorated link clicks.
   gtag("config", GA_MEASUREMENT_ID, {
-    linker: { domains: ["snaptapp.us", "moreorless.snaptapp.us"] },
+    linker: { domains: ["snaptappllc.com", "snaptapp.us", "moreorless.app"] },
   });
 
   const gtm = document.createElement("script");

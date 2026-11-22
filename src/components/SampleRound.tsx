@@ -138,7 +138,7 @@ export function SampleRound({ placement, variant = "card" }: { placement: "homep
           )}
         </div>
         <Button variant="ghost" onClick={() => {
-          trackEvent("outbound_click", { destination: "moreorless.snaptapp.us", location: `${placement}_sample_round` });
+          trackEvent("outbound_click", { destination: "moreorless.app", location: `${placement}_sample_round` });
           window.location.assign(gameUrl(`${placement}_sample_round`));
         }}>Play the full game <ExternalLink aria-hidden="true" /></Button>
       </section>
@@ -188,7 +188,7 @@ export function SampleRound({ placement, variant = "card" }: { placement: "homep
       </Card>
       <div className="sample-round-actions">
         <Button onClick={() => {
-          trackEvent("outbound_click", { destination: "moreorless.snaptapp.us", location: `${placement}_sample_round` });
+          trackEvent("outbound_click", { destination: "moreorless.app", location: `${placement}_sample_round` });
           window.location.assign(gameUrl(`${placement}_sample_round`));
         }}>Play the full game <ExternalLink aria-hidden="true" /></Button>
       </div>

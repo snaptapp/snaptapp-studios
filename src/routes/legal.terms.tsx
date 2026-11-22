@@ -106,7 +106,7 @@ function PageLegalTerms() {
                 <a href="/company/">Company</a>
                 <a href="/support/">Support</a>
                 <a href="/contact/">Contact</a>
-                <a className="btn btn--primary btn--sm" href="https://moreorless.snaptapp.us">Play More or Less</a
+                <a className="btn btn--primary btn--sm" href="https://moreorless.app">Play More or Less</a
                 >
               </nav>
             </div>
@@ -142,7 +142,7 @@ function PageLegalTerms() {
                     (&ldquo;Snaptapp&rdquo;, &ldquo;we&rdquo;, &ldquo;us&rdquo;) covering your use
                     of our websites and applications, including{" "}
                     <a href="https://snaptapp.us/">snaptapp.us</a> and{" "}
-                    <a href="https://moreorless.snaptapp.us">More or Less</a> (together, the
+                    <a href="https://moreorless.app">More or Less</a> (together, the
                     &ldquo;Services&rdquo;). By using the Services you accept these terms. If you
                     do not accept them, do not use the Services.
                   </p>
@@ -427,7 +427,7 @@ function PageLegalTerms() {
                   <h2>Products</h2>
                   <ul>
                     <li><a href="/products/">All products</a></li>
-                    <li><a href="https://moreorless.snaptapp.us">More or Less</a></li>
+                    <li><a href="https://moreorless.app">More or Less</a></li>
                   </ul>
                 </div>
       

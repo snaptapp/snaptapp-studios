@@ -8,12 +8,12 @@ export const Route = createFileRoute("/higher-lower-game")({
   head: () => ({
     meta: [
       {
-        title: "Higher Lower Game: More or Less — Snaptapp",
+        title: "Higher or Lower Game About Numbers: More or Less",
       },
       {
         name: "description",
         content:
-          "More or Less is a free higher lower game about numbers: see a claim with a wrong number and call whether the real answer is higher or lower before time runs out.",
+          "Play a free higher or lower game about numbers. In this higher lower game, see a wrong number and call whether the real answer is higher or lower.",
       },
       {
         name: "theme-color",
@@ -33,12 +33,12 @@ export const Route = createFileRoute("/higher-lower-game")({
       },
       {
         property: "og:title",
-        content: "Higher Lower Game: More or Less — Snaptapp",
+        content: "Higher or Lower Game About Numbers: More or Less",
       },
       {
         property: "og:description",
         content:
-          "A free higher lower trivia game about numbers. Play a 60-second offline Solitaire sprint or a server-authoritative Arena match with up to 100 entrants.",
+          "A free higher or lower game about numbers. Play a 60-second offline Solitaire sprint or a server-authoritative Arena match with up to 100 entrants.",
       },
       {
         property: "og:url",
@@ -110,7 +110,7 @@ function PageHigherLowerGame() {
             <a href="/company/">Company</a>
             <a href="/support/">Support</a>
             <a href="/contact/">Contact</a>
-            <a className="btn btn--primary btn--sm" href="https://moreorless.snaptapp.us">Play More or Less</a>
+            <a className="btn btn--primary btn--sm" href="https://moreorless.app">Play More or Less</a>
           </nav>
         </div>
       </header>
@@ -122,7 +122,7 @@ function PageHigherLowerGame() {
               <li><a href="/">Home</a></li>
               <li>Higher lower game</li>
             </ol>
-            <h1>The higher lower game about numbers</h1>
+            <h1>The higher or lower game about numbers</h1>
             <p className="lede">
               More or Less is a higher lower trivia game. Every round shows a claim with a
               believable but wrong number. You call whether the real answer is higher or lower
@@ -187,7 +187,7 @@ function PageHigherLowerGame() {
               <h2>Play the higher lower game now</h2>
             </div>
             <p className="mt-md reveal">
-              <a className="btn btn--primary" href="https://moreorless.snaptapp.us">Play More or Less</a>
+              <a className="btn btn--primary" href="https://moreorless.app">Play More or Less</a>
               <a className="btn btn--ghost" href="/products/">About the game</a>
             </p>
           </div>
@@ -209,7 +209,7 @@ function PageHigherLowerGame() {
               <h2>Products</h2>
               <ul>
                 <li><a href="/products/">All products</a></li>
-                <li><a href="https://moreorless.snaptapp.us">More or Less</a></li>
+                <li><a href="https://moreorless.app">More or Less</a></li>
               </ul>
             </div>
 

@@ -97,7 +97,7 @@ Supported grants:
 - `grant_type=urn:ietf:params:oauth:grant-type:jwt-bearer` with `assertion` set to a valid identity JWT from this server
 - `grant_type=urn:workos:agent-auth:grant-type:claim` with a valid `claim_token` (currently always `authorization_pending`)
 
-Access tokens are ES256 JWTs (`token_use=access`, `token_class=catalog_hint`, `aud=<the origin serving this document>`, scopes `catalog.read` and `mcp.invoke`). Send them as `Authorization: Bearer …`. They are unauthenticated hints for catalog and MCP callers on the issuing origin only. They are not credentials for `moreorless.snaptapp.us` or any other host. Do not accept them as login, session, or player identity. Unsigned or tampered assertions are rejected.
+Access tokens are ES256 JWTs (`token_use=access`, `token_class=catalog_hint`, `aud=<the origin serving this document>`, scopes `catalog.read` and `mcp.invoke`). Send them as `Authorization: Bearer …`. They are unauthenticated hints for catalog and MCP callers on the issuing origin only. They are not credentials for `moreorless.app` or any other host. Do not accept them as login, session, or player identity. Unsigned or tampered assertions are rejected.
 
 ## Step 4. Call APIs
 
@@ -121,4 +121,4 @@ This endpoint requires POST and a `token` field. It returns `{ "revoked": true }
 
 ## More or Less player APIs
 
-Party rooms, trivia generation, and disputes are **not** this resource. They authenticate with Firebase ID tokens issued for the More or Less Firebase project. Play the game at `https://moreorless.snaptapp.us`.
+Party rooms, trivia generation, and disputes are **not** this resource. They authenticate with Firebase ID tokens issued for the More or Less Firebase project. Play the game at `https://moreorless.app`.
