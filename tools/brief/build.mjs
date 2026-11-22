@@ -58,6 +58,7 @@ doc.setSubject(
 doc.setKeywords([
   "Google Cloud",
   "Gemini Enterprise Agent Platform",
+  "Gemini Decision-1",
   "Gemini 3.5 Flash Lite",
   "Gemini 3.8 Flash",
   "More or Less",

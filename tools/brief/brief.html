@@ -312,7 +312,7 @@
     border-bottom: 1px solid var(--line); vertical-align: bottom; line-height: 1.35;
   }
   .matrix th:first-child { text-align: left; }
-  .matrix td { padding: 8.8px 2px; border-bottom: 1px solid #161b27; text-align: center; }
+  .matrix td { padding: 6.8px 2px; border-bottom: 1px solid #161b27; text-align: center; }
   .matrix td:first-child { text-align: left; font-size: 9px; color: var(--ink-2); padding-right: 4px; }
   .matrix tr:last-child td { border-bottom: 0; }
   .dot { display: inline-block; width: 7.5px; height: 7.5px; border-radius: 50%; }
@@ -553,18 +553,18 @@
         <div class="sub">Studio architecture brief</div>
       </div>
     </div>
-    <div class="right"><b>Rev. 2026-10</b><br>5 pages · public</div>
+    <div class="right"><b>Rev. 2026-11</b><br>5 pages · public</div>
   </header>
 
   <div class="hero">
     <div class="eyebrow">Google Cloud × Gemini Enterprise Agent Platform</div>
     <h1>More or Less<span class="accent">.</span></h1>
-    <p class="kicker">Architecture Brief <span>— Snaptapp's first title</span></p>
-    <p class="intro">A real-time multiplayer trivia game where every generated answer is <strong>grounded in Google Search</strong>, calibrated by a <strong>deterministic math kernel</strong>, and audited before it reaches the table.</p>
+    <p class="kicker">Technical Architecture Brief</p>
+    <p class="intro">A real-time multiplayer trivia game where every generated answer is <strong>grounded in Google Search</strong>, calibrated by a <strong>deterministic math kernel</strong>, and audited before it reaches players.</p>
   </div>
 
   <div class="stats">
-    <div class="stat"><b>10</b><span>players per room</span></div>
+    <div class="stat"><b>100</b><span>entrants per arena</span></div>
     <div class="stat"><b>&lt;2 s</b><span>generated round</span></div>
     <div class="stat"><b>0.0%</b><span>answer-leak gate</span></div>
     <div class="stat"><b>7</b><span>metrics before promotion</span></div>
@@ -573,24 +573,23 @@
   <div class="cover-body">
     <div class="cover-left">
       <div class="kf-head">
-        <h2>The short version</h2>
-        <span>8 facts</span>
+        <h2>Architecture overview</h2>
+        <span>8 pillars</span>
       </div>
       <ul class="bullets">
-        <li><strong>One call per round.</strong> Players decide whether the true figure is higher or lower than a believable decoy before the 60-second match clock expires.</li>
-        <li><strong>Grounded by default.</strong> Custom topics call Gemini 3.5 Flash Lite with mandatory Google Search grounding; curated rounds serve from a verified fact bank.</li>
-        <li><strong>Receipts, not promises.</strong> Every generated round carries a <code>grounding_receipt</code> recording its web queries and support spans.</li>
-        <li><strong>The model never picks the decoy.</strong> DDM-4, a deterministic kernel shared by Go and TypeScript, derives every distractor number.</li>
-        <li><strong>Audited before promotion.</strong> Gemini 3.8 Flash cross-checks claims against primary sources; a 7-metric, 0.0% redline gate admits facts to Firestore.</li>
-        <li><strong>Disputes get a referee.</strong> The Fact Ombudsman runs adversarial Search checks on Cloud Run and evicts debunked facts in real time.</li>
-        <li><strong>Fine-tuned on its own facts.</strong> Audited facts export into Gemini SFT corpora and Gemma 2 9B LoRA adapters.</li>
-        <li><strong>Two ways to play.</strong> Solitaire runs offline and client-authoritative; Arena seats up to 100 entrants on server-authoritative Durable Objects.</li>
+        <li><strong>Core loop.</strong> Players decide whether the true figure is higher or lower than a plausible distractor before the match clock expires.</li>
+        <li><strong>Search-grounded generation.</strong> Curated rounds serve from a verified fact bank; custom topics (staged for public rollout) call Gemini 3.5 Flash Lite with mandatory Google Search grounding.</li>
+        <li><strong>Grounding provenance.</strong> Every generated round carries a <code>grounding_receipt</code> recording its web queries and source support spans.</li>
+        <li><strong>Deterministic distractors.</strong> DDM-4, a deterministic math kernel shared across Go and TypeScript, derives every presented distractor number.</li>
+        <li><strong>Multi-stage fact audit.</strong> Gemini 3.8 Flash cross-checks claims against primary sources; a 7-metric, 0.0% redline gate admits facts to Firestore.</li>
+        <li><strong>Automated dispute arbitration.</strong> The Fact Ombudsman runs adversarial Search checks on Cloud Run and evicts debunked facts from the hot cache.</li>
+        <li><strong>Continuous SFT &amp; LoRA pipeline.</strong> Audited facts export into Gemini SFT corpora and Gemma 2 9B LoRA evaluation adapters.</li>
+        <li><strong>Solo and multiplayer modes.</strong> Solitaire runs offline from a verified snapshot deck; Arena seats up to 100 entrants on server-authoritative Durable Objects.</li>
       </ul>
       <div class="playnote">
         <span class="ptag">Live</span>
         <div>
-          <a class="lnk" href="https://moreorless.snaptapp.us/"><b>moreorless.snaptapp.us</b></a>
-          <span>Play as a guest — no account required.</span>
+          <a class="lnk" href="https://moreorless.app/"><b>moreorless.app</b></a>
         </div>
       </div>
     </div>
@@ -601,7 +600,7 @@
         <dl>
           <div class="f"><dt>Legal entity</dt><dd>Snaptapp LLC <span>· Washington LLC</span></dd></div>
           <div class="f"><dt>Founded</dt><dd>2026 <span>· Spokane, Washington</span></dd></div>
-          <div class="f"><dt>Jurisdiction</dt><dd>Washington, United States</dd></div>
+          <div class="f"><dt>Domains</dt><dd>snaptappllc.com <span>· snaptapp.us</span></dd></div>
           <div class="f"><dt>Contact</dt><dd>michael@snaptapp.us <span>· Founder</span></dd></div>
         </dl>
       </div>
@@ -619,10 +618,10 @@
         <dl>
           <div class="f"><dt>Cloud</dt><dd>Google Cloud <span>· </span><code>more-or-less-505908</code></dd></div>
           <div class="f"><dt>AI platform</dt><dd>Gemini Enterprise Agent Platform</dd></div>
-          <div class="f"><dt>Models</dt><dd>Gemini 3.5 Flash Lite · Gemini 3.8 Flash · Gemma 2 9B</dd></div>
+          <div class="f"><dt>Models</dt><dd>Gemini Decision-1 · 3.5 Flash Lite · 3.8 Flash · Gemma 2 9B</dd></div>
           <div class="f"><dt>Grounding</dt><dd>Google Search <span>· mandatory on generated rounds</span></dd></div>
           <div class="f"><dt>Guardrails</dt><dd>DDM-4 math kernel <span>· 7-metric gate</span></dd></div>
-          <div class="f"><dt>Runtime</dt><dd>Cloud Run (Go) · Cloud Firestore · Firebase</dd></div>
+          <div class="f"><dt>Runtime</dt><dd>Cloud Run (Go) · Cloud Firestore · BigQuery · Firebase</dd></div>
         </dl>
       </div>
     </aside>
@@ -637,7 +636,7 @@
   </div>
 
   <footer class="pagefoot">
-    <span>Google Cloud project more-or-less-505908 &nbsp;·&nbsp; <a class="lnk" href="https://snaptapp.us/">snaptapp.us</a> &nbsp;·&nbsp; <a class="lnk" href="mailto:michael@snaptapp.us">michael@snaptapp.us</a></span>
+    <span>Google Cloud project more-or-less-505908 &nbsp;·&nbsp; <a class="lnk" href="https://snaptappllc.com/">snaptappllc.com</a> &nbsp;·&nbsp; <a class="lnk" href="https://snaptapp.us/">snaptapp.us</a> &nbsp;·&nbsp; <a class="lnk" href="mailto:michael@snaptapp.us">michael@snaptapp.us</a></span>
     <span class="dots"><i class="on"></i><i></i><i></i><i></i><i></i></span>
     <span class="pn">01 / 05</span>
   </footer>
@@ -669,47 +668,47 @@
   </header>
 
   <div class="eyebrow"><span class="idx">01</span> The hot path</div>
-  <h2>Anatomy of a grounded round</h2>
-  <p class="lede">From typed topic to synchronized answer in under two seconds — with a chain of custody a partner can audit. <strong>Nothing about the number is left to the model.</strong></p>
+  <h2>Live round generation pipeline</h2>
+  <p class="lede">From player topic to synchronized round in under two seconds. <strong>Every generated claim carries source citations and a deterministically derived distractor.</strong></p>
 
   <div class="pipeline">
     <div class="pipe">
       <div class="num">01</div>
       <h3>Scope gate</h3>
-      <p>Topic text is filtered for scope and purity before any model call or quota is spent.</p>
-      <p class="pipe-why">Keeps off-topic prompts out of the paid model path.</p>
+      <p>Gemini Decision-1 (Decisions API) scores safety and scope routing in one zero-output-token pass.</p>
+      <p class="pipe-why">Filters unsafe or bank-covered topics before generation quota is spent.</p>
       <div class="pipe-out"><b style="color:var(--cyan)">→</b> scope verdict</div>
-      <span class="tag">pre-quota</span>
+      <span class="tag">Gemini Decision-1</span>
     </div>
     <div class="pipe">
       <div class="num">02</div>
       <h3>Cloud Run</h3>
-      <p><code>agent-go</code> receives an OIDC-authenticated request. No model keys live in the client.</p>
-      <p class="pipe-why">OIDC keeps model access server-side and scoped per request.</p>
+      <p><code>agent-go</code> receives an OIDC-authenticated request from the edge worker.</p>
+      <p class="pipe-why">Service-to-service OIDC keeps model credentials isolated server-side.</p>
       <div class="pipe-out"><b style="color:var(--mint)">→</b> OIDC request</div>
       <span class="tag">Google Cloud Run · OIDC</span>
     </div>
     <div class="pipe">
       <div class="num">03</div>
       <h3>Grounded generation</h3>
-      <p>Gemini 3.5 Flash Lite answers with mandatory <code>google_search</code> grounding.</p>
-      <p class="pipe-why">Search grounding is mandatory, not best-effort.</p>
+      <p>Gemini 3.5 Flash Lite retrieves factual quantities with <code>google_search</code> grounding.</p>
+      <p class="pipe-why">Responses without search grounding spans are rejected.</p>
       <div class="pipe-out"><b style="color:var(--volt)">→</b> grounded claim</div>
       <span class="tag">Gemini 3.5 Flash Lite</span>
     </div>
     <div class="pipe">
       <div class="num">04</div>
-      <h3>Deterministic decoy</h3>
-      <p>DDM-4 derives the distractor from the verified claim across surprise factors 0–3.</p>
-      <p class="pipe-why">The model supplies the fact; the kernel supplies the wrong number.</p>
+      <h3>Distractor derivation</h3>
+      <p>DDM-4 derives the presented distractor from the true number across surprise bands 0–3.</p>
+      <p class="pipe-why">Separates factual retrieval from deterministic distractor math.</p>
       <div class="pipe-out"><b style="color:var(--purple)">→</b> decoy number</div>
       <span class="tag">DDM-4 kernel</span>
     </div>
     <div class="pipe">
       <div class="num">05</div>
       <h3>Stream &amp; sync</h3>
-      <p>NDJSON rounds stream to a Durable Object match; up to 100 entrants share one server clock.</p>
-      <p class="pipe-why">The room clock, not the model, sets the deadline.</p>
+      <p>NDJSON rounds stream to the room state machine; entrants share a single server clock.</p>
+      <p class="pipe-why">Server-authoritative timers keep all entrants synchronized.</p>
       <div class="pipe-out"><b style="color:var(--cyan)">→</b> synchronized round</div>
       <span class="tag">under 2 s</span>
     </div>
@@ -775,7 +774,7 @@
 
     <div class="panel">
       <div class="ph">
-        <h3>Inside the receipt</h3>
+        <h3>Grounding metadata</h3>
         <span>per generated round</span>
       </div>
       <div class="receipt">
@@ -784,25 +783,25 @@
           <span>telemetry</span>
         </div>
         <ul class="checks">
-          <li>Model and grounding tool recorded</li>
-          <li>Every web query retained</li>
-          <li>Support spans mapped to the claim</li>
-          <li>Decoy hash tied to the verified number</li>
-          <li>Emitted before the round is served</li>
+          <li>Model ID and grounding tool recorded</li>
+          <li>Web search queries retained</li>
+          <li>Source support spans mapped to the claim</li>
+          <li>Distractor digest bound to the verified number</li>
+          <li>Validated before the round is served</li>
         </ul>
         <div class="receipt__spec">
           <div><span>model</span><b>gemini-3.5-flash-lite</b></div>
           <div><span>tool</span><b>google_search</b></div>
           <div><span>guard</span><b>DDM-4 · SHA-256 digest</b></div>
         </div>
-        <div class="receipt__foot">No receipt, no round. <span>· auditable downstream</span></div>
+        <div class="receipt__foot">Unverified rounds fail closed. <span>· auditable downstream</span></div>
       </div>
     </div>
   </div>
 
   <div class="roundview">
     <div class="rv-head">
-      <h3>The round the player sees</h3>
+      <h3>Round lifecycle</h3>
       <span>example · ISS orbital velocity</span>
     </div>
     <div class="rv-stages">
@@ -816,7 +815,7 @@
       <div class="rv-card">
         <div class="rv-label">Call</div>
         <div class="rv-call">MORE</div>
-        <div class="rv-clock">60 s match clock<br>Solitaire · offline</div>
+        <div class="rv-clock">60 s match clock<br>Custom topic · live</div>
       </div>
       <div class="rv-arrow">→</div>
       <div class="rv-card">
@@ -861,8 +860,8 @@
   </header>
 
   <div class="eyebrow"><span class="idx">02</span> Cold path</div>
-  <h2>The fact supply chain</h2>
-  <p class="lede">Discovery runs offline and feeds the hot path. A claim reaches a player only after it survives verification, calibration, and the promotion gate.</p>
+  <h2>Offline fact verification pipeline</h2>
+  <p class="lede">Fact discovery and auditing run offline in Fact Foundry. Candidate claims enter the serving snapshot only after passing source verification, DDM-4 precomputation, and all seven quality gates.</p>
 
   <div class="split">
     <div class="chain">
@@ -902,6 +901,7 @@
           <thead>
             <tr>
               <th>Workload</th>
+              <th>Decision<br>1</th>
               <th>3.5<br>Flash Lite</th>
               <th>3.8<br>Flash</th>
               <th>Gemma 2<br>9B</th>
@@ -909,11 +909,12 @@
             </tr>
           </thead>
           <tbody>
-            <tr><td>Live pack generation</td><td><i class="dot c"></i></td><td><i class="dot n"></i></td><td><i class="dot n"></i></td><td><i class="dot g"></i></td></tr>
-            <tr><td>Fact Foundry audit</td><td><i class="dot n"></i></td><td><i class="dot v"></i></td><td><i class="dot n"></i></td><td><i class="dot g"></i></td></tr>
-            <tr><td>Dispute referee</td><td><i class="dot c"></i></td><td><i class="dot v"></i></td><td><i class="dot n"></i></td><td><i class="dot g"></i></td></tr>
-            <tr><td>Ops copilots</td><td><i class="dot n"></i></td><td><i class="dot v"></i></td><td><i class="dot n"></i></td><td><i class="dot n"></i></td></tr>
-            <tr><td>SFT &amp; adapters</td><td><i class="dot n"></i></td><td><i class="dot v"></i></td><td><i class="dot p"></i></td><td><i class="dot n"></i></td></tr>
+            <tr><td>Scope &amp; safety gate</td><td><i class="dot c"></i></td><td><i class="dot n"></i></td><td><i class="dot n"></i></td><td><i class="dot n"></i></td><td><i class="dot n"></i></td></tr>
+            <tr><td>Live pack generation</td><td><i class="dot n"></i></td><td><i class="dot c"></i></td><td><i class="dot n"></i></td><td><i class="dot n"></i></td><td><i class="dot g"></i></td></tr>
+            <tr><td>Fact Foundry audit</td><td><i class="dot n"></i></td><td><i class="dot n"></i></td><td><i class="dot v"></i></td><td><i class="dot n"></i></td><td><i class="dot g"></i></td></tr>
+            <tr><td>Dispute referee</td><td><i class="dot n"></i></td><td><i class="dot c"></i></td><td><i class="dot v"></i></td><td><i class="dot n"></i></td><td><i class="dot g"></i></td></tr>
+            <tr><td>Ops portal review</td><td><i class="dot n"></i></td><td><i class="dot n"></i></td><td><i class="dot v"></i></td><td><i class="dot n"></i></td><td><i class="dot g"></i></td></tr>
+            <tr><td>SFT &amp; adapters</td><td><i class="dot n"></i></td><td><i class="dot n"></i></td><td><i class="dot v"></i></td><td><i class="dot p"></i></td><td><i class="dot n"></i></td></tr>
           </tbody>
         </table>
         <div class="matrix-note">● active role &nbsp;·&nbsp; ○ not used on that workload</div>
@@ -929,7 +930,7 @@
         <div class="flow">
           <code>pending</code> <span class="arrow">→</span> <code>active</code>
           <span style="color:var(--ink-4)">·</span>
-          <span>one bad metric keeps a fact out</span>
+          <span>all 7 checks required for promotion</span>
         </div>
       </div>
     </div>
@@ -938,7 +939,7 @@
   <div class="flywheel">
     <div class="fw-head">
       <h3>Closed-loop fine-tuning</h3>
-      <span>audited facts → adapters → back to generation</span>
+      <span>audited facts → SFT export → planned adapters</span>
     </div>
     <div class="fw-row">
       <div class="fw">
@@ -969,24 +970,24 @@
 
   <div class="verdicts">
     <div class="v-head">
-      <h3>When a player disputes a fact</h3>
+      <h3>Live dispute arbitration</h3>
       <span>Fact Ombudsman · Cloud Run · adversarial Search</span>
     </div>
-    <p class="v-intro">A player report opens an adversarial review: counter-evidence queries run against primary sources, then the Ombudsman issues one of three rulings and acts on it immediately.</p>
+    <p class="v-intro">Player-submitted disputes trigger an automated review on Cloud Run: counter-evidence queries run against primary sources, and the Ombudsman applies one of three rulings immediately.</p>
     <div class="v-grid">
       <div class="verdict">
         <code>VERIFIED_CANONICAL</code>
-        <p>Claim upheld. The fact stays active and the dispute closes.</p>
+        <p>Claim upheld against primary sources. The fact remains active and the dispute closes.</p>
         <div class="v-next">→ remains in rotation</div>
       </div>
       <div class="verdict red">
         <code>DEBUNKED_AND_EVICTED</code>
-        <p>Counter-evidence wins. The fact is removed and its cache entry evicted.</p>
+        <p>Counter-evidence confirmed. The fact is blocklisted in KV and queued for retirement.</p>
         <div class="v-next">→ cached rounds invalidated</div>
       </div>
       <div class="verdict volt">
         <code>AMBIGUOUS_UNIT</code>
-        <p>Units or framing can't be reconciled. The fact is quarantined for review.</p>
+        <p>Unit scale or phrasing is ambiguous. The fact is quarantined for editorial revision.</p>
         <div class="v-next">→ held out of rotation</div>
       </div>
     </div>
@@ -1025,8 +1026,8 @@
   </header>
 
   <div class="eyebrow"><span class="idx">03</span> The product</div>
-  <h2>Two ways to play, one verified fact bank</h2>
-  <p class="lede">Same grounded round format, two different pressures. Solitaire serves a qualified offline snapshot deck; Arena deals every entrant the same frozen deck.</p>
+  <h2>Game modes &amp; scoring</h2>
+  <p class="lede">Solitaire runs client-side from a DDM-4 precomputed snapshot deck; Arena runs server-authoritative multiplayer matches over WebSockets using a shared deck per lobby.</p>
 
   <div class="game-grid">
     <div>
@@ -1088,7 +1089,7 @@
 
       <div class="custom-topic">
         <span class="ctag">Custom topics</span>
-        <p>Type any subject. It is filtered for scope, generated on demand, and cached for other players who enter the same topic.</p>
+        <p>Deployed on Cloud Run (<code>agent-go</code>) with Gemini Decision-1 and Gemini 3.5 Flash Lite Search grounding — staged for public rollout next.</p>
       </div>
     </div>
 
@@ -1096,7 +1097,7 @@
       <div class="phone">
         <img src="data:image/png;base64,__SHOT__" alt="More or Less home screen">
       </div>
-      <div class="phone-cap">More or Less · web client</div>
+      <div class="phone-cap">More or Less · live client</div>
       <div class="room">
         <b>100</b>
         <span>entrants per Arena match<br>server-authoritative</span>
@@ -1121,15 +1122,15 @@
         <text x="55" y="68" text-anchor="middle" font-family="JBMono" font-size="5.4" letter-spacing="1.2" fill="#8d95a9">ENTRANTS</text>
       </svg>
       <div>
-        <h3>Arena Mode</h3>
-        <p>Up to 100 entrants share one frozen deck and one server clock. Match state lives in Durable Objects and is verified before it is stored.</p>
-        <div class="tagline">20 s lobby · bots fill to 8</div>
+        <h3>Server-authoritative sync</h3>
+        <p>Each Durable Object room freezes the deck at match start, enforces the 60 s clock, and verifies every answer before persisting standings.</p>
+        <div class="tagline">WebSockets · zero client clock trust</div>
       </div>
     </div>
 
     <div class="quote">
-      <p>One decision. Two buttons.<br><span>A verifiable answer every time.</span></p>
-      <div class="src">More or Less<br>60 s match clock · 1.0 s preview · 750 ms feedback</div>
+      <p>One Flutter codebase.<br><span>Firebase Remote Config, GA4 &amp; Crashlytics wired end-to-end.</span></p>
+      <div class="src">Live on web<br>moreorless.app · WASM/Impeller</div>
     </div>
   </div>
 
@@ -1173,8 +1174,8 @@
   </header>
 
   <div class="eyebrow"><span class="idx">04</span> Infrastructure</div>
-  <h2>What we run on</h2>
-  <p class="lede">Serverless by default, grounded by design. Managed Google Cloud and Firebase services keep a small studio operating globally with predictable economics.</p>
+  <h2>Production infrastructure &amp; roadmap</h2>
+  <p class="lede">Built on managed Google Cloud, Gemini, and Firebase services in project <code style="white-space:nowrap">more-or-less-505908</code> for low-overhead global operation.</p>
 
   <div class="layers-head">
     <h3>Google Cloud services in production</h3>
@@ -1186,9 +1187,10 @@
       <div class="lbl">Client</div>
       <div class="chips">
         <span class="chip">Flutter Web · WASM/Impeller</span>
-        <span class="chip">iOS</span>
-        <span class="chip">Android</span>
         <span class="chip">Firebase Auth</span>
+        <span class="chip">Remote Config</span>
+        <span class="chip">GA4 &amp; Firebase Analytics</span>
+        <span class="chip">Crashlytics &amp; Perf</span>
       </div>
     </div>
     <div class="layer">
@@ -1203,9 +1205,9 @@
       <div class="lbl">AI platform</div>
       <div class="chips">
         <span class="chip volt">Gemini Enterprise Agent Platform</span>
+        <span class="chip">Gemini Decision-1 (Decisions API)</span>
         <span class="chip">Gemini 3.5 Flash Lite</span>
         <span class="chip">Gemini 3.8 Flash</span>
-        <span class="chip purple">Gemma 2 9B LoRA</span>
         <span class="chip">Google Search grounding</span>
       </div>
     </div>
@@ -1215,16 +1217,18 @@
         <span class="chip">Cloud Run · <code>agent-go</code></span>
         <span class="chip">Cloud Run Jobs · foundry</span>
         <span class="chip">Cloud Functions v2</span>
+        <span class="chip">Cloud Build</span>
         <span class="chip">OIDC</span>
         <span class="chip">OpenTelemetry</span>
       </div>
     </div>
     <div class="layer">
-      <div class="lbl">Data</div>
+      <div class="lbl">Data &amp; Ops</div>
       <div class="chips">
         <span class="chip">Cloud Firestore · <code>fact_bank</code></span>
-        <span class="chip">Cloud Firestore · <code>model_adapters</code></span>
-        <span class="chip">Firebase</span>
+        <span class="chip">BigQuery · GenAI telemetry</span>
+        <span class="chip">Cloud Storage</span>
+        <span class="chip">Cloud Logging &amp; Trace</span>
       </div>
     </div>
   </div>
@@ -1232,13 +1236,13 @@
   <div class="security">
     <div class="sec-head">
       <h3>Security posture</h3>
-      <span>attestation on every client path</span>
+      <span>web live · mobile staged</span>
     </div>
     <div class="sec-grid">
       <div class="sec"><b>Firebase App Check</b><p>Attestation token attached to every client request.</p></div>
-      <div class="sec"><b>Play Integrity</b><p>Android app and device integrity verdicts.</p></div>
-      <div class="sec"><b>App Attest</b><p>iOS app and device attestation.</p></div>
-      <div class="sec"><b>reCAPTCHA Enterprise</b><p>Web abuse and bot scoring.</p></div>
+      <div class="sec"><b>Play Integrity</b><p>Android app and device integrity verdicts (mobile launch).</p></div>
+      <div class="sec"><b>App Attest</b><p>iOS app and device attestation (mobile launch).</p></div>
+      <div class="sec"><b>reCAPTCHA Enterprise</b><p>Web abuse and bot scoring (live).</p></div>
     </div>
   </div>
 
@@ -1247,7 +1251,9 @@
       <h4>Google-managed</h4>
       <div class="chips">
         <span class="chip">Cloud Run</span><span class="chip">Cloud Firestore</span>
-        <span class="chip">Firebase</span><span class="chip">Google Search</span>
+        <span class="chip">BigQuery</span><span class="chip">Cloud Storage</span>
+        <span class="chip">Cloud Logging &amp; Trace</span><span class="chip">Firebase</span>
+        <span class="chip">Google Search</span>
         <span class="chip volt">Gemini Enterprise Agent Platform</span>
       </div>
     </div>
@@ -1268,14 +1274,14 @@
 
   <div class="roadmap">
     <div class="rm-head">
-      <h3>24-month Google Cloud credit plan</h3>
+      <h3>24-month Google Cloud scale plan</h3>
       <span>four phases · one studio pipeline</span>
     </div>
     <div class="timeline">
       <div class="phase">
         <div class="m">MONTHS 0–6</div>
         <h4>Launch &amp; scale</h4>
-        <p>Live Gemini 3.5 Flash Lite inference and Search grounding concurrency across web, iOS, and Android launches.</p>
+        <p>Open public custom-topic packs on Gemini Decision-1 and Gemini 3.5 Flash Lite with Search grounding across web, iOS, and Android.</p>
       </div>
       <div class="phase">
         <div class="m">MONTHS 6–12</div>
@@ -1297,9 +1303,9 @@
 
   <div class="cta">
     <div class="t">
-      <h3>Reviewing the stack for a partnership or the Google for Startups Cloud Program?</h3>
-      <p>The production project is more-or-less-505908. Happy to walk through any layer of the pipeline.</p>
-      <div class="contact"><a class="lnk" href="mailto:michael@snaptapp.us"><b>michael@snaptapp.us</b></a> &nbsp;·&nbsp; <a class="lnk" href="https://snaptapp.us/">snaptapp.us</a> &nbsp;·&nbsp; <a class="lnk" href="https://moreorless.snaptapp.us/">moreorless.snaptapp.us</a></div>
+      <h3>Architecture &amp; partnership inquiries</h3>
+      <p>Production workloads run in Google Cloud project more-or-less-505908. Technical walkthroughs available on request.</p>
+      <div class="contact"><a class="lnk" href="mailto:michael@snaptapp.us"><b>michael@snaptapp.us</b></a> &nbsp;·&nbsp; <a class="lnk" href="https://snaptappllc.com/">snaptappllc.com</a> &nbsp;·&nbsp; <a class="lnk" href="https://snaptapp.us/">snaptapp.us</a> &nbsp;·&nbsp; <a class="lnk" href="https://moreorless.app/">moreorless.app</a></div>
     </div>
     <div class="qr">
       <div class="code">__QR__</div>
