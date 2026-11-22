@@ -312,6 +312,103 @@ function PageProducts() {
         <section className="section section--edge">
           <div className="shell">
             <div className="section-head reveal">
+              <p className="eyebrow">Client screens</p>
+              <h2>Inside the app</h2>
+              <p className="lede">
+                Captures from the live Flutter client showing onboarding, a timed
+                Solitaire round, verified answer reveals, achievement ranks, and player
+                identity.
+              </p>
+            </div>
+
+            <div className="screenshot-grid reveal">
+              <figure className="screenshot-card">
+                <img
+                  src="/assets/img/screenshots/more-or-less-how-to-play.png"
+                  alt="More or Less interactive tutorial screen showing the claim and choice prompt"
+                  width="640"
+                  height="1227"
+                  loading="lazy"
+                />
+                <figcaption>
+                  <span className="screenshot-card__title">Interactive tutorial</span>
+                  <span className="screenshot-card__note">
+                    Guided 3-step onboarding explaining the claim, decoy number, and
+                    binary choice.
+                  </span>
+                </figcaption>
+              </figure>
+              <figure className="screenshot-card">
+                <img
+                  src="/assets/img/screenshots/more-or-less-solitaire-round.png"
+                  alt="More or Less Solitaire Q1 screen with 56.5s shot clock and MORE or LESS buttons"
+                  width="640"
+                  height="1227"
+                  loading="lazy"
+                />
+                <figcaption>
+                  <span className="screenshot-card__title">Solitaire round</span>
+                  <span className="screenshot-card__note">
+                    60-second shot clock, DDM-4 distractor figure, and MORE, LESS, or SKIP
+                    controls.
+                  </span>
+                </figcaption>
+              </figure>
+              <figure className="screenshot-card">
+                <img
+                  src="/assets/img/screenshots/more-or-less-solitaire-reveal.png"
+                  alt="More or Less reveal screen crossing out 15.0 decoy and showing true value 10.1"
+                  width="640"
+                  height="1227"
+                  loading="lazy"
+                />
+                <figcaption>
+                  <span className="screenshot-card__title">Verified reveal</span>
+                  <span className="screenshot-card__note">
+                    Crossed-out decoy, ground-truth number, point delta, and concise
+                    source explanation.
+                  </span>
+                </figcaption>
+              </figure>
+              <figure className="screenshot-card">
+                <img
+                  src="/assets/img/screenshots/more-or-less-vault.png"
+                  alt="More or Less Vault progression screen showing 0 of 12 achievement ranks"
+                  width="640"
+                  height="1227"
+                  loading="lazy"
+                />
+                <figcaption>
+                  <span className="screenshot-card__title">The Vault</span>
+                  <span className="screenshot-card__note">
+                    12 unlockable achievement ranks tracked across Solitaire and Arena
+                    sessions.
+                  </span>
+                </figcaption>
+              </figure>
+              <figure className="screenshot-card">
+                <img
+                  src="/assets/img/screenshots/more-or-less-profile.png"
+                  alt="More or Less player profile screen displaying LVL 1 and rank status"
+                  width="640"
+                  height="1227"
+                  loading="lazy"
+                />
+                <figcaption>
+                  <span className="screenshot-card__title">Player profile</span>
+                  <span className="screenshot-card__note">
+                    Firebase Auth account identity, XP leveling, and match standings
+                    history.
+                  </span>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </section>
+
+        <section className="section section--edge">
+          <div className="shell">
+            <div className="section-head reveal">
               <p className="eyebrow">More or Less</p>
               <h2>Two ways to play</h2>
             </div>

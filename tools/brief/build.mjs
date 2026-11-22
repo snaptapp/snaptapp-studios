@@ -15,6 +15,11 @@ const html = template
   .replaceAll("__INTER_FONT__", read64(path.join(root, "tools/brief-assets/inter-var.woff2")))
   .replaceAll("__MONO_FONT__", read64(path.join(root, "tools/brief-assets/jbmono-var.woff2")))
   .replaceAll("__SHOT__", read64(path.join(root, "public/assets/img/more-or-less-home.png")))
+  .replaceAll("__SHOT_TUTORIAL__", read64(path.join(root, "public/assets/img/screenshots/more-or-less-how-to-play.png")))
+  .replaceAll("__SHOT_ROUND__", read64(path.join(root, "public/assets/img/screenshots/more-or-less-solitaire-round.png")))
+  .replaceAll("__SHOT_REVEAL__", read64(path.join(root, "public/assets/img/screenshots/more-or-less-solitaire-reveal.png")))
+  .replaceAll("__SHOT_VAULT__", read64(path.join(root, "public/assets/img/screenshots/more-or-less-vault.png")))
+  .replaceAll("__SHOT_PROFILE__", read64(path.join(root, "public/assets/img/screenshots/more-or-less-profile.png")))
   .replaceAll("__QR__", fs.readFileSync(path.join(root, "tools/brief-assets/qr.svg"), "utf8"));
 
 fs.mkdirSync(outDir, { recursive: true });

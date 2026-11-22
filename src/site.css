@@ -618,6 +618,52 @@ samp {
   border-radius: var(--ds-arena-radius-lg);
 }
 
+.screenshot-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+  gap: var(--ds-arena-space-5);
+}
+
+.screenshot-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ds-arena-space-3);
+  margin: 0;
+  padding: var(--ds-arena-space-4);
+  border-color: var(--ds-arena-color-border);
+  border-style: solid;
+  border-width: calc(var(--ds-arena-space-1) / 4);
+  border-radius: var(--ds-arena-radius-lg);
+  background: var(--ds-arena-color-surface);
+}
+
+.screenshot-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-color: var(--ds-arena-color-border-strong);
+  border-style: solid;
+  border-width: calc(var(--ds-arena-space-1) / 4);
+  border-radius: var(--ds-arena-radius-md);
+}
+
+.screenshot-card figcaption {
+  display: grid;
+  gap: var(--ds-arena-space-1);
+}
+
+.screenshot-card__title {
+  color: var(--ds-arena-color-text);
+  font-weight: 600;
+  font-size: var(--ds-arena-text-sm);
+}
+
+.screenshot-card__note {
+  color: var(--ds-arena-color-text-muted);
+  font-size: var(--ds-arena-text-xs);
+  line-height: 1.45;
+}
+
 .product__title {
   display: flex;
   flex-wrap: wrap;

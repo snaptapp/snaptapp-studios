@@ -445,7 +445,34 @@
   .platforms b.live { color: var(--mint); }
   .platforms b.dev { color: var(--ink-3); }
 
-  /* ---------- page 5 ---------- */
+  /* ---------- page 5 (client UI gallery) ---------- */
+  .gallery-top { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 0.18in; }
+  .gitem { display: flex; flex-direction: column; align-items: center; }
+  .gphone {
+    width: 1.96in; border-radius: 0.24in; padding: 4px;
+    background: linear-gradient(160deg, #262d3d, #0a0c12);
+    border: 1px solid #333c52;
+    box-shadow: 0 0 0 1px rgba(255,255,255,0.03) inset, 0 18px 36px -22px #000;
+  }
+  .gphone img { width: 100%; display: block; border-radius: 0.19in; }
+  .gcap { width: 100%; margin-top: 8px; text-align: left; border-top: 1px solid var(--line); padding-top: 6px; }
+  .gcap .gn { font-family: var(--mono); font-size: 6.4px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--cyan); }
+  .gcap h3 { font-size: 10px; margin: 2px 0 2px; }
+  .gcap p { margin: 0; font-size: 8.1px; line-height: 1.4; color: var(--ink-3); }
+  .gallery-bot { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 0.18in; }
+  .gcard { display: flex; align-items: center; gap: 12px; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); padding: 10px 12px; }
+  .gphone-sm {
+    width: 1.32in; flex: none; border-radius: 0.2in; padding: 3.5px;
+    background: linear-gradient(160deg, #262d3d, #0a0c12);
+    border: 1px solid #333c52;
+  }
+  .gphone-sm img { width: 100%; display: block; border-radius: 0.15in; }
+  .gcard .gn { font-family: var(--mono); font-size: 6.2px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--mint); }
+  .gcard h3 { font-size: 10.6px; margin: 3px 0 4px; }
+  .gcard p { margin: 0; font-size: 8.5px; line-height: 1.45; color: var(--ink-3); }
+  .gcard .gtag { margin-top: 7px; font-family: var(--mono); font-size: 6.4px; color: var(--ink-4); letter-spacing: 0.04em; }
+
+  /* ---------- page 6 ---------- */
   .layers-head { display: flex; align-items: baseline; justify-content: space-between; margin-top: 0.1in; }
   .layers-head h3 { font-size: 11.5px; letter-spacing: -0.01em; }
   .layers-head span { font-family: var(--mono); font-size: 6.4px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-4); }
@@ -553,7 +580,7 @@
         <div class="sub">Studio architecture brief</div>
       </div>
     </div>
-    <div class="right"><b>Rev. 2026-11</b><br>5 pages · public</div>
+    <div class="right"><b>Rev. 2026-11</b><br>6 pages · public</div>
   </header>
 
   <div class="hero">
@@ -632,13 +659,14 @@
     <span>01 Hot path</span><span class="sep">·</span>
     <span>02 Verification</span><span class="sep">·</span>
     <span>03 The game</span><span class="sep">·</span>
-    <span>04 Infrastructure</span>
+    <span>04 Client UI</span><span class="sep">·</span>
+    <span>05 Infrastructure</span>
   </div>
 
   <footer class="pagefoot">
     <span>Google Cloud project more-or-less-505908 &nbsp;·&nbsp; <a class="lnk" href="https://snaptappllc.com/">snaptappllc.com</a> &nbsp;·&nbsp; <a class="lnk" href="https://snaptapp.us/">snaptapp.us</a> &nbsp;·&nbsp; <a class="lnk" href="mailto:michael@snaptapp.us">michael@snaptapp.us</a></span>
-    <span class="dots"><i class="on"></i><i></i><i></i><i></i><i></i></span>
-    <span class="pn">01 / 05</span>
+    <span class="dots"><i class="on"></i><i></i><i></i><i></i><i></i><i></i></span>
+    <span class="pn">01 / 06</span>
   </footer>
 </section>
 
@@ -829,8 +857,8 @@
 
   <footer class="pagefoot">
     <span>Google Cloud &amp; Gemini Enterprise Agent Platform · project more-or-less-505908</span>
-    <span class="dots"><i></i><i class="on"></i><i></i><i></i><i></i></span>
-    <span class="pn">02 / 05</span>
+    <span class="dots"><i></i><i class="on"></i><i></i><i></i><i></i><i></i></span>
+    <span class="pn">02 / 06</span>
   </footer>
 </section>
 
@@ -995,8 +1023,8 @@
 
   <footer class="pagefoot">
     <span>Google Cloud · project more-or-less-505908 · Gemini 3.8 Flash audit · DDM-4 calibration</span>
-    <span class="dots"><i></i><i></i><i class="on"></i><i></i><i></i></span>
-    <span class="pn">03 / 05</span>
+    <span class="dots"><i></i><i></i><i class="on"></i><i></i><i></i><i></i></span>
+    <span class="pn">03 / 06</span>
   </footer>
 </section>
 
@@ -1143,12 +1171,96 @@
 
   <footer class="pagefoot">
     <span>Google Cloud Run · Cloud Firestore · Firebase Auth &amp; App Check · Flutter · Durable Object rooms</span>
-    <span class="dots"><i></i><i></i><i></i><i class="on"></i><i></i></span>
-    <span class="pn">04 / 05</span>
+    <span class="dots"><i></i><i></i><i></i><i class="on"></i><i></i><i></i></span>
+    <span class="pn">04 / 06</span>
   </footer>
 </section>
 
 <!-- ============================== PAGE 5 ============================== -->
+<section class="page">
+  <header class="masthead">
+    <div class="brand">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true">
+        <defs>
+          <linearGradient id="stGrad4b" x1="2" y1="30" x2="30" y2="2" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#22d3ee"/><stop offset="0.52" stop-color="#7be0a4"/><stop offset="1" stop-color="#ccff00"/>
+          </linearGradient>
+        </defs>
+        <rect x="1.25" y="1.25" width="29.5" height="29.5" rx="8.5" fill="url(#stGrad4b)"/>
+        <g fill="none" stroke="#07080b">
+          <circle cx="16" cy="16" r="12.4" stroke-width="1.4" opacity="0.4"/>
+          <circle cx="16" cy="16" r="8.3" stroke-width="2.3"/>
+        </g>
+        <circle cx="16" cy="16" r="4" fill="#07080b"/>
+      </svg>
+      <div>
+        <div class="name">Snaptapp LLC</div>
+        <div class="sub">Architecture brief · More or Less</div>
+      </div>
+    </div>
+    <div class="right"><b>04 / Client UI</b><br>Flutter · Live Captures</div>
+  </header>
+
+  <div class="eyebrow"><span class="idx">04</span> The client</div>
+  <h2>Live application screens</h2>
+  <p class="lede">Captured directly from the Flutter client. Every round pairs a DDM-4 decoy against a verified ground-truth reveal.</p>
+
+  <div class="gallery-top">
+    <div class="gitem">
+      <div class="gphone"><img src="data:image/png;base64,__SHOT_TUTORIAL__" alt="More or Less interactive tutorial screen"></div>
+      <div class="gcap">
+        <div class="gn">01 · Onboarding</div>
+        <h3>Interactive tutorial</h3>
+        <p>Guided 3-step intro explaining the claim, decoy number, and binary MORE / LESS choice.</p>
+      </div>
+    </div>
+    <div class="gitem">
+      <div class="gphone"><img src="data:image/png;base64,__SHOT_ROUND__" alt="More or Less active Solitaire round screen"></div>
+      <div class="gcap">
+        <div class="gn">02 · Gameplay</div>
+        <h3>Active Solitaire round</h3>
+        <p>60-second shot clock, DDM-4 distractor figure, and MORE / LESS / SKIP controls.</p>
+      </div>
+    </div>
+    <div class="gitem">
+      <div class="gphone"><img src="data:image/png;base64,__SHOT_REVEAL__" alt="More or Less grounded reveal screen"></div>
+      <div class="gcap">
+        <div class="gn">03 · Verification</div>
+        <h3>Grounded reveal</h3>
+        <p>Crossed-out decoy, true verified figure, launchScore delta, and short source explanation.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="gallery-bot">
+    <div class="gcard">
+      <div class="gphone-sm"><img src="data:image/png;base64,__SHOT_VAULT__" alt="More or Less Vault progression screen"></div>
+      <div>
+        <div class="gn">Progression</div>
+        <h3>The Vault</h3>
+        <p>12 unlockable achievement ranks tracked across Solitaire and Arena sessions, persisted locally and synced to Firestore.</p>
+        <div class="gtag">12 ranks · local + Firestore sync</div>
+      </div>
+    </div>
+    <div class="gcard">
+      <div class="gphone-sm"><img src="data:image/png;base64,__SHOT_PROFILE__" alt="More or Less player profile screen"></div>
+      <div>
+        <div class="gn">Identity</div>
+        <h3>Player profile</h3>
+        <p>Firebase Auth account identity, XP leveling, and server-verified standings history across web and mobile.</p>
+        <div class="gtag">Firebase Auth · XP &amp; standings</div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="pagefoot">
+    <span>Flutter client captures · Android &amp; Web · moreorless.app</span>
+    <span class="dots"><i></i><i></i><i></i><i></i><i class="on"></i><i></i></span>
+    <span class="pn">05 / 06</span>
+  </footer>
+</section>
+
+<!-- ============================== PAGE 6 ============================== -->
 <section class="page">
   <header class="masthead">
     <div class="brand">
@@ -1170,10 +1282,10 @@
         <div class="sub">Architecture brief · More or Less</div>
       </div>
     </div>
-    <div class="right"><b>04 / Infrastructure</b><br>Google Cloud</div>
+    <div class="right"><b>05 / Infrastructure</b><br>Google Cloud</div>
   </header>
 
-  <div class="eyebrow"><span class="idx">04</span> Infrastructure</div>
+  <div class="eyebrow"><span class="idx">05</span> Infrastructure</div>
   <h2>Production infrastructure &amp; roadmap</h2>
   <p class="lede">Built on managed Google Cloud, Gemini, and Firebase services in project <code style="white-space:nowrap">more-or-less-505908</code> for low-overhead global operation.</p>
 
@@ -1315,8 +1427,8 @@
 
   <footer class="pagefoot">
     <span>Snaptapp LLC · Spokane, Washington</span>
-    <span class="dots"><i></i><i></i><i></i><i></i><i class="on"></i></span>
-    <span class="pn">05 / 05</span>
+    <span class="dots"><i></i><i></i><i></i><i></i><i></i><i class="on"></i></span>
+    <span class="pn">06 / 06</span>
   </footer>
 </section>
 
