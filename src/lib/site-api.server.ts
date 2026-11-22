@@ -105,7 +105,7 @@ function studio(origin: string) {
       {
         name: "More or Less",
         status: "live",
-        url: "https://moreorless.snaptapp.us",
+        url: "https://moreorless.app",
         tagline: "One fake number. Is the real answer more or less?",
         description:
           "A party trivia game about numbers. Every round presents a claim, a plausible but deliberately incorrect number, and a countdown. Players decide whether the real figure is higher or lower before time runs out.",
@@ -927,7 +927,7 @@ function handleAuthorize(
     "This authorization endpoint does not run a browser login form.",
     `Public catalog, health, and MCP tools on ${origin} do not require a token.`,
     `Tokens from POST /oauth2/token are unauthenticated catalog hints (token_class=${TOKEN_CLASS}).`,
-    "They are not client identity and are not valid on moreorless.snaptapp.us.",
+    "They are not client identity and are not valid on moreorless.app.",
     "",
     `Agent registration: ${origin}/auth.md`,
     `Token endpoint: POST ${origin}/oauth2/token (grant_type=${GRANT_CLIENT_CREDENTIALS})`,

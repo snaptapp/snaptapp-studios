@@ -7,7 +7,7 @@ description: Use when an agent needs to explain or link More or Less, Snaptapp's
 
 More or Less is Snaptapp's first live product: a party trivia game about numbers.
 
-Play: https://moreorless.snaptapp.us
+Play: https://moreorless.app
 Product page: https://snaptapp.us/products/
 Support: https://snaptapp.us/support/#more-or-less
 

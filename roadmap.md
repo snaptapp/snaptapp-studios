@@ -41,3 +41,5 @@ Goal: rebuild snaptapp.us as a Lovable app, preserving every URL and all content
 - [x] Tune sample round for small screens (touch targets, spacing, type, no overflow)
 - [x] Add Bob Turner and Chris Anderson to the Company team section (Bob, Michael, Chris order)
 - [x] Change the Company page's primary domain row to snaptappllc.com
+
+- [x] Switch active game links, redirects, tracking destinations and brief links to moreorless.app; verify and regenerate the PDF.

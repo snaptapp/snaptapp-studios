@@ -51,7 +51,7 @@ function NotFoundComponent() {
             <a href="/company/">Company</a>
             <a href="/support/">Support</a>
             <a href="/contact/">Contact</a>
-            <a className="btn btn--primary btn--sm" href="https://moreorless.snaptapp.us">
+            <a className="btn btn--primary btn--sm" href="https://moreorless.app">
               Play More or Less
             </a>
           </nav>

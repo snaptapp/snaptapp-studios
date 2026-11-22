@@ -106,7 +106,7 @@ function PageSupport() {
               <a href="/company/">Company</a>
               <a href="/support/" aria-current="page">Support</a>
               <a href="/contact/">Contact</a>
-              <a className="btn btn--primary btn--sm" href="https://moreorless.snaptapp.us">Play More or Less</a>
+              <a className="btn btn--primary btn--sm" href="https://moreorless.app">Play More or Less</a>
             </nav>
           </div>
         </header>
@@ -142,7 +142,7 @@ function PageSupport() {
                   <dt>Where do I play?</dt>
                   <dd>
                     In a browser at{" "}
-                    <a href="https://moreorless.snaptapp.us">moreorless.snaptapp.us</a>. The iOS
+                    <a href="https://moreorless.app">moreorless.app</a>. The iOS
                     and Android builds are in development; when they land they will be linked
                     from <a href="/products/">the products page</a>.
                   </dd>
@@ -288,7 +288,7 @@ function PageSupport() {
                 <h2>Products</h2>
                 <ul>
                   <li><a href="/products/">All products</a></li>
-                  <li><a href="https://moreorless.snaptapp.us">More or Less</a></li>
+                  <li><a href="https://moreorless.app">More or Less</a></li>
                 </ul>
               </div>
       
